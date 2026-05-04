@@ -1,0 +1,40 @@
+{
+  "few_shot_examples": [
+    {
+      "cq": "What are all the available fire-specific hazard attributes and their details related to all geographical places?",
+      "query": "PREFIX kwg-ont: <http://stko-kwg.geog.ucsb.edu/lod/ontology/>\nPREFIX sosa: <http://www.w3.org/ns/sosa/>\nPREFIX geo: <http://www.opengis.net/ont/geosparql#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT ?place ?fire ?property ?propertyLabel ?value\nWHERE {\n  ?fire a/rdfs:subClassOf* kwg-ont:Fire .\n\n  OPTIONAL { ?fire kwg-ont:spatialRelation ?place . }\n  OPTIONAL { ?fire geo:hasGeometry ?geometry . }\n\n  ?obs sosa:hasFeatureOfInterest ?fire ;\n       sosa:observedProperty ?property ;\n       sosa:hasSimpleResult ?value .\n\n  OPTIONAL { ?property rdfs:label ?propertyLabel . }\n}"
+    },
+    {
+      "cq": "What are all the available fire hazards, their details, and their types?",
+      "query": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX kwg-ont: <http://stko-kwg.geog.ucsb.edu/lod/ontology/>\nPREFIX geo: <http://www.opengis.net/ont/geosparql#>\n\nSELECT DISTINCT ?fireType ?superType ?property ?value\nWHERE {\n  ?fireType rdfs:subClassOf* kwg-ont:Fire .\n  OPTIONAL { ?fireType rdfs:subClassOf ?superType . }\n  OPTIONAL { ?fireType ?property ?value . }\n}\nORDER BY ?fireType ?property"
+    },
+    {
+      "cq": "What are all the available landslide-specific hazard attributes and their details related to all geographical places?",
+      "query": "PREFIX kwg-ont: <http://example.org/kwg-ont/>\nPREFIX sosa: <http://www.w3.org/ns/sosa/>\nSELECT ?place ?hazard ?property ?value\nWHERE {\n  ?hazard a kwg-ont:Hazard .\n  ?hazard kwg-ont:spatialRelation ?place .\n  ?obs sosa:hasFeatureOfInterest ?hazard ;\n       sosa:observedProperty ?property ;\n       sosa:hasSimpleResult ?value .\n}"
+    },
+    {
+      "cq": "What are all the damage details available done by flood-specific hazards that are related to a geographical place within a certain temporal extent?",
+      "query": "PREFIX kwg-ont: <http://example.org/kwg-ont/>\nPREFIX kwgr: <http://example.org/kwgr/>\nPREFIX sosa: <http://www.w3.org/ns/sosa/>\nPREFIX time: <http://www.w3.org/2006/time#>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n\nSELECT ?hazard ?place ?damage ?value ?time ?start ?end\nWHERE {\n  ?hazard a kwg-ont:NOAAFlood .\n  ?hazard kwg-ont:spatialRelation ?place .\n\n  ?obs a kwg-ont:ImpactObservation ;\n       sosa:hasFeatureOfInterest ?hazard ;\n       sosa:observedProperty ?damage ;\n       sosa:hasSimpleResult ?value ;\n       sosa:phenomenonTime ?time .\n\n  OPTIONAL {\n    ?time time:hasBeginning ?start .\n    ?time time:hasEnd ?end .\n  }\n}"
+    },
+    {
+      "cq": "What are all the damage details available done by landslide-specific hazards that are related to a geographical place within a certain temporal extent?",
+      "query": "PREFIX kwg-ont: <http://example.org/kwg-ont/>\nPREFIX sosa: <http://www.w3.org/ns/sosa/>\nPREFIX time: <http://www.w3.org/2006/time#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT ?hazard ?place ?damageType ?damageValue ?time\nWHERE {\n  \n  # Hazard (landslide-related)\n  ?hazard a ?hazardType .\n  ?hazardType rdfs:subClassOf* kwg-ont:NOAAHazardEvent .\n  FILTER(CONTAINS(LCASE(STR(?hazardType)), \"landslide\")) .\n\n  # Spatial relation to place\n  ?hazard kwg-ont:spatialRelation ?place .\n\n  # Impact / damage observation\n  ?obs a kwg-ont:ImpactObservation ;\n       sosa:hasFeatureOfInterest ?hazard ;\n       sosa:observedProperty ?damageType ;\n       sosa:hasSimpleResult ?damageValue ;\n       sosa:phenomenonTime ?time .\n}"
+    }
+  ],
+  "reasoning_steps": [
+    "First, identify the entities, filters, and relationships required by the competency question.",
+    "Next, map those needs to the classes and properties available in the provided schema context.",
+    "Then, outline the SELECT variables and graph patterns needed for the answer.",
+    "Finally, write one complete SPARQL query using only the available schema elements."
+  ],
+  "reasoning_example": {
+    "cq": "What are all the available fire hazards, their details, and their types?",
+    "reasoning": [
+      "First, I identify the main entity requested by the competency question as fire hazards, with the needed details being each fire-related class, its parent type, and any available schema properties and values.",
+      "Next, I map this to the schema by using kwg-ont:Fire as the root class, rdfs:subClassOf* to include all direct and indirect fire hazard types, rdfs:subClassOf to retrieve each immediate supertype, and a generic ?property ?value pattern to collect available details.",
+      "Then, I define the SELECT variables as ?fireType, ?superType, ?property, and ?value, and combine the required subclass pattern with optional patterns for supertypes and additional details.",
+      "Finally, I write one complete SPARQL query using only these schema elements to return all fire hazard types and their associated details."
+  ],
+    "query": "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\nPREFIX kwg-ont: <http://stko-kwg.geog.ucsb.edu/lod/ontology/>\nPREFIX geo: <http://www.opengis.net/ont/geosparql#>\n\nSELECT DISTINCT ?fireType ?superType ?property ?value\nWHERE {\n  ?fireType rdfs:subClassOf* kwg-ont:Fire .\n  OPTIONAL { ?fireType rdfs:subClassOf ?superType . }\n  OPTIONAL { ?fireType ?property ?value . }\n}\nORDER BY ?fireType ?property"
+  }
+}

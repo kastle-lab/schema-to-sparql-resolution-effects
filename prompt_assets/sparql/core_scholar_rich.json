@@ -1,0 +1,40 @@
+{
+  "few_shot_examples": [
+    {
+      "cq": "What are all available publications and their titles?",
+      "query": "PREFIX coresr-ont: <http://example.org/core_scholar_rich/>\nSELECT ?publication ?title\nWHERE {\n  ?publication coresr-ont:hasTitle ?title .\n}"
+    },
+    {
+      "cq": "What publications were submitted by authors who have a recorded role?",
+      "query": "PREFIX coresr-ont: <http://example.org/core_scholar_rich/>\nSELECT ?title\nWHERE {\n  ?publication coresr-ont:hasTitle ?title .\n  ?publication coresr-ont:submittedBy ?author .\n  ?agent coresr-ont:performsRole ?author .\n}"
+    },
+    {
+      "cq": "What publications were published after a certain date?",
+      "query": "PREFIX coresr-ont: <http://example.org/core_scholar_rich/>\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\nSELECT ?publication\nWHERE {\n  ?publication coresr-ont:dateOfPublication ?date .\n  FILTER (?date > \"2020-01-01\"^^xsd:date)\n}"
+    },
+    {
+      "cq": "What fields of study are represented by publications from universities in each state?",
+      "query": "PREFIX coresr-ont: <http://example.org/core_scholar_rich/>\n\nSELECT DISTINCT ?state ?fieldOfStudy\nWHERE {\n  ?publication coresr-ont:associatedFieldOfStudy ?fieldOfStudy .\n  ?publication coresr-ont:submittedBy ?author .\n  ?agent coresr-ont:performsRole ?author .\n  ?agent coresr-ont:associatedWith ?department .\n  ?department coresr-ont:partOf ?college .\n  ?college coresr-ont:partOf ?university .\n  ?university coresr-ont:locatedAt ?location .\n  ?location coresr-ont:atState ?state .\n}"
+    },
+    {
+      "cq": "Which authors or agents associated with publications are missing email addresses?",
+      "query": "PREFIX coresr-ont: <http://example.org/core_scholar_rich/>\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\nSELECT DISTINCT ?agent\nWHERE {\n  ?publication coresr-ont:submittedBy ?agent .\n  FILTER NOT EXISTS {\n    ?agent coresr-ont:hasContactInformation ?contact .\n    ?contact rdf:type/rdfs:subClassOf* coresr-ont:EmailAddress .\n  }\n}"
+    }
+  ],
+  "reasoning_steps": [
+    "First, identify the entities, filters, and relationships required by the competency question.",
+    "Next, map those needs to the classes and properties available in the provided schema context.",
+    "Then, outline the SELECT variables and graph patterns needed for the answer.",
+    "Finally, write one complete SPARQL query using only the available schema elements."
+  ],
+  "reasoning_example": {
+    "cq": "What are all available publications and their titles?",
+    "reasoning": [
+      "First, identify the main entity as the publication and the requested attribute as title.",
+      "Next, map this to the available schema using `coresr-ont:Publication` as the publication entity, `coresr-ont:hasTitle` to filter the title.",
+      "Then, select the publication identifier and optionally the publication’s title using `coresr-ont:hasTitle`.",
+      "Finally, write a SPARQL query that retrieves all publications and includes their titles when available."
+    ],
+    "query": "PREFIX coresr-ont: <http://example.org/core_scholar_rich/>\nSELECT ?publication ?title\nWHERE {\n  ?publication coresr-ont:hasTitle ?title .\n}"
+  }
+}

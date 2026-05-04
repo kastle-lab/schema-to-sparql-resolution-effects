@@ -1,0 +1,19 @@
+{
+  "few_shot_examples": [
+    {
+      "cq": "Which resources are connected by a given relationship?",
+      "query": "PREFIX ex: <http://example.org/graph/>\nSELECT ?subject ?object\nWHERE {\n  ?subject ex:relatedTo ?object .\n}"
+    }
+  ],
+  "reasoning_steps": [
+    "First, identify the entities, filters, and relationships required by the competency question.",
+    "Next, map those needs to the classes and properties available in the provided schema context.",
+    "Then, outline the SELECT variables and graph patterns needed for the answer.",
+    "Finally, write one complete SPARQL query using only the available schema elements."
+  ],
+  "reasoning_example": {
+    "cq": "Which resources are connected by a given relationship?",
+    "reasoning": "I identify the variables I need to return and the relationship that connects them. Then I write a query pattern that binds those variables through the available property.",
+    "query": "PREFIX ex: <http://example.org/graph/>\nSELECT ?subject ?object\nWHERE {\n  ?subject ex:relatedTo ?object .\n}"
+  }
+}
