@@ -1,0 +1,15 @@
+What are any and all available hazards, their details, and when did they happen?
+What are all the available geographical places and their names?
+What are all the available health-related concerns or attributes of all geographical places?
+What are all the available demographic attributes like population, household units, etc., associated with all geographical places?
+What are all the available earthquake hazards and how many are there?
+What are all the available tornado-specific hazard attributes related to all geographical places and how many are there?
+What are all the available storm-specific hazard attributes and their details related to all geographical places?
+What are all the available flood-specific hazard attributes and their details related to all geographical places?
+What are all the available climate-specific attributes related to all geographical places?
+What are all the available earthquake hazards, their details, and their types?
+What are all the available impact factor details for all hazard events?
+What are all the available damage details that have been impacted by a hazard?
+What are all the hurricane-specific hazard attributes available that are related to a geographical place, and all the damage impact details available and their temporal data if available?
+What are all the damage details available done by tornado-specific hazards that are related to a geographical place within a certain temporal extent?
+What are all the damage details available done by storm-specific hazards that are related to a geographical place within a certain temporal extent?

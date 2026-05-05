@@ -4,6 +4,7 @@ This repository contains prompt templates, prompt assets, helper scripts, notebo
 
 ## Directory and File Overview
 
+* **cqs/** — Competency question lists used as SPARQL generation tasks.
 * **prompt_assets/** — JSON prompt support assets used by the SPARQL generation workflow.
 * **prompts/** — Python prompt template modules used to assemble LLM requests for SPARQL generation.
 * **results/** — SPARQL generation and evaluation outputs.

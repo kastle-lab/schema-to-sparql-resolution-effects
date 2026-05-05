@@ -1,0 +1,15 @@
+What are all available authors?
+What are all available publications and their DOI values?
+What are all available departments?
+What are all available publications and their submission dates?
+What are all available universities and their city values?
+What authors are advised by which advisors?
+What publications belong to which publication type?
+What agents work in or are associated with which departments?
+What publications are associated with each field of study?
+What colleges are associated with universities in each city?
+Which universities in each state are associated with the most publications?
+What publications involve people from more than one department?
+What publication types have the longest average time between submission and publication?
+Which authors have advisors and also submitted publications by each field?
+Which departments have the highest number of agents missing family name information?
