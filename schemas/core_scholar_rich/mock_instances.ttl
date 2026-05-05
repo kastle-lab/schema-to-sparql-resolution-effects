@@ -1,0 +1,2203 @@
+# Auto-generated synthetic instance data.
+# Source schema: schema.ttl
+# Coverage: 30 named classes, 50 properties, 500 property assertions, 1871 triples.
+# Occurrences: at least 10 instances per named class and at least 10 assertions per declared property.
+
+@prefix coresr-ont: <http://example.org/core_scholar_rich/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+coresr-ont:AcademicConcentrationInstance01 a coresr-ont:AcademicConcentration ;
+    rdfs:label "Sample AcademicConcentration instance 1" .
+
+coresr-ont:AcademicConcentrationInstance02 a coresr-ont:AcademicConcentration ;
+    rdfs:label "Sample AcademicConcentration instance 2" .
+
+coresr-ont:AcademicConcentrationInstance03 a coresr-ont:AcademicConcentration ;
+    rdfs:label "Sample AcademicConcentration instance 3" .
+
+coresr-ont:AcademicConcentrationInstance04 a coresr-ont:AcademicConcentration ;
+    rdfs:label "Sample AcademicConcentration instance 4" .
+
+coresr-ont:AcademicConcentrationInstance05 a coresr-ont:AcademicConcentration ;
+    rdfs:label "Sample AcademicConcentration instance 5" .
+
+coresr-ont:AcademicConcentrationInstance06 a coresr-ont:AcademicConcentration ;
+    rdfs:label "Sample AcademicConcentration instance 6" .
+
+coresr-ont:AcademicConcentrationInstance07 a coresr-ont:AcademicConcentration ;
+    rdfs:label "Sample AcademicConcentration instance 7" .
+
+coresr-ont:AcademicConcentrationInstance08 a coresr-ont:AcademicConcentration ;
+    rdfs:label "Sample AcademicConcentration instance 8" .
+
+coresr-ont:AcademicConcentrationInstance09 a coresr-ont:AcademicConcentration ;
+    rdfs:label "Sample AcademicConcentration instance 9" .
+
+coresr-ont:AcademicConcentrationInstance10 a coresr-ont:AcademicConcentration ;
+    rdfs:label "Sample AcademicConcentration instance 10" .
+
+coresr-ont:DisciplineInstance01 a coresr-ont:Discipline ;
+    rdfs:label "Sample Discipline instance 1" .
+
+coresr-ont:DisciplineInstance02 a coresr-ont:Discipline ;
+    rdfs:label "Sample Discipline instance 2" .
+
+coresr-ont:DisciplineInstance03 a coresr-ont:Discipline ;
+    rdfs:label "Sample Discipline instance 3" .
+
+coresr-ont:DisciplineInstance04 a coresr-ont:Discipline ;
+    rdfs:label "Sample Discipline instance 4" .
+
+coresr-ont:DisciplineInstance05 a coresr-ont:Discipline ;
+    rdfs:label "Sample Discipline instance 5" .
+
+coresr-ont:DisciplineInstance06 a coresr-ont:Discipline ;
+    rdfs:label "Sample Discipline instance 6" .
+
+coresr-ont:DisciplineInstance07 a coresr-ont:Discipline ;
+    rdfs:label "Sample Discipline instance 7" .
+
+coresr-ont:DisciplineInstance08 a coresr-ont:Discipline ;
+    rdfs:label "Sample Discipline instance 8" .
+
+coresr-ont:DisciplineInstance09 a coresr-ont:Discipline ;
+    rdfs:label "Sample Discipline instance 9" .
+
+coresr-ont:DisciplineInstance10 a coresr-ont:Discipline ;
+    rdfs:label "Sample Discipline instance 10" .
+
+coresr-ont:EmailAddressInstance01 a coresr-ont:EmailAddress ;
+    rdfs:label "Sample EmailAddress instance 1" .
+
+coresr-ont:EmailAddressInstance02 a coresr-ont:EmailAddress ;
+    rdfs:label "Sample EmailAddress instance 2" .
+
+coresr-ont:EmailAddressInstance03 a coresr-ont:EmailAddress ;
+    rdfs:label "Sample EmailAddress instance 3" .
+
+coresr-ont:EmailAddressInstance04 a coresr-ont:EmailAddress ;
+    rdfs:label "Sample EmailAddress instance 4" .
+
+coresr-ont:EmailAddressInstance05 a coresr-ont:EmailAddress ;
+    rdfs:label "Sample EmailAddress instance 5" .
+
+coresr-ont:EmailAddressInstance06 a coresr-ont:EmailAddress ;
+    rdfs:label "Sample EmailAddress instance 6" .
+
+coresr-ont:EmailAddressInstance07 a coresr-ont:EmailAddress ;
+    rdfs:label "Sample EmailAddress instance 7" .
+
+coresr-ont:EmailAddressInstance08 a coresr-ont:EmailAddress ;
+    rdfs:label "Sample EmailAddress instance 8" .
+
+coresr-ont:EmailAddressInstance09 a coresr-ont:EmailAddress ;
+    rdfs:label "Sample EmailAddress instance 9" .
+
+coresr-ont:EmailAddressInstance10 a coresr-ont:EmailAddress ;
+    rdfs:label "Sample EmailAddress instance 10" .
+
+coresr-ont:FamilyNameInstance01 a coresr-ont:FamilyName ;
+    rdfs:label "Sample FamilyName instance 1" ;
+    coresr-ont:nameAsString coresr-ont:GenericObject01,
+        "Sample nameAsString value 1"^^xsd:string .
+
+coresr-ont:FamilyNameInstance02 a coresr-ont:FamilyName ;
+    rdfs:label "Sample FamilyName instance 2" ;
+    coresr-ont:nameAsString coresr-ont:GenericObject02,
+        "Sample nameAsString value 2"^^xsd:string .
+
+coresr-ont:FamilyNameInstance03 a coresr-ont:FamilyName ;
+    rdfs:label "Sample FamilyName instance 3" ;
+    coresr-ont:nameAsString coresr-ont:GenericObject03,
+        "Sample nameAsString value 3"^^xsd:string .
+
+coresr-ont:FamilyNameInstance04 a coresr-ont:FamilyName ;
+    rdfs:label "Sample FamilyName instance 4" ;
+    coresr-ont:nameAsString coresr-ont:GenericObject04,
+        "Sample nameAsString value 4"^^xsd:string .
+
+coresr-ont:FamilyNameInstance05 a coresr-ont:FamilyName ;
+    rdfs:label "Sample FamilyName instance 5" ;
+    coresr-ont:nameAsString coresr-ont:GenericObject05,
+        "Sample nameAsString value 5"^^xsd:string .
+
+coresr-ont:FamilyNameInstance06 a coresr-ont:FamilyName ;
+    rdfs:label "Sample FamilyName instance 6" ;
+    coresr-ont:nameAsString coresr-ont:GenericObject06,
+        "Sample nameAsString value 6"^^xsd:string .
+
+coresr-ont:FamilyNameInstance07 a coresr-ont:FamilyName ;
+    rdfs:label "Sample FamilyName instance 7" ;
+    coresr-ont:nameAsString coresr-ont:GenericObject07,
+        "Sample nameAsString value 7"^^xsd:string .
+
+coresr-ont:FamilyNameInstance08 a coresr-ont:FamilyName ;
+    rdfs:label "Sample FamilyName instance 8" ;
+    coresr-ont:nameAsString coresr-ont:GenericObject08,
+        "Sample nameAsString value 8"^^xsd:string .
+
+coresr-ont:FamilyNameInstance09 a coresr-ont:FamilyName ;
+    rdfs:label "Sample FamilyName instance 9" ;
+    coresr-ont:nameAsString coresr-ont:GenericObject09,
+        "Sample nameAsString value 9"^^xsd:string .
+
+coresr-ont:FamilyNameInstance10 a coresr-ont:FamilyName ;
+    rdfs:label "Sample FamilyName instance 10" ;
+    coresr-ont:nameAsString coresr-ont:GenericObject10,
+        "Sample nameAsString value 10"^^xsd:string .
+
+coresr-ont:FirstNameInstance01 a coresr-ont:FirstName ;
+    rdfs:label "Sample FirstName instance 1" ;
+    coresr-ont:nameAsString coresr-ont:GenericObject01,
+        "Sample nameAsString value 1"^^xsd:string .
+
+coresr-ont:FirstNameInstance02 a coresr-ont:FirstName ;
+    rdfs:label "Sample FirstName instance 2" ;
+    coresr-ont:nameAsString coresr-ont:GenericObject02,
+        "Sample nameAsString value 2"^^xsd:string .
+
+coresr-ont:FirstNameInstance03 a coresr-ont:FirstName ;
+    rdfs:label "Sample FirstName instance 3" ;
+    coresr-ont:nameAsString coresr-ont:GenericObject03,
+        "Sample nameAsString value 3"^^xsd:string .
+
+coresr-ont:FirstNameInstance04 a coresr-ont:FirstName ;
+    rdfs:label "Sample FirstName instance 4" ;
+    coresr-ont:nameAsString coresr-ont:GenericObject04,
+        "Sample nameAsString value 4"^^xsd:string .
+
+coresr-ont:FirstNameInstance05 a coresr-ont:FirstName ;
+    rdfs:label "Sample FirstName instance 5" ;
+    coresr-ont:nameAsString coresr-ont:GenericObject05,
+        "Sample nameAsString value 5"^^xsd:string .
+
+coresr-ont:FirstNameInstance06 a coresr-ont:FirstName ;
+    rdfs:label "Sample FirstName instance 6" ;
+    coresr-ont:nameAsString coresr-ont:GenericObject06,
+        "Sample nameAsString value 6"^^xsd:string .
+
+coresr-ont:FirstNameInstance07 a coresr-ont:FirstName ;
+    rdfs:label "Sample FirstName instance 7" ;
+    coresr-ont:nameAsString coresr-ont:GenericObject07,
+        "Sample nameAsString value 7"^^xsd:string .
+
+coresr-ont:FirstNameInstance08 a coresr-ont:FirstName ;
+    rdfs:label "Sample FirstName instance 8" ;
+    coresr-ont:nameAsString coresr-ont:GenericObject08,
+        "Sample nameAsString value 8"^^xsd:string .
+
+coresr-ont:FirstNameInstance09 a coresr-ont:FirstName ;
+    rdfs:label "Sample FirstName instance 9" ;
+    coresr-ont:nameAsString coresr-ont:GenericObject09,
+        "Sample nameAsString value 9"^^xsd:string .
+
+coresr-ont:FirstNameInstance10 a coresr-ont:FirstName ;
+    rdfs:label "Sample FirstName instance 10" ;
+    coresr-ont:nameAsString coresr-ont:GenericObject10,
+        "Sample nameAsString value 10"^^xsd:string .
+
+coresr-ont:GenericSubject01 a owl:Thing ;
+    rdfs:label "Sample generic subject 1" ;
+    coresr-ont:advisedBy coresr-ont:AdvisorInstance01 ;
+    coresr-ont:associatedFieldOfStudy coresr-ont:FieldOfStudyInstance01 ;
+    coresr-ont:associatedWith coresr-ont:DepartmentInstance01 ;
+    coresr-ont:atState coresr-ont:StateInstance01 ;
+    coresr-ont:atTime "2026-05-01"^^xsd:date ;
+    coresr-ont:contributedTo coresr-ont:PublicationInstance01 ;
+    coresr-ont:doiAsString "Sample doiAsString value 1"^^xsd:string ;
+    coresr-ont:hasAbstract coresr-ont:AbstractInstance01 ;
+    coresr-ont:hasAssociatedAgent coresr-ont:AgentInstance01 ;
+    coresr-ont:hasContactInformation coresr-ont:ContactInformationInstance01 ;
+    coresr-ont:hasDescription "Sample hasDescription value 1"^^xsd:string ;
+    coresr-ont:hasIdentifier coresr-ont:DOIInstance01 ;
+    coresr-ont:hasIssue coresr-ont:IssueInstance01 ;
+    coresr-ont:hasPart coresr-ont:CollegeInstance01,
+        coresr-ont:DepartmentInstance01 ;
+    coresr-ont:hasPublicationType coresr-ont:PublicationTypeInstance01 ;
+    coresr-ont:hasTitle "Sample hasTitle value 1"^^xsd:string ;
+    coresr-ont:hasVolume coresr-ont:VolumeInstance01 ;
+    coresr-ont:inCity coresr-ont:CityInstance01 ;
+    coresr-ont:isAbstractOf coresr-ont:PublicationInstance01 ;
+    coresr-ont:isIdentifierFor coresr-ont:PublicationInstance01 ;
+    coresr-ont:isIssueOf coresr-ont:PeriodicalLiteratureInstance01 ;
+    coresr-ont:isLocationOf coresr-ont:UniversityInstance01 ;
+    coresr-ont:isPerformedBy coresr-ont:AgentInstance01 ;
+    coresr-ont:isPublicationStateOf coresr-ont:PublicationInstance01 ;
+    coresr-ont:isPublicationTypeOf coresr-ont:PublicationInstance01 ;
+    coresr-ont:isStateOf coresr-ont:LocationInstance01 ;
+    coresr-ont:isVolumeOf coresr-ont:PeriodicalLiteratureInstance01 ;
+    coresr-ont:issueNumber "42"^^xsd:int ;
+    coresr-ont:locatedAt coresr-ont:LocationInstance01 ;
+    coresr-ont:partOf coresr-ont:ArticleInstance01,
+        coresr-ont:CollegeInstance01,
+        coresr-ont:UniversityInstance01 ;
+    coresr-ont:performsRole coresr-ont:RoleInstance01 ;
+    coresr-ont:publicationState coresr-ont:ProcessStateInstance01 ;
+    coresr-ont:stateAsString "Sample stateAsString value 1"^^xsd:string ;
+    coresr-ont:submits coresr-ont:PublicationInstance01 ;
+    coresr-ont:submittedBy coresr-ont:AuthorInstance01 ;
+    coresr-ont:typeAsString "Sample typeAsString value 1"^^xsd:string ;
+    coresr-ont:volumeNumber "42"^^xsd:int ;
+    terms:contributor "Sample contributor value 1" ;
+    terms:description "Sample description value 1" ;
+    terms:title "Sample title value 1" .
+
+coresr-ont:GenericSubject02 a owl:Thing ;
+    rdfs:label "Sample generic subject 2" ;
+    coresr-ont:advisedBy coresr-ont:AdvisorInstance02 ;
+    coresr-ont:associatedFieldOfStudy coresr-ont:FieldOfStudyInstance02 ;
+    coresr-ont:associatedWith coresr-ont:DepartmentInstance02 ;
+    coresr-ont:atState coresr-ont:StateInstance02 ;
+    coresr-ont:atTime "2026-05-02"^^xsd:date ;
+    coresr-ont:contributedTo coresr-ont:PublicationInstance02 ;
+    coresr-ont:doiAsString "Sample doiAsString value 2"^^xsd:string ;
+    coresr-ont:hasAbstract coresr-ont:AbstractInstance02 ;
+    coresr-ont:hasAssociatedAgent coresr-ont:AgentInstance02 ;
+    coresr-ont:hasContactInformation coresr-ont:ContactInformationInstance02 ;
+    coresr-ont:hasDescription "Sample hasDescription value 2"^^xsd:string ;
+    coresr-ont:hasIdentifier coresr-ont:DOIInstance02 ;
+    coresr-ont:hasIssue coresr-ont:IssueInstance02 ;
+    coresr-ont:hasPart coresr-ont:CollegeInstance02,
+        coresr-ont:DepartmentInstance02 ;
+    coresr-ont:hasPublicationType coresr-ont:PublicationTypeInstance02 ;
+    coresr-ont:hasTitle "Sample hasTitle value 2"^^xsd:string ;
+    coresr-ont:hasVolume coresr-ont:VolumeInstance02 ;
+    coresr-ont:inCity coresr-ont:CityInstance02 ;
+    coresr-ont:isAbstractOf coresr-ont:PublicationInstance02 ;
+    coresr-ont:isIdentifierFor coresr-ont:PublicationInstance02 ;
+    coresr-ont:isIssueOf coresr-ont:PeriodicalLiteratureInstance02 ;
+    coresr-ont:isLocationOf coresr-ont:UniversityInstance02 ;
+    coresr-ont:isPerformedBy coresr-ont:AgentInstance02 ;
+    coresr-ont:isPublicationStateOf coresr-ont:PublicationInstance02 ;
+    coresr-ont:isPublicationTypeOf coresr-ont:PublicationInstance02 ;
+    coresr-ont:isStateOf coresr-ont:LocationInstance02 ;
+    coresr-ont:isVolumeOf coresr-ont:PeriodicalLiteratureInstance02 ;
+    coresr-ont:issueNumber "43"^^xsd:int ;
+    coresr-ont:locatedAt coresr-ont:LocationInstance02 ;
+    coresr-ont:partOf coresr-ont:ArticleInstance02,
+        coresr-ont:CollegeInstance02,
+        coresr-ont:UniversityInstance02 ;
+    coresr-ont:performsRole coresr-ont:RoleInstance02 ;
+    coresr-ont:publicationState coresr-ont:ProcessStateInstance02 ;
+    coresr-ont:stateAsString "Sample stateAsString value 2"^^xsd:string ;
+    coresr-ont:submits coresr-ont:PublicationInstance02 ;
+    coresr-ont:submittedBy coresr-ont:AuthorInstance02 ;
+    coresr-ont:typeAsString "Sample typeAsString value 2"^^xsd:string ;
+    coresr-ont:volumeNumber "43"^^xsd:int ;
+    terms:contributor "Sample contributor value 2" ;
+    terms:description "Sample description value 2" ;
+    terms:title "Sample title value 2" .
+
+coresr-ont:GenericSubject03 a owl:Thing ;
+    rdfs:label "Sample generic subject 3" ;
+    coresr-ont:advisedBy coresr-ont:AdvisorInstance03 ;
+    coresr-ont:associatedFieldOfStudy coresr-ont:FieldOfStudyInstance03 ;
+    coresr-ont:associatedWith coresr-ont:DepartmentInstance03 ;
+    coresr-ont:atState coresr-ont:StateInstance03 ;
+    coresr-ont:atTime "2026-05-03"^^xsd:date ;
+    coresr-ont:contributedTo coresr-ont:PublicationInstance03 ;
+    coresr-ont:doiAsString "Sample doiAsString value 3"^^xsd:string ;
+    coresr-ont:hasAbstract coresr-ont:AbstractInstance03 ;
+    coresr-ont:hasAssociatedAgent coresr-ont:AgentInstance03 ;
+    coresr-ont:hasContactInformation coresr-ont:ContactInformationInstance03 ;
+    coresr-ont:hasDescription "Sample hasDescription value 3"^^xsd:string ;
+    coresr-ont:hasIdentifier coresr-ont:DOIInstance03 ;
+    coresr-ont:hasIssue coresr-ont:IssueInstance03 ;
+    coresr-ont:hasPart coresr-ont:CollegeInstance03,
+        coresr-ont:DepartmentInstance03 ;
+    coresr-ont:hasPublicationType coresr-ont:PublicationTypeInstance03 ;
+    coresr-ont:hasTitle "Sample hasTitle value 3"^^xsd:string ;
+    coresr-ont:hasVolume coresr-ont:VolumeInstance03 ;
+    coresr-ont:inCity coresr-ont:CityInstance03 ;
+    coresr-ont:isAbstractOf coresr-ont:PublicationInstance03 ;
+    coresr-ont:isIdentifierFor coresr-ont:PublicationInstance03 ;
+    coresr-ont:isIssueOf coresr-ont:PeriodicalLiteratureInstance03 ;
+    coresr-ont:isLocationOf coresr-ont:UniversityInstance03 ;
+    coresr-ont:isPerformedBy coresr-ont:AgentInstance03 ;
+    coresr-ont:isPublicationStateOf coresr-ont:PublicationInstance03 ;
+    coresr-ont:isPublicationTypeOf coresr-ont:PublicationInstance03 ;
+    coresr-ont:isStateOf coresr-ont:LocationInstance03 ;
+    coresr-ont:isVolumeOf coresr-ont:PeriodicalLiteratureInstance03 ;
+    coresr-ont:issueNumber "44"^^xsd:int ;
+    coresr-ont:locatedAt coresr-ont:LocationInstance03 ;
+    coresr-ont:partOf coresr-ont:ArticleInstance03,
+        coresr-ont:CollegeInstance03,
+        coresr-ont:UniversityInstance03 ;
+    coresr-ont:performsRole coresr-ont:RoleInstance03 ;
+    coresr-ont:publicationState coresr-ont:ProcessStateInstance03 ;
+    coresr-ont:stateAsString "Sample stateAsString value 3"^^xsd:string ;
+    coresr-ont:submits coresr-ont:PublicationInstance03 ;
+    coresr-ont:submittedBy coresr-ont:AuthorInstance03 ;
+    coresr-ont:typeAsString "Sample typeAsString value 3"^^xsd:string ;
+    coresr-ont:volumeNumber "44"^^xsd:int ;
+    terms:contributor "Sample contributor value 3" ;
+    terms:description "Sample description value 3" ;
+    terms:title "Sample title value 3" .
+
+coresr-ont:GenericSubject04 a owl:Thing ;
+    rdfs:label "Sample generic subject 4" ;
+    coresr-ont:advisedBy coresr-ont:AdvisorInstance04 ;
+    coresr-ont:associatedFieldOfStudy coresr-ont:FieldOfStudyInstance04 ;
+    coresr-ont:associatedWith coresr-ont:DepartmentInstance04 ;
+    coresr-ont:atState coresr-ont:StateInstance04 ;
+    coresr-ont:atTime "2026-05-04"^^xsd:date ;
+    coresr-ont:contributedTo coresr-ont:PublicationInstance04 ;
+    coresr-ont:doiAsString "Sample doiAsString value 4"^^xsd:string ;
+    coresr-ont:hasAbstract coresr-ont:AbstractInstance04 ;
+    coresr-ont:hasAssociatedAgent coresr-ont:AgentInstance04 ;
+    coresr-ont:hasContactInformation coresr-ont:ContactInformationInstance04 ;
+    coresr-ont:hasDescription "Sample hasDescription value 4"^^xsd:string ;
+    coresr-ont:hasIdentifier coresr-ont:DOIInstance04 ;
+    coresr-ont:hasIssue coresr-ont:IssueInstance04 ;
+    coresr-ont:hasPart coresr-ont:CollegeInstance04,
+        coresr-ont:DepartmentInstance04 ;
+    coresr-ont:hasPublicationType coresr-ont:PublicationTypeInstance04 ;
+    coresr-ont:hasTitle "Sample hasTitle value 4"^^xsd:string ;
+    coresr-ont:hasVolume coresr-ont:VolumeInstance04 ;
+    coresr-ont:inCity coresr-ont:CityInstance04 ;
+    coresr-ont:isAbstractOf coresr-ont:PublicationInstance04 ;
+    coresr-ont:isIdentifierFor coresr-ont:PublicationInstance04 ;
+    coresr-ont:isIssueOf coresr-ont:PeriodicalLiteratureInstance04 ;
+    coresr-ont:isLocationOf coresr-ont:UniversityInstance04 ;
+    coresr-ont:isPerformedBy coresr-ont:AgentInstance04 ;
+    coresr-ont:isPublicationStateOf coresr-ont:PublicationInstance04 ;
+    coresr-ont:isPublicationTypeOf coresr-ont:PublicationInstance04 ;
+    coresr-ont:isStateOf coresr-ont:LocationInstance04 ;
+    coresr-ont:isVolumeOf coresr-ont:PeriodicalLiteratureInstance04 ;
+    coresr-ont:issueNumber "45"^^xsd:int ;
+    coresr-ont:locatedAt coresr-ont:LocationInstance04 ;
+    coresr-ont:partOf coresr-ont:ArticleInstance04,
+        coresr-ont:CollegeInstance04,
+        coresr-ont:UniversityInstance04 ;
+    coresr-ont:performsRole coresr-ont:RoleInstance04 ;
+    coresr-ont:publicationState coresr-ont:ProcessStateInstance04 ;
+    coresr-ont:stateAsString "Sample stateAsString value 4"^^xsd:string ;
+    coresr-ont:submits coresr-ont:PublicationInstance04 ;
+    coresr-ont:submittedBy coresr-ont:AuthorInstance04 ;
+    coresr-ont:typeAsString "Sample typeAsString value 4"^^xsd:string ;
+    coresr-ont:volumeNumber "45"^^xsd:int ;
+    terms:contributor "Sample contributor value 4" ;
+    terms:description "Sample description value 4" ;
+    terms:title "Sample title value 4" .
+
+coresr-ont:GenericSubject05 a owl:Thing ;
+    rdfs:label "Sample generic subject 5" ;
+    coresr-ont:advisedBy coresr-ont:AdvisorInstance05 ;
+    coresr-ont:associatedFieldOfStudy coresr-ont:FieldOfStudyInstance05 ;
+    coresr-ont:associatedWith coresr-ont:DepartmentInstance05 ;
+    coresr-ont:atState coresr-ont:StateInstance05 ;
+    coresr-ont:atTime "2026-05-05"^^xsd:date ;
+    coresr-ont:contributedTo coresr-ont:PublicationInstance05 ;
+    coresr-ont:doiAsString "Sample doiAsString value 5"^^xsd:string ;
+    coresr-ont:hasAbstract coresr-ont:AbstractInstance05 ;
+    coresr-ont:hasAssociatedAgent coresr-ont:AgentInstance05 ;
+    coresr-ont:hasContactInformation coresr-ont:ContactInformationInstance05 ;
+    coresr-ont:hasDescription "Sample hasDescription value 5"^^xsd:string ;
+    coresr-ont:hasIdentifier coresr-ont:DOIInstance05 ;
+    coresr-ont:hasIssue coresr-ont:IssueInstance05 ;
+    coresr-ont:hasPart coresr-ont:CollegeInstance05,
+        coresr-ont:DepartmentInstance05 ;
+    coresr-ont:hasPublicationType coresr-ont:PublicationTypeInstance05 ;
+    coresr-ont:hasTitle "Sample hasTitle value 5"^^xsd:string ;
+    coresr-ont:hasVolume coresr-ont:VolumeInstance05 ;
+    coresr-ont:inCity coresr-ont:CityInstance05 ;
+    coresr-ont:isAbstractOf coresr-ont:PublicationInstance05 ;
+    coresr-ont:isIdentifierFor coresr-ont:PublicationInstance05 ;
+    coresr-ont:isIssueOf coresr-ont:PeriodicalLiteratureInstance05 ;
+    coresr-ont:isLocationOf coresr-ont:UniversityInstance05 ;
+    coresr-ont:isPerformedBy coresr-ont:AgentInstance05 ;
+    coresr-ont:isPublicationStateOf coresr-ont:PublicationInstance05 ;
+    coresr-ont:isPublicationTypeOf coresr-ont:PublicationInstance05 ;
+    coresr-ont:isStateOf coresr-ont:LocationInstance05 ;
+    coresr-ont:isVolumeOf coresr-ont:PeriodicalLiteratureInstance05 ;
+    coresr-ont:issueNumber "46"^^xsd:int ;
+    coresr-ont:locatedAt coresr-ont:LocationInstance05 ;
+    coresr-ont:partOf coresr-ont:ArticleInstance05,
+        coresr-ont:CollegeInstance05,
+        coresr-ont:UniversityInstance05 ;
+    coresr-ont:performsRole coresr-ont:RoleInstance05 ;
+    coresr-ont:publicationState coresr-ont:ProcessStateInstance05 ;
+    coresr-ont:stateAsString "Sample stateAsString value 5"^^xsd:string ;
+    coresr-ont:submits coresr-ont:PublicationInstance05 ;
+    coresr-ont:submittedBy coresr-ont:AuthorInstance05 ;
+    coresr-ont:typeAsString "Sample typeAsString value 5"^^xsd:string ;
+    coresr-ont:volumeNumber "46"^^xsd:int ;
+    terms:contributor "Sample contributor value 5" ;
+    terms:description "Sample description value 5" ;
+    terms:title "Sample title value 5" .
+
+coresr-ont:GenericSubject06 a owl:Thing ;
+    rdfs:label "Sample generic subject 6" ;
+    coresr-ont:advisedBy coresr-ont:AdvisorInstance06 ;
+    coresr-ont:associatedFieldOfStudy coresr-ont:FieldOfStudyInstance06 ;
+    coresr-ont:associatedWith coresr-ont:DepartmentInstance06 ;
+    coresr-ont:atState coresr-ont:StateInstance06 ;
+    coresr-ont:atTime "2026-05-06"^^xsd:date ;
+    coresr-ont:contributedTo coresr-ont:PublicationInstance06 ;
+    coresr-ont:doiAsString "Sample doiAsString value 6"^^xsd:string ;
+    coresr-ont:hasAbstract coresr-ont:AbstractInstance06 ;
+    coresr-ont:hasAssociatedAgent coresr-ont:AgentInstance06 ;
+    coresr-ont:hasContactInformation coresr-ont:ContactInformationInstance06 ;
+    coresr-ont:hasDescription "Sample hasDescription value 6"^^xsd:string ;
+    coresr-ont:hasIdentifier coresr-ont:DOIInstance06 ;
+    coresr-ont:hasIssue coresr-ont:IssueInstance06 ;
+    coresr-ont:hasPart coresr-ont:CollegeInstance06,
+        coresr-ont:DepartmentInstance06 ;
+    coresr-ont:hasPublicationType coresr-ont:PublicationTypeInstance06 ;
+    coresr-ont:hasTitle "Sample hasTitle value 6"^^xsd:string ;
+    coresr-ont:hasVolume coresr-ont:VolumeInstance06 ;
+    coresr-ont:inCity coresr-ont:CityInstance06 ;
+    coresr-ont:isAbstractOf coresr-ont:PublicationInstance06 ;
+    coresr-ont:isIdentifierFor coresr-ont:PublicationInstance06 ;
+    coresr-ont:isIssueOf coresr-ont:PeriodicalLiteratureInstance06 ;
+    coresr-ont:isLocationOf coresr-ont:UniversityInstance06 ;
+    coresr-ont:isPerformedBy coresr-ont:AgentInstance06 ;
+    coresr-ont:isPublicationStateOf coresr-ont:PublicationInstance06 ;
+    coresr-ont:isPublicationTypeOf coresr-ont:PublicationInstance06 ;
+    coresr-ont:isStateOf coresr-ont:LocationInstance06 ;
+    coresr-ont:isVolumeOf coresr-ont:PeriodicalLiteratureInstance06 ;
+    coresr-ont:issueNumber "47"^^xsd:int ;
+    coresr-ont:locatedAt coresr-ont:LocationInstance06 ;
+    coresr-ont:partOf coresr-ont:ArticleInstance06,
+        coresr-ont:CollegeInstance06,
+        coresr-ont:UniversityInstance06 ;
+    coresr-ont:performsRole coresr-ont:RoleInstance06 ;
+    coresr-ont:publicationState coresr-ont:ProcessStateInstance06 ;
+    coresr-ont:stateAsString "Sample stateAsString value 6"^^xsd:string ;
+    coresr-ont:submits coresr-ont:PublicationInstance06 ;
+    coresr-ont:submittedBy coresr-ont:AuthorInstance06 ;
+    coresr-ont:typeAsString "Sample typeAsString value 6"^^xsd:string ;
+    coresr-ont:volumeNumber "47"^^xsd:int ;
+    terms:contributor "Sample contributor value 6" ;
+    terms:description "Sample description value 6" ;
+    terms:title "Sample title value 6" .
+
+coresr-ont:GenericSubject07 a owl:Thing ;
+    rdfs:label "Sample generic subject 7" ;
+    coresr-ont:advisedBy coresr-ont:AdvisorInstance07 ;
+    coresr-ont:associatedFieldOfStudy coresr-ont:FieldOfStudyInstance07 ;
+    coresr-ont:associatedWith coresr-ont:DepartmentInstance07 ;
+    coresr-ont:atState coresr-ont:StateInstance07 ;
+    coresr-ont:atTime "2026-05-07"^^xsd:date ;
+    coresr-ont:contributedTo coresr-ont:PublicationInstance07 ;
+    coresr-ont:doiAsString "Sample doiAsString value 7"^^xsd:string ;
+    coresr-ont:hasAbstract coresr-ont:AbstractInstance07 ;
+    coresr-ont:hasAssociatedAgent coresr-ont:AgentInstance07 ;
+    coresr-ont:hasContactInformation coresr-ont:ContactInformationInstance07 ;
+    coresr-ont:hasDescription "Sample hasDescription value 7"^^xsd:string ;
+    coresr-ont:hasIdentifier coresr-ont:DOIInstance07 ;
+    coresr-ont:hasIssue coresr-ont:IssueInstance07 ;
+    coresr-ont:hasPart coresr-ont:CollegeInstance07,
+        coresr-ont:DepartmentInstance07 ;
+    coresr-ont:hasPublicationType coresr-ont:PublicationTypeInstance07 ;
+    coresr-ont:hasTitle "Sample hasTitle value 7"^^xsd:string ;
+    coresr-ont:hasVolume coresr-ont:VolumeInstance07 ;
+    coresr-ont:inCity coresr-ont:CityInstance07 ;
+    coresr-ont:isAbstractOf coresr-ont:PublicationInstance07 ;
+    coresr-ont:isIdentifierFor coresr-ont:PublicationInstance07 ;
+    coresr-ont:isIssueOf coresr-ont:PeriodicalLiteratureInstance07 ;
+    coresr-ont:isLocationOf coresr-ont:UniversityInstance07 ;
+    coresr-ont:isPerformedBy coresr-ont:AgentInstance07 ;
+    coresr-ont:isPublicationStateOf coresr-ont:PublicationInstance07 ;
+    coresr-ont:isPublicationTypeOf coresr-ont:PublicationInstance07 ;
+    coresr-ont:isStateOf coresr-ont:LocationInstance07 ;
+    coresr-ont:isVolumeOf coresr-ont:PeriodicalLiteratureInstance07 ;
+    coresr-ont:issueNumber "48"^^xsd:int ;
+    coresr-ont:locatedAt coresr-ont:LocationInstance07 ;
+    coresr-ont:partOf coresr-ont:ArticleInstance07,
+        coresr-ont:CollegeInstance07,
+        coresr-ont:UniversityInstance07 ;
+    coresr-ont:performsRole coresr-ont:RoleInstance07 ;
+    coresr-ont:publicationState coresr-ont:ProcessStateInstance07 ;
+    coresr-ont:stateAsString "Sample stateAsString value 7"^^xsd:string ;
+    coresr-ont:submits coresr-ont:PublicationInstance07 ;
+    coresr-ont:submittedBy coresr-ont:AuthorInstance07 ;
+    coresr-ont:typeAsString "Sample typeAsString value 7"^^xsd:string ;
+    coresr-ont:volumeNumber "48"^^xsd:int ;
+    terms:contributor "Sample contributor value 7" ;
+    terms:description "Sample description value 7" ;
+    terms:title "Sample title value 7" .
+
+coresr-ont:GenericSubject08 a owl:Thing ;
+    rdfs:label "Sample generic subject 8" ;
+    coresr-ont:advisedBy coresr-ont:AdvisorInstance08 ;
+    coresr-ont:associatedFieldOfStudy coresr-ont:FieldOfStudyInstance08 ;
+    coresr-ont:associatedWith coresr-ont:DepartmentInstance08 ;
+    coresr-ont:atState coresr-ont:StateInstance08 ;
+    coresr-ont:atTime "2026-05-08"^^xsd:date ;
+    coresr-ont:contributedTo coresr-ont:PublicationInstance08 ;
+    coresr-ont:doiAsString "Sample doiAsString value 8"^^xsd:string ;
+    coresr-ont:hasAbstract coresr-ont:AbstractInstance08 ;
+    coresr-ont:hasAssociatedAgent coresr-ont:AgentInstance08 ;
+    coresr-ont:hasContactInformation coresr-ont:ContactInformationInstance08 ;
+    coresr-ont:hasDescription "Sample hasDescription value 8"^^xsd:string ;
+    coresr-ont:hasIdentifier coresr-ont:DOIInstance08 ;
+    coresr-ont:hasIssue coresr-ont:IssueInstance08 ;
+    coresr-ont:hasPart coresr-ont:CollegeInstance08,
+        coresr-ont:DepartmentInstance08 ;
+    coresr-ont:hasPublicationType coresr-ont:PublicationTypeInstance08 ;
+    coresr-ont:hasTitle "Sample hasTitle value 8"^^xsd:string ;
+    coresr-ont:hasVolume coresr-ont:VolumeInstance08 ;
+    coresr-ont:inCity coresr-ont:CityInstance08 ;
+    coresr-ont:isAbstractOf coresr-ont:PublicationInstance08 ;
+    coresr-ont:isIdentifierFor coresr-ont:PublicationInstance08 ;
+    coresr-ont:isIssueOf coresr-ont:PeriodicalLiteratureInstance08 ;
+    coresr-ont:isLocationOf coresr-ont:UniversityInstance08 ;
+    coresr-ont:isPerformedBy coresr-ont:AgentInstance08 ;
+    coresr-ont:isPublicationStateOf coresr-ont:PublicationInstance08 ;
+    coresr-ont:isPublicationTypeOf coresr-ont:PublicationInstance08 ;
+    coresr-ont:isStateOf coresr-ont:LocationInstance08 ;
+    coresr-ont:isVolumeOf coresr-ont:PeriodicalLiteratureInstance08 ;
+    coresr-ont:issueNumber "49"^^xsd:int ;
+    coresr-ont:locatedAt coresr-ont:LocationInstance08 ;
+    coresr-ont:partOf coresr-ont:ArticleInstance08,
+        coresr-ont:CollegeInstance08,
+        coresr-ont:UniversityInstance08 ;
+    coresr-ont:performsRole coresr-ont:RoleInstance08 ;
+    coresr-ont:publicationState coresr-ont:ProcessStateInstance08 ;
+    coresr-ont:stateAsString "Sample stateAsString value 8"^^xsd:string ;
+    coresr-ont:submits coresr-ont:PublicationInstance08 ;
+    coresr-ont:submittedBy coresr-ont:AuthorInstance08 ;
+    coresr-ont:typeAsString "Sample typeAsString value 8"^^xsd:string ;
+    coresr-ont:volumeNumber "49"^^xsd:int ;
+    terms:contributor "Sample contributor value 8" ;
+    terms:description "Sample description value 8" ;
+    terms:title "Sample title value 8" .
+
+coresr-ont:GenericSubject09 a owl:Thing ;
+    rdfs:label "Sample generic subject 9" ;
+    coresr-ont:advisedBy coresr-ont:AdvisorInstance09 ;
+    coresr-ont:associatedFieldOfStudy coresr-ont:FieldOfStudyInstance09 ;
+    coresr-ont:associatedWith coresr-ont:DepartmentInstance09 ;
+    coresr-ont:atState coresr-ont:StateInstance09 ;
+    coresr-ont:atTime "2026-05-09"^^xsd:date ;
+    coresr-ont:contributedTo coresr-ont:PublicationInstance09 ;
+    coresr-ont:doiAsString "Sample doiAsString value 9"^^xsd:string ;
+    coresr-ont:hasAbstract coresr-ont:AbstractInstance09 ;
+    coresr-ont:hasAssociatedAgent coresr-ont:AgentInstance09 ;
+    coresr-ont:hasContactInformation coresr-ont:ContactInformationInstance09 ;
+    coresr-ont:hasDescription "Sample hasDescription value 9"^^xsd:string ;
+    coresr-ont:hasIdentifier coresr-ont:DOIInstance09 ;
+    coresr-ont:hasIssue coresr-ont:IssueInstance09 ;
+    coresr-ont:hasPart coresr-ont:CollegeInstance09,
+        coresr-ont:DepartmentInstance09 ;
+    coresr-ont:hasPublicationType coresr-ont:PublicationTypeInstance09 ;
+    coresr-ont:hasTitle "Sample hasTitle value 9"^^xsd:string ;
+    coresr-ont:hasVolume coresr-ont:VolumeInstance09 ;
+    coresr-ont:inCity coresr-ont:CityInstance09 ;
+    coresr-ont:isAbstractOf coresr-ont:PublicationInstance09 ;
+    coresr-ont:isIdentifierFor coresr-ont:PublicationInstance09 ;
+    coresr-ont:isIssueOf coresr-ont:PeriodicalLiteratureInstance09 ;
+    coresr-ont:isLocationOf coresr-ont:UniversityInstance09 ;
+    coresr-ont:isPerformedBy coresr-ont:AgentInstance09 ;
+    coresr-ont:isPublicationStateOf coresr-ont:PublicationInstance09 ;
+    coresr-ont:isPublicationTypeOf coresr-ont:PublicationInstance09 ;
+    coresr-ont:isStateOf coresr-ont:LocationInstance09 ;
+    coresr-ont:isVolumeOf coresr-ont:PeriodicalLiteratureInstance09 ;
+    coresr-ont:issueNumber "50"^^xsd:int ;
+    coresr-ont:locatedAt coresr-ont:LocationInstance09 ;
+    coresr-ont:partOf coresr-ont:ArticleInstance09,
+        coresr-ont:CollegeInstance09,
+        coresr-ont:UniversityInstance09 ;
+    coresr-ont:performsRole coresr-ont:RoleInstance09 ;
+    coresr-ont:publicationState coresr-ont:ProcessStateInstance09 ;
+    coresr-ont:stateAsString "Sample stateAsString value 9"^^xsd:string ;
+    coresr-ont:submits coresr-ont:PublicationInstance09 ;
+    coresr-ont:submittedBy coresr-ont:AuthorInstance09 ;
+    coresr-ont:typeAsString "Sample typeAsString value 9"^^xsd:string ;
+    coresr-ont:volumeNumber "50"^^xsd:int ;
+    terms:contributor "Sample contributor value 9" ;
+    terms:description "Sample description value 9" ;
+    terms:title "Sample title value 9" .
+
+coresr-ont:GenericSubject10 a owl:Thing ;
+    rdfs:label "Sample generic subject 10" ;
+    coresr-ont:advisedBy coresr-ont:AdvisorInstance10 ;
+    coresr-ont:associatedFieldOfStudy coresr-ont:FieldOfStudyInstance10 ;
+    coresr-ont:associatedWith coresr-ont:DepartmentInstance10 ;
+    coresr-ont:atState coresr-ont:StateInstance10 ;
+    coresr-ont:atTime "2026-05-10"^^xsd:date ;
+    coresr-ont:contributedTo coresr-ont:PublicationInstance10 ;
+    coresr-ont:doiAsString "Sample doiAsString value 10"^^xsd:string ;
+    coresr-ont:hasAbstract coresr-ont:AbstractInstance10 ;
+    coresr-ont:hasAssociatedAgent coresr-ont:AgentInstance10 ;
+    coresr-ont:hasContactInformation coresr-ont:ContactInformationInstance10 ;
+    coresr-ont:hasDescription "Sample hasDescription value 10"^^xsd:string ;
+    coresr-ont:hasIdentifier coresr-ont:DOIInstance10 ;
+    coresr-ont:hasIssue coresr-ont:IssueInstance10 ;
+    coresr-ont:hasPart coresr-ont:CollegeInstance10,
+        coresr-ont:DepartmentInstance10 ;
+    coresr-ont:hasPublicationType coresr-ont:PublicationTypeInstance10 ;
+    coresr-ont:hasTitle "Sample hasTitle value 10"^^xsd:string ;
+    coresr-ont:hasVolume coresr-ont:VolumeInstance10 ;
+    coresr-ont:inCity coresr-ont:CityInstance10 ;
+    coresr-ont:isAbstractOf coresr-ont:PublicationInstance10 ;
+    coresr-ont:isIdentifierFor coresr-ont:PublicationInstance10 ;
+    coresr-ont:isIssueOf coresr-ont:PeriodicalLiteratureInstance10 ;
+    coresr-ont:isLocationOf coresr-ont:UniversityInstance10 ;
+    coresr-ont:isPerformedBy coresr-ont:AgentInstance10 ;
+    coresr-ont:isPublicationStateOf coresr-ont:PublicationInstance10 ;
+    coresr-ont:isPublicationTypeOf coresr-ont:PublicationInstance10 ;
+    coresr-ont:isStateOf coresr-ont:LocationInstance10 ;
+    coresr-ont:isVolumeOf coresr-ont:PeriodicalLiteratureInstance10 ;
+    coresr-ont:issueNumber "51"^^xsd:int ;
+    coresr-ont:locatedAt coresr-ont:LocationInstance10 ;
+    coresr-ont:partOf coresr-ont:ArticleInstance10,
+        coresr-ont:CollegeInstance10,
+        coresr-ont:UniversityInstance10 ;
+    coresr-ont:performsRole coresr-ont:RoleInstance10 ;
+    coresr-ont:publicationState coresr-ont:ProcessStateInstance10 ;
+    coresr-ont:stateAsString "Sample stateAsString value 10"^^xsd:string ;
+    coresr-ont:submits coresr-ont:PublicationInstance10 ;
+    coresr-ont:submittedBy coresr-ont:AuthorInstance10 ;
+    coresr-ont:typeAsString "Sample typeAsString value 10"^^xsd:string ;
+    coresr-ont:volumeNumber "51"^^xsd:int ;
+    terms:contributor "Sample contributor value 10" ;
+    terms:description "Sample description value 10" ;
+    terms:title "Sample title value 10" .
+
+coresr-ont:NameInstance01 a coresr-ont:Name ;
+    rdfs:label "Sample Name instance 1" ;
+    coresr-ont:nameAsString coresr-ont:GenericObject01,
+        "Sample nameAsString value 1"^^xsd:string .
+
+coresr-ont:NameInstance02 a coresr-ont:Name ;
+    rdfs:label "Sample Name instance 2" ;
+    coresr-ont:nameAsString coresr-ont:GenericObject02,
+        "Sample nameAsString value 2"^^xsd:string .
+
+coresr-ont:NameInstance03 a coresr-ont:Name ;
+    rdfs:label "Sample Name instance 3" ;
+    coresr-ont:nameAsString coresr-ont:GenericObject03,
+        "Sample nameAsString value 3"^^xsd:string .
+
+coresr-ont:NameInstance04 a coresr-ont:Name ;
+    rdfs:label "Sample Name instance 4" ;
+    coresr-ont:nameAsString coresr-ont:GenericObject04,
+        "Sample nameAsString value 4"^^xsd:string .
+
+coresr-ont:NameInstance05 a coresr-ont:Name ;
+    rdfs:label "Sample Name instance 5" ;
+    coresr-ont:nameAsString coresr-ont:GenericObject05,
+        "Sample nameAsString value 5"^^xsd:string .
+
+coresr-ont:NameInstance06 a coresr-ont:Name ;
+    rdfs:label "Sample Name instance 6" ;
+    coresr-ont:nameAsString coresr-ont:GenericObject06,
+        "Sample nameAsString value 6"^^xsd:string .
+
+coresr-ont:NameInstance07 a coresr-ont:Name ;
+    rdfs:label "Sample Name instance 7" ;
+    coresr-ont:nameAsString coresr-ont:GenericObject07,
+        "Sample nameAsString value 7"^^xsd:string .
+
+coresr-ont:NameInstance08 a coresr-ont:Name ;
+    rdfs:label "Sample Name instance 8" ;
+    coresr-ont:nameAsString coresr-ont:GenericObject08,
+        "Sample nameAsString value 8"^^xsd:string .
+
+coresr-ont:NameInstance09 a coresr-ont:Name ;
+    rdfs:label "Sample Name instance 9" ;
+    coresr-ont:nameAsString coresr-ont:GenericObject09,
+        "Sample nameAsString value 9"^^xsd:string .
+
+coresr-ont:NameInstance10 a coresr-ont:Name ;
+    rdfs:label "Sample Name instance 10" ;
+    coresr-ont:nameAsString coresr-ont:GenericObject10,
+        "Sample nameAsString value 10"^^xsd:string .
+
+coresr-ont:PhoneNumberInstance01 a coresr-ont:PhoneNumber ;
+    rdfs:label "Sample PhoneNumber instance 1" .
+
+coresr-ont:PhoneNumberInstance02 a coresr-ont:PhoneNumber ;
+    rdfs:label "Sample PhoneNumber instance 2" .
+
+coresr-ont:PhoneNumberInstance03 a coresr-ont:PhoneNumber ;
+    rdfs:label "Sample PhoneNumber instance 3" .
+
+coresr-ont:PhoneNumberInstance04 a coresr-ont:PhoneNumber ;
+    rdfs:label "Sample PhoneNumber instance 4" .
+
+coresr-ont:PhoneNumberInstance05 a coresr-ont:PhoneNumber ;
+    rdfs:label "Sample PhoneNumber instance 5" .
+
+coresr-ont:PhoneNumberInstance06 a coresr-ont:PhoneNumber ;
+    rdfs:label "Sample PhoneNumber instance 6" .
+
+coresr-ont:PhoneNumberInstance07 a coresr-ont:PhoneNumber ;
+    rdfs:label "Sample PhoneNumber instance 7" .
+
+coresr-ont:PhoneNumberInstance08 a coresr-ont:PhoneNumber ;
+    rdfs:label "Sample PhoneNumber instance 8" .
+
+coresr-ont:PhoneNumberInstance09 a coresr-ont:PhoneNumber ;
+    rdfs:label "Sample PhoneNumber instance 9" .
+
+coresr-ont:PhoneNumberInstance10 a coresr-ont:PhoneNumber ;
+    rdfs:label "Sample PhoneNumber instance 10" .
+
+coresr-ont:SampleDataset01 rdfs:comment "Synthetic instance coverage data for core_scholar_rich." .
+
+coresr-ont:SpatialExtentInstance01 a coresr-ont:SpatialExtent ;
+    rdfs:label "Sample SpatialExtent instance 1" .
+
+coresr-ont:SpatialExtentInstance02 a coresr-ont:SpatialExtent ;
+    rdfs:label "Sample SpatialExtent instance 2" .
+
+coresr-ont:SpatialExtentInstance03 a coresr-ont:SpatialExtent ;
+    rdfs:label "Sample SpatialExtent instance 3" .
+
+coresr-ont:SpatialExtentInstance04 a coresr-ont:SpatialExtent ;
+    rdfs:label "Sample SpatialExtent instance 4" .
+
+coresr-ont:SpatialExtentInstance05 a coresr-ont:SpatialExtent ;
+    rdfs:label "Sample SpatialExtent instance 5" .
+
+coresr-ont:SpatialExtentInstance06 a coresr-ont:SpatialExtent ;
+    rdfs:label "Sample SpatialExtent instance 6" .
+
+coresr-ont:SpatialExtentInstance07 a coresr-ont:SpatialExtent ;
+    rdfs:label "Sample SpatialExtent instance 7" .
+
+coresr-ont:SpatialExtentInstance08 a coresr-ont:SpatialExtent ;
+    rdfs:label "Sample SpatialExtent instance 8" .
+
+coresr-ont:SpatialExtentInstance09 a coresr-ont:SpatialExtent ;
+    rdfs:label "Sample SpatialExtent instance 9" .
+
+coresr-ont:SpatialExtentInstance10 a coresr-ont:SpatialExtent ;
+    rdfs:label "Sample SpatialExtent instance 10" .
+
+coresr-ont:ContributorInstance01 a coresr-ont:Contributor ;
+    rdfs:label "Sample Contributor instance 1" ;
+    coresr-ont:contributedTo coresr-ont:PublicationInstance01 .
+
+coresr-ont:ContributorInstance02 a coresr-ont:Contributor ;
+    rdfs:label "Sample Contributor instance 2" ;
+    coresr-ont:contributedTo coresr-ont:PublicationInstance02 .
+
+coresr-ont:ContributorInstance03 a coresr-ont:Contributor ;
+    rdfs:label "Sample Contributor instance 3" ;
+    coresr-ont:contributedTo coresr-ont:PublicationInstance03 .
+
+coresr-ont:ContributorInstance04 a coresr-ont:Contributor ;
+    rdfs:label "Sample Contributor instance 4" ;
+    coresr-ont:contributedTo coresr-ont:PublicationInstance04 .
+
+coresr-ont:ContributorInstance05 a coresr-ont:Contributor ;
+    rdfs:label "Sample Contributor instance 5" ;
+    coresr-ont:contributedTo coresr-ont:PublicationInstance05 .
+
+coresr-ont:ContributorInstance06 a coresr-ont:Contributor ;
+    rdfs:label "Sample Contributor instance 6" ;
+    coresr-ont:contributedTo coresr-ont:PublicationInstance06 .
+
+coresr-ont:ContributorInstance07 a coresr-ont:Contributor ;
+    rdfs:label "Sample Contributor instance 7" ;
+    coresr-ont:contributedTo coresr-ont:PublicationInstance07 .
+
+coresr-ont:ContributorInstance08 a coresr-ont:Contributor ;
+    rdfs:label "Sample Contributor instance 8" ;
+    coresr-ont:contributedTo coresr-ont:PublicationInstance08 .
+
+coresr-ont:ContributorInstance09 a coresr-ont:Contributor ;
+    rdfs:label "Sample Contributor instance 9" ;
+    coresr-ont:contributedTo coresr-ont:PublicationInstance09 .
+
+coresr-ont:ContributorInstance10 a coresr-ont:Contributor ;
+    rdfs:label "Sample Contributor instance 10" ;
+    coresr-ont:contributedTo coresr-ont:PublicationInstance10 .
+
+coresr-ont:AbstractInstance01 a coresr-ont:Abstract ;
+    rdfs:label "Sample Abstract instance 1" ;
+    coresr-ont:hasDescription coresr-ont:GenericObject01,
+        "Sample hasDescription value 1"^^xsd:string ;
+    coresr-ont:isAbstractOf coresr-ont:PublicationInstance01 .
+
+coresr-ont:AbstractInstance02 a coresr-ont:Abstract ;
+    rdfs:label "Sample Abstract instance 2" ;
+    coresr-ont:hasDescription coresr-ont:GenericObject02,
+        "Sample hasDescription value 2"^^xsd:string ;
+    coresr-ont:isAbstractOf coresr-ont:PublicationInstance02 .
+
+coresr-ont:AbstractInstance03 a coresr-ont:Abstract ;
+    rdfs:label "Sample Abstract instance 3" ;
+    coresr-ont:hasDescription coresr-ont:GenericObject03,
+        "Sample hasDescription value 3"^^xsd:string ;
+    coresr-ont:isAbstractOf coresr-ont:PublicationInstance03 .
+
+coresr-ont:AbstractInstance04 a coresr-ont:Abstract ;
+    rdfs:label "Sample Abstract instance 4" ;
+    coresr-ont:hasDescription coresr-ont:GenericObject04,
+        "Sample hasDescription value 4"^^xsd:string ;
+    coresr-ont:isAbstractOf coresr-ont:PublicationInstance04 .
+
+coresr-ont:AbstractInstance05 a coresr-ont:Abstract ;
+    rdfs:label "Sample Abstract instance 5" ;
+    coresr-ont:hasDescription coresr-ont:GenericObject05,
+        "Sample hasDescription value 5"^^xsd:string ;
+    coresr-ont:isAbstractOf coresr-ont:PublicationInstance05 .
+
+coresr-ont:AbstractInstance06 a coresr-ont:Abstract ;
+    rdfs:label "Sample Abstract instance 6" ;
+    coresr-ont:hasDescription coresr-ont:GenericObject06,
+        "Sample hasDescription value 6"^^xsd:string ;
+    coresr-ont:isAbstractOf coresr-ont:PublicationInstance06 .
+
+coresr-ont:AbstractInstance07 a coresr-ont:Abstract ;
+    rdfs:label "Sample Abstract instance 7" ;
+    coresr-ont:hasDescription coresr-ont:GenericObject07,
+        "Sample hasDescription value 7"^^xsd:string ;
+    coresr-ont:isAbstractOf coresr-ont:PublicationInstance07 .
+
+coresr-ont:AbstractInstance08 a coresr-ont:Abstract ;
+    rdfs:label "Sample Abstract instance 8" ;
+    coresr-ont:hasDescription coresr-ont:GenericObject08,
+        "Sample hasDescription value 8"^^xsd:string ;
+    coresr-ont:isAbstractOf coresr-ont:PublicationInstance08 .
+
+coresr-ont:AbstractInstance09 a coresr-ont:Abstract ;
+    rdfs:label "Sample Abstract instance 9" ;
+    coresr-ont:hasDescription coresr-ont:GenericObject09,
+        "Sample hasDescription value 9"^^xsd:string ;
+    coresr-ont:isAbstractOf coresr-ont:PublicationInstance09 .
+
+coresr-ont:AbstractInstance10 a coresr-ont:Abstract ;
+    rdfs:label "Sample Abstract instance 10" ;
+    coresr-ont:hasDescription coresr-ont:GenericObject10,
+        "Sample hasDescription value 10"^^xsd:string ;
+    coresr-ont:isAbstractOf coresr-ont:PublicationInstance10 .
+
+coresr-ont:AdvisorInstance01 a coresr-ont:Advisor ;
+    rdfs:label "Sample Advisor instance 1" ;
+    coresr-ont:advises coresr-ont:AuthorInstance01 .
+
+coresr-ont:AdvisorInstance02 a coresr-ont:Advisor ;
+    rdfs:label "Sample Advisor instance 2" ;
+    coresr-ont:advises coresr-ont:AuthorInstance02 .
+
+coresr-ont:AdvisorInstance03 a coresr-ont:Advisor ;
+    rdfs:label "Sample Advisor instance 3" ;
+    coresr-ont:advises coresr-ont:AuthorInstance03 .
+
+coresr-ont:AdvisorInstance04 a coresr-ont:Advisor ;
+    rdfs:label "Sample Advisor instance 4" ;
+    coresr-ont:advises coresr-ont:AuthorInstance04 .
+
+coresr-ont:AdvisorInstance05 a coresr-ont:Advisor ;
+    rdfs:label "Sample Advisor instance 5" ;
+    coresr-ont:advises coresr-ont:AuthorInstance05 .
+
+coresr-ont:AdvisorInstance06 a coresr-ont:Advisor ;
+    rdfs:label "Sample Advisor instance 6" ;
+    coresr-ont:advises coresr-ont:AuthorInstance06 .
+
+coresr-ont:AdvisorInstance07 a coresr-ont:Advisor ;
+    rdfs:label "Sample Advisor instance 7" ;
+    coresr-ont:advises coresr-ont:AuthorInstance07 .
+
+coresr-ont:AdvisorInstance08 a coresr-ont:Advisor ;
+    rdfs:label "Sample Advisor instance 8" ;
+    coresr-ont:advises coresr-ont:AuthorInstance08 .
+
+coresr-ont:AdvisorInstance09 a coresr-ont:Advisor ;
+    rdfs:label "Sample Advisor instance 9" ;
+    coresr-ont:advises coresr-ont:AuthorInstance09 .
+
+coresr-ont:AdvisorInstance10 a coresr-ont:Advisor ;
+    rdfs:label "Sample Advisor instance 10" ;
+    coresr-ont:advises coresr-ont:AuthorInstance10 .
+
+coresr-ont:CityInstance01 a coresr-ont:City ;
+    rdfs:label "Sample City instance 1" ;
+    coresr-ont:hasState coresr-ont:StateInstance01 .
+
+coresr-ont:CityInstance02 a coresr-ont:City ;
+    rdfs:label "Sample City instance 2" ;
+    coresr-ont:hasState coresr-ont:StateInstance02 .
+
+coresr-ont:CityInstance03 a coresr-ont:City ;
+    rdfs:label "Sample City instance 3" ;
+    coresr-ont:hasState coresr-ont:StateInstance03 .
+
+coresr-ont:CityInstance04 a coresr-ont:City ;
+    rdfs:label "Sample City instance 4" ;
+    coresr-ont:hasState coresr-ont:StateInstance04 .
+
+coresr-ont:CityInstance05 a coresr-ont:City ;
+    rdfs:label "Sample City instance 5" ;
+    coresr-ont:hasState coresr-ont:StateInstance05 .
+
+coresr-ont:CityInstance06 a coresr-ont:City ;
+    rdfs:label "Sample City instance 6" ;
+    coresr-ont:hasState coresr-ont:StateInstance06 .
+
+coresr-ont:CityInstance07 a coresr-ont:City ;
+    rdfs:label "Sample City instance 7" ;
+    coresr-ont:hasState coresr-ont:StateInstance07 .
+
+coresr-ont:CityInstance08 a coresr-ont:City ;
+    rdfs:label "Sample City instance 8" ;
+    coresr-ont:hasState coresr-ont:StateInstance08 .
+
+coresr-ont:CityInstance09 a coresr-ont:City ;
+    rdfs:label "Sample City instance 9" ;
+    coresr-ont:hasState coresr-ont:StateInstance09 .
+
+coresr-ont:CityInstance10 a coresr-ont:City ;
+    rdfs:label "Sample City instance 10" ;
+    coresr-ont:hasState coresr-ont:StateInstance10 .
+
+coresr-ont:ContactInformationInstance01 a coresr-ont:ContactInformation ;
+    rdfs:label "Sample ContactInformation instance 1" ;
+    coresr-ont:isContactInformationFor coresr-ont:AgentInstance01 .
+
+coresr-ont:ContactInformationInstance02 a coresr-ont:ContactInformation ;
+    rdfs:label "Sample ContactInformation instance 2" ;
+    coresr-ont:isContactInformationFor coresr-ont:AgentInstance02 .
+
+coresr-ont:ContactInformationInstance03 a coresr-ont:ContactInformation ;
+    rdfs:label "Sample ContactInformation instance 3" ;
+    coresr-ont:isContactInformationFor coresr-ont:AgentInstance03 .
+
+coresr-ont:ContactInformationInstance04 a coresr-ont:ContactInformation ;
+    rdfs:label "Sample ContactInformation instance 4" ;
+    coresr-ont:isContactInformationFor coresr-ont:AgentInstance04 .
+
+coresr-ont:ContactInformationInstance05 a coresr-ont:ContactInformation ;
+    rdfs:label "Sample ContactInformation instance 5" ;
+    coresr-ont:isContactInformationFor coresr-ont:AgentInstance05 .
+
+coresr-ont:ContactInformationInstance06 a coresr-ont:ContactInformation ;
+    rdfs:label "Sample ContactInformation instance 6" ;
+    coresr-ont:isContactInformationFor coresr-ont:AgentInstance06 .
+
+coresr-ont:ContactInformationInstance07 a coresr-ont:ContactInformation ;
+    rdfs:label "Sample ContactInformation instance 7" ;
+    coresr-ont:isContactInformationFor coresr-ont:AgentInstance07 .
+
+coresr-ont:ContactInformationInstance08 a coresr-ont:ContactInformation ;
+    rdfs:label "Sample ContactInformation instance 8" ;
+    coresr-ont:isContactInformationFor coresr-ont:AgentInstance08 .
+
+coresr-ont:ContactInformationInstance09 a coresr-ont:ContactInformation ;
+    rdfs:label "Sample ContactInformation instance 9" ;
+    coresr-ont:isContactInformationFor coresr-ont:AgentInstance09 .
+
+coresr-ont:ContactInformationInstance10 a coresr-ont:ContactInformation ;
+    rdfs:label "Sample ContactInformation instance 10" ;
+    coresr-ont:isContactInformationFor coresr-ont:AgentInstance10 .
+
+coresr-ont:DOIInstance01 a coresr-ont:DOI ;
+    rdfs:label "Sample DOI instance 1" ;
+    coresr-ont:doiAsString coresr-ont:GenericObject01,
+        "Sample doiAsString value 1"^^xsd:string ;
+    coresr-ont:isIdentifierFor coresr-ont:PublicationInstance01 .
+
+coresr-ont:DOIInstance02 a coresr-ont:DOI ;
+    rdfs:label "Sample DOI instance 2" ;
+    coresr-ont:doiAsString coresr-ont:GenericObject02,
+        "Sample doiAsString value 2"^^xsd:string ;
+    coresr-ont:isIdentifierFor coresr-ont:PublicationInstance02 .
+
+coresr-ont:DOIInstance03 a coresr-ont:DOI ;
+    rdfs:label "Sample DOI instance 3" ;
+    coresr-ont:doiAsString coresr-ont:GenericObject03,
+        "Sample doiAsString value 3"^^xsd:string ;
+    coresr-ont:isIdentifierFor coresr-ont:PublicationInstance03 .
+
+coresr-ont:DOIInstance04 a coresr-ont:DOI ;
+    rdfs:label "Sample DOI instance 4" ;
+    coresr-ont:doiAsString coresr-ont:GenericObject04,
+        "Sample doiAsString value 4"^^xsd:string ;
+    coresr-ont:isIdentifierFor coresr-ont:PublicationInstance04 .
+
+coresr-ont:DOIInstance05 a coresr-ont:DOI ;
+    rdfs:label "Sample DOI instance 5" ;
+    coresr-ont:doiAsString coresr-ont:GenericObject05,
+        "Sample doiAsString value 5"^^xsd:string ;
+    coresr-ont:isIdentifierFor coresr-ont:PublicationInstance05 .
+
+coresr-ont:DOIInstance06 a coresr-ont:DOI ;
+    rdfs:label "Sample DOI instance 6" ;
+    coresr-ont:doiAsString coresr-ont:GenericObject06,
+        "Sample doiAsString value 6"^^xsd:string ;
+    coresr-ont:isIdentifierFor coresr-ont:PublicationInstance06 .
+
+coresr-ont:DOIInstance07 a coresr-ont:DOI ;
+    rdfs:label "Sample DOI instance 7" ;
+    coresr-ont:doiAsString coresr-ont:GenericObject07,
+        "Sample doiAsString value 7"^^xsd:string ;
+    coresr-ont:isIdentifierFor coresr-ont:PublicationInstance07 .
+
+coresr-ont:DOIInstance08 a coresr-ont:DOI ;
+    rdfs:label "Sample DOI instance 8" ;
+    coresr-ont:doiAsString coresr-ont:GenericObject08,
+        "Sample doiAsString value 8"^^xsd:string ;
+    coresr-ont:isIdentifierFor coresr-ont:PublicationInstance08 .
+
+coresr-ont:DOIInstance09 a coresr-ont:DOI ;
+    rdfs:label "Sample DOI instance 9" ;
+    coresr-ont:doiAsString coresr-ont:GenericObject09,
+        "Sample doiAsString value 9"^^xsd:string ;
+    coresr-ont:isIdentifierFor coresr-ont:PublicationInstance09 .
+
+coresr-ont:DOIInstance10 a coresr-ont:DOI ;
+    rdfs:label "Sample DOI instance 10" ;
+    coresr-ont:doiAsString coresr-ont:GenericObject10,
+        "Sample doiAsString value 10"^^xsd:string ;
+    coresr-ont:isIdentifierFor coresr-ont:PublicationInstance10 .
+
+coresr-ont:FieldOfStudyInstance01 a coresr-ont:FieldOfStudy ;
+    rdfs:label "Sample FieldOfStudy instance 1" ;
+    coresr-ont:isFieldOfStudyOf coresr-ont:PublicationInstance01 .
+
+coresr-ont:FieldOfStudyInstance02 a coresr-ont:FieldOfStudy ;
+    rdfs:label "Sample FieldOfStudy instance 2" ;
+    coresr-ont:isFieldOfStudyOf coresr-ont:PublicationInstance02 .
+
+coresr-ont:FieldOfStudyInstance03 a coresr-ont:FieldOfStudy ;
+    rdfs:label "Sample FieldOfStudy instance 3" ;
+    coresr-ont:isFieldOfStudyOf coresr-ont:PublicationInstance03 .
+
+coresr-ont:FieldOfStudyInstance04 a coresr-ont:FieldOfStudy ;
+    rdfs:label "Sample FieldOfStudy instance 4" ;
+    coresr-ont:isFieldOfStudyOf coresr-ont:PublicationInstance04 .
+
+coresr-ont:FieldOfStudyInstance05 a coresr-ont:FieldOfStudy ;
+    rdfs:label "Sample FieldOfStudy instance 5" ;
+    coresr-ont:isFieldOfStudyOf coresr-ont:PublicationInstance05 .
+
+coresr-ont:FieldOfStudyInstance06 a coresr-ont:FieldOfStudy ;
+    rdfs:label "Sample FieldOfStudy instance 6" ;
+    coresr-ont:isFieldOfStudyOf coresr-ont:PublicationInstance06 .
+
+coresr-ont:FieldOfStudyInstance07 a coresr-ont:FieldOfStudy ;
+    rdfs:label "Sample FieldOfStudy instance 7" ;
+    coresr-ont:isFieldOfStudyOf coresr-ont:PublicationInstance07 .
+
+coresr-ont:FieldOfStudyInstance08 a coresr-ont:FieldOfStudy ;
+    rdfs:label "Sample FieldOfStudy instance 8" ;
+    coresr-ont:isFieldOfStudyOf coresr-ont:PublicationInstance08 .
+
+coresr-ont:FieldOfStudyInstance09 a coresr-ont:FieldOfStudy ;
+    rdfs:label "Sample FieldOfStudy instance 9" ;
+    coresr-ont:isFieldOfStudyOf coresr-ont:PublicationInstance09 .
+
+coresr-ont:FieldOfStudyInstance10 a coresr-ont:FieldOfStudy ;
+    rdfs:label "Sample FieldOfStudy instance 10" ;
+    coresr-ont:isFieldOfStudyOf coresr-ont:PublicationInstance10 .
+
+coresr-ont:IssueInstance01 a coresr-ont:Issue ;
+    rdfs:label "Sample Issue instance 1" ;
+    coresr-ont:isIssueOf coresr-ont:PeriodicalLiteratureInstance01 ;
+    coresr-ont:issueNumber coresr-ont:GenericObject01,
+        "42"^^xsd:int .
+
+coresr-ont:IssueInstance02 a coresr-ont:Issue ;
+    rdfs:label "Sample Issue instance 2" ;
+    coresr-ont:isIssueOf coresr-ont:PeriodicalLiteratureInstance02 ;
+    coresr-ont:issueNumber coresr-ont:GenericObject02,
+        "43"^^xsd:int .
+
+coresr-ont:IssueInstance03 a coresr-ont:Issue ;
+    rdfs:label "Sample Issue instance 3" ;
+    coresr-ont:isIssueOf coresr-ont:PeriodicalLiteratureInstance03 ;
+    coresr-ont:issueNumber coresr-ont:GenericObject03,
+        "44"^^xsd:int .
+
+coresr-ont:IssueInstance04 a coresr-ont:Issue ;
+    rdfs:label "Sample Issue instance 4" ;
+    coresr-ont:isIssueOf coresr-ont:PeriodicalLiteratureInstance04 ;
+    coresr-ont:issueNumber coresr-ont:GenericObject04,
+        "45"^^xsd:int .
+
+coresr-ont:IssueInstance05 a coresr-ont:Issue ;
+    rdfs:label "Sample Issue instance 5" ;
+    coresr-ont:isIssueOf coresr-ont:PeriodicalLiteratureInstance05 ;
+    coresr-ont:issueNumber coresr-ont:GenericObject05,
+        "46"^^xsd:int .
+
+coresr-ont:IssueInstance06 a coresr-ont:Issue ;
+    rdfs:label "Sample Issue instance 6" ;
+    coresr-ont:isIssueOf coresr-ont:PeriodicalLiteratureInstance06 ;
+    coresr-ont:issueNumber coresr-ont:GenericObject06,
+        "47"^^xsd:int .
+
+coresr-ont:IssueInstance07 a coresr-ont:Issue ;
+    rdfs:label "Sample Issue instance 7" ;
+    coresr-ont:isIssueOf coresr-ont:PeriodicalLiteratureInstance07 ;
+    coresr-ont:issueNumber coresr-ont:GenericObject07,
+        "48"^^xsd:int .
+
+coresr-ont:IssueInstance08 a coresr-ont:Issue ;
+    rdfs:label "Sample Issue instance 8" ;
+    coresr-ont:isIssueOf coresr-ont:PeriodicalLiteratureInstance08 ;
+    coresr-ont:issueNumber coresr-ont:GenericObject08,
+        "49"^^xsd:int .
+
+coresr-ont:IssueInstance09 a coresr-ont:Issue ;
+    rdfs:label "Sample Issue instance 9" ;
+    coresr-ont:isIssueOf coresr-ont:PeriodicalLiteratureInstance09 ;
+    coresr-ont:issueNumber coresr-ont:GenericObject09,
+        "50"^^xsd:int .
+
+coresr-ont:IssueInstance10 a coresr-ont:Issue ;
+    rdfs:label "Sample Issue instance 10" ;
+    coresr-ont:isIssueOf coresr-ont:PeriodicalLiteratureInstance10 ;
+    coresr-ont:issueNumber coresr-ont:GenericObject10,
+        "51"^^xsd:int .
+
+coresr-ont:ProcessStateInstance01 a coresr-ont:ProcessState ;
+    rdfs:label "Sample ProcessState instance 1" ;
+    coresr-ont:atTime coresr-ont:GenericObject01,
+        "2026-05-01"^^xsd:date ;
+    coresr-ont:isPublicationStateOf coresr-ont:PublicationInstance01 ;
+    coresr-ont:stateAsString coresr-ont:GenericObject01,
+        "Sample stateAsString value 1"^^xsd:string .
+
+coresr-ont:ProcessStateInstance02 a coresr-ont:ProcessState ;
+    rdfs:label "Sample ProcessState instance 2" ;
+    coresr-ont:atTime coresr-ont:GenericObject02,
+        "2026-05-02"^^xsd:date ;
+    coresr-ont:isPublicationStateOf coresr-ont:PublicationInstance02 ;
+    coresr-ont:stateAsString coresr-ont:GenericObject02,
+        "Sample stateAsString value 2"^^xsd:string .
+
+coresr-ont:ProcessStateInstance03 a coresr-ont:ProcessState ;
+    rdfs:label "Sample ProcessState instance 3" ;
+    coresr-ont:atTime coresr-ont:GenericObject03,
+        "2026-05-03"^^xsd:date ;
+    coresr-ont:isPublicationStateOf coresr-ont:PublicationInstance03 ;
+    coresr-ont:stateAsString coresr-ont:GenericObject03,
+        "Sample stateAsString value 3"^^xsd:string .
+
+coresr-ont:ProcessStateInstance04 a coresr-ont:ProcessState ;
+    rdfs:label "Sample ProcessState instance 4" ;
+    coresr-ont:atTime coresr-ont:GenericObject04,
+        "2026-05-04"^^xsd:date ;
+    coresr-ont:isPublicationStateOf coresr-ont:PublicationInstance04 ;
+    coresr-ont:stateAsString coresr-ont:GenericObject04,
+        "Sample stateAsString value 4"^^xsd:string .
+
+coresr-ont:ProcessStateInstance05 a coresr-ont:ProcessState ;
+    rdfs:label "Sample ProcessState instance 5" ;
+    coresr-ont:atTime coresr-ont:GenericObject05,
+        "2026-05-05"^^xsd:date ;
+    coresr-ont:isPublicationStateOf coresr-ont:PublicationInstance05 ;
+    coresr-ont:stateAsString coresr-ont:GenericObject05,
+        "Sample stateAsString value 5"^^xsd:string .
+
+coresr-ont:ProcessStateInstance06 a coresr-ont:ProcessState ;
+    rdfs:label "Sample ProcessState instance 6" ;
+    coresr-ont:atTime coresr-ont:GenericObject06,
+        "2026-05-06"^^xsd:date ;
+    coresr-ont:isPublicationStateOf coresr-ont:PublicationInstance06 ;
+    coresr-ont:stateAsString coresr-ont:GenericObject06,
+        "Sample stateAsString value 6"^^xsd:string .
+
+coresr-ont:ProcessStateInstance07 a coresr-ont:ProcessState ;
+    rdfs:label "Sample ProcessState instance 7" ;
+    coresr-ont:atTime coresr-ont:GenericObject07,
+        "2026-05-07"^^xsd:date ;
+    coresr-ont:isPublicationStateOf coresr-ont:PublicationInstance07 ;
+    coresr-ont:stateAsString coresr-ont:GenericObject07,
+        "Sample stateAsString value 7"^^xsd:string .
+
+coresr-ont:ProcessStateInstance08 a coresr-ont:ProcessState ;
+    rdfs:label "Sample ProcessState instance 8" ;
+    coresr-ont:atTime coresr-ont:GenericObject08,
+        "2026-05-08"^^xsd:date ;
+    coresr-ont:isPublicationStateOf coresr-ont:PublicationInstance08 ;
+    coresr-ont:stateAsString coresr-ont:GenericObject08,
+        "Sample stateAsString value 8"^^xsd:string .
+
+coresr-ont:ProcessStateInstance09 a coresr-ont:ProcessState ;
+    rdfs:label "Sample ProcessState instance 9" ;
+    coresr-ont:atTime coresr-ont:GenericObject09,
+        "2026-05-09"^^xsd:date ;
+    coresr-ont:isPublicationStateOf coresr-ont:PublicationInstance09 ;
+    coresr-ont:stateAsString coresr-ont:GenericObject09,
+        "Sample stateAsString value 9"^^xsd:string .
+
+coresr-ont:ProcessStateInstance10 a coresr-ont:ProcessState ;
+    rdfs:label "Sample ProcessState instance 10" ;
+    coresr-ont:atTime coresr-ont:GenericObject10,
+        "2026-05-10"^^xsd:date ;
+    coresr-ont:isPublicationStateOf coresr-ont:PublicationInstance10 ;
+    coresr-ont:stateAsString coresr-ont:GenericObject10,
+        "Sample stateAsString value 10"^^xsd:string .
+
+coresr-ont:PublicationTypeInstance01 a coresr-ont:PublicationType ;
+    rdfs:label "Sample PublicationType instance 1" ;
+    coresr-ont:isPublicationTypeOf coresr-ont:PublicationInstance01 ;
+    coresr-ont:typeAsString coresr-ont:GenericObject01,
+        "Sample typeAsString value 1"^^xsd:string .
+
+coresr-ont:PublicationTypeInstance02 a coresr-ont:PublicationType ;
+    rdfs:label "Sample PublicationType instance 2" ;
+    coresr-ont:isPublicationTypeOf coresr-ont:PublicationInstance02 ;
+    coresr-ont:typeAsString coresr-ont:GenericObject02,
+        "Sample typeAsString value 2"^^xsd:string .
+
+coresr-ont:PublicationTypeInstance03 a coresr-ont:PublicationType ;
+    rdfs:label "Sample PublicationType instance 3" ;
+    coresr-ont:isPublicationTypeOf coresr-ont:PublicationInstance03 ;
+    coresr-ont:typeAsString coresr-ont:GenericObject03,
+        "Sample typeAsString value 3"^^xsd:string .
+
+coresr-ont:PublicationTypeInstance04 a coresr-ont:PublicationType ;
+    rdfs:label "Sample PublicationType instance 4" ;
+    coresr-ont:isPublicationTypeOf coresr-ont:PublicationInstance04 ;
+    coresr-ont:typeAsString coresr-ont:GenericObject04,
+        "Sample typeAsString value 4"^^xsd:string .
+
+coresr-ont:PublicationTypeInstance05 a coresr-ont:PublicationType ;
+    rdfs:label "Sample PublicationType instance 5" ;
+    coresr-ont:isPublicationTypeOf coresr-ont:PublicationInstance05 ;
+    coresr-ont:typeAsString coresr-ont:GenericObject05,
+        "Sample typeAsString value 5"^^xsd:string .
+
+coresr-ont:PublicationTypeInstance06 a coresr-ont:PublicationType ;
+    rdfs:label "Sample PublicationType instance 6" ;
+    coresr-ont:isPublicationTypeOf coresr-ont:PublicationInstance06 ;
+    coresr-ont:typeAsString coresr-ont:GenericObject06,
+        "Sample typeAsString value 6"^^xsd:string .
+
+coresr-ont:PublicationTypeInstance07 a coresr-ont:PublicationType ;
+    rdfs:label "Sample PublicationType instance 7" ;
+    coresr-ont:isPublicationTypeOf coresr-ont:PublicationInstance07 ;
+    coresr-ont:typeAsString coresr-ont:GenericObject07,
+        "Sample typeAsString value 7"^^xsd:string .
+
+coresr-ont:PublicationTypeInstance08 a coresr-ont:PublicationType ;
+    rdfs:label "Sample PublicationType instance 8" ;
+    coresr-ont:isPublicationTypeOf coresr-ont:PublicationInstance08 ;
+    coresr-ont:typeAsString coresr-ont:GenericObject08,
+        "Sample typeAsString value 8"^^xsd:string .
+
+coresr-ont:PublicationTypeInstance09 a coresr-ont:PublicationType ;
+    rdfs:label "Sample PublicationType instance 9" ;
+    coresr-ont:isPublicationTypeOf coresr-ont:PublicationInstance09 ;
+    coresr-ont:typeAsString coresr-ont:GenericObject09,
+        "Sample typeAsString value 9"^^xsd:string .
+
+coresr-ont:PublicationTypeInstance10 a coresr-ont:PublicationType ;
+    rdfs:label "Sample PublicationType instance 10" ;
+    coresr-ont:isPublicationTypeOf coresr-ont:PublicationInstance10 ;
+    coresr-ont:typeAsString coresr-ont:GenericObject10,
+        "Sample typeAsString value 10"^^xsd:string .
+
+coresr-ont:RoleInstance01 a coresr-ont:Role ;
+    rdfs:label "Sample Role instance 1" ;
+    coresr-ont:isPerformedBy coresr-ont:AgentInstance01 .
+
+coresr-ont:RoleInstance02 a coresr-ont:Role ;
+    rdfs:label "Sample Role instance 2" ;
+    coresr-ont:isPerformedBy coresr-ont:AgentInstance02 .
+
+coresr-ont:RoleInstance03 a coresr-ont:Role ;
+    rdfs:label "Sample Role instance 3" ;
+    coresr-ont:isPerformedBy coresr-ont:AgentInstance03 .
+
+coresr-ont:RoleInstance04 a coresr-ont:Role ;
+    rdfs:label "Sample Role instance 4" ;
+    coresr-ont:isPerformedBy coresr-ont:AgentInstance04 .
+
+coresr-ont:RoleInstance05 a coresr-ont:Role ;
+    rdfs:label "Sample Role instance 5" ;
+    coresr-ont:isPerformedBy coresr-ont:AgentInstance05 .
+
+coresr-ont:RoleInstance06 a coresr-ont:Role ;
+    rdfs:label "Sample Role instance 6" ;
+    coresr-ont:isPerformedBy coresr-ont:AgentInstance06 .
+
+coresr-ont:RoleInstance07 a coresr-ont:Role ;
+    rdfs:label "Sample Role instance 7" ;
+    coresr-ont:isPerformedBy coresr-ont:AgentInstance07 .
+
+coresr-ont:RoleInstance08 a coresr-ont:Role ;
+    rdfs:label "Sample Role instance 8" ;
+    coresr-ont:isPerformedBy coresr-ont:AgentInstance08 .
+
+coresr-ont:RoleInstance09 a coresr-ont:Role ;
+    rdfs:label "Sample Role instance 9" ;
+    coresr-ont:isPerformedBy coresr-ont:AgentInstance09 .
+
+coresr-ont:RoleInstance10 a coresr-ont:Role ;
+    rdfs:label "Sample Role instance 10" ;
+    coresr-ont:isPerformedBy coresr-ont:AgentInstance10 .
+
+coresr-ont:VolumeInstance01 a coresr-ont:Volume ;
+    rdfs:label "Sample Volume instance 1" ;
+    coresr-ont:isVolumeOf coresr-ont:PeriodicalLiteratureInstance01 ;
+    coresr-ont:volumeNumber coresr-ont:GenericObject01,
+        "42"^^xsd:int .
+
+coresr-ont:VolumeInstance02 a coresr-ont:Volume ;
+    rdfs:label "Sample Volume instance 2" ;
+    coresr-ont:isVolumeOf coresr-ont:PeriodicalLiteratureInstance02 ;
+    coresr-ont:volumeNumber coresr-ont:GenericObject02,
+        "43"^^xsd:int .
+
+coresr-ont:VolumeInstance03 a coresr-ont:Volume ;
+    rdfs:label "Sample Volume instance 3" ;
+    coresr-ont:isVolumeOf coresr-ont:PeriodicalLiteratureInstance03 ;
+    coresr-ont:volumeNumber coresr-ont:GenericObject03,
+        "44"^^xsd:int .
+
+coresr-ont:VolumeInstance04 a coresr-ont:Volume ;
+    rdfs:label "Sample Volume instance 4" ;
+    coresr-ont:isVolumeOf coresr-ont:PeriodicalLiteratureInstance04 ;
+    coresr-ont:volumeNumber coresr-ont:GenericObject04,
+        "45"^^xsd:int .
+
+coresr-ont:VolumeInstance05 a coresr-ont:Volume ;
+    rdfs:label "Sample Volume instance 5" ;
+    coresr-ont:isVolumeOf coresr-ont:PeriodicalLiteratureInstance05 ;
+    coresr-ont:volumeNumber coresr-ont:GenericObject05,
+        "46"^^xsd:int .
+
+coresr-ont:VolumeInstance06 a coresr-ont:Volume ;
+    rdfs:label "Sample Volume instance 6" ;
+    coresr-ont:isVolumeOf coresr-ont:PeriodicalLiteratureInstance06 ;
+    coresr-ont:volumeNumber coresr-ont:GenericObject06,
+        "47"^^xsd:int .
+
+coresr-ont:VolumeInstance07 a coresr-ont:Volume ;
+    rdfs:label "Sample Volume instance 7" ;
+    coresr-ont:isVolumeOf coresr-ont:PeriodicalLiteratureInstance07 ;
+    coresr-ont:volumeNumber coresr-ont:GenericObject07,
+        "48"^^xsd:int .
+
+coresr-ont:VolumeInstance08 a coresr-ont:Volume ;
+    rdfs:label "Sample Volume instance 8" ;
+    coresr-ont:isVolumeOf coresr-ont:PeriodicalLiteratureInstance08 ;
+    coresr-ont:volumeNumber coresr-ont:GenericObject08,
+        "49"^^xsd:int .
+
+coresr-ont:VolumeInstance09 a coresr-ont:Volume ;
+    rdfs:label "Sample Volume instance 9" ;
+    coresr-ont:isVolumeOf coresr-ont:PeriodicalLiteratureInstance09 ;
+    coresr-ont:volumeNumber coresr-ont:GenericObject09,
+        "50"^^xsd:int .
+
+coresr-ont:VolumeInstance10 a coresr-ont:Volume ;
+    rdfs:label "Sample Volume instance 10" ;
+    coresr-ont:isVolumeOf coresr-ont:PeriodicalLiteratureInstance10 ;
+    coresr-ont:volumeNumber coresr-ont:GenericObject10,
+        "51"^^xsd:int .
+
+coresr-ont:ArticleInstance01 a coresr-ont:Article,
+        coresr-ont:College,
+        coresr-ont:University ;
+    rdfs:label "Sample Article instance 1" ;
+    coresr-ont:hasNumericIdentifier coresr-ont:GenericObject01,
+        "42"^^xsd:int ;
+    coresr-ont:hasPart coresr-ont:CollegeInstance01 .
+
+coresr-ont:ArticleInstance02 a coresr-ont:Article,
+        coresr-ont:College,
+        coresr-ont:University ;
+    rdfs:label "Sample Article instance 2" ;
+    coresr-ont:hasNumericIdentifier coresr-ont:GenericObject02,
+        "43"^^xsd:int ;
+    coresr-ont:hasPart coresr-ont:CollegeInstance02 .
+
+coresr-ont:ArticleInstance03 a coresr-ont:Article,
+        coresr-ont:College,
+        coresr-ont:University ;
+    rdfs:label "Sample Article instance 3" ;
+    coresr-ont:hasNumericIdentifier coresr-ont:GenericObject03,
+        "44"^^xsd:int ;
+    coresr-ont:hasPart coresr-ont:CollegeInstance03 .
+
+coresr-ont:ArticleInstance04 a coresr-ont:Article,
+        coresr-ont:College,
+        coresr-ont:University ;
+    rdfs:label "Sample Article instance 4" ;
+    coresr-ont:hasNumericIdentifier coresr-ont:GenericObject04,
+        "45"^^xsd:int ;
+    coresr-ont:hasPart coresr-ont:CollegeInstance04 .
+
+coresr-ont:ArticleInstance05 a coresr-ont:Article,
+        coresr-ont:College,
+        coresr-ont:University ;
+    rdfs:label "Sample Article instance 5" ;
+    coresr-ont:hasNumericIdentifier coresr-ont:GenericObject05,
+        "46"^^xsd:int ;
+    coresr-ont:hasPart coresr-ont:CollegeInstance05 .
+
+coresr-ont:ArticleInstance06 a coresr-ont:Article,
+        coresr-ont:College,
+        coresr-ont:University ;
+    rdfs:label "Sample Article instance 6" ;
+    coresr-ont:hasNumericIdentifier coresr-ont:GenericObject06,
+        "47"^^xsd:int ;
+    coresr-ont:hasPart coresr-ont:CollegeInstance06 .
+
+coresr-ont:ArticleInstance07 a coresr-ont:Article,
+        coresr-ont:College,
+        coresr-ont:University ;
+    rdfs:label "Sample Article instance 7" ;
+    coresr-ont:hasNumericIdentifier coresr-ont:GenericObject07,
+        "48"^^xsd:int ;
+    coresr-ont:hasPart coresr-ont:CollegeInstance07 .
+
+coresr-ont:ArticleInstance08 a coresr-ont:Article,
+        coresr-ont:College,
+        coresr-ont:University ;
+    rdfs:label "Sample Article instance 8" ;
+    coresr-ont:hasNumericIdentifier coresr-ont:GenericObject08,
+        "49"^^xsd:int ;
+    coresr-ont:hasPart coresr-ont:CollegeInstance08 .
+
+coresr-ont:ArticleInstance09 a coresr-ont:Article,
+        coresr-ont:College,
+        coresr-ont:University ;
+    rdfs:label "Sample Article instance 9" ;
+    coresr-ont:hasNumericIdentifier coresr-ont:GenericObject09,
+        "50"^^xsd:int ;
+    coresr-ont:hasPart coresr-ont:CollegeInstance09 .
+
+coresr-ont:ArticleInstance10 a coresr-ont:Article,
+        coresr-ont:College,
+        coresr-ont:University ;
+    rdfs:label "Sample Article instance 10" ;
+    coresr-ont:hasNumericIdentifier coresr-ont:GenericObject10,
+        "51"^^xsd:int ;
+    coresr-ont:hasPart coresr-ont:CollegeInstance10 .
+
+coresr-ont:AuthorInstance01 a coresr-ont:Author ;
+    rdfs:label "Sample Author instance 1" ;
+    coresr-ont:advisedBy coresr-ont:AdvisorInstance01 ;
+    coresr-ont:submits coresr-ont:PublicationInstance01 .
+
+coresr-ont:AuthorInstance02 a coresr-ont:Author ;
+    rdfs:label "Sample Author instance 2" ;
+    coresr-ont:advisedBy coresr-ont:AdvisorInstance02 ;
+    coresr-ont:submits coresr-ont:PublicationInstance02 .
+
+coresr-ont:AuthorInstance03 a coresr-ont:Author ;
+    rdfs:label "Sample Author instance 3" ;
+    coresr-ont:advisedBy coresr-ont:AdvisorInstance03 ;
+    coresr-ont:submits coresr-ont:PublicationInstance03 .
+
+coresr-ont:AuthorInstance04 a coresr-ont:Author ;
+    rdfs:label "Sample Author instance 4" ;
+    coresr-ont:advisedBy coresr-ont:AdvisorInstance04 ;
+    coresr-ont:submits coresr-ont:PublicationInstance04 .
+
+coresr-ont:AuthorInstance05 a coresr-ont:Author ;
+    rdfs:label "Sample Author instance 5" ;
+    coresr-ont:advisedBy coresr-ont:AdvisorInstance05 ;
+    coresr-ont:submits coresr-ont:PublicationInstance05 .
+
+coresr-ont:AuthorInstance06 a coresr-ont:Author ;
+    rdfs:label "Sample Author instance 6" ;
+    coresr-ont:advisedBy coresr-ont:AdvisorInstance06 ;
+    coresr-ont:submits coresr-ont:PublicationInstance06 .
+
+coresr-ont:AuthorInstance07 a coresr-ont:Author ;
+    rdfs:label "Sample Author instance 7" ;
+    coresr-ont:advisedBy coresr-ont:AdvisorInstance07 ;
+    coresr-ont:submits coresr-ont:PublicationInstance07 .
+
+coresr-ont:AuthorInstance08 a coresr-ont:Author ;
+    rdfs:label "Sample Author instance 8" ;
+    coresr-ont:advisedBy coresr-ont:AdvisorInstance08 ;
+    coresr-ont:submits coresr-ont:PublicationInstance08 .
+
+coresr-ont:AuthorInstance09 a coresr-ont:Author ;
+    rdfs:label "Sample Author instance 9" ;
+    coresr-ont:advisedBy coresr-ont:AdvisorInstance09 ;
+    coresr-ont:submits coresr-ont:PublicationInstance09 .
+
+coresr-ont:AuthorInstance10 a coresr-ont:Author ;
+    rdfs:label "Sample Author instance 10" ;
+    coresr-ont:advisedBy coresr-ont:AdvisorInstance10 ;
+    coresr-ont:submits coresr-ont:PublicationInstance10 .
+
+coresr-ont:StateInstance01 a coresr-ont:State ;
+    rdfs:label "Sample State instance 1" ;
+    coresr-ont:inCity coresr-ont:CityInstance01 ;
+    coresr-ont:isStateOf coresr-ont:LocationInstance01 .
+
+coresr-ont:StateInstance02 a coresr-ont:State ;
+    rdfs:label "Sample State instance 2" ;
+    coresr-ont:inCity coresr-ont:CityInstance02 ;
+    coresr-ont:isStateOf coresr-ont:LocationInstance02 .
+
+coresr-ont:StateInstance03 a coresr-ont:State ;
+    rdfs:label "Sample State instance 3" ;
+    coresr-ont:inCity coresr-ont:CityInstance03 ;
+    coresr-ont:isStateOf coresr-ont:LocationInstance03 .
+
+coresr-ont:StateInstance04 a coresr-ont:State ;
+    rdfs:label "Sample State instance 4" ;
+    coresr-ont:inCity coresr-ont:CityInstance04 ;
+    coresr-ont:isStateOf coresr-ont:LocationInstance04 .
+
+coresr-ont:StateInstance05 a coresr-ont:State ;
+    rdfs:label "Sample State instance 5" ;
+    coresr-ont:inCity coresr-ont:CityInstance05 ;
+    coresr-ont:isStateOf coresr-ont:LocationInstance05 .
+
+coresr-ont:StateInstance06 a coresr-ont:State ;
+    rdfs:label "Sample State instance 6" ;
+    coresr-ont:inCity coresr-ont:CityInstance06 ;
+    coresr-ont:isStateOf coresr-ont:LocationInstance06 .
+
+coresr-ont:StateInstance07 a coresr-ont:State ;
+    rdfs:label "Sample State instance 7" ;
+    coresr-ont:inCity coresr-ont:CityInstance07 ;
+    coresr-ont:isStateOf coresr-ont:LocationInstance07 .
+
+coresr-ont:StateInstance08 a coresr-ont:State ;
+    rdfs:label "Sample State instance 8" ;
+    coresr-ont:inCity coresr-ont:CityInstance08 ;
+    coresr-ont:isStateOf coresr-ont:LocationInstance08 .
+
+coresr-ont:StateInstance09 a coresr-ont:State ;
+    rdfs:label "Sample State instance 9" ;
+    coresr-ont:inCity coresr-ont:CityInstance09 ;
+    coresr-ont:isStateOf coresr-ont:LocationInstance09 .
+
+coresr-ont:StateInstance10 a coresr-ont:State ;
+    rdfs:label "Sample State instance 10" ;
+    coresr-ont:inCity coresr-ont:CityInstance10 ;
+    coresr-ont:isStateOf coresr-ont:LocationInstance10 .
+
+coresr-ont:DepartmentInstance01 a coresr-ont:Department ;
+    rdfs:label "Sample Department instance 1" ;
+    coresr-ont:hasAssociatedAgent coresr-ont:AgentInstance01 ;
+    coresr-ont:partOf coresr-ont:CollegeInstance01,
+        coresr-ont:GenericObject01 .
+
+coresr-ont:DepartmentInstance02 a coresr-ont:Department ;
+    rdfs:label "Sample Department instance 2" ;
+    coresr-ont:hasAssociatedAgent coresr-ont:AgentInstance02 ;
+    coresr-ont:partOf coresr-ont:CollegeInstance02,
+        coresr-ont:GenericObject02 .
+
+coresr-ont:DepartmentInstance03 a coresr-ont:Department ;
+    rdfs:label "Sample Department instance 3" ;
+    coresr-ont:hasAssociatedAgent coresr-ont:AgentInstance03 ;
+    coresr-ont:partOf coresr-ont:CollegeInstance03,
+        coresr-ont:GenericObject03 .
+
+coresr-ont:DepartmentInstance04 a coresr-ont:Department ;
+    rdfs:label "Sample Department instance 4" ;
+    coresr-ont:hasAssociatedAgent coresr-ont:AgentInstance04 ;
+    coresr-ont:partOf coresr-ont:CollegeInstance04,
+        coresr-ont:GenericObject04 .
+
+coresr-ont:DepartmentInstance05 a coresr-ont:Department ;
+    rdfs:label "Sample Department instance 5" ;
+    coresr-ont:hasAssociatedAgent coresr-ont:AgentInstance05 ;
+    coresr-ont:partOf coresr-ont:CollegeInstance05,
+        coresr-ont:GenericObject05 .
+
+coresr-ont:DepartmentInstance06 a coresr-ont:Department ;
+    rdfs:label "Sample Department instance 6" ;
+    coresr-ont:hasAssociatedAgent coresr-ont:AgentInstance06 ;
+    coresr-ont:partOf coresr-ont:CollegeInstance06,
+        coresr-ont:GenericObject06 .
+
+coresr-ont:DepartmentInstance07 a coresr-ont:Department ;
+    rdfs:label "Sample Department instance 7" ;
+    coresr-ont:hasAssociatedAgent coresr-ont:AgentInstance07 ;
+    coresr-ont:partOf coresr-ont:CollegeInstance07,
+        coresr-ont:GenericObject07 .
+
+coresr-ont:DepartmentInstance08 a coresr-ont:Department ;
+    rdfs:label "Sample Department instance 8" ;
+    coresr-ont:hasAssociatedAgent coresr-ont:AgentInstance08 ;
+    coresr-ont:partOf coresr-ont:CollegeInstance08,
+        coresr-ont:GenericObject08 .
+
+coresr-ont:DepartmentInstance09 a coresr-ont:Department ;
+    rdfs:label "Sample Department instance 9" ;
+    coresr-ont:hasAssociatedAgent coresr-ont:AgentInstance09 ;
+    coresr-ont:partOf coresr-ont:CollegeInstance09,
+        coresr-ont:GenericObject09 .
+
+coresr-ont:DepartmentInstance10 a coresr-ont:Department ;
+    rdfs:label "Sample Department instance 10" ;
+    coresr-ont:hasAssociatedAgent coresr-ont:AgentInstance10 ;
+    coresr-ont:partOf coresr-ont:CollegeInstance10,
+        coresr-ont:GenericObject10 .
+
+coresr-ont:LocationInstance01 a coresr-ont:Location ;
+    rdfs:label "Sample Location instance 1" ;
+    coresr-ont:atState coresr-ont:StateInstance01 ;
+    coresr-ont:isLocationOf coresr-ont:UniversityInstance01 .
+
+coresr-ont:LocationInstance02 a coresr-ont:Location ;
+    rdfs:label "Sample Location instance 2" ;
+    coresr-ont:atState coresr-ont:StateInstance02 ;
+    coresr-ont:isLocationOf coresr-ont:UniversityInstance02 .
+
+coresr-ont:LocationInstance03 a coresr-ont:Location ;
+    rdfs:label "Sample Location instance 3" ;
+    coresr-ont:atState coresr-ont:StateInstance03 ;
+    coresr-ont:isLocationOf coresr-ont:UniversityInstance03 .
+
+coresr-ont:LocationInstance04 a coresr-ont:Location ;
+    rdfs:label "Sample Location instance 4" ;
+    coresr-ont:atState coresr-ont:StateInstance04 ;
+    coresr-ont:isLocationOf coresr-ont:UniversityInstance04 .
+
+coresr-ont:LocationInstance05 a coresr-ont:Location ;
+    rdfs:label "Sample Location instance 5" ;
+    coresr-ont:atState coresr-ont:StateInstance05 ;
+    coresr-ont:isLocationOf coresr-ont:UniversityInstance05 .
+
+coresr-ont:LocationInstance06 a coresr-ont:Location ;
+    rdfs:label "Sample Location instance 6" ;
+    coresr-ont:atState coresr-ont:StateInstance06 ;
+    coresr-ont:isLocationOf coresr-ont:UniversityInstance06 .
+
+coresr-ont:LocationInstance07 a coresr-ont:Location ;
+    rdfs:label "Sample Location instance 7" ;
+    coresr-ont:atState coresr-ont:StateInstance07 ;
+    coresr-ont:isLocationOf coresr-ont:UniversityInstance07 .
+
+coresr-ont:LocationInstance08 a coresr-ont:Location ;
+    rdfs:label "Sample Location instance 8" ;
+    coresr-ont:atState coresr-ont:StateInstance08 ;
+    coresr-ont:isLocationOf coresr-ont:UniversityInstance08 .
+
+coresr-ont:LocationInstance09 a coresr-ont:Location ;
+    rdfs:label "Sample Location instance 9" ;
+    coresr-ont:atState coresr-ont:StateInstance09 ;
+    coresr-ont:isLocationOf coresr-ont:UniversityInstance09 .
+
+coresr-ont:LocationInstance10 a coresr-ont:Location ;
+    rdfs:label "Sample Location instance 10" ;
+    coresr-ont:atState coresr-ont:StateInstance10 ;
+    coresr-ont:isLocationOf coresr-ont:UniversityInstance10 .
+
+coresr-ont:PeriodicalLiteratureInstance01 a coresr-ont:PeriodicalLiterature ;
+    rdfs:label "Sample PeriodicalLiterature instance 1" ;
+    coresr-ont:hasIssue coresr-ont:IssueInstance01 ;
+    coresr-ont:hasVolume coresr-ont:VolumeInstance01 .
+
+coresr-ont:PeriodicalLiteratureInstance02 a coresr-ont:PeriodicalLiterature ;
+    rdfs:label "Sample PeriodicalLiterature instance 2" ;
+    coresr-ont:hasIssue coresr-ont:IssueInstance02 ;
+    coresr-ont:hasVolume coresr-ont:VolumeInstance02 .
+
+coresr-ont:PeriodicalLiteratureInstance03 a coresr-ont:PeriodicalLiterature ;
+    rdfs:label "Sample PeriodicalLiterature instance 3" ;
+    coresr-ont:hasIssue coresr-ont:IssueInstance03 ;
+    coresr-ont:hasVolume coresr-ont:VolumeInstance03 .
+
+coresr-ont:PeriodicalLiteratureInstance04 a coresr-ont:PeriodicalLiterature ;
+    rdfs:label "Sample PeriodicalLiterature instance 4" ;
+    coresr-ont:hasIssue coresr-ont:IssueInstance04 ;
+    coresr-ont:hasVolume coresr-ont:VolumeInstance04 .
+
+coresr-ont:PeriodicalLiteratureInstance05 a coresr-ont:PeriodicalLiterature ;
+    rdfs:label "Sample PeriodicalLiterature instance 5" ;
+    coresr-ont:hasIssue coresr-ont:IssueInstance05 ;
+    coresr-ont:hasVolume coresr-ont:VolumeInstance05 .
+
+coresr-ont:PeriodicalLiteratureInstance06 a coresr-ont:PeriodicalLiterature ;
+    rdfs:label "Sample PeriodicalLiterature instance 6" ;
+    coresr-ont:hasIssue coresr-ont:IssueInstance06 ;
+    coresr-ont:hasVolume coresr-ont:VolumeInstance06 .
+
+coresr-ont:PeriodicalLiteratureInstance07 a coresr-ont:PeriodicalLiterature ;
+    rdfs:label "Sample PeriodicalLiterature instance 7" ;
+    coresr-ont:hasIssue coresr-ont:IssueInstance07 ;
+    coresr-ont:hasVolume coresr-ont:VolumeInstance07 .
+
+coresr-ont:PeriodicalLiteratureInstance08 a coresr-ont:PeriodicalLiterature ;
+    rdfs:label "Sample PeriodicalLiterature instance 8" ;
+    coresr-ont:hasIssue coresr-ont:IssueInstance08 ;
+    coresr-ont:hasVolume coresr-ont:VolumeInstance08 .
+
+coresr-ont:PeriodicalLiteratureInstance09 a coresr-ont:PeriodicalLiterature ;
+    rdfs:label "Sample PeriodicalLiterature instance 9" ;
+    coresr-ont:hasIssue coresr-ont:IssueInstance09 ;
+    coresr-ont:hasVolume coresr-ont:VolumeInstance09 .
+
+coresr-ont:PeriodicalLiteratureInstance10 a coresr-ont:PeriodicalLiterature ;
+    rdfs:label "Sample PeriodicalLiterature instance 10" ;
+    coresr-ont:hasIssue coresr-ont:IssueInstance10 ;
+    coresr-ont:hasVolume coresr-ont:VolumeInstance10 .
+
+coresr-ont:UniversityInstance01 a coresr-ont:University ;
+    rdfs:label "Sample University instance 1" ;
+    coresr-ont:hasPart coresr-ont:CollegeInstance01 ;
+    coresr-ont:locatedAt coresr-ont:GenericObject01,
+        coresr-ont:LocationInstance01 .
+
+coresr-ont:UniversityInstance02 a coresr-ont:University ;
+    rdfs:label "Sample University instance 2" ;
+    coresr-ont:hasPart coresr-ont:CollegeInstance02 ;
+    coresr-ont:locatedAt coresr-ont:GenericObject02,
+        coresr-ont:LocationInstance02 .
+
+coresr-ont:UniversityInstance03 a coresr-ont:University ;
+    rdfs:label "Sample University instance 3" ;
+    coresr-ont:hasPart coresr-ont:CollegeInstance03 ;
+    coresr-ont:locatedAt coresr-ont:GenericObject03,
+        coresr-ont:LocationInstance03 .
+
+coresr-ont:UniversityInstance04 a coresr-ont:University ;
+    rdfs:label "Sample University instance 4" ;
+    coresr-ont:hasPart coresr-ont:CollegeInstance04 ;
+    coresr-ont:locatedAt coresr-ont:GenericObject04,
+        coresr-ont:LocationInstance04 .
+
+coresr-ont:UniversityInstance05 a coresr-ont:University ;
+    rdfs:label "Sample University instance 5" ;
+    coresr-ont:hasPart coresr-ont:CollegeInstance05 ;
+    coresr-ont:locatedAt coresr-ont:GenericObject05,
+        coresr-ont:LocationInstance05 .
+
+coresr-ont:UniversityInstance06 a coresr-ont:University ;
+    rdfs:label "Sample University instance 6" ;
+    coresr-ont:hasPart coresr-ont:CollegeInstance06 ;
+    coresr-ont:locatedAt coresr-ont:GenericObject06,
+        coresr-ont:LocationInstance06 .
+
+coresr-ont:UniversityInstance07 a coresr-ont:University ;
+    rdfs:label "Sample University instance 7" ;
+    coresr-ont:hasPart coresr-ont:CollegeInstance07 ;
+    coresr-ont:locatedAt coresr-ont:GenericObject07,
+        coresr-ont:LocationInstance07 .
+
+coresr-ont:UniversityInstance08 a coresr-ont:University ;
+    rdfs:label "Sample University instance 8" ;
+    coresr-ont:hasPart coresr-ont:CollegeInstance08 ;
+    coresr-ont:locatedAt coresr-ont:GenericObject08,
+        coresr-ont:LocationInstance08 .
+
+coresr-ont:UniversityInstance09 a coresr-ont:University ;
+    rdfs:label "Sample University instance 9" ;
+    coresr-ont:hasPart coresr-ont:CollegeInstance09 ;
+    coresr-ont:locatedAt coresr-ont:GenericObject09,
+        coresr-ont:LocationInstance09 .
+
+coresr-ont:UniversityInstance10 a coresr-ont:University ;
+    rdfs:label "Sample University instance 10" ;
+    coresr-ont:hasPart coresr-ont:CollegeInstance10 ;
+    coresr-ont:locatedAt coresr-ont:GenericObject10,
+        coresr-ont:LocationInstance10 .
+
+coresr-ont:AgentInstance01 a coresr-ont:Agent ;
+    rdfs:label "Sample Agent instance 1" ;
+    coresr-ont:associatedWith coresr-ont:DepartmentInstance01 ;
+    coresr-ont:hasContactInformation coresr-ont:ContactInformationInstance01 ;
+    coresr-ont:performsRole coresr-ont:RoleInstance01 .
+
+coresr-ont:AgentInstance02 a coresr-ont:Agent ;
+    rdfs:label "Sample Agent instance 2" ;
+    coresr-ont:associatedWith coresr-ont:DepartmentInstance02 ;
+    coresr-ont:hasContactInformation coresr-ont:ContactInformationInstance02 ;
+    coresr-ont:performsRole coresr-ont:RoleInstance02 .
+
+coresr-ont:AgentInstance03 a coresr-ont:Agent ;
+    rdfs:label "Sample Agent instance 3" ;
+    coresr-ont:associatedWith coresr-ont:DepartmentInstance03 ;
+    coresr-ont:hasContactInformation coresr-ont:ContactInformationInstance03 ;
+    coresr-ont:performsRole coresr-ont:RoleInstance03 .
+
+coresr-ont:AgentInstance04 a coresr-ont:Agent ;
+    rdfs:label "Sample Agent instance 4" ;
+    coresr-ont:associatedWith coresr-ont:DepartmentInstance04 ;
+    coresr-ont:hasContactInformation coresr-ont:ContactInformationInstance04 ;
+    coresr-ont:performsRole coresr-ont:RoleInstance04 .
+
+coresr-ont:AgentInstance05 a coresr-ont:Agent ;
+    rdfs:label "Sample Agent instance 5" ;
+    coresr-ont:associatedWith coresr-ont:DepartmentInstance05 ;
+    coresr-ont:hasContactInformation coresr-ont:ContactInformationInstance05 ;
+    coresr-ont:performsRole coresr-ont:RoleInstance05 .
+
+coresr-ont:AgentInstance06 a coresr-ont:Agent ;
+    rdfs:label "Sample Agent instance 6" ;
+    coresr-ont:associatedWith coresr-ont:DepartmentInstance06 ;
+    coresr-ont:hasContactInformation coresr-ont:ContactInformationInstance06 ;
+    coresr-ont:performsRole coresr-ont:RoleInstance06 .
+
+coresr-ont:AgentInstance07 a coresr-ont:Agent ;
+    rdfs:label "Sample Agent instance 7" ;
+    coresr-ont:associatedWith coresr-ont:DepartmentInstance07 ;
+    coresr-ont:hasContactInformation coresr-ont:ContactInformationInstance07 ;
+    coresr-ont:performsRole coresr-ont:RoleInstance07 .
+
+coresr-ont:AgentInstance08 a coresr-ont:Agent ;
+    rdfs:label "Sample Agent instance 8" ;
+    coresr-ont:associatedWith coresr-ont:DepartmentInstance08 ;
+    coresr-ont:hasContactInformation coresr-ont:ContactInformationInstance08 ;
+    coresr-ont:performsRole coresr-ont:RoleInstance08 .
+
+coresr-ont:AgentInstance09 a coresr-ont:Agent ;
+    rdfs:label "Sample Agent instance 9" ;
+    coresr-ont:associatedWith coresr-ont:DepartmentInstance09 ;
+    coresr-ont:hasContactInformation coresr-ont:ContactInformationInstance09 ;
+    coresr-ont:performsRole coresr-ont:RoleInstance09 .
+
+coresr-ont:AgentInstance10 a coresr-ont:Agent ;
+    rdfs:label "Sample Agent instance 10" ;
+    coresr-ont:associatedWith coresr-ont:DepartmentInstance10 ;
+    coresr-ont:hasContactInformation coresr-ont:ContactInformationInstance10 ;
+    coresr-ont:performsRole coresr-ont:RoleInstance10 .
+
+coresr-ont:CollegeInstance01 a coresr-ont:College,
+        coresr-ont:Department,
+        coresr-ont:Publication ;
+    rdfs:label "Sample College instance 1" ;
+    coresr-ont:hasPart coresr-ont:DepartmentInstance01 ;
+    coresr-ont:partOf coresr-ont:ArticleInstance01,
+        coresr-ont:GenericObject01,
+        coresr-ont:UniversityInstance01 .
+
+coresr-ont:CollegeInstance02 a coresr-ont:College,
+        coresr-ont:Department,
+        coresr-ont:Publication ;
+    rdfs:label "Sample College instance 2" ;
+    coresr-ont:hasPart coresr-ont:DepartmentInstance02 ;
+    coresr-ont:partOf coresr-ont:ArticleInstance02,
+        coresr-ont:GenericObject02,
+        coresr-ont:UniversityInstance02 .
+
+coresr-ont:CollegeInstance03 a coresr-ont:College,
+        coresr-ont:Department,
+        coresr-ont:Publication ;
+    rdfs:label "Sample College instance 3" ;
+    coresr-ont:hasPart coresr-ont:DepartmentInstance03 ;
+    coresr-ont:partOf coresr-ont:ArticleInstance03,
+        coresr-ont:GenericObject03,
+        coresr-ont:UniversityInstance03 .
+
+coresr-ont:CollegeInstance04 a coresr-ont:College,
+        coresr-ont:Department,
+        coresr-ont:Publication ;
+    rdfs:label "Sample College instance 4" ;
+    coresr-ont:hasPart coresr-ont:DepartmentInstance04 ;
+    coresr-ont:partOf coresr-ont:ArticleInstance04,
+        coresr-ont:GenericObject04,
+        coresr-ont:UniversityInstance04 .
+
+coresr-ont:CollegeInstance05 a coresr-ont:College,
+        coresr-ont:Department,
+        coresr-ont:Publication ;
+    rdfs:label "Sample College instance 5" ;
+    coresr-ont:hasPart coresr-ont:DepartmentInstance05 ;
+    coresr-ont:partOf coresr-ont:ArticleInstance05,
+        coresr-ont:GenericObject05,
+        coresr-ont:UniversityInstance05 .
+
+coresr-ont:CollegeInstance06 a coresr-ont:College,
+        coresr-ont:Department,
+        coresr-ont:Publication ;
+    rdfs:label "Sample College instance 6" ;
+    coresr-ont:hasPart coresr-ont:DepartmentInstance06 ;
+    coresr-ont:partOf coresr-ont:ArticleInstance06,
+        coresr-ont:GenericObject06,
+        coresr-ont:UniversityInstance06 .
+
+coresr-ont:CollegeInstance07 a coresr-ont:College,
+        coresr-ont:Department,
+        coresr-ont:Publication ;
+    rdfs:label "Sample College instance 7" ;
+    coresr-ont:hasPart coresr-ont:DepartmentInstance07 ;
+    coresr-ont:partOf coresr-ont:ArticleInstance07,
+        coresr-ont:GenericObject07,
+        coresr-ont:UniversityInstance07 .
+
+coresr-ont:CollegeInstance08 a coresr-ont:College,
+        coresr-ont:Department,
+        coresr-ont:Publication ;
+    rdfs:label "Sample College instance 8" ;
+    coresr-ont:hasPart coresr-ont:DepartmentInstance08 ;
+    coresr-ont:partOf coresr-ont:ArticleInstance08,
+        coresr-ont:GenericObject08,
+        coresr-ont:UniversityInstance08 .
+
+coresr-ont:CollegeInstance09 a coresr-ont:College,
+        coresr-ont:Department,
+        coresr-ont:Publication ;
+    rdfs:label "Sample College instance 9" ;
+    coresr-ont:hasPart coresr-ont:DepartmentInstance09 ;
+    coresr-ont:partOf coresr-ont:ArticleInstance09,
+        coresr-ont:GenericObject09,
+        coresr-ont:UniversityInstance09 .
+
+coresr-ont:CollegeInstance10 a coresr-ont:College,
+        coresr-ont:Department,
+        coresr-ont:Publication ;
+    rdfs:label "Sample College instance 10" ;
+    coresr-ont:hasPart coresr-ont:DepartmentInstance10 ;
+    coresr-ont:partOf coresr-ont:ArticleInstance10,
+        coresr-ont:GenericObject10,
+        coresr-ont:UniversityInstance10 .
+
+coresr-ont:PublicationInstance01 a coresr-ont:Publication ;
+    rdfs:label "Sample Publication instance 1" ;
+    coresr-ont:associatedFieldOfStudy coresr-ont:FieldOfStudyInstance01 ;
+    coresr-ont:dateOfPost coresr-ont:GenericObject01,
+        "2026-05-01"^^xsd:date ;
+    coresr-ont:dateOfPublication coresr-ont:GenericObject01,
+        "2026-05-01"^^xsd:date ;
+    coresr-ont:dateOfSubmission coresr-ont:GenericObject01,
+        "2026-05-01"^^xsd:date ;
+    coresr-ont:hasAbstract coresr-ont:AbstractInstance01 ;
+    coresr-ont:hasContributor coresr-ont:ContributorInstance01 ;
+    coresr-ont:hasIdentifier coresr-ont:DOIInstance01,
+        coresr-ont:GenericObject01 ;
+    coresr-ont:hasPublicationType coresr-ont:GenericObject01,
+        coresr-ont:PublicationTypeInstance01 ;
+    coresr-ont:hasTitle coresr-ont:GenericObject01,
+        "Sample hasTitle value 1"^^xsd:string ;
+    coresr-ont:partOf coresr-ont:ArticleInstance01 ;
+    coresr-ont:publicationState coresr-ont:GenericObject01,
+        coresr-ont:ProcessStateInstance01 ;
+    coresr-ont:submittedBy coresr-ont:AuthorInstance01,
+        coresr-ont:GenericObject01 .
+
+coresr-ont:PublicationInstance02 a coresr-ont:Publication ;
+    rdfs:label "Sample Publication instance 2" ;
+    coresr-ont:associatedFieldOfStudy coresr-ont:FieldOfStudyInstance02 ;
+    coresr-ont:dateOfPost coresr-ont:GenericObject02,
+        "2026-05-02"^^xsd:date ;
+    coresr-ont:dateOfPublication coresr-ont:GenericObject02,
+        "2026-05-02"^^xsd:date ;
+    coresr-ont:dateOfSubmission coresr-ont:GenericObject02,
+        "2026-05-02"^^xsd:date ;
+    coresr-ont:hasAbstract coresr-ont:AbstractInstance02 ;
+    coresr-ont:hasContributor coresr-ont:ContributorInstance02 ;
+    coresr-ont:hasIdentifier coresr-ont:DOIInstance02,
+        coresr-ont:GenericObject02 ;
+    coresr-ont:hasPublicationType coresr-ont:GenericObject02,
+        coresr-ont:PublicationTypeInstance02 ;
+    coresr-ont:hasTitle coresr-ont:GenericObject02,
+        "Sample hasTitle value 2"^^xsd:string ;
+    coresr-ont:partOf coresr-ont:ArticleInstance02 ;
+    coresr-ont:publicationState coresr-ont:GenericObject02,
+        coresr-ont:ProcessStateInstance02 ;
+    coresr-ont:submittedBy coresr-ont:AuthorInstance02,
+        coresr-ont:GenericObject02 .
+
+coresr-ont:PublicationInstance03 a coresr-ont:Publication ;
+    rdfs:label "Sample Publication instance 3" ;
+    coresr-ont:associatedFieldOfStudy coresr-ont:FieldOfStudyInstance03 ;
+    coresr-ont:dateOfPost coresr-ont:GenericObject03,
+        "2026-05-03"^^xsd:date ;
+    coresr-ont:dateOfPublication coresr-ont:GenericObject03,
+        "2026-05-03"^^xsd:date ;
+    coresr-ont:dateOfSubmission coresr-ont:GenericObject03,
+        "2026-05-03"^^xsd:date ;
+    coresr-ont:hasAbstract coresr-ont:AbstractInstance03 ;
+    coresr-ont:hasContributor coresr-ont:ContributorInstance03 ;
+    coresr-ont:hasIdentifier coresr-ont:DOIInstance03,
+        coresr-ont:GenericObject03 ;
+    coresr-ont:hasPublicationType coresr-ont:GenericObject03,
+        coresr-ont:PublicationTypeInstance03 ;
+    coresr-ont:hasTitle coresr-ont:GenericObject03,
+        "Sample hasTitle value 3"^^xsd:string ;
+    coresr-ont:partOf coresr-ont:ArticleInstance03 ;
+    coresr-ont:publicationState coresr-ont:GenericObject03,
+        coresr-ont:ProcessStateInstance03 ;
+    coresr-ont:submittedBy coresr-ont:AuthorInstance03,
+        coresr-ont:GenericObject03 .
+
+coresr-ont:PublicationInstance04 a coresr-ont:Publication ;
+    rdfs:label "Sample Publication instance 4" ;
+    coresr-ont:associatedFieldOfStudy coresr-ont:FieldOfStudyInstance04 ;
+    coresr-ont:dateOfPost coresr-ont:GenericObject04,
+        "2026-05-04"^^xsd:date ;
+    coresr-ont:dateOfPublication coresr-ont:GenericObject04,
+        "2026-05-04"^^xsd:date ;
+    coresr-ont:dateOfSubmission coresr-ont:GenericObject04,
+        "2026-05-04"^^xsd:date ;
+    coresr-ont:hasAbstract coresr-ont:AbstractInstance04 ;
+    coresr-ont:hasContributor coresr-ont:ContributorInstance04 ;
+    coresr-ont:hasIdentifier coresr-ont:DOIInstance04,
+        coresr-ont:GenericObject04 ;
+    coresr-ont:hasPublicationType coresr-ont:GenericObject04,
+        coresr-ont:PublicationTypeInstance04 ;
+    coresr-ont:hasTitle coresr-ont:GenericObject04,
+        "Sample hasTitle value 4"^^xsd:string ;
+    coresr-ont:partOf coresr-ont:ArticleInstance04 ;
+    coresr-ont:publicationState coresr-ont:GenericObject04,
+        coresr-ont:ProcessStateInstance04 ;
+    coresr-ont:submittedBy coresr-ont:AuthorInstance04,
+        coresr-ont:GenericObject04 .
+
+coresr-ont:PublicationInstance05 a coresr-ont:Publication ;
+    rdfs:label "Sample Publication instance 5" ;
+    coresr-ont:associatedFieldOfStudy coresr-ont:FieldOfStudyInstance05 ;
+    coresr-ont:dateOfPost coresr-ont:GenericObject05,
+        "2026-05-05"^^xsd:date ;
+    coresr-ont:dateOfPublication coresr-ont:GenericObject05,
+        "2026-05-05"^^xsd:date ;
+    coresr-ont:dateOfSubmission coresr-ont:GenericObject05,
+        "2026-05-05"^^xsd:date ;
+    coresr-ont:hasAbstract coresr-ont:AbstractInstance05 ;
+    coresr-ont:hasContributor coresr-ont:ContributorInstance05 ;
+    coresr-ont:hasIdentifier coresr-ont:DOIInstance05,
+        coresr-ont:GenericObject05 ;
+    coresr-ont:hasPublicationType coresr-ont:GenericObject05,
+        coresr-ont:PublicationTypeInstance05 ;
+    coresr-ont:hasTitle coresr-ont:GenericObject05,
+        "Sample hasTitle value 5"^^xsd:string ;
+    coresr-ont:partOf coresr-ont:ArticleInstance05 ;
+    coresr-ont:publicationState coresr-ont:GenericObject05,
+        coresr-ont:ProcessStateInstance05 ;
+    coresr-ont:submittedBy coresr-ont:AuthorInstance05,
+        coresr-ont:GenericObject05 .
+
+coresr-ont:PublicationInstance06 a coresr-ont:Publication ;
+    rdfs:label "Sample Publication instance 6" ;
+    coresr-ont:associatedFieldOfStudy coresr-ont:FieldOfStudyInstance06 ;
+    coresr-ont:dateOfPost coresr-ont:GenericObject06,
+        "2026-05-06"^^xsd:date ;
+    coresr-ont:dateOfPublication coresr-ont:GenericObject06,
+        "2026-05-06"^^xsd:date ;
+    coresr-ont:dateOfSubmission coresr-ont:GenericObject06,
+        "2026-05-06"^^xsd:date ;
+    coresr-ont:hasAbstract coresr-ont:AbstractInstance06 ;
+    coresr-ont:hasContributor coresr-ont:ContributorInstance06 ;
+    coresr-ont:hasIdentifier coresr-ont:DOIInstance06,
+        coresr-ont:GenericObject06 ;
+    coresr-ont:hasPublicationType coresr-ont:GenericObject06,
+        coresr-ont:PublicationTypeInstance06 ;
+    coresr-ont:hasTitle coresr-ont:GenericObject06,
+        "Sample hasTitle value 6"^^xsd:string ;
+    coresr-ont:partOf coresr-ont:ArticleInstance06 ;
+    coresr-ont:publicationState coresr-ont:GenericObject06,
+        coresr-ont:ProcessStateInstance06 ;
+    coresr-ont:submittedBy coresr-ont:AuthorInstance06,
+        coresr-ont:GenericObject06 .
+
+coresr-ont:PublicationInstance07 a coresr-ont:Publication ;
+    rdfs:label "Sample Publication instance 7" ;
+    coresr-ont:associatedFieldOfStudy coresr-ont:FieldOfStudyInstance07 ;
+    coresr-ont:dateOfPost coresr-ont:GenericObject07,
+        "2026-05-07"^^xsd:date ;
+    coresr-ont:dateOfPublication coresr-ont:GenericObject07,
+        "2026-05-07"^^xsd:date ;
+    coresr-ont:dateOfSubmission coresr-ont:GenericObject07,
+        "2026-05-07"^^xsd:date ;
+    coresr-ont:hasAbstract coresr-ont:AbstractInstance07 ;
+    coresr-ont:hasContributor coresr-ont:ContributorInstance07 ;
+    coresr-ont:hasIdentifier coresr-ont:DOIInstance07,
+        coresr-ont:GenericObject07 ;
+    coresr-ont:hasPublicationType coresr-ont:GenericObject07,
+        coresr-ont:PublicationTypeInstance07 ;
+    coresr-ont:hasTitle coresr-ont:GenericObject07,
+        "Sample hasTitle value 7"^^xsd:string ;
+    coresr-ont:partOf coresr-ont:ArticleInstance07 ;
+    coresr-ont:publicationState coresr-ont:GenericObject07,
+        coresr-ont:ProcessStateInstance07 ;
+    coresr-ont:submittedBy coresr-ont:AuthorInstance07,
+        coresr-ont:GenericObject07 .
+
+coresr-ont:PublicationInstance08 a coresr-ont:Publication ;
+    rdfs:label "Sample Publication instance 8" ;
+    coresr-ont:associatedFieldOfStudy coresr-ont:FieldOfStudyInstance08 ;
+    coresr-ont:dateOfPost coresr-ont:GenericObject08,
+        "2026-05-08"^^xsd:date ;
+    coresr-ont:dateOfPublication coresr-ont:GenericObject08,
+        "2026-05-08"^^xsd:date ;
+    coresr-ont:dateOfSubmission coresr-ont:GenericObject08,
+        "2026-05-08"^^xsd:date ;
+    coresr-ont:hasAbstract coresr-ont:AbstractInstance08 ;
+    coresr-ont:hasContributor coresr-ont:ContributorInstance08 ;
+    coresr-ont:hasIdentifier coresr-ont:DOIInstance08,
+        coresr-ont:GenericObject08 ;
+    coresr-ont:hasPublicationType coresr-ont:GenericObject08,
+        coresr-ont:PublicationTypeInstance08 ;
+    coresr-ont:hasTitle coresr-ont:GenericObject08,
+        "Sample hasTitle value 8"^^xsd:string ;
+    coresr-ont:partOf coresr-ont:ArticleInstance08 ;
+    coresr-ont:publicationState coresr-ont:GenericObject08,
+        coresr-ont:ProcessStateInstance08 ;
+    coresr-ont:submittedBy coresr-ont:AuthorInstance08,
+        coresr-ont:GenericObject08 .
+
+coresr-ont:PublicationInstance09 a coresr-ont:Publication ;
+    rdfs:label "Sample Publication instance 9" ;
+    coresr-ont:associatedFieldOfStudy coresr-ont:FieldOfStudyInstance09 ;
+    coresr-ont:dateOfPost coresr-ont:GenericObject09,
+        "2026-05-09"^^xsd:date ;
+    coresr-ont:dateOfPublication coresr-ont:GenericObject09,
+        "2026-05-09"^^xsd:date ;
+    coresr-ont:dateOfSubmission coresr-ont:GenericObject09,
+        "2026-05-09"^^xsd:date ;
+    coresr-ont:hasAbstract coresr-ont:AbstractInstance09 ;
+    coresr-ont:hasContributor coresr-ont:ContributorInstance09 ;
+    coresr-ont:hasIdentifier coresr-ont:DOIInstance09,
+        coresr-ont:GenericObject09 ;
+    coresr-ont:hasPublicationType coresr-ont:GenericObject09,
+        coresr-ont:PublicationTypeInstance09 ;
+    coresr-ont:hasTitle coresr-ont:GenericObject09,
+        "Sample hasTitle value 9"^^xsd:string ;
+    coresr-ont:partOf coresr-ont:ArticleInstance09 ;
+    coresr-ont:publicationState coresr-ont:GenericObject09,
+        coresr-ont:ProcessStateInstance09 ;
+    coresr-ont:submittedBy coresr-ont:AuthorInstance09,
+        coresr-ont:GenericObject09 .
+
+coresr-ont:PublicationInstance10 a coresr-ont:Publication ;
+    rdfs:label "Sample Publication instance 10" ;
+    coresr-ont:associatedFieldOfStudy coresr-ont:FieldOfStudyInstance10 ;
+    coresr-ont:dateOfPost coresr-ont:GenericObject10,
+        "2026-05-10"^^xsd:date ;
+    coresr-ont:dateOfPublication coresr-ont:GenericObject10,
+        "2026-05-10"^^xsd:date ;
+    coresr-ont:dateOfSubmission coresr-ont:GenericObject10,
+        "2026-05-10"^^xsd:date ;
+    coresr-ont:hasAbstract coresr-ont:AbstractInstance10 ;
+    coresr-ont:hasContributor coresr-ont:ContributorInstance10 ;
+    coresr-ont:hasIdentifier coresr-ont:DOIInstance10,
+        coresr-ont:GenericObject10 ;
+    coresr-ont:hasPublicationType coresr-ont:GenericObject10,
+        coresr-ont:PublicationTypeInstance10 ;
+    coresr-ont:hasTitle coresr-ont:GenericObject10,
+        "Sample hasTitle value 10"^^xsd:string ;
+    coresr-ont:partOf coresr-ont:ArticleInstance10 ;
+    coresr-ont:publicationState coresr-ont:GenericObject10,
+        coresr-ont:ProcessStateInstance10 ;
+    coresr-ont:submittedBy coresr-ont:AuthorInstance10,
+        coresr-ont:GenericObject10 .
+
+coresr-ont:GenericObject01 a owl:Thing ;
+    rdfs:label "Sample generic object 1" .
+
+coresr-ont:GenericObject02 a owl:Thing ;
+    rdfs:label "Sample generic object 2" .
+
+coresr-ont:GenericObject03 a owl:Thing ;
+    rdfs:label "Sample generic object 3" .
+
+coresr-ont:GenericObject04 a owl:Thing ;
+    rdfs:label "Sample generic object 4" .
+
+coresr-ont:GenericObject05 a owl:Thing ;
+    rdfs:label "Sample generic object 5" .
+
+coresr-ont:GenericObject06 a owl:Thing ;
+    rdfs:label "Sample generic object 6" .
+
+coresr-ont:GenericObject07 a owl:Thing ;
+    rdfs:label "Sample generic object 7" .
+
+coresr-ont:GenericObject08 a owl:Thing ;
+    rdfs:label "Sample generic object 8" .
+
+coresr-ont:GenericObject09 a owl:Thing ;
+    rdfs:label "Sample generic object 9" .
+
+coresr-ont:GenericObject10 a owl:Thing ;
+    rdfs:label "Sample generic object 10" .
+

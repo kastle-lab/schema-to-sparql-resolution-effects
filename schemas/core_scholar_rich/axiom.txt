@@ -1,0 +1,306 @@
+coresr-ont:Abstract ⊑ ∃ coresr-ont:hasDescription xsd:string
+coresr-ont:Abstract ⊑ ∃ coresr-ont:isAbstractOf coresr-ont:Publication
+coresr-ont:Abstract ⊑ ≤ 1 coresr-ont:hasDescription
+coresr-ont:Abstract ⊑ ¬ coresr-ont:Agent
+coresr-ont:Abstract ⊑ ¬ coresr-ont:Publication
+coresr-ont:AcademicConcentration ⊑ coresr-ont:FieldOfStudy
+coresr-ont:Advisor ⊑ ∃ coresr-ont:advises coresr-ont:Author
+coresr-ont:Advisor ⊑ coresr-ont:Role
+coresr-ont:Agent ⊑ ∃ coresr-ont:associatedWith coresr-ont:Department
+coresr-ont:Agent ⊑ ∃ coresr-ont:hasContactInformation coresr-ont:ContactInformation
+coresr-ont:Agent ⊑ ∃ coresr-ont:performsRole coresr-ont:Role
+coresr-ont:Agent ⊑ ¬ coresr-ont:University
+coresr-ont:Agent ⊑ ¬ coresr-ont:Abstract
+coresr-ont:Agent ⊑ ¬ coresr-ont:Location
+coresr-ont:Agent ⊑ ¬ coresr-ont:DOI
+coresr-ont:Agent ⊑ ¬ coresr-ont:ProcessState
+coresr-ont:Agent ⊑ ¬ coresr-ont:Department
+coresr-ont:Agent ⊑ ¬ coresr-ont:PublicationType
+coresr-ont:Agent ⊑ ¬ coresr-ont:Publication
+coresr-ont:Agent ⊑ ¬ coresr-ont:College
+coresr-ont:Article ⊑ ∃ coresr-ont:hasNumericIdentifier xsd:int
+coresr-ont:Article ⊑ ≤ 1 coresr-ont:hasNumericIdentifier
+coresr-ont:Author ⊑ ∃ coresr-ont:submits coresr-ont:Publication
+coresr-ont:Author ⊑ coresr-ont:Role
+coresr-ont:Author ⊑ ∃ coresr-ont:advisedBy coresr-ont:Advisor
+coresr-ont:City ⊑ ¬ coresr-ont:College
+coresr-ont:City ⊑ ¬ coresr-ont:Location
+coresr-ont:City ⊑ ¬ coresr-ont:University
+coresr-ont:College ⊑ ∃ coresr-ont:hasPart coresr-ont:Department
+coresr-ont:College ⊑ ≤ 1 coresr-ont:partOf coresr-ont:University
+coresr-ont:College ⊑ ∃ coresr-ont:partOf coresr-ont:University
+coresr-ont:College ⊑ ¬ coresr-ont:City
+coresr-ont:College ⊑ ¬ coresr-ont:Publication
+coresr-ont:College ⊑ ¬ coresr-ont:University
+coresr-ont:College ⊑ ¬ coresr-ont:State
+coresr-ont:College ⊑ ¬ coresr-ont:Location
+coresr-ont:College ⊑ ¬ coresr-ont:Department
+coresr-ont:College ⊑ ¬ coresr-ont:Agent
+coresr-ont:College ⊑ ¬ coresr-ont:ContactInformation
+coresr-ont:ContactInformation ⊑ ¬ coresr-ont:University
+coresr-ont:ContactInformation ⊑ ¬ coresr-ont:Publication
+coresr-ont:ContactInformation ⊑ ¬ coresr-ont:Department
+coresr-ont:ContactInformation ⊑ ¬ coresr-ont:College
+coresr-ont:Contributor ⊑ coresr-ont:Role
+coresr-ont:Contributor ⊑ ∃ coresr-ont:contributedTo coresr-ont:Publication
+coresr-ont:DOI ⊑ ≤ 1 coresr-ont:doiAsString
+coresr-ont:DOI ⊑ ∃ coresr-ont:doiAsString xsd:string
+coresr-ont:DOI ⊑ ∃ coresr-ont:isIdentifierFor coresr-ont:Publication
+coresr-ont:DOI ⊑ ¬ coresr-ont:Agent
+coresr-ont:DOI ⊑ ¬ coresr-ont:Location
+coresr-ont:DOI ⊑ ¬ coresr-ont:Publication
+coresr-ont:Department ⊑ ∃ coresr-ont:hasAssociatedAgent coresr-ont:Agent
+coresr-ont:Department ⊑ ≤ 1 coresr-ont:partOf coresr-ont:College
+coresr-ont:Department ⊑ ∃ coresr-ont:partOf coresr-ont:College
+coresr-ont:Department ⊑ ¬ coresr-ont:University
+coresr-ont:Department ⊑ ¬ coresr-ont:Publication
+coresr-ont:Department ⊑ ¬ coresr-ont:Agent
+coresr-ont:Department ⊑ ¬ coresr-ont:College
+coresr-ont:Department ⊑ ¬ coresr-ont:ContactInformation
+coresr-ont:Discipline ⊑ coresr-ont:FieldOfStudy
+coresr-ont:EmailAddress ⊑ coresr-ont:ContactInformation
+coresr-ont:FamilyName ⊑ coresr-ont:Name
+coresr-ont:FamilyName ⊑ ∃ coresr-ont:nameAsString xsd:string
+coresr-ont:FamilyName ⊑ ≤ 1 coresr-ont:nameAsString
+coresr-ont:FirstName ⊑ ∃ coresr-ont:nameAsString xsd:string
+coresr-ont:FirstName ⊑ ≤ 1 coresr-ont:nameAsString
+coresr-ont:FirstName ⊑ coresr-ont:Name
+coresr-ont:Issue ⊑ ∃ coresr-ont:isIssueOf coresr-ont:PeriodicalLiterature
+coresr-ont:Issue ⊑ ≤ 1 coresr-ont:issueNumber
+coresr-ont:Issue ⊑ ∃ coresr-ont:issueNumber xsd:int
+coresr-ont:Issue ⊑ ¬ coresr-ont:Publication
+coresr-ont:Issue ⊑ ¬ coresr-ont:Volume
+coresr-ont:Location ⊑ coresr-ont:SpatialExtent
+coresr-ont:Location ⊑ ∃ coresr-ont:isLocationOf coresr-ont:University
+coresr-ont:Location ⊑ ∃ coresr-ont:atState coresr-ont:State
+coresr-ont:Location ⊑ ¬ coresr-ont:University
+coresr-ont:Location ⊑ ¬ coresr-ont:Publication
+coresr-ont:Location ⊑ ¬ coresr-ont:City
+coresr-ont:Location ⊑ ¬ coresr-ont:College
+coresr-ont:Location ⊑ ¬ coresr-ont:Agent
+coresr-ont:Location ⊑ ¬ coresr-ont:DOI
+coresr-ont:Location ⊑ ¬ coresr-ont:State
+coresr-ont:Location ⊑ ¬ coresr-ont:ProcessState
+coresr-ont:Name ⊑ coresr-ont:ContactInformation
+coresr-ont:Name ⊑ ≤ 1 coresr-ont:nameAsString
+coresr-ont:Name ⊑ ∃ coresr-ont:nameAsString xsd:string
+coresr-ont:PeriodicalLiterature ⊑ ∃ coresr-ont:hasIssue coresr-ont:Issue
+coresr-ont:PeriodicalLiterature ⊑ ∃ coresr-ont:hasVolume coresr-ont:Volume
+coresr-ont:PeriodicalLiterature ⊑ coresr-ont:Article
+coresr-ont:PhoneNumber ⊑ coresr-ont:ContactInformation
+coresr-ont:ProcessState ⊑ ≤ 1 coresr-ont:atTime
+coresr-ont:ProcessState ⊑ ∃ coresr-ont:isPublicationStateOf coresr-ont:Publication
+coresr-ont:ProcessState ⊑ ∃ coresr-ont:stateAsString xsd:string
+coresr-ont:ProcessState ⊑ ≤ 1 coresr-ont:stateAsString
+coresr-ont:ProcessState ⊑ ∃ coresr-ont:atTime xsd:date
+coresr-ont:ProcessState ⊑ ¬ coresr-ont:Publication
+coresr-ont:ProcessState ⊑ ¬ coresr-ont:Agent
+coresr-ont:ProcessState ⊑ ¬ coresr-ont:Location
+coresr-ont:Publication ⊑ ≤ 1 coresr-ont:submittedBy coresr-ont:Author
+coresr-ont:Publication ⊑ ∃ coresr-ont:dateOfPublication xsd:date
+coresr-ont:Publication ⊑ ≤ 1 coresr-ont:hasTitle
+coresr-ont:Publication ⊑ ∃ coresr-ont:submittedBy coresr-ont:Author
+coresr-ont:Publication ⊑ ∃ coresr-ont:partOf coresr-ont:Article
+coresr-ont:Publication ⊑ ≤ 1 coresr-ont:hasPublicationType coresr-ont:PublicationType
+coresr-ont:Publication ⊑ ≤ 1 coresr-ont:hasIdentifier coresr-ont:DOI
+coresr-ont:Publication ⊑ ∃ coresr-ont:hasPublicationType coresr-ont:PublicationType
+coresr-ont:Publication ⊑ ∃ coresr-ont:hasTitle xsd:string
+coresr-ont:Publication ⊑ ∃ coresr-ont:hasAbstract coresr-ont:Abstract
+coresr-ont:Publication ⊑ ≤ 1 coresr-ont:publicationState coresr-ont:ProcessState
+coresr-ont:Publication ⊑ ∃ coresr-ont:dateOfPost xsd:date
+coresr-ont:Publication ⊑ ≤ 1 coresr-ont:dateOfPublication
+coresr-ont:Publication ⊑ ≤ 1 coresr-ont:dateOfSubmission
+coresr-ont:Publication ⊑ ∃ coresr-ont:hasIdentifier coresr-ont:DOI
+coresr-ont:Publication ⊑ ∃ coresr-ont:publicationState coresr-ont:ProcessState
+coresr-ont:Publication ⊑ ∃ coresr-ont:associatedFieldOfStudy coresr-ont:FieldOfStudy
+coresr-ont:Publication ⊑ ∃ coresr-ont:dateOfSubmission xsd:date
+coresr-ont:Publication ⊑ ≤ 1 coresr-ont:dateOfPost
+coresr-ont:Publication ⊑ ¬ coresr-ont:ProcessState
+coresr-ont:Publication ⊑ ¬ coresr-ont:College
+coresr-ont:Publication ⊑ ¬ coresr-ont:Agent
+coresr-ont:Publication ⊑ ¬ coresr-ont:Issue
+coresr-ont:Publication ⊑ ¬ coresr-ont:University
+coresr-ont:Publication ⊑ ¬ coresr-ont:Abstract
+coresr-ont:Publication ⊑ ¬ coresr-ont:PublicationType
+coresr-ont:Publication ⊑ ¬ coresr-ont:Location
+coresr-ont:Publication ⊑ ¬ coresr-ont:Department
+coresr-ont:Publication ⊑ ¬ coresr-ont:ContactInformation
+coresr-ont:Publication ⊑ ¬ coresr-ont:Volume
+coresr-ont:Publication ⊑ ¬ coresr-ont:DOI
+coresr-ont:PublicationType ⊑ ∃ coresr-ont:isPublicationTypeOf coresr-ont:Publication
+coresr-ont:PublicationType ⊑ ∃ coresr-ont:typeAsString xsd:string
+coresr-ont:PublicationType ⊑ ≤ 1 coresr-ont:typeAsString
+coresr-ont:PublicationType ⊑ ¬ coresr-ont:Publication
+coresr-ont:PublicationType ⊑ ¬ coresr-ont:Agent
+coresr-ont:Role ⊑ ∃ coresr-ont:isPerformedBy coresr-ont:Agent
+coresr-ont:State ⊑ ∃ coresr-ont:isStateOf coresr-ont:Location
+coresr-ont:State ⊑ ∃ coresr-ont:inCity coresr-ont:City
+coresr-ont:State ⊑ ¬ coresr-ont:University
+coresr-ont:State ⊑ ¬ coresr-ont:College
+coresr-ont:State ⊑ ¬ coresr-ont:Location
+coresr-ont:University ⊑ ∃ coresr-ont:locatedAt coresr-ont:Location
+coresr-ont:University ⊑ ∃ coresr-ont:hasPart coresr-ont:College
+coresr-ont:University ⊑ ≤ 1 coresr-ont:locatedAt coresr-ont:Location
+coresr-ont:University ⊑ ¬ coresr-ont:ContactInformation
+coresr-ont:University ⊑ ¬ coresr-ont:Location
+coresr-ont:University ⊑ ¬ coresr-ont:State
+coresr-ont:University ⊑ ¬ coresr-ont:Department
+coresr-ont:University ⊑ ¬ coresr-ont:College
+coresr-ont:University ⊑ ¬ coresr-ont:Agent
+coresr-ont:University ⊑ ¬ coresr-ont:City
+coresr-ont:University ⊑ ¬ coresr-ont:Publication
+coresr-ont:Volume ⊑ ∃ coresr-ont:volumeNumber xsd:int
+coresr-ont:Volume ⊑ ∃ coresr-ont:isVolumeOf coresr-ont:PeriodicalLiterature
+coresr-ont:Volume ⊑ ≤ 1 coresr-ont:volumeNumber
+coresr-ont:Volume ⊑ ¬ coresr-ont:Publication
+coresr-ont:Volume ⊑ ¬ coresr-ont:Issue
+coresr-ont:advisedBy ≡ coresr-ont:advises⁻
+∃ coresr-ont:advisedBy Thing ⊑ coresr-ont:Author
+⊤ ⊑ ∀ coresr-ont:advisedBy coresr-ont:Advisor
+coresr-ont:advisedBy ≡ coresr-ont:advises⁻
+∃ coresr-ont:advises Thing ⊑ coresr-ont:Advisor
+⊤ ⊑ ∀ coresr-ont:advises coresr-ont:Author
+coresr-ont:associatedFieldOfStudy ≡ coresr-ont:isFieldOfStudyOf⁻
+∃ coresr-ont:associatedFieldOfStudy Thing ⊑ coresr-ont:Publication
+⊤ ⊑ ∀ coresr-ont:associatedFieldOfStudy coresr-ont:FieldOfStudy
+coresr-ont:associatedWith ≡ coresr-ont:hasAssociatedAgent⁻
+∃ coresr-ont:associatedWith Thing ⊑ coresr-ont:Agent
+⊤ ⊑ ∀ coresr-ont:associatedWith coresr-ont:Department
+coresr-ont:atState ≡ coresr-ont:isStateOf⁻
+∃ coresr-ont:atState Thing ⊑ coresr-ont:Location
+⊤ ⊑ ∀ coresr-ont:atState coresr-ont:State
+coresr-ont:contributedTo ≡ coresr-ont:hasContributor⁻
+∃ coresr-ont:contributedTo Thing ⊑ coresr-ont:Contributor
+⊤ ⊑ ∀ coresr-ont:contributedTo coresr-ont:Publication
+coresr-ont:hasAbstract ≡ coresr-ont:isAbstractOf⁻
+∃ coresr-ont:hasAbstract Thing ⊑ coresr-ont:Publication
+⊤ ⊑ ∀ coresr-ont:hasAbstract coresr-ont:Abstract
+coresr-ont:associatedWith ≡ coresr-ont:hasAssociatedAgent⁻
+∃ coresr-ont:hasAssociatedAgent Thing ⊑ coresr-ont:Department
+⊤ ⊑ ∀ coresr-ont:hasAssociatedAgent coresr-ont:Agent
+coresr-ont:hasContactInformation ≡ coresr-ont:isContactInformationFor⁻
+∃ coresr-ont:hasContactInformation Thing ⊑ coresr-ont:Agent
+⊤ ⊑ ∀ coresr-ont:hasContactInformation coresr-ont:ContactInformation
+coresr-ont:contributedTo ≡ coresr-ont:hasContributor⁻
+∃ coresr-ont:hasContributor Thing ⊑ coresr-ont:Publication
+⊤ ⊑ ∀ coresr-ont:hasContributor coresr-ont:Contributor
+coresr-ont:hasIdentifier ≡ coresr-ont:isIdentifierFor⁻
+⊤ ⊑ ≤ 1 coresr-ont:hasIdentifier Thing
+∃ coresr-ont:hasIdentifier Thing ⊑ coresr-ont:Publication
+⊤ ⊑ ∀ coresr-ont:hasIdentifier coresr-ont:DOI
+coresr-ont:hasIssue ≡ coresr-ont:isIssueOf⁻
+∃ coresr-ont:hasIssue Thing ⊑ coresr-ont:PeriodicalLiterature
+⊤ ⊑ ∀ coresr-ont:hasIssue coresr-ont:Issue
+coresr-ont:hasPart ≡ coresr-ont:partOf⁻
+AsymmetricPropertyhasPart
+IrreflexiveObjectPropertyhasPart
+∃ coresr-ont:hasPart Thing ⊑ coresr-ont:Article ⊔ coresr-ont:College ⊔ coresr-ont:University
+⊤ ⊑ ∀ coresr-ont:hasPart (coresr-ont:College ⊔ coresr-ont:Department ⊔ coresr-ont:Publication)
+coresr-ont:hasPublicationType ≡ coresr-ont:isPublicationTypeOf⁻
+⊤ ⊑ ≤ 1 coresr-ont:hasPublicationType Thing
+∃ coresr-ont:hasPublicationType Thing ⊑ coresr-ont:Publication
+⊤ ⊑ ∀ coresr-ont:hasPublicationType coresr-ont:PublicationType
+coresr-ont:hasState ≡ coresr-ont:inCity⁻
+∃ coresr-ont:hasState Thing ⊑ coresr-ont:City
+⊤ ⊑ ∀ coresr-ont:hasState coresr-ont:State
+coresr-ont:hasVolume ≡ coresr-ont:isVolumeOf⁻
+∃ coresr-ont:hasVolume Thing ⊑ coresr-ont:PeriodicalLiterature
+⊤ ⊑ ∀ coresr-ont:hasVolume coresr-ont:Volume
+coresr-ont:hasState ≡ coresr-ont:inCity⁻
+∃ coresr-ont:inCity Thing ⊑ coresr-ont:State
+⊤ ⊑ ∀ coresr-ont:inCity coresr-ont:City
+coresr-ont:hasAbstract ≡ coresr-ont:isAbstractOf⁻
+∃ coresr-ont:isAbstractOf Thing ⊑ coresr-ont:Abstract
+⊤ ⊑ ∀ coresr-ont:isAbstractOf coresr-ont:Publication
+coresr-ont:hasContactInformation ≡ coresr-ont:isContactInformationFor⁻
+∃ coresr-ont:isContactInformationFor Thing ⊑ coresr-ont:ContactInformation
+⊤ ⊑ ∀ coresr-ont:isContactInformationFor coresr-ont:Agent
+coresr-ont:associatedFieldOfStudy ≡ coresr-ont:isFieldOfStudyOf⁻
+∃ coresr-ont:isFieldOfStudyOf Thing ⊑ coresr-ont:FieldOfStudy
+⊤ ⊑ ∀ coresr-ont:isFieldOfStudyOf coresr-ont:Publication
+coresr-ont:hasIdentifier ≡ coresr-ont:isIdentifierFor⁻
+∃ coresr-ont:isIdentifierFor Thing ⊑ coresr-ont:DOI
+⊤ ⊑ ∀ coresr-ont:isIdentifierFor coresr-ont:Publication
+coresr-ont:hasIssue ≡ coresr-ont:isIssueOf⁻
+∃ coresr-ont:isIssueOf Thing ⊑ coresr-ont:Issue
+⊤ ⊑ ∀ coresr-ont:isIssueOf coresr-ont:PeriodicalLiterature
+coresr-ont:isLocationOf ≡ coresr-ont:locatedAt⁻
+∃ coresr-ont:isLocationOf Thing ⊑ coresr-ont:Location
+⊤ ⊑ ∀ coresr-ont:isLocationOf coresr-ont:University
+coresr-ont:isPerformedBy ≡ coresr-ont:performsRole⁻
+∃ coresr-ont:isPerformedBy Thing ⊑ coresr-ont:Role
+⊤ ⊑ ∀ coresr-ont:isPerformedBy coresr-ont:Agent
+coresr-ont:isPublicationStateOf ≡ coresr-ont:publicationState⁻
+∃ coresr-ont:isPublicationStateOf Thing ⊑ coresr-ont:ProcessState
+⊤ ⊑ ∀ coresr-ont:isPublicationStateOf coresr-ont:Publication
+coresr-ont:hasPublicationType ≡ coresr-ont:isPublicationTypeOf⁻
+∃ coresr-ont:isPublicationTypeOf Thing ⊑ coresr-ont:PublicationType
+⊤ ⊑ ∀ coresr-ont:isPublicationTypeOf coresr-ont:Publication
+coresr-ont:atState ≡ coresr-ont:isStateOf⁻
+∃ coresr-ont:isStateOf Thing ⊑ coresr-ont:State
+⊤ ⊑ ∀ coresr-ont:isStateOf coresr-ont:Location
+coresr-ont:hasVolume ≡ coresr-ont:isVolumeOf⁻
+∃ coresr-ont:isVolumeOf Thing ⊑ coresr-ont:Volume
+⊤ ⊑ ∀ coresr-ont:isVolumeOf coresr-ont:PeriodicalLiterature
+coresr-ont:isLocationOf ≡ coresr-ont:locatedAt⁻
+⊤ ⊑ ≤ 1 coresr-ont:locatedAt Thing
+∃ coresr-ont:locatedAt Thing ⊑ coresr-ont:University
+⊤ ⊑ ∀ coresr-ont:locatedAt coresr-ont:Location
+coresr-ont:hasPart ≡ coresr-ont:partOf⁻
+AsymmetricPropertypartOf
+IrreflexiveObjectPropertypartOf
+∃ coresr-ont:partOf Thing ⊑ coresr-ont:College ⊔ coresr-ont:Department ⊔ coresr-ont:Publication
+⊤ ⊑ ∀ coresr-ont:partOf (coresr-ont:Article ⊔ coresr-ont:College ⊔ coresr-ont:University)
+coresr-ont:isPerformedBy ≡ coresr-ont:performsRole⁻
+∃ coresr-ont:performsRole Thing ⊑ coresr-ont:Agent
+⊤ ⊑ ∀ coresr-ont:performsRole coresr-ont:Role
+coresr-ont:isPublicationStateOf ≡ coresr-ont:publicationState⁻
+⊤ ⊑ ≤ 1 coresr-ont:publicationState Thing
+∃ coresr-ont:publicationState Thing ⊑ coresr-ont:Publication
+⊤ ⊑ ∀ coresr-ont:publicationState coresr-ont:ProcessState
+coresr-ont:submits ≡ coresr-ont:submittedBy⁻
+∃ coresr-ont:submits Thing ⊑ coresr-ont:Author
+⊤ ⊑ ∀ coresr-ont:submits coresr-ont:Publication
+coresr-ont:submits ≡ coresr-ont:submittedBy⁻
+⊤ ⊑ ≤ 1 coresr-ont:submittedBy Thing
+∃ coresr-ont:submittedBy Thing ⊑ coresr-ont:Publication
+⊤ ⊑ ∀ coresr-ont:submittedBy coresr-ont:Author
+⊤ ⊑ ≤ 1 coresr-ont:atTime
+∃ coresr-ont:atTime rdfs:Literal ⊑ coresr-ont:ProcessState
+⊤ ⊑ ∀ coresr-ont:atTime xsd:date
+⊤ ⊑ ≤ 1 coresr-ont:dateOfPost
+∃ coresr-ont:dateOfPost rdfs:Literal ⊑ coresr-ont:Publication
+⊤ ⊑ ∀ coresr-ont:dateOfPost xsd:date
+⊤ ⊑ ≤ 1 coresr-ont:dateOfPublication
+∃ coresr-ont:dateOfPublication rdfs:Literal ⊑ coresr-ont:Publication
+⊤ ⊑ ∀ coresr-ont:dateOfPublication xsd:date
+⊤ ⊑ ≤ 1 coresr-ont:dateOfSubmission
+∃ coresr-ont:dateOfSubmission rdfs:Literal ⊑ coresr-ont:Publication
+⊤ ⊑ ∀ coresr-ont:dateOfSubmission xsd:date
+⊤ ⊑ ≤ 1 coresr-ont:doiAsString
+∃ coresr-ont:doiAsString rdfs:Literal ⊑ coresr-ont:DOI
+⊤ ⊑ ∀ coresr-ont:doiAsString xsd:string
+⊤ ⊑ ≤ 1 coresr-ont:hasDescription
+∃ coresr-ont:hasDescription rdfs:Literal ⊑ coresr-ont:Abstract
+⊤ ⊑ ∀ coresr-ont:hasDescription xsd:string
+⊤ ⊑ ≤ 1 coresr-ont:hasNumericIdentifier
+∃ coresr-ont:hasNumericIdentifier rdfs:Literal ⊑ coresr-ont:Article
+⊤ ⊑ ∀ coresr-ont:hasNumericIdentifier xsd:int
+⊤ ⊑ ≤ 1 coresr-ont:hasTitle
+∃ coresr-ont:hasTitle rdfs:Literal ⊑ coresr-ont:Publication
+⊤ ⊑ ∀ coresr-ont:hasTitle xsd:string
+⊤ ⊑ ≤ 1 coresr-ont:issueNumber
+∃ coresr-ont:issueNumber rdfs:Literal ⊑ coresr-ont:Issue
+⊤ ⊑ ∀ coresr-ont:issueNumber xsd:int
+⊤ ⊑ ≤ 1 coresr-ont:nameAsString
+∃ coresr-ont:nameAsString rdfs:Literal ⊑ coresr-ont:Name
+⊤ ⊑ ∀ coresr-ont:nameAsString xsd:string
+⊤ ⊑ ≤ 1 coresr-ont:stateAsString
+∃ coresr-ont:stateAsString rdfs:Literal ⊑ coresr-ont:ProcessState
+⊤ ⊑ ∀ coresr-ont:stateAsString xsd:string
+⊤ ⊑ ≤ 1 coresr-ont:typeAsString
+∃ coresr-ont:typeAsString rdfs:Literal ⊑ coresr-ont:PublicationType
+⊤ ⊑ ∀ coresr-ont:typeAsString xsd:string
+⊤ ⊑ ≤ 1 coresr-ont:volumeNumber
+∃ coresr-ont:volumeNumber rdfs:Literal ⊑ coresr-ont:Volume
+⊤ ⊑ ∀ coresr-ont:volumeNumber xsd:int

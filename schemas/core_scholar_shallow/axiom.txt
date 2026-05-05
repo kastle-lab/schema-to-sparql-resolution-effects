@@ -1,0 +1,159 @@
+coress-ont:Agent ⊑ ∃ coress-ont:performsRole coress-ont:Role
+coress-ont:Agent ⊑ ≤ 1 coress-ont:hasFamilyName
+coress-ont:Agent ⊑ ∃ coress-ont:hasFamilyName xsd:string
+coress-ont:Agent ⊑ ≤ 1 coress-ont:hasFirstName
+coress-ont:Agent ⊑ ∃ coress-ont:hasFirstName xsd:string
+coress-ont:Agent ⊑ ∃ coress-ont:worksInDepartment coress-ont:Department
+coress-ont:Agent ⊑ ¬ coress-ont:University
+coress-ont:Agent ⊑ ¬ coress-ont:Department
+coress-ont:Agent ⊑ ¬ coress-ont:Publication
+coress-ont:Agent ⊑ ¬ coress-ont:College
+coress-ont:Author ⊑ ∃ coress-ont:advisedBy xsd:string
+coress-ont:Author ⊑ coress-ont:Role
+coress-ont:Author ⊑ ∃ coress-ont:submits coress-ont:Publication
+coress-ont:College ⊑ ∃ coress-ont:hasDepartment coress-ont:Department
+coress-ont:College ⊑ ∃ coress-ont:collegeOf coress-ont:University
+coress-ont:College ⊑ ≤ 1 coress-ont:collegeOf coress-ont:University
+coress-ont:College ⊑ ¬ coress-ont:Publication
+coress-ont:College ⊑ ¬ coress-ont:Role
+coress-ont:College ⊑ ¬ coress-ont:Department
+coress-ont:College ⊑ ¬ coress-ont:Agent
+coress-ont:College ⊑ ¬ coress-ont:University
+coress-ont:Department ⊑ ∃ coress-ont:departmentOf coress-ont:College
+coress-ont:Department ⊑ ∃ coress-ont:hasAgent coress-ont:Agent
+coress-ont:Department ⊑ ≤ 1 coress-ont:departmentOf coress-ont:College
+coress-ont:Department ⊑ ¬ coress-ont:Role
+coress-ont:Department ⊑ ¬ coress-ont:Publication
+coress-ont:Department ⊑ ¬ coress-ont:University
+coress-ont:Department ⊑ ¬ coress-ont:Agent
+coress-ont:Department ⊑ ¬ coress-ont:College
+coress-ont:Publication ⊑ ≤ 1 coress-ont:publicationState
+coress-ont:Publication ⊑ ≤ 1 coress-ont:hasAbstract
+coress-ont:Publication ⊑ ≤ 1 coress-ont:hasIssueNumber
+coress-ont:Publication ⊑ ≤ 1 coress-ont:hasDOI
+coress-ont:Publication ⊑ ∃ coress-ont:dateOfPublication xsd:date
+coress-ont:Publication ⊑ ≤ 1 coress-ont:hasVolumeNumber
+coress-ont:Publication ⊑ ∃ coress-ont:publicationState xsd:string
+coress-ont:Publication ⊑ ∃ coress-ont:hasPublicationType xsd:string
+coress-ont:Publication ⊑ ∃ coress-ont:dateOfSubmission xsd:date
+coress-ont:Publication ⊑ ∃ coress-ont:hasAbstract xsd:string
+coress-ont:Publication ⊑ ∃ coress-ont:submittedBy coress-ont:Author
+coress-ont:Publication ⊑ ≤ 1 coress-ont:hasTitle
+coress-ont:Publication ⊑ ≤ 1 coress-ont:dateOfPublication
+coress-ont:Publication ⊑ ≤ 1 coress-ont:hasArticleNumber
+coress-ont:Publication ⊑ ∃ coress-ont:hasTitle xsd:string
+coress-ont:Publication ⊑ ≤ 1 coress-ont:dateOfSubmission
+coress-ont:Publication ⊑ ≤ 1 coress-ont:hasPublicationType
+coress-ont:Publication ⊑ ¬ coress-ont:Role
+coress-ont:Publication ⊑ ¬ coress-ont:College
+coress-ont:Publication ⊑ ¬ coress-ont:Department
+coress-ont:Publication ⊑ ¬ coress-ont:University
+coress-ont:Publication ⊑ ¬ coress-ont:Agent
+coress-ont:Role ⊑ ∃ coress-ont:isPerformedBy coress-ont:Agent
+coress-ont:Role ⊑ ¬ coress-ont:University
+coress-ont:Role ⊑ ¬ coress-ont:Department
+coress-ont:Role ⊑ ¬ coress-ont:College
+coress-ont:Role ⊑ ¬ coress-ont:Publication
+coress-ont:University ⊑ ∃ coress-ont:hasCollege coress-ont:College
+coress-ont:University ⊑ ≤ 1 coress-ont:atCity
+coress-ont:University ⊑ ∃ coress-ont:atCity xsd:string
+coress-ont:University ⊑ ≤ 1 coress-ont:atState
+coress-ont:University ⊑ ∃ coress-ont:atState xsd:string
+coress-ont:University ⊑ ¬ coress-ont:Role
+coress-ont:University ⊑ ¬ coress-ont:Agent
+coress-ont:University ⊑ ¬ coress-ont:Department
+coress-ont:University ⊑ ¬ coress-ont:Publication
+coress-ont:University ⊑ ¬ coress-ont:College
+coress-ont:collegeOf ≡ coress-ont:hasCollege⁻
+⊤ ⊑ ≤ 1 coress-ont:collegeOf Thing
+∃ coress-ont:collegeOf Thing ⊑ coress-ont:College
+⊤ ⊑ ∀ coress-ont:collegeOf coress-ont:University
+coress-ont:departmentOf ≡ coress-ont:hasDepartment⁻
+⊤ ⊑ ≤ 1 coress-ont:departmentOf Thing
+∃ coress-ont:departmentOf Thing ⊑ coress-ont:Department
+⊤ ⊑ ∀ coress-ont:departmentOf coress-ont:College
+coress-ont:hasAgent ≡ coress-ont:worksInDepartment⁻
+∃ coress-ont:hasAgent Thing ⊑ coress-ont:Department
+⊤ ⊑ ∀ coress-ont:hasAgent coress-ont:Agent
+coress-ont:collegeOf ≡ coress-ont:hasCollege⁻
+∃ coress-ont:hasCollege Thing ⊑ coress-ont:University
+⊤ ⊑ ∀ coress-ont:hasCollege coress-ont:College
+coress-ont:departmentOf ≡ coress-ont:hasDepartment⁻
+∃ coress-ont:hasDepartment Thing ⊑ coress-ont:College
+⊤ ⊑ ∀ coress-ont:hasDepartment coress-ont:Department
+coress-ont:isPerformedBy ≡ coress-ont:performsRole⁻
+∃ coress-ont:isPerformedBy Thing ⊑ coress-ont:Role
+⊤ ⊑ ∀ coress-ont:isPerformedBy coress-ont:Agent
+coress-ont:isPerformedBy ≡ coress-ont:performsRole⁻
+∃ coress-ont:performsRole Thing ⊑ coress-ont:Agent
+⊤ ⊑ ∀ coress-ont:performsRole coress-ont:Role
+coress-ont:submits ≡ coress-ont:submittedBy⁻
+∃ coress-ont:submits Thing ⊑ coress-ont:Author
+⊤ ⊑ ∀ coress-ont:submits coress-ont:Publication
+coress-ont:submits ≡ coress-ont:submittedBy⁻
+∃ coress-ont:submittedBy Thing ⊑ coress-ont:Publication
+⊤ ⊑ ∀ coress-ont:submittedBy coress-ont:Author
+coress-ont:hasAgent ≡ coress-ont:worksInDepartment⁻
+∃ coress-ont:worksInDepartment Thing ⊑ coress-ont:Agent
+⊤ ⊑ ∀ coress-ont:worksInDepartment coress-ont:Department
+∃ coress-ont:advisedBy rdfs:Literal ⊑ coress-ont:Author ⊔ coress-ont:Role
+⊤ ⊑ ∀ coress-ont:advisedBy xsd:string
+∃ coress-ont:associatedFieldOfStudy rdfs:Literal ⊑ coress-ont:Publication
+⊤ ⊑ ∀ coress-ont:associatedFieldOfStudy xsd:string
+⊤ ⊑ ≤ 1 coress-ont:atCity
+∃ coress-ont:atCity rdfs:Literal ⊑ coress-ont:University
+⊤ ⊑ ∀ coress-ont:atCity xsd:string
+⊤ ⊑ ≤ 1 coress-ont:atState
+∃ coress-ont:atState rdfs:Literal ⊑ coress-ont:University
+⊤ ⊑ ∀ coress-ont:atState xsd:string
+∃ coress-ont:contributionBy rdfs:Literal ⊑ coress-ont:Publication
+⊤ ⊑ ∀ coress-ont:contributionBy xsd:string
+⊤ ⊑ ≤ 1 coress-ont:dateOfPost
+∃ coress-ont:dateOfPost rdfs:Literal ⊑ coress-ont:Publication
+⊤ ⊑ ∀ coress-ont:dateOfPost xsd:date
+⊤ ⊑ ≤ 1 coress-ont:dateOfPublication
+∃ coress-ont:dateOfPublication rdfs:Literal ⊑ coress-ont:Publication
+⊤ ⊑ ∀ coress-ont:dateOfPublication xsd:date
+⊤ ⊑ ≤ 1 coress-ont:dateOfPublicationStateChange
+∃ coress-ont:dateOfPublicationStateChange rdfs:Literal ⊑ coress-ont:Publication
+⊤ ⊑ ∀ coress-ont:dateOfPublicationStateChange xsd:date
+⊤ ⊑ ≤ 1 coress-ont:dateOfSubmission
+∃ coress-ont:dateOfSubmission rdfs:Literal ⊑ coress-ont:Publication
+⊤ ⊑ ∀ coress-ont:dateOfSubmission xsd:date
+⊤ ⊑ ≤ 1 coress-ont:hasAbstract
+∃ coress-ont:hasAbstract rdfs:Literal ⊑ coress-ont:Publication
+⊤ ⊑ ∀ coress-ont:hasAbstract xsd:string
+⊤ ⊑ ≤ 1 coress-ont:hasAdvisor
+∃ coress-ont:hasAdvisor rdfs:Literal ⊑ coress-ont:Publication
+⊤ ⊑ ∀ coress-ont:hasAdvisor xsd:string
+⊤ ⊑ ≤ 1 coress-ont:hasArticleNumber
+∃ coress-ont:hasArticleNumber rdfs:Literal ⊑ coress-ont:Publication
+⊤ ⊑ ∀ coress-ont:hasArticleNumber xsd:int
+⊤ ⊑ ≤ 1 coress-ont:hasDOI
+∃ coress-ont:hasDOI rdfs:Literal ⊑ coress-ont:Publication
+⊤ ⊑ ∀ coress-ont:hasDOI xsd:string
+∃ coress-ont:hasEmailAddress rdfs:Literal ⊑ coress-ont:Agent
+⊤ ⊑ ∀ coress-ont:hasEmailAddress xsd:string
+⊤ ⊑ ≤ 1 coress-ont:hasFamilyName
+∃ coress-ont:hasFamilyName rdfs:Literal ⊑ coress-ont:Agent
+⊤ ⊑ ∀ coress-ont:hasFamilyName xsd:string
+⊤ ⊑ ≤ 1 coress-ont:hasFirstName
+∃ coress-ont:hasFirstName rdfs:Literal ⊑ coress-ont:Agent
+⊤ ⊑ ∀ coress-ont:hasFirstName xsd:string
+⊤ ⊑ ≤ 1 coress-ont:hasIssueNumber
+∃ coress-ont:hasIssueNumber rdfs:Literal ⊑ coress-ont:Publication
+⊤ ⊑ ∀ coress-ont:hasIssueNumber xsd:int
+∃ coress-ont:hasPhoneNumber rdfs:Literal ⊑ coress-ont:Agent
+⊤ ⊑ ∀ coress-ont:hasPhoneNumber xsd:string
+⊤ ⊑ ≤ 1 coress-ont:hasPublicationType
+∃ coress-ont:hasPublicationType rdfs:Literal ⊑ coress-ont:Publication
+⊤ ⊑ ∀ coress-ont:hasPublicationType xsd:string
+⊤ ⊑ ≤ 1 coress-ont:hasTitle
+∃ coress-ont:hasTitle rdfs:Literal ⊑ coress-ont:Publication
+⊤ ⊑ ∀ coress-ont:hasTitle xsd:string
+⊤ ⊑ ≤ 1 coress-ont:hasVolumeNumber
+∃ coress-ont:hasVolumeNumber rdfs:Literal ⊑ coress-ont:Publication
+⊤ ⊑ ∀ coress-ont:hasVolumeNumber xsd:int
+⊤ ⊑ ≤ 1 coress-ont:publicationState
+∃ coress-ont:publicationState rdfs:Literal ⊑ coress-ont:Publication
+⊤ ⊑ ∀ coress-ont:publicationState xsd:string

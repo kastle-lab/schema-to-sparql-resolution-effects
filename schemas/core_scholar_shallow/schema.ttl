@@ -1,0 +1,839 @@
+@prefix : <http://example.org/core_scholar_shallow/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix coress-ont: <http://example.org/core_scholar_shallow/> .
+@base <http://example.org/core_scholar_shallow/> .
+
+<http://example.org/core_scholar_shallow/> rdf:type owl:Ontology ;
+                                            terms:contributor "Anmol Saini" ,
+                                                              "Antrea Christou" ,
+                                                              "Brandon Dave" ,
+                                                              "Chris Davis Jaldi" ,
+                                                              "Cogan Shimizu" ,
+                                                              "Elham Ghiasi" ;
+                                            terms:description "A shallow ontology for the Core Scholar domain capturing publications, agents, authors, roles, and academic organizational structure." ;
+                                            terms:title "Core Scholar Shallow Ontology" ;
+                                            rdfs:label "Core Scholar Shallow Ontology" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+terms:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+terms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+terms:title rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#int
+xsd:int rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#string
+xsd:string rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://example.org/core_scholar_shallow/collegeOf
+coress-ont:collegeOf rdf:type owl:ObjectProperty ;
+                     owl:inverseOf coress-ont:hasCollege ;
+                     rdf:type owl:FunctionalProperty ;
+                     rdfs:domain coress-ont:College ;
+                     rdfs:range coress-ont:University ;
+                     rdfs:comment "Relates a college to the university it belongs to." ;
+                     rdfs:label "collegeOf" .
+
+
+###  http://example.org/core_scholar_shallow/departmentOf
+coress-ont:departmentOf rdf:type owl:ObjectProperty ;
+                        owl:inverseOf coress-ont:hasDepartment ;
+                        rdf:type owl:FunctionalProperty ;
+                        rdfs:domain coress-ont:Department ;
+                        rdfs:range coress-ont:College ;
+                        rdfs:comment "Relates a department to the college it belongs to." ;
+                        rdfs:label "departmentOf" .
+
+
+###  http://example.org/core_scholar_shallow/hasAgent
+coress-ont:hasAgent rdf:type owl:ObjectProperty ;
+                    owl:inverseOf coress-ont:worksInDepartment ;
+                    rdfs:domain coress-ont:Department ;
+                    rdfs:range coress-ont:Agent ;
+                    rdfs:comment "Relates a department to an agent who works in it." ;
+                    rdfs:label "hasAgent" .
+
+
+###  http://example.org/core_scholar_shallow/hasCollege
+coress-ont:hasCollege rdf:type owl:ObjectProperty ;
+                      rdfs:domain coress-ont:University ;
+                      rdfs:range coress-ont:College ;
+                      rdfs:comment "Relates a university to a college that belongs to it." ;
+                      rdfs:label "hasCollege" .
+
+
+###  http://example.org/core_scholar_shallow/hasDepartment
+coress-ont:hasDepartment rdf:type owl:ObjectProperty ;
+                         rdfs:domain coress-ont:College ;
+                         rdfs:range coress-ont:Department ;
+                         rdfs:comment "Relates a college to a department that belongs to it." ;
+                         rdfs:label "hasDepartment" .
+
+
+###  http://example.org/core_scholar_shallow/isPerformedBy
+coress-ont:isPerformedBy rdf:type owl:ObjectProperty ;
+                         owl:inverseOf coress-ont:performsRole ;
+                         rdfs:domain coress-ont:Role ;
+                         rdfs:range coress-ont:Agent ;
+                         rdfs:comment "Relates a role to the agent that performs it." ;
+                         rdfs:label "isPerformedBy" .
+
+
+###  http://example.org/core_scholar_shallow/performsRole
+coress-ont:performsRole rdf:type owl:ObjectProperty ;
+                        rdfs:domain coress-ont:Agent ;
+                        rdfs:range coress-ont:Role ;
+                        rdfs:comment "Relates an agent to a role that the agent performs." ;
+                        rdfs:label "performsRole" .
+
+
+###  http://example.org/core_scholar_shallow/submits
+coress-ont:submits rdf:type owl:ObjectProperty ;
+                   owl:inverseOf coress-ont:submittedBy ;
+                   rdfs:domain coress-ont:Author ;
+                   rdfs:range coress-ont:Publication ;
+                   rdfs:comment "Relates an author to a publication the author submits." ;
+                   rdfs:label "submits" .
+
+
+###  http://example.org/core_scholar_shallow/submittedBy
+coress-ont:submittedBy rdf:type owl:ObjectProperty ;
+                       rdfs:domain coress-ont:Publication ;
+                       rdfs:range coress-ont:Author ;
+                       rdfs:comment "Relates a publication to the author who submitted it." ;
+                       rdfs:label "submittedBy" .
+
+
+###  http://example.org/core_scholar_shallow/worksInDepartment
+coress-ont:worksInDepartment rdf:type owl:ObjectProperty ;
+                             rdfs:domain coress-ont:Agent ;
+                             rdfs:range coress-ont:Department ;
+                             rdfs:comment "Relates an agent to the department where the agent works." ;
+                             rdfs:label "worksInDepartment" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://example.org/core_scholar_shallow/advisedBy
+coress-ont:advisedBy rdf:type owl:DatatypeProperty ;
+                     rdfs:domain [ rdf:type owl:Class ;
+                                   owl:unionOf ( coress-ont:Author
+                                                 coress-ont:Role
+                                               )
+                                 ] ;
+                     rdfs:range xsd:string ;
+                     rdfs:comment "Provides the advisor name associated with an author or role." ;
+                     rdfs:label "advisedBy" .
+
+
+###  http://example.org/core_scholar_shallow/associatedFieldOfStudy
+coress-ont:associatedFieldOfStudy rdf:type owl:DatatypeProperty ;
+                                  rdfs:domain coress-ont:Publication ;
+                                  rdfs:range xsd:string ;
+                                  rdfs:comment "Specifies the field of study associated with a publication." ;
+                                  rdfs:label "associatedFieldOfStudy" .
+
+
+###  http://example.org/core_scholar_shallow/atCity
+coress-ont:atCity rdf:type owl:DatatypeProperty ,
+                           owl:FunctionalProperty ;
+                  rdfs:domain coress-ont:University ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Specifies the city where a university is located." ;
+                  rdfs:label "atCity" .
+
+
+###  http://example.org/core_scholar_shallow/atState
+coress-ont:atState rdf:type owl:DatatypeProperty ,
+                            owl:FunctionalProperty ;
+                   rdfs:domain coress-ont:University ;
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Specifies the state where a university is located." ;
+                   rdfs:label "atState" .
+
+
+###  http://example.org/core_scholar_shallow/contributionBy
+coress-ont:contributionBy rdf:type owl:DatatypeProperty ;
+                          rdfs:domain coress-ont:Publication ;
+                          rdfs:range xsd:string ;
+                          rdfs:comment "Records a textual description of a contributor or contribution associated with a publication." ;
+                          rdfs:label "contributionBy" .
+
+
+###  http://example.org/core_scholar_shallow/dateOfPost
+coress-ont:dateOfPost rdf:type owl:DatatypeProperty ,
+                               owl:FunctionalProperty ;
+                      rdfs:domain coress-ont:Publication ;
+                      rdfs:range xsd:date ;
+                      rdfs:comment "Specifies the date when a publication record was posted." ;
+                      rdfs:label "dateOfPost" .
+
+
+###  http://example.org/core_scholar_shallow/dateOfPublication
+coress-ont:dateOfPublication rdf:type owl:DatatypeProperty ,
+                                      owl:FunctionalProperty ;
+                             rdfs:domain coress-ont:Publication ;
+                             rdfs:range xsd:date ;
+                             rdfs:comment "Specifies the publication date of a publication." ;
+                             rdfs:label "dateOfPublication" .
+
+
+###  http://example.org/core_scholar_shallow/dateOfPublicationStateChange
+coress-ont:dateOfPublicationStateChange rdf:type owl:DatatypeProperty ,
+                                                 owl:FunctionalProperty ;
+                                        rdfs:domain coress-ont:Publication ;
+                                        rdfs:range xsd:date ;
+                                        rdfs:comment "Specifies the date when the publication state last changed." ;
+                                        rdfs:label "dateOfPublicationStateChange" .
+
+
+###  http://example.org/core_scholar_shallow/dateOfSubmission
+coress-ont:dateOfSubmission rdf:type owl:DatatypeProperty ,
+                                     owl:FunctionalProperty ;
+                            rdfs:domain coress-ont:Publication ;
+                            rdfs:range xsd:date ;
+                            rdfs:comment "Specifies the date when a publication was submitted." ;
+                            rdfs:label "dateOfSubmission" .
+
+
+###  http://example.org/core_scholar_shallow/hasAbstract
+coress-ont:hasAbstract rdf:type owl:DatatypeProperty ,
+                                owl:FunctionalProperty ;
+                       rdfs:domain coress-ont:Publication ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "Provides the abstract text for a publication." ;
+                       rdfs:label "hasAbstract" .
+
+
+###  http://example.org/core_scholar_shallow/hasAdvisor
+coress-ont:hasAdvisor rdf:type owl:DatatypeProperty ,
+                               owl:FunctionalProperty ;
+                      rdfs:domain coress-ont:Publication ;
+                      rdfs:range xsd:string ;
+                      rdfs:comment "Provides the advisor name associated with a publication." ;
+                      rdfs:label "hasAdvisor" .
+
+
+###  http://example.org/core_scholar_shallow/hasArticleNumber
+coress-ont:hasArticleNumber rdf:type owl:DatatypeProperty ,
+                                     owl:FunctionalProperty ;
+                            rdfs:domain coress-ont:Publication ;
+                            rdfs:range xsd:int ;
+                            rdfs:comment "Specifies the article number assigned to a publication." ;
+                            rdfs:label "hasArticleNumber" .
+
+
+###  http://example.org/core_scholar_shallow/hasDOI
+coress-ont:hasDOI rdf:type owl:DatatypeProperty ,
+                           owl:FunctionalProperty ;
+                  rdfs:domain coress-ont:Publication ;
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Provides the digital object identifier for a publication." ;
+                  rdfs:label "hasDOI" .
+
+
+###  http://example.org/core_scholar_shallow/hasEmailAddress
+coress-ont:hasEmailAddress rdf:type owl:DatatypeProperty ;
+                           rdfs:domain coress-ont:Agent ;
+                           rdfs:range xsd:string ;
+                           rdfs:comment "Provides the email address of an agent." ;
+                           rdfs:label "hasEmailAddress" .
+
+
+###  http://example.org/core_scholar_shallow/hasFamilyName
+coress-ont:hasFamilyName rdf:type owl:DatatypeProperty ,
+                                  owl:FunctionalProperty ;
+                         rdfs:domain coress-ont:Agent ;
+                         rdfs:range xsd:string ;
+                         rdfs:comment "Provides the family name of an agent." ;
+                         rdfs:label "hasFamilyName" .
+
+
+###  http://example.org/core_scholar_shallow/hasFirstName
+coress-ont:hasFirstName rdf:type owl:DatatypeProperty ,
+                                 owl:FunctionalProperty ;
+                        rdfs:domain coress-ont:Agent ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "Provides the first or given name of an agent." ;
+                        rdfs:label "hasFirstName" .
+
+
+###  http://example.org/core_scholar_shallow/hasIssueNumber
+coress-ont:hasIssueNumber rdf:type owl:DatatypeProperty ,
+                                   owl:FunctionalProperty ;
+                          rdfs:domain coress-ont:Publication ;
+                          rdfs:range xsd:int ;
+                          rdfs:comment "Specifies the issue number of a publication." ;
+                          rdfs:label "hasIssueNumber" .
+
+
+###  http://example.org/core_scholar_shallow/hasPhoneNumber
+coress-ont:hasPhoneNumber rdf:type owl:DatatypeProperty ;
+                          rdfs:domain coress-ont:Agent ;
+                          rdfs:range xsd:string ;
+                          rdfs:comment "Provides the phone number of an agent." ;
+                          rdfs:label "hasPhoneNumber" .
+
+
+###  http://example.org/core_scholar_shallow/hasPublicationType
+coress-ont:hasPublicationType rdf:type owl:DatatypeProperty ,
+                                       owl:FunctionalProperty ;
+                              rdfs:domain coress-ont:Publication ;
+                              rdfs:range xsd:string ;
+                              rdfs:comment "Specifies the publication type of a publication." ;
+                              rdfs:label "hasPublicationType" .
+
+
+###  http://example.org/core_scholar_shallow/hasTitle
+coress-ont:hasTitle rdf:type owl:DatatypeProperty ,
+                             owl:FunctionalProperty ;
+                    rdfs:domain coress-ont:Publication ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Provides the title of a publication." ;
+                    rdfs:label "hasTitle" .
+
+
+###  http://example.org/core_scholar_shallow/hasVolumeNumber
+coress-ont:hasVolumeNumber rdf:type owl:DatatypeProperty ,
+                                    owl:FunctionalProperty ;
+                           rdfs:domain coress-ont:Publication ;
+                           rdfs:range xsd:int ;
+                           rdfs:comment "Specifies the volume number of a publication." ;
+                           rdfs:label "hasVolumeNumber" .
+
+
+###  http://example.org/core_scholar_shallow/publicationState
+coress-ont:publicationState rdf:type owl:DatatypeProperty ,
+                                     owl:FunctionalProperty ;
+                            rdfs:domain coress-ont:Publication ;
+                            rdfs:range xsd:string ;
+                            rdfs:comment "Specifies the current publication state of a publication." ;
+                            rdfs:label "publicationState" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.org/core_scholar_shallow/Agent
+coress-ont:Agent rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty coress-ont:performsRole ;
+                                   owl:someValuesFrom coress-ont:Role
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty coress-ont:worksInDepartment ;
+                                   owl:someValuesFrom coress-ont:Department
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty coress-ont:hasFamilyName ;
+                                   owl:someValuesFrom xsd:string
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty coress-ont:hasFirstName ;
+                                   owl:someValuesFrom xsd:string
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty coress-ont:hasFamilyName ;
+                                   owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange xsd:string
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty coress-ont:hasFirstName ;
+                                   owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange xsd:string
+                                 ] ;
+                 owl:disjointWith coress-ont:College ,
+                                  coress-ont:Department ,
+                                  coress-ont:Publication ,
+                                  coress-ont:University ;
+                 rdfs:comment "An individual or organizational actor associated with scholarly activity in the Core Scholar domain." ;
+                 rdfs:label "Agent" .
+
+
+###  http://example.org/core_scholar_shallow/Author
+coress-ont:Author rdf:type owl:Class ;
+                  rdfs:subClassOf coress-ont:Role ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty coress-ont:submits ;
+                                    owl:someValuesFrom coress-ont:Publication
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty coress-ont:advisedBy ;
+                                    owl:someValuesFrom xsd:string
+                                  ] ;
+                  rdfs:comment "A role representing authorship for a scholarly publication." ;
+                  rdfs:label "Author" .
+
+
+###  http://example.org/core_scholar_shallow/College
+coress-ont:College rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty coress-ont:collegeOf ;
+                                     owl:someValuesFrom coress-ont:University
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty coress-ont:hasDepartment ;
+                                     owl:someValuesFrom coress-ont:Department
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty coress-ont:collegeOf ;
+                                     owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass coress-ont:University
+                                   ] ;
+                   owl:disjointWith coress-ont:Department ,
+                                    coress-ont:Publication ,
+                                    coress-ont:Role ,
+                                    coress-ont:University ;
+                   rdfs:comment "An academic college that is part of a university." ;
+                   rdfs:label "College" .
+
+
+###  http://example.org/core_scholar_shallow/Department
+coress-ont:Department rdf:type owl:Class ;
+                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                        owl:onProperty coress-ont:departmentOf ;
+                                        owl:someValuesFrom coress-ont:College
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty coress-ont:hasAgent ;
+                                        owl:someValuesFrom coress-ont:Agent
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty coress-ont:departmentOf ;
+                                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onClass coress-ont:College
+                                      ] ;
+                      owl:disjointWith coress-ont:Publication ,
+                                       coress-ont:Role ,
+                                       coress-ont:University ;
+                      rdfs:comment "An academic department within a college." ;
+                      rdfs:label "Department" .
+
+
+###  http://example.org/core_scholar_shallow/Publication
+coress-ont:Publication rdf:type owl:Class ;
+                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty coress-ont:submittedBy ;
+                                         owl:someValuesFrom coress-ont:Author
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty coress-ont:dateOfPublication ;
+                                         owl:someValuesFrom xsd:date
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty coress-ont:dateOfSubmission ;
+                                         owl:someValuesFrom xsd:date
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty coress-ont:hasAbstract ;
+                                         owl:someValuesFrom xsd:string
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty coress-ont:hasPublicationType ;
+                                         owl:someValuesFrom xsd:string
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty coress-ont:hasTitle ;
+                                         owl:someValuesFrom xsd:string
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty coress-ont:publicationState ;
+                                         owl:someValuesFrom xsd:string
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty coress-ont:dateOfPublication ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onDataRange xsd:date
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty coress-ont:dateOfSubmission ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onDataRange xsd:date
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty coress-ont:hasAbstract ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onDataRange xsd:string
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty coress-ont:hasArticleNumber ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onDataRange xsd:int
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty coress-ont:hasDOI ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onDataRange xsd:string
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty coress-ont:hasIssueNumber ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onDataRange xsd:int
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty coress-ont:hasPublicationType ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onDataRange xsd:string
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty coress-ont:hasTitle ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onDataRange xsd:string
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty coress-ont:hasVolumeNumber ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onDataRange xsd:int
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty coress-ont:publicationState ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onDataRange xsd:string
+                                       ] ;
+                       owl:disjointWith coress-ont:Role ,
+                                        coress-ont:University ;
+                       rdfs:comment "A scholarly publication together with its descriptive and administrative metadata." ;
+                       rdfs:label "Publication" .
+
+
+###  http://example.org/core_scholar_shallow/Role
+coress-ont:Role rdf:type owl:Class ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty coress-ont:isPerformedBy ;
+                                  owl:someValuesFrom coress-ont:Agent
+                                ] ;
+                owl:disjointWith coress-ont:University ;
+                rdfs:comment "A scholarly or institutional role performed by an agent." ;
+                rdfs:label "Role" .
+
+
+###  http://example.org/core_scholar_shallow/University
+coress-ont:University rdf:type owl:Class ;
+                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                        owl:onProperty coress-ont:hasCollege ;
+                                        owl:someValuesFrom coress-ont:College
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty coress-ont:atCity ;
+                                        owl:someValuesFrom xsd:string
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty coress-ont:atState ;
+                                        owl:someValuesFrom xsd:string
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty coress-ont:atCity ;
+                                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onDataRange xsd:string
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty coress-ont:atState ;
+                                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onDataRange xsd:string
+                                      ] ;
+                      rdfs:comment "A university that contains colleges and is associated with a city and state." ;
+                      rdfs:label "University" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:collegeOf ;
+                         owl:someValuesFrom coress-ont:University
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:hasDepartment ;
+                         owl:someValuesFrom coress-ont:Department
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:collegeOf ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass coress-ont:University
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf coress-ont:College
+] .
+
+
+[ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:departmentOf ;
+                         owl:someValuesFrom coress-ont:College
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:hasAgent ;
+                         owl:someValuesFrom coress-ont:Agent
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:departmentOf ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass coress-ont:College
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf coress-ont:Department
+] .
+
+
+[ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:hasCollege ;
+                         owl:someValuesFrom coress-ont:College
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:atCity ;
+                         owl:someValuesFrom xsd:string
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:atState ;
+                         owl:someValuesFrom xsd:string
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:atCity ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:string
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:atState ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:string
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf coress-ont:University
+] .
+
+
+[ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:isPerformedBy ;
+                         owl:someValuesFrom coress-ont:Agent
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:advisedBy ;
+                         owl:someValuesFrom xsd:string
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf coress-ont:Role
+] .
+
+
+[ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:performsRole ;
+                         owl:someValuesFrom coress-ont:Role
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:worksInDepartment ;
+                         owl:someValuesFrom coress-ont:Department
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:hasEmailAddress ;
+                         owl:someValuesFrom xsd:string
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:hasFamilyName ;
+                         owl:someValuesFrom xsd:string
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:hasFirstName ;
+                         owl:someValuesFrom xsd:string
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:hasPhoneNumber ;
+                         owl:someValuesFrom xsd:string
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:hasFamilyName ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:string
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:hasFirstName ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:string
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf coress-ont:Agent
+] .
+
+
+[ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:submits ;
+                         owl:someValuesFrom coress-ont:Publication
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:advisedBy ;
+                         owl:someValuesFrom xsd:string
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf coress-ont:Author
+] .
+
+
+[ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:submittedBy ;
+                         owl:someValuesFrom coress-ont:Author
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:associatedFieldOfStudy ;
+                         owl:someValuesFrom xsd:string
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:contributionBy ;
+                         owl:someValuesFrom xsd:string
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:dateOfPost ;
+                         owl:someValuesFrom xsd:date
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:dateOfPublication ;
+                         owl:someValuesFrom xsd:date
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:dateOfPublicationStateChange ;
+                         owl:someValuesFrom xsd:date
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:dateOfSubmission ;
+                         owl:someValuesFrom xsd:date
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:hasAbstract ;
+                         owl:someValuesFrom xsd:string
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:hasAdvisor ;
+                         owl:someValuesFrom xsd:string
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:hasArticleNumber ;
+                         owl:someValuesFrom xsd:int
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:hasDOI ;
+                         owl:someValuesFrom xsd:string
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:hasIssueNumber ;
+                         owl:someValuesFrom xsd:int
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:hasPublicationType ;
+                         owl:someValuesFrom xsd:string
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:hasTitle ;
+                         owl:someValuesFrom xsd:string
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:hasVolumeNumber ;
+                         owl:someValuesFrom xsd:int
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:publicationState ;
+                         owl:someValuesFrom xsd:string
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:dateOfPost ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:date
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:dateOfPublication ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:date
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:dateOfPublicationStateChange ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:date
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:dateOfSubmission ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:date
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:hasAbstract ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:string
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:hasArticleNumber ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:int
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:hasDOI ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:string
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:hasIssueNumber ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:int
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:hasPublicationType ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:string
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:hasTitle ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:string
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:hasVolumeNumber ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:int
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coress-ont:publicationState ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:string
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf coress-ont:Publication
+] .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

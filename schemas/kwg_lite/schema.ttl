@@ -1,0 +1,3666 @@
+@prefix : <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix kwglr: <http://stko-kwg.geog.ucsb.edu/lod/lite-resource/> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix kwgl-ont: <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/> .
+@base <http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/> .
+
+<http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/> rdf:type owl:Ontology ;
+                                                    terms:contributor """Krysztof Janowicz,
+Pascal Hitzler,
+Mark Schildhauer,
+Dean Rehnberger,
+Shirly Stephen,
+Cogan Shimizu,
+Colby Fisher,
+Antrea Christou,
+Adrita Barua,
+Sanaz Saki Norouzi,
+Kitty Currier
+Abhilekha Dalal,
+Mohammad Saeid Mahdavinejad,
+Thomas Thelen,
+Anthony D'Onofrio"""@en ;
+                                                    terms:created "2023-06-14"@en ;
+                                                    terms:creator "The KnowWhereGraph Project" ;
+                                                    terms:description "This ontology supports the KnowWhereGraph Panels application"@en ;
+                                                    rdfs:label "KWG-Lite Ontology"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+terms:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+terms:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+terms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+terms:description rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasHazardType
+kwgl-ont:hasHazardType rdf:type owl:ObjectProperty ;
+                       rdfs:domain kwgl-ont:HazardEvent ;
+                       rdfs:range kwgl-ont:HazardType ;
+                       rdfs:label "has hazard type" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasImpacted
+kwgl-ont:hasImpacted rdf:type owl:ObjectProperty ;
+                     owl:inverseOf kwgl-ont:impactedBy ;
+                     rdfs:domain kwgl-ont:HazardEvent ;
+                     rdfs:range kwgl-ont:Place ;
+                     rdfs:label "has impacted" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasPlaceType
+kwgl-ont:hasPlaceType rdf:type owl:ObjectProperty ;
+                      rdfs:domain kwgl-ont:Place ;
+                      rdfs:range kwgl-ont:PlaceType ;
+                      rdfs:label "has place type" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/impactedBy
+kwgl-ont:impactedBy rdf:type owl:ObjectProperty ;
+                    rdfs:domain kwgl-ont:Place ;
+                    rdfs:range kwgl-ont:HazardEvent ;
+                    rdfs:label "impacted by" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/isOfFireType
+kwgl-ont:isOfFireType rdf:type owl:ObjectProperty ;
+                      rdfs:domain kwgl-ont:Fire ;
+                      rdfs:range kwgl-ont:FireType ;
+                      rdfs:label "is of fire type" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/sfContains
+kwgl-ont:sfContains rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf kwgl-ont:spatialRelation ;
+                    rdfs:domain kwgl-ont:Place ;
+                    rdfs:range kwgl-ont:Place ;
+                    rdfs:label "contains" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/sfIntersects
+kwgl-ont:sfIntersects rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf kwgl-ont:spatialRelation ;
+                      rdfs:domain kwgl-ont:Place ;
+                      rdfs:range kwgl-ont:Place ;
+                      rdfs:label "intersects" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/sfOverlaps
+kwgl-ont:sfOverlaps rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf kwgl-ont:spatialRelation ;
+                    rdfs:domain kwgl-ont:Place ;
+                    rdfs:range kwgl-ont:Place ;
+                    rdfs:label "overlaps" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/sfTouches
+kwgl-ont:sfTouches rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf kwgl-ont:spatialRelation ;
+                   rdfs:domain kwgl-ont:Place ;
+                   rdfs:range kwgl-ont:Place ;
+                   rdfs:label "touches" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/sfWithin
+kwgl-ont:sfWithin rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf kwgl-ont:spatialRelation ;
+                  rdfs:domain kwgl-ont:Place ;
+                  rdfs:range kwgl-ont:Place ;
+                  rdfs:label "within" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/spatialRelation
+kwgl-ont:spatialRelation rdf:type owl:ObjectProperty ;
+                         rdfs:domain kwgl-ont:Place ;
+                         rdfs:range kwgl-ont:Place ;
+                         rdfs:label "spatial relation" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/affectedAreaInAcres
+kwgl-ont:affectedAreaInAcres rdf:type owl:DatatypeProperty ;
+                             rdfs:domain kwgl-ont:HazardEvent ;
+                             rdfs:range xsd:nonNegativeInteger ;
+                             rdfs:label "affected area in acres" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonth
+kwgl-ont:averageCoolingDegreeDaysPerMonth rdf:type owl:DatatypeProperty ;
+                                          rdfs:domain kwgl-ont:Place ;
+                                          rdfs:range xsd:integer ;
+                                          rdfs:label "average cooling degree days per month" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthApr2021
+kwgl-ont:averageCoolingDegreeDaysPerMonthApr2021 rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf kwgl-ont:averageCoolingDegreeDaysPerMonth ;
+                                                 rdfs:domain kwgl-ont:Place ;
+                                                 rdfs:range xsd:integer ;
+                                                 rdfs:label "average cooling degree days per month-Apr2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthAug2021
+kwgl-ont:averageCoolingDegreeDaysPerMonthAug2021 rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf kwgl-ont:averageCoolingDegreeDaysPerMonth ;
+                                                 rdfs:domain kwgl-ont:Place ;
+                                                 rdfs:range xsd:integer ;
+                                                 rdfs:label "average cooling degree days per month-Aug2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthDec2021
+kwgl-ont:averageCoolingDegreeDaysPerMonthDec2021 rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf kwgl-ont:averageCoolingDegreeDaysPerMonth ;
+                                                 rdfs:domain kwgl-ont:Place ;
+                                                 rdfs:range xsd:integer ;
+                                                 rdfs:label "average cooling degree days per month-Dec2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthFeb2021
+kwgl-ont:averageCoolingDegreeDaysPerMonthFeb2021 rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf kwgl-ont:averageCoolingDegreeDaysPerMonth ;
+                                                 rdfs:domain kwgl-ont:Place ;
+                                                 rdfs:range xsd:integer ;
+                                                 rdfs:label "average cooling degree days per month-Feb2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthJan2021
+kwgl-ont:averageCoolingDegreeDaysPerMonthJan2021 rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf kwgl-ont:averageCoolingDegreeDaysPerMonth ;
+                                                 rdfs:domain kwgl-ont:Place ;
+                                                 rdfs:range xsd:integer ;
+                                                 rdfs:label "average cooling degree days per month-Jan2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthJul2021
+kwgl-ont:averageCoolingDegreeDaysPerMonthJul2021 rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf kwgl-ont:averageCoolingDegreeDaysPerMonth ;
+                                                 rdfs:domain kwgl-ont:Place ;
+                                                 rdfs:range xsd:integer ;
+                                                 rdfs:label "average cooling degree days per month-Jul2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthJun2021
+kwgl-ont:averageCoolingDegreeDaysPerMonthJun2021 rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf kwgl-ont:averageCoolingDegreeDaysPerMonth ;
+                                                 rdfs:domain kwgl-ont:Place ;
+                                                 rdfs:range xsd:integer ;
+                                                 rdfs:label "average cooling degree days per month-Jun2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthMar2021
+kwgl-ont:averageCoolingDegreeDaysPerMonthMar2021 rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf kwgl-ont:averageCoolingDegreeDaysPerMonth ;
+                                                 rdfs:domain kwgl-ont:Place ;
+                                                 rdfs:range xsd:integer ;
+                                                 rdfs:label "average cooling degree days per month-Mar2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthMay2021
+kwgl-ont:averageCoolingDegreeDaysPerMonthMay2021 rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf kwgl-ont:averageCoolingDegreeDaysPerMonth ;
+                                                 rdfs:domain kwgl-ont:Place ;
+                                                 rdfs:range xsd:integer ;
+                                                 rdfs:label "average cooling degree days per month-May2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthNov2021
+kwgl-ont:averageCoolingDegreeDaysPerMonthNov2021 rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf kwgl-ont:averageCoolingDegreeDaysPerMonth ;
+                                                 rdfs:domain kwgl-ont:Place ;
+                                                 rdfs:range xsd:integer ;
+                                                 rdfs:label "average cooling degree days per month-Nov2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthOct2021
+kwgl-ont:averageCoolingDegreeDaysPerMonthOct2021 rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf kwgl-ont:averageCoolingDegreeDaysPerMonth ;
+                                                 rdfs:domain kwgl-ont:Place ;
+                                                 rdfs:range xsd:integer ;
+                                                 rdfs:label "average cooling degree days per month-Oct2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageCoolingDegreeDaysPerMonthSep2021
+kwgl-ont:averageCoolingDegreeDaysPerMonthSep2021 rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf kwgl-ont:averageCoolingDegreeDaysPerMonth ;
+                                                 rdfs:domain kwgl-ont:Place ;
+                                                 rdfs:range xsd:integer ;
+                                                 rdfs:label "average cooling degree days per month-Sep2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonth
+kwgl-ont:averageHeatingDegreeDaysPerMonth rdf:type owl:DatatypeProperty ;
+                                          rdfs:domain kwgl-ont:Place ;
+                                          rdfs:range xsd:integer ;
+                                          rdfs:label "average heating degree days per month" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthApr2021
+kwgl-ont:averageHeatingDegreeDaysPerMonthApr2021 rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf kwgl-ont:averageHeatingDegreeDaysPerMonth ;
+                                                 rdfs:domain kwgl-ont:Place ;
+                                                 rdfs:range xsd:integer ;
+                                                 rdfs:label "average heating degree days per month-Apr2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthAug2021
+kwgl-ont:averageHeatingDegreeDaysPerMonthAug2021 rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf kwgl-ont:averageHeatingDegreeDaysPerMonth ;
+                                                 rdfs:domain kwgl-ont:Place ;
+                                                 rdfs:range xsd:integer ;
+                                                 rdfs:label "average heating degree days per month-Aug2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthDec2021
+kwgl-ont:averageHeatingDegreeDaysPerMonthDec2021 rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf kwgl-ont:averageHeatingDegreeDaysPerMonth ;
+                                                 rdfs:domain kwgl-ont:Place ;
+                                                 rdfs:range xsd:integer ;
+                                                 rdfs:label "average heating degree days per month-Dec2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthFeb2021
+kwgl-ont:averageHeatingDegreeDaysPerMonthFeb2021 rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf kwgl-ont:averageHeatingDegreeDaysPerMonth ;
+                                                 rdfs:domain kwgl-ont:Place ;
+                                                 rdfs:range xsd:integer ;
+                                                 rdfs:label "average heating degree days per month-Feb2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthJan2021
+kwgl-ont:averageHeatingDegreeDaysPerMonthJan2021 rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf kwgl-ont:averageHeatingDegreeDaysPerMonth ;
+                                                 rdfs:domain kwgl-ont:Place ;
+                                                 rdfs:range xsd:integer ;
+                                                 rdfs:label "average heating degree days per month-Jan2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthJul2021
+kwgl-ont:averageHeatingDegreeDaysPerMonthJul2021 rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf kwgl-ont:averageHeatingDegreeDaysPerMonth ;
+                                                 rdfs:domain kwgl-ont:Place ;
+                                                 rdfs:range xsd:integer ;
+                                                 rdfs:label "average heating degree days per month-Jul2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthJun2021
+kwgl-ont:averageHeatingDegreeDaysPerMonthJun2021 rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf kwgl-ont:averageHeatingDegreeDaysPerMonth ;
+                                                 rdfs:domain kwgl-ont:Place ;
+                                                 rdfs:range xsd:integer ;
+                                                 rdfs:label "average heating degree days per month-Jun2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthMar2021
+kwgl-ont:averageHeatingDegreeDaysPerMonthMar2021 rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf kwgl-ont:averageHeatingDegreeDaysPerMonth ;
+                                                 rdfs:domain kwgl-ont:Place ;
+                                                 rdfs:range xsd:integer ;
+                                                 rdfs:label "average heating degree days per month-Mar2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthMay2021
+kwgl-ont:averageHeatingDegreeDaysPerMonthMay2021 rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf kwgl-ont:averageHeatingDegreeDaysPerMonth ;
+                                                 rdfs:domain kwgl-ont:Place ;
+                                                 rdfs:range xsd:integer ;
+                                                 rdfs:label "average heating degree days per month-May2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthNov2021
+kwgl-ont:averageHeatingDegreeDaysPerMonthNov2021 rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf kwgl-ont:averageHeatingDegreeDaysPerMonth ;
+                                                 rdfs:domain kwgl-ont:Place ;
+                                                 rdfs:range xsd:integer ;
+                                                 rdfs:label "average heating degree days per month-Nov2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthOct2021
+kwgl-ont:averageHeatingDegreeDaysPerMonthOct2021 rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf kwgl-ont:averageHeatingDegreeDaysPerMonth ;
+                                                 rdfs:domain kwgl-ont:Place ;
+                                                 rdfs:range xsd:integer ;
+                                                 rdfs:label "average heating degree days per month-Oct2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageHeatingDegreeDaysPerMonthSep2021
+kwgl-ont:averageHeatingDegreeDaysPerMonthSep2021 rdf:type owl:DatatypeProperty ;
+                                                 rdfs:subPropertyOf kwgl-ont:averageHeatingDegreeDaysPerMonth ;
+                                                 rdfs:domain kwgl-ont:Place ;
+                                                 rdfs:range xsd:integer ;
+                                                 rdfs:label "average heating degree days per month-Sep2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsius
+kwgl-ont:averageMonthlyTemperatureInCelsius rdf:type owl:DatatypeProperty ;
+                                            rdfs:domain kwgl-ont:Place ;
+                                            rdfs:range xsd:integer ;
+                                            rdfs:label "average monthly temperature in celsius" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusApr2021
+kwgl-ont:averageMonthlyTemperatureInCelsiusApr2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:averageMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "average monthly temperature in celsius-Apr2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusAug2021
+kwgl-ont:averageMonthlyTemperatureInCelsiusAug2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:averageMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "average monthly temperature in celsius-Aug2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusDec2021
+kwgl-ont:averageMonthlyTemperatureInCelsiusDec2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:averageMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "average monthly temperature in celsius-Dec2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusFeb2021
+kwgl-ont:averageMonthlyTemperatureInCelsiusFeb2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:averageMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "average monthly temperature in celsius-Feb2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusJan2021
+kwgl-ont:averageMonthlyTemperatureInCelsiusJan2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:averageMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "average monthly temperature in celsius-Jan2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusJul2021
+kwgl-ont:averageMonthlyTemperatureInCelsiusJul2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:averageMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "average monthly temperature in celsius-Jul2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusJun2021
+kwgl-ont:averageMonthlyTemperatureInCelsiusJun2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:averageMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "average monthly temperature in celsius-Jun2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusMar2021
+kwgl-ont:averageMonthlyTemperatureInCelsiusMar2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:averageMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "average monthly temperature in celsius-Mar2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusMay2021
+kwgl-ont:averageMonthlyTemperatureInCelsiusMay2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:averageMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "average monthly temperature in celsius-May2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusNov2021
+kwgl-ont:averageMonthlyTemperatureInCelsiusNov2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:averageMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "average monthly temperature in celsius-Nov2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusOct2021
+kwgl-ont:averageMonthlyTemperatureInCelsiusOct2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:averageMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "average monthly temperature in celsius-Oct2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/averageMonthlyTemperatureInCelsiusSep2021
+kwgl-ont:averageMonthlyTemperatureInCelsiusSep2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:averageMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "average monthly temperature in celsius-Sep2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/damageToCropsInDollars
+kwgl-ont:damageToCropsInDollars rdf:type owl:DatatypeProperty ;
+                                rdfs:domain kwgl-ont:HazardEvent ;
+                                rdfs:range xsd:nonNegativeInteger ;
+                                rdfs:label "damage to crop in dollars" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/damageToInfrastructureInDollars
+kwgl-ont:damageToInfrastructureInDollars rdf:type owl:DatatypeProperty ;
+                                         rdfs:domain kwgl-ont:HazardEvent ;
+                                         rdfs:range xsd:nonNegativeInteger ;
+                                         rdfs:label "damage to infrstructure in dollars" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace
+kwgl-ont:dollarDamageOfFiresImpactingPlace rdf:type owl:DatatypeProperty ;
+                                           rdfs:domain kwgl-ont:Place ;
+                                           rdfs:range xsd:nonNegativeInteger ;
+                                           rdfs:label "dollar damage of fires impacting place" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace2018
+kwgl-ont:dollarDamageOfFiresImpactingPlace2018 rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf kwgl-ont:dollarDamageOfFiresImpactingPlace ;
+                                               rdfs:domain kwgl-ont:Place ;
+                                               rdfs:range xsd:nonNegativeInteger ;
+                                               rdfs:label "dollar damage of fires impacting place-2018" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace2019
+kwgl-ont:dollarDamageOfFiresImpactingPlace2019 rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf kwgl-ont:dollarDamageOfFiresImpactingPlace ;
+                                               rdfs:domain kwgl-ont:Place ;
+                                               rdfs:range xsd:nonNegativeInteger ;
+                                               rdfs:label "dollar damage of fires impacting place-2019" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace2020
+kwgl-ont:dollarDamageOfFiresImpactingPlace2020 rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf kwgl-ont:dollarDamageOfFiresImpactingPlace ;
+                                               rdfs:domain kwgl-ont:Place ;
+                                               rdfs:range xsd:nonNegativeInteger ;
+                                               rdfs:label "dollar damage of fires impacting place-2020" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace2021
+kwgl-ont:dollarDamageOfFiresImpactingPlace2021 rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf kwgl-ont:dollarDamageOfFiresImpactingPlace ;
+                                               rdfs:domain kwgl-ont:Place ;
+                                               rdfs:range xsd:nonNegativeInteger ;
+                                               rdfs:label "dollar damage of fires impacting place-2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFiresImpactingPlace2022
+kwgl-ont:dollarDamageOfFiresImpactingPlace2022 rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf kwgl-ont:dollarDamageOfFiresImpactingPlace ;
+                                               rdfs:domain kwgl-ont:Place ;
+                                               rdfs:range xsd:nonNegativeInteger ;
+                                               rdfs:label "dollar damage of fires impacting place-2022" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace
+kwgl-ont:dollarDamageOfFloodsImpactingPlace rdf:type owl:DatatypeProperty ;
+                                            rdfs:domain kwgl-ont:Place ;
+                                            rdfs:range xsd:nonNegativeInteger ;
+                                            rdfs:label "dollar damage of floods impacting place" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace2018
+kwgl-ont:dollarDamageOfFloodsImpactingPlace2018 rdf:type owl:DatatypeProperty ;
+                                                rdfs:subPropertyOf kwgl-ont:dollarDamageOfFloodsImpactingPlace ;
+                                                rdfs:domain kwgl-ont:Place ;
+                                                rdfs:range xsd:nonNegativeInteger ;
+                                                rdfs:label "dollar damage of floods impacting place-2018" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace2019
+kwgl-ont:dollarDamageOfFloodsImpactingPlace2019 rdf:type owl:DatatypeProperty ;
+                                                rdfs:subPropertyOf kwgl-ont:dollarDamageOfFloodsImpactingPlace ;
+                                                rdfs:domain kwgl-ont:Place ;
+                                                rdfs:range xsd:nonNegativeInteger ;
+                                                rdfs:label "dollar damage of floods impacting place-2019" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace2020
+kwgl-ont:dollarDamageOfFloodsImpactingPlace2020 rdf:type owl:DatatypeProperty ;
+                                                rdfs:subPropertyOf kwgl-ont:dollarDamageOfFloodsImpactingPlace ;
+                                                rdfs:domain kwgl-ont:Place ;
+                                                rdfs:range xsd:nonNegativeInteger ;
+                                                rdfs:label "dollar damage of floods impacting place-2020" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace2021
+kwgl-ont:dollarDamageOfFloodsImpactingPlace2021 rdf:type owl:DatatypeProperty ;
+                                                rdfs:subPropertyOf kwgl-ont:dollarDamageOfFloodsImpactingPlace ;
+                                                rdfs:domain kwgl-ont:Place ;
+                                                rdfs:range xsd:nonNegativeInteger ;
+                                                rdfs:label "dollar damage of floods impacting place-2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfFloodsImpactingPlace2022
+kwgl-ont:dollarDamageOfFloodsImpactingPlace2022 rdf:type owl:DatatypeProperty ;
+                                                rdfs:subPropertyOf kwgl-ont:dollarDamageOfFloodsImpactingPlace ;
+                                                rdfs:domain kwgl-ont:Place ;
+                                                rdfs:range xsd:nonNegativeInteger ;
+                                                rdfs:label "dollar damage of floods impacting place-2022" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace
+kwgl-ont:dollarDamageOfHurricanesImpactingPlace rdf:type owl:DatatypeProperty ;
+                                                rdfs:domain kwgl-ont:Place ;
+                                                rdfs:range xsd:nonNegativeInteger ;
+                                                rdfs:label "dollar damage of hurricanes impacting place" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace2018
+kwgl-ont:dollarDamageOfHurricanesImpactingPlace2018 rdf:type owl:DatatypeProperty ;
+                                                    rdfs:subPropertyOf kwgl-ont:dollarDamageOfHurricanesImpactingPlace ;
+                                                    rdfs:domain kwgl-ont:Place ;
+                                                    rdfs:range xsd:nonNegativeInteger ;
+                                                    rdfs:label "dollar damage of hurricanes impacting place-2018" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace2019
+kwgl-ont:dollarDamageOfHurricanesImpactingPlace2019 rdf:type owl:DatatypeProperty ;
+                                                    rdfs:subPropertyOf kwgl-ont:dollarDamageOfHurricanesImpactingPlace ;
+                                                    rdfs:domain kwgl-ont:Place ;
+                                                    rdfs:range xsd:nonNegativeInteger ;
+                                                    rdfs:label "dollar damage of hurricanes impacting place-2019" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace2020
+kwgl-ont:dollarDamageOfHurricanesImpactingPlace2020 rdf:type owl:DatatypeProperty ;
+                                                    rdfs:subPropertyOf kwgl-ont:dollarDamageOfHurricanesImpactingPlace ;
+                                                    rdfs:domain kwgl-ont:Place ;
+                                                    rdfs:range xsd:nonNegativeInteger ;
+                                                    rdfs:label "dollar damage of hurricanes impacting place-2020" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace2021
+kwgl-ont:dollarDamageOfHurricanesImpactingPlace2021 rdf:type owl:DatatypeProperty ;
+                                                    rdfs:subPropertyOf kwgl-ont:dollarDamageOfHurricanesImpactingPlace ;
+                                                    rdfs:domain kwgl-ont:Place ;
+                                                    rdfs:range xsd:nonNegativeInteger ;
+                                                    rdfs:label "dollar damage of hurricanes impacting place-2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfHurricanesImpactingPlace2022
+kwgl-ont:dollarDamageOfHurricanesImpactingPlace2022 rdf:type owl:DatatypeProperty ;
+                                                    rdfs:subPropertyOf kwgl-ont:dollarDamageOfHurricanesImpactingPlace ;
+                                                    rdfs:domain kwgl-ont:Place ;
+                                                    rdfs:range xsd:nonNegativeInteger ;
+                                                    rdfs:label "dollar damage of hurricanes impacting place-2022" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace
+kwgl-ont:dollarDamageOfLandslidesImpactingPlace rdf:type owl:DatatypeProperty ;
+                                                rdfs:domain kwgl-ont:Place ;
+                                                rdfs:range xsd:nonNegativeInteger ;
+                                                rdfs:label "dollar damage of landslides impacting place" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace2018
+kwgl-ont:dollarDamageOfLandslidesImpactingPlace2018 rdf:type owl:DatatypeProperty ;
+                                                    rdfs:subPropertyOf kwgl-ont:dollarDamageOfLandslidesImpactingPlace ;
+                                                    rdfs:domain kwgl-ont:Place ;
+                                                    rdfs:range xsd:nonNegativeInteger ;
+                                                    rdfs:label "dollar damage of landslides impacting place-2018" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace2019
+kwgl-ont:dollarDamageOfLandslidesImpactingPlace2019 rdf:type owl:DatatypeProperty ;
+                                                    rdfs:subPropertyOf kwgl-ont:dollarDamageOfLandslidesImpactingPlace ;
+                                                    rdfs:domain kwgl-ont:Place ;
+                                                    rdfs:range xsd:nonNegativeInteger ;
+                                                    rdfs:label "dollar damage of landslides impacting place-2019" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace2020
+kwgl-ont:dollarDamageOfLandslidesImpactingPlace2020 rdf:type owl:DatatypeProperty ;
+                                                    rdfs:subPropertyOf kwgl-ont:dollarDamageOfLandslidesImpactingPlace ;
+                                                    rdfs:domain kwgl-ont:Place ;
+                                                    rdfs:range xsd:nonNegativeInteger ;
+                                                    rdfs:label "dollar damage of landslides impacting place-2020" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace2021
+kwgl-ont:dollarDamageOfLandslidesImpactingPlace2021 rdf:type owl:DatatypeProperty ;
+                                                    rdfs:subPropertyOf kwgl-ont:dollarDamageOfLandslidesImpactingPlace ;
+                                                    rdfs:domain kwgl-ont:Place ;
+                                                    rdfs:range xsd:nonNegativeInteger ;
+                                                    rdfs:label "dollar damage of landslides impacting place-2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfLandslidesImpactingPlace2022
+kwgl-ont:dollarDamageOfLandslidesImpactingPlace2022 rdf:type owl:DatatypeProperty ;
+                                                    rdfs:subPropertyOf kwgl-ont:dollarDamageOfLandslidesImpactingPlace ;
+                                                    rdfs:domain kwgl-ont:Place ;
+                                                    rdfs:range xsd:nonNegativeInteger ;
+                                                    rdfs:label "dollar damage of landslides impacting place-2022" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace
+kwgl-ont:dollarDamageOfStormSurgesImpactingPlace rdf:type owl:DatatypeProperty ;
+                                                 rdfs:domain kwgl-ont:Place ;
+                                                 rdfs:range xsd:nonNegativeInteger ;
+                                                 rdfs:label "dollar damage of storm surges impacting place" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace2018
+kwgl-ont:dollarDamageOfStormSurgesImpactingPlace2018 rdf:type owl:DatatypeProperty ;
+                                                     rdfs:subPropertyOf kwgl-ont:dollarDamageOfStormSurgesImpactingPlace ;
+                                                     rdfs:domain kwgl-ont:Place ;
+                                                     rdfs:range xsd:nonNegativeInteger ;
+                                                     rdfs:label "dollar damage of storm surges impacting place-2018" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace2019
+kwgl-ont:dollarDamageOfStormSurgesImpactingPlace2019 rdf:type owl:DatatypeProperty ;
+                                                     rdfs:subPropertyOf kwgl-ont:dollarDamageOfStormSurgesImpactingPlace ;
+                                                     rdfs:domain kwgl-ont:Place ;
+                                                     rdfs:range xsd:nonNegativeInteger ;
+                                                     rdfs:label "dollar damage of storm surges impacting place-2019" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace2020
+kwgl-ont:dollarDamageOfStormSurgesImpactingPlace2020 rdf:type owl:DatatypeProperty ;
+                                                     rdfs:subPropertyOf kwgl-ont:dollarDamageOfStormSurgesImpactingPlace ;
+                                                     rdfs:domain kwgl-ont:Place ;
+                                                     rdfs:range xsd:nonNegativeInteger ;
+                                                     rdfs:label "dollar damage of storm surges impacting place-2020" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace2021
+kwgl-ont:dollarDamageOfStormSurgesImpactingPlace2021 rdf:type owl:DatatypeProperty ;
+                                                     rdfs:subPropertyOf kwgl-ont:dollarDamageOfStormSurgesImpactingPlace ;
+                                                     rdfs:domain kwgl-ont:Place ;
+                                                     rdfs:range xsd:nonNegativeInteger ;
+                                                     rdfs:label "dollar damage of storm surges impacting place-2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfStormSurgesImpactingPlace2022
+kwgl-ont:dollarDamageOfStormSurgesImpactingPlace2022 rdf:type owl:DatatypeProperty ;
+                                                     rdfs:subPropertyOf kwgl-ont:dollarDamageOfStormSurgesImpactingPlace ;
+                                                     rdfs:domain kwgl-ont:Place ;
+                                                     rdfs:range xsd:nonNegativeInteger ;
+                                                     rdfs:label "dollar damage of storm surges impacting place-2022" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace
+kwgl-ont:dollarDamageOfTornadoesImpactingPlace rdf:type owl:DatatypeProperty ;
+                                               rdfs:domain kwgl-ont:Place ;
+                                               rdfs:range xsd:nonNegativeInteger ;
+                                               rdfs:label "dollar damage of tornadoes impacting place" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace2018
+kwgl-ont:dollarDamageOfTornadoesImpactingPlace2018 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:dollarDamageOfTornadoesImpactingPlace ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:nonNegativeInteger ;
+                                                   rdfs:label "dollar damage of tornadoes impacting place-2018" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace2019
+kwgl-ont:dollarDamageOfTornadoesImpactingPlace2019 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:dollarDamageOfTornadoesImpactingPlace ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:nonNegativeInteger ;
+                                                   rdfs:label "dollar damage of tornadoes impacting place-2019" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace2020
+kwgl-ont:dollarDamageOfTornadoesImpactingPlace2020 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:dollarDamageOfTornadoesImpactingPlace ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:nonNegativeInteger ;
+                                                   rdfs:label "dollar damage of tornadoes impacting place-2020" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace2021
+kwgl-ont:dollarDamageOfTornadoesImpactingPlace2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:dollarDamageOfTornadoesImpactingPlace ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:nonNegativeInteger ;
+                                                   rdfs:label "dollar damage of tornadoes impacting place-2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/dollarDamageOfTornadoesImpactingPlace2022
+kwgl-ont:dollarDamageOfTornadoesImpactingPlace2022 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:dollarDamageOfTornadoesImpactingPlace ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:nonNegativeInteger ;
+                                                   rdfs:label "dollar damage of tornadoes impacting place-2022" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasEndDate
+kwgl-ont:hasEndDate rdf:type owl:DatatypeProperty ;
+                    rdfs:domain kwgl-ont:HazardEvent ;
+                    rdfs:range xsd:date ;
+                    rdfs:label "has end date" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasKWGEntity
+kwgl-ont:hasKWGEntity rdf:type owl:DatatypeProperty ;
+                      rdfs:domain [ rdf:type owl:Class ;
+                                    owl:unionOf ( kwgl-ont:HazardEvent
+                                                  kwgl-ont:Place
+                                                )
+                                  ] ;
+                      rdfs:range xsd:anyURI ;
+                      rdfs:label "has KWG entity" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasName
+kwgl-ont:hasName rdf:type owl:DatatypeProperty ;
+                 rdfs:domain [ rdf:type owl:Class ;
+                               owl:unionOf ( kwgl-ont:HazardEvent
+                                             kwgl-ont:Place
+                                           )
+                             ] ;
+                 rdfs:range xsd:string ;
+                 rdfs:label "has name" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasNumberOfHouseHolds
+kwgl-ont:hasNumberOfHouseHolds rdf:type owl:DatatypeProperty ;
+                               rdfs:domain kwgl-ont:Place ;
+                               rdfs:range xsd:nonNegativeInteger ;
+                               rdfs:label "has number of household units" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasPopulation
+kwgl-ont:hasPopulation rdf:type owl:DatatypeProperty ;
+                       rdfs:domain kwgl-ont:Place ;
+                       rdfs:range xsd:nonNegativeInteger ;
+                       rdfs:label "has population" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/hasStartDate
+kwgl-ont:hasStartDate rdf:type owl:DatatypeProperty ;
+                      rdfs:domain kwgl-ont:HazardEvent ;
+                      rdfs:range xsd:date ;
+                      rdfs:label "has start date" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsius
+kwgl-ont:maximumMonthlyTemperatureInCelsius rdf:type owl:DatatypeProperty ;
+                                            rdfs:domain kwgl-ont:Place ;
+                                            rdfs:range xsd:integer ;
+                                            rdfs:label "maximum monthly temperature in celsius" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusApr2021
+kwgl-ont:maximumMonthlyTemperatureInCelsiusApr2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:maximumMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "maximum monthly temperature in celsius-Apr2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusAug2021
+kwgl-ont:maximumMonthlyTemperatureInCelsiusAug2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:maximumMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "maximum monthly temperature in celsius-Aug2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusDec2021
+kwgl-ont:maximumMonthlyTemperatureInCelsiusDec2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:maximumMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "maximum monthly temperature in celsius-Dec2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusFeb2021
+kwgl-ont:maximumMonthlyTemperatureInCelsiusFeb2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:maximumMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "maximum monthly temperature in celsius-Feb2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusJan2021
+kwgl-ont:maximumMonthlyTemperatureInCelsiusJan2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:maximumMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "maximum monthly temperature in celsius-Jan2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusJul2021
+kwgl-ont:maximumMonthlyTemperatureInCelsiusJul2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:maximumMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "maximum monthly temperature in celsius-Jul2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusJun2021
+kwgl-ont:maximumMonthlyTemperatureInCelsiusJun2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:maximumMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "maximum monthly temperature in celsius-Jun2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusMar2021
+kwgl-ont:maximumMonthlyTemperatureInCelsiusMar2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:maximumMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "maximum monthly temperature in celsius-Mar2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusMay2021
+kwgl-ont:maximumMonthlyTemperatureInCelsiusMay2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:maximumMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "maximum monthly temperature in celsius-May2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusNov2021
+kwgl-ont:maximumMonthlyTemperatureInCelsiusNov2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:maximumMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "maximum monthly temperature in celsius-Nov2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusOct2021
+kwgl-ont:maximumMonthlyTemperatureInCelsiusOct2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:maximumMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "maximum monthly temperature in celsius-Oct2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/maximumMonthlyTemperatureInCelsiusSep2021
+kwgl-ont:maximumMonthlyTemperatureInCelsiusSep2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:maximumMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "maximum monthly temperature in celsius-Sep2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsius
+kwgl-ont:minimumMonthlyTemperatureInCelsius rdf:type owl:DatatypeProperty ;
+                                            rdfs:domain kwgl-ont:Place ;
+                                            rdfs:range xsd:integer ;
+                                            rdfs:label "minimum monthly temperature in celsius" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusApr2021
+kwgl-ont:minimumMonthlyTemperatureInCelsiusApr2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:minimumMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "minimum monthly temperature in celsius-Apr2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusAug2021
+kwgl-ont:minimumMonthlyTemperatureInCelsiusAug2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:minimumMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "minimum monthly temperature in celsius-Aug2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusDec2021
+kwgl-ont:minimumMonthlyTemperatureInCelsiusDec2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:minimumMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "minimum monthly temperature in celsius-Dec2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusFeb2021
+kwgl-ont:minimumMonthlyTemperatureInCelsiusFeb2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:minimumMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "minimum monthly temperature in celsius-Feb2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusJan2021
+kwgl-ont:minimumMonthlyTemperatureInCelsiusJan2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:minimumMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "minimum monthly temperature in celsius-Jan2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusJul2021
+kwgl-ont:minimumMonthlyTemperatureInCelsiusJul2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:minimumMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "minimum monthly temperature in celsius-Jul2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusJun2021
+kwgl-ont:minimumMonthlyTemperatureInCelsiusJun2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:minimumMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "minimum monthly temperature in celsius-Jun2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusMar2021
+kwgl-ont:minimumMonthlyTemperatureInCelsiusMar2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:minimumMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "minimum monthly temperature in celsius-Mar2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusMay2021
+kwgl-ont:minimumMonthlyTemperatureInCelsiusMay2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:minimumMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "minimum monthly temperature in celsius-May2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusNov2021
+kwgl-ont:minimumMonthlyTemperatureInCelsiusNov2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:minimumMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "minimum monthly temperature in celsius-Nov2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusOct2021
+kwgl-ont:minimumMonthlyTemperatureInCelsiusOct2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:minimumMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "minimum monthly temperature in celsius-Oct2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/minimumMonthlyTemperatureInCelsiusSep2021
+kwgl-ont:minimumMonthlyTemperatureInCelsiusSep2021 rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf kwgl-ont:minimumMonthlyTemperatureInCelsius ;
+                                                   rdfs:domain kwgl-ont:Place ;
+                                                   rdfs:range xsd:integer ;
+                                                   rdfs:label "minimum monthly temperature in celsius-Sep2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfDeaths
+kwgl-ont:numberOfDeaths rdf:type owl:DatatypeProperty ;
+                        rdfs:domain kwgl-ont:HazardEvent ;
+                        rdfs:range xsd:nonNegativeInteger ;
+                        rdfs:label "number of deaths" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace
+kwgl-ont:numberOfEarthquakesImpactingPlace rdf:type owl:DatatypeProperty ;
+                                           rdfs:domain kwgl-ont:Place ;
+                                           rdfs:range xsd:nonNegativeInteger ;
+                                           rdfs:label "number of earthquakes impacting place" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace2018
+kwgl-ont:numberOfEarthquakesImpactingPlace2018 rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf kwgl-ont:numberOfEarthquakesImpactingPlace ;
+                                               rdfs:domain kwgl-ont:Place ;
+                                               rdfs:range xsd:nonNegativeInteger ;
+                                               rdfs:label "number of earthquakes impacting place-2018" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace2019
+kwgl-ont:numberOfEarthquakesImpactingPlace2019 rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf kwgl-ont:numberOfEarthquakesImpactingPlace ;
+                                               rdfs:domain kwgl-ont:Place ;
+                                               rdfs:range xsd:nonNegativeInteger ;
+                                               rdfs:label "number of earthquakes impacting place-2019" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace2020
+kwgl-ont:numberOfEarthquakesImpactingPlace2020 rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf kwgl-ont:numberOfEarthquakesImpactingPlace ;
+                                               rdfs:domain kwgl-ont:Place ;
+                                               rdfs:range xsd:nonNegativeInteger ;
+                                               rdfs:label "number of earthquakes impacting place-2020" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace2021
+kwgl-ont:numberOfEarthquakesImpactingPlace2021 rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf kwgl-ont:numberOfEarthquakesImpactingPlace ;
+                                               rdfs:domain kwgl-ont:Place ;
+                                               rdfs:range xsd:nonNegativeInteger ;
+                                               rdfs:label "number of earthquakes impacting place-2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfEarthquakesImpactingPlace2022
+kwgl-ont:numberOfEarthquakesImpactingPlace2022 rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf kwgl-ont:numberOfEarthquakesImpactingPlace ;
+                                               rdfs:domain kwgl-ont:Place ;
+                                               rdfs:range xsd:nonNegativeInteger ;
+                                               rdfs:label "number of earthquakes impacting place-2022" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace
+kwgl-ont:numberOfFiresImpactingPlace rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain kwgl-ont:Place ;
+                                     rdfs:range xsd:nonNegativeInteger ;
+                                     rdfs:label "number of fires impacting place" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace2018
+kwgl-ont:numberOfFiresImpactingPlace2018 rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf kwgl-ont:numberOfFiresImpactingPlace ;
+                                         rdfs:domain kwgl-ont:Place ;
+                                         rdfs:range xsd:nonNegativeInteger ;
+                                         rdfs:label "number of fires impacting place-2018" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace2019
+kwgl-ont:numberOfFiresImpactingPlace2019 rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf kwgl-ont:numberOfFiresImpactingPlace ;
+                                         rdfs:domain kwgl-ont:Place ;
+                                         rdfs:range xsd:nonNegativeInteger ;
+                                         rdfs:label "number of fires impacting place-2019" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace2020
+kwgl-ont:numberOfFiresImpactingPlace2020 rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf kwgl-ont:numberOfFiresImpactingPlace ;
+                                         rdfs:domain kwgl-ont:Place ;
+                                         rdfs:range xsd:nonNegativeInteger ;
+                                         rdfs:label "number of fires impacting place-2020" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace2021
+kwgl-ont:numberOfFiresImpactingPlace2021 rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf kwgl-ont:numberOfFiresImpactingPlace ;
+                                         rdfs:domain kwgl-ont:Place ;
+                                         rdfs:range xsd:nonNegativeInteger ;
+                                         rdfs:label "number of fires impacting place-2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFiresImpactingPlace2022
+kwgl-ont:numberOfFiresImpactingPlace2022 rdf:type owl:DatatypeProperty ;
+                                         rdfs:subPropertyOf kwgl-ont:numberOfFiresImpactingPlace ;
+                                         rdfs:domain kwgl-ont:Place ;
+                                         rdfs:range xsd:nonNegativeInteger ;
+                                         rdfs:label "number of fires impacting place-2022" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace
+kwgl-ont:numberOfFloodsImpactingPlace rdf:type owl:DatatypeProperty ;
+                                      rdfs:domain kwgl-ont:Place ;
+                                      rdfs:range xsd:nonNegativeInteger ;
+                                      rdfs:label "number of floods impacting place" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace2018
+kwgl-ont:numberOfFloodsImpactingPlace2018 rdf:type owl:DatatypeProperty ;
+                                          rdfs:subPropertyOf kwgl-ont:numberOfFloodsImpactingPlace ;
+                                          rdfs:domain kwgl-ont:Place ;
+                                          rdfs:range xsd:nonNegativeInteger ;
+                                          rdfs:label "number of floods impacting place-2018" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace2019
+kwgl-ont:numberOfFloodsImpactingPlace2019 rdf:type owl:DatatypeProperty ;
+                                          rdfs:subPropertyOf kwgl-ont:numberOfFloodsImpactingPlace ;
+                                          rdfs:domain kwgl-ont:Place ;
+                                          rdfs:range xsd:nonNegativeInteger ;
+                                          rdfs:label "number of floods impacting place-2019" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace2020
+kwgl-ont:numberOfFloodsImpactingPlace2020 rdf:type owl:DatatypeProperty ;
+                                          rdfs:subPropertyOf kwgl-ont:numberOfFloodsImpactingPlace ;
+                                          rdfs:domain kwgl-ont:Place ;
+                                          rdfs:range xsd:nonNegativeInteger ;
+                                          rdfs:label "number of floods impacting place-2020" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace2021
+kwgl-ont:numberOfFloodsImpactingPlace2021 rdf:type owl:DatatypeProperty ;
+                                          rdfs:subPropertyOf kwgl-ont:numberOfFloodsImpactingPlace ;
+                                          rdfs:domain kwgl-ont:Place ;
+                                          rdfs:range xsd:nonNegativeInteger ;
+                                          rdfs:label "number of floods impacting place-2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfFloodsImpactingPlace2022
+kwgl-ont:numberOfFloodsImpactingPlace2022 rdf:type owl:DatatypeProperty ;
+                                          rdfs:subPropertyOf kwgl-ont:numberOfFloodsImpactingPlace ;
+                                          rdfs:domain kwgl-ont:Place ;
+                                          rdfs:range xsd:nonNegativeInteger ;
+                                          rdfs:label "number of floods impacting place-2022" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace
+kwgl-ont:numberOfHurricanesImpactingPlace rdf:type owl:DatatypeProperty ;
+                                          rdfs:domain kwgl-ont:Place ;
+                                          rdfs:range xsd:nonNegativeInteger ;
+                                          rdfs:label "number of hurricanes impacting place" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace2018
+kwgl-ont:numberOfHurricanesImpactingPlace2018 rdf:type owl:DatatypeProperty ;
+                                              rdfs:subPropertyOf kwgl-ont:numberOfHurricanesImpactingPlace ;
+                                              rdfs:domain kwgl-ont:Place ;
+                                              rdfs:range xsd:nonNegativeInteger ;
+                                              rdfs:label "number of hurricanes impacting place-2018" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace2019
+kwgl-ont:numberOfHurricanesImpactingPlace2019 rdf:type owl:DatatypeProperty ;
+                                              rdfs:subPropertyOf kwgl-ont:numberOfHurricanesImpactingPlace ;
+                                              rdfs:domain kwgl-ont:Place ;
+                                              rdfs:range xsd:nonNegativeInteger ;
+                                              rdfs:label "number of hurricanes impacting place-2019" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace2020
+kwgl-ont:numberOfHurricanesImpactingPlace2020 rdf:type owl:DatatypeProperty ;
+                                              rdfs:subPropertyOf kwgl-ont:numberOfHurricanesImpactingPlace ;
+                                              rdfs:domain kwgl-ont:Place ;
+                                              rdfs:range xsd:nonNegativeInteger ;
+                                              rdfs:label "number of hurricanes impacting place-2020" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace2021
+kwgl-ont:numberOfHurricanesImpactingPlace2021 rdf:type owl:DatatypeProperty ;
+                                              rdfs:subPropertyOf kwgl-ont:numberOfHurricanesImpactingPlace ;
+                                              rdfs:domain kwgl-ont:Place ;
+                                              rdfs:range xsd:nonNegativeInteger ;
+                                              rdfs:label "number of hurricanes impacting place-2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfHurricanesImpactingPlace2022
+kwgl-ont:numberOfHurricanesImpactingPlace2022 rdf:type owl:DatatypeProperty ;
+                                              rdfs:subPropertyOf kwgl-ont:numberOfHurricanesImpactingPlace ;
+                                              rdfs:domain kwgl-ont:Place ;
+                                              rdfs:range xsd:nonNegativeInteger ;
+                                              rdfs:label "number of hurricanes impacting place-2022" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace
+kwgl-ont:numberOfLandslidesImpactingPlace rdf:type owl:DatatypeProperty ;
+                                          rdfs:domain kwgl-ont:Place ;
+                                          rdfs:range xsd:nonNegativeInteger ;
+                                          rdfs:label "number of landslides impacting place" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace2018
+kwgl-ont:numberOfLandslidesImpactingPlace2018 rdf:type owl:DatatypeProperty ;
+                                              rdfs:subPropertyOf kwgl-ont:numberOfLandslidesImpactingPlace ;
+                                              rdfs:domain kwgl-ont:Place ;
+                                              rdfs:range xsd:nonNegativeInteger ;
+                                              rdfs:label "number of landslides impacting place-2018" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace2019
+kwgl-ont:numberOfLandslidesImpactingPlace2019 rdf:type owl:DatatypeProperty ;
+                                              rdfs:subPropertyOf kwgl-ont:numberOfLandslidesImpactingPlace ;
+                                              rdfs:domain kwgl-ont:Place ;
+                                              rdfs:range xsd:nonNegativeInteger ;
+                                              rdfs:label "number of landslides impacting place-2019" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace2020
+kwgl-ont:numberOfLandslidesImpactingPlace2020 rdf:type owl:DatatypeProperty ;
+                                              rdfs:subPropertyOf kwgl-ont:numberOfLandslidesImpactingPlace ;
+                                              rdfs:domain kwgl-ont:Place ;
+                                              rdfs:range xsd:nonNegativeInteger ;
+                                              rdfs:label "number of landslides impacting place-2020" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace2021
+kwgl-ont:numberOfLandslidesImpactingPlace2021 rdf:type owl:DatatypeProperty ;
+                                              rdfs:subPropertyOf kwgl-ont:numberOfLandslidesImpactingPlace ;
+                                              rdfs:domain kwgl-ont:Place ;
+                                              rdfs:range xsd:nonNegativeInteger ;
+                                              rdfs:label "number of landslides impacting place-2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfLandslidesImpactingPlace2022
+kwgl-ont:numberOfLandslidesImpactingPlace2022 rdf:type owl:DatatypeProperty ;
+                                              rdfs:subPropertyOf kwgl-ont:numberOfLandslidesImpactingPlace ;
+                                              rdfs:domain kwgl-ont:Place ;
+                                              rdfs:range xsd:nonNegativeInteger ;
+                                              rdfs:label "number of landslides impacting place-2022" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace
+kwgl-ont:numberOfStormSurgesImpactingPlace rdf:type owl:DatatypeProperty ;
+                                           rdfs:domain kwgl-ont:Place ;
+                                           rdfs:range xsd:nonNegativeInteger ;
+                                           rdfs:label "number of storm surges impacting place" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace2018
+kwgl-ont:numberOfStormSurgesImpactingPlace2018 rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf kwgl-ont:numberOfStormSurgesImpactingPlace ;
+                                               rdfs:domain kwgl-ont:Place ;
+                                               rdfs:range xsd:nonNegativeInteger ;
+                                               rdfs:label "number of storm surges impacting place-2018" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace2019
+kwgl-ont:numberOfStormSurgesImpactingPlace2019 rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf kwgl-ont:numberOfStormSurgesImpactingPlace ;
+                                               rdfs:domain kwgl-ont:Place ;
+                                               rdfs:range xsd:nonNegativeInteger ;
+                                               rdfs:label "number of storm surges impacting place-2019" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace2020
+kwgl-ont:numberOfStormSurgesImpactingPlace2020 rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf kwgl-ont:numberOfStormSurgesImpactingPlace ;
+                                               rdfs:domain kwgl-ont:Place ;
+                                               rdfs:range xsd:nonNegativeInteger ;
+                                               rdfs:label "number of storm surges impacting place-2020" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace2021
+kwgl-ont:numberOfStormSurgesImpactingPlace2021 rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf kwgl-ont:numberOfStormSurgesImpactingPlace ;
+                                               rdfs:domain kwgl-ont:Place ;
+                                               rdfs:range xsd:nonNegativeInteger ;
+                                               rdfs:label "number of storm surges impacting place-2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfStormSurgesImpactingPlace2022
+kwgl-ont:numberOfStormSurgesImpactingPlace2022 rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf kwgl-ont:numberOfStormSurgesImpactingPlace ;
+                                               rdfs:domain kwgl-ont:Place ;
+                                               rdfs:range xsd:nonNegativeInteger ;
+                                               rdfs:label "number of storm surges impacting place-2022" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace
+kwgl-ont:numberOfTornadoesImpactingPlace rdf:type owl:DatatypeProperty ;
+                                         rdfs:domain kwgl-ont:Place ;
+                                         rdfs:range xsd:nonNegativeInteger ;
+                                         rdfs:label "number of tornadoes impacting place" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace-2018
+kwgl-ont:numberOfTornadoesImpactingPlace-2018 rdf:type owl:DatatypeProperty ;
+                                              rdfs:subPropertyOf kwgl-ont:numberOfTornadoesImpactingPlace ;
+                                              rdfs:domain kwgl-ont:Place ;
+                                              rdfs:range xsd:nonNegativeInteger ;
+                                              rdfs:label "number of tornadoes impacting place-2018" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace2019
+kwgl-ont:numberOfTornadoesImpactingPlace2019 rdf:type owl:DatatypeProperty ;
+                                             rdfs:subPropertyOf kwgl-ont:numberOfTornadoesImpactingPlace ;
+                                             rdfs:domain kwgl-ont:Place ;
+                                             rdfs:range xsd:nonNegativeInteger ;
+                                             rdfs:label "number of tornadoes impacting place-2019" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace2020
+kwgl-ont:numberOfTornadoesImpactingPlace2020 rdf:type owl:DatatypeProperty ;
+                                             rdfs:subPropertyOf kwgl-ont:numberOfTornadoesImpactingPlace ;
+                                             rdfs:domain kwgl-ont:Place ;
+                                             rdfs:range xsd:nonNegativeInteger ;
+                                             rdfs:label "number of tornadoes impacting place-2020" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace2021
+kwgl-ont:numberOfTornadoesImpactingPlace2021 rdf:type owl:DatatypeProperty ;
+                                             rdfs:subPropertyOf kwgl-ont:numberOfTornadoesImpactingPlace ;
+                                             rdfs:domain kwgl-ont:Place ;
+                                             rdfs:range xsd:nonNegativeInteger ;
+                                             rdfs:label "number of tornadoes impacting place-2021" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/numberOfTornadoesImpactingPlace2022
+kwgl-ont:numberOfTornadoesImpactingPlace2022 rdf:type owl:DatatypeProperty ;
+                                             rdfs:subPropertyOf kwgl-ont:numberOfTornadoesImpactingPlace ;
+                                             rdfs:domain kwgl-ont:Place ;
+                                             rdfs:range xsd:nonNegativeInteger ;
+                                             rdfs:label "number of tornadoes impacting place-2022" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/percentBelowPovertyLine
+kwgl-ont:percentBelowPovertyLine rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain kwgl-ont:Place ;
+                                 rdfs:range xsd:nonNegativeInteger ;
+                                 rdfs:label "percent below poverty line" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/percentDiabetic
+kwgl-ont:percentDiabetic rdf:type owl:DatatypeProperty ;
+                         rdfs:domain kwgl-ont:Place ;
+                         rdfs:range xsd:nonNegativeInteger ;
+                         rdfs:label "percent diabetic" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/percentObese
+kwgl-ont:percentObese rdf:type owl:DatatypeProperty ;
+                      rdfs:domain kwgl-ont:Place ;
+                      rdfs:range xsd:nonNegativeInteger ;
+                      rdfs:label "percent obese" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/Earthquake
+kwgl-ont:Earthquake rdf:type owl:Class ;
+                    rdfs:subClassOf kwgl-ont:HazardEvent ;
+                    rdfs:label "Earthquake" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/Fire
+kwgl-ont:Fire rdf:type owl:Class ;
+              rdfs:subClassOf kwgl-ont:HazardEvent ;
+              rdfs:label "Fire" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/FireType
+kwgl-ont:FireType rdf:type owl:Class ;
+                  rdfs:label "Fire Type" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardEvent
+kwgl-ont:HazardEvent rdf:type owl:Class ;
+                     rdfs:label "Hazard Event" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/HazardType
+kwgl-ont:HazardType rdf:type owl:Class ;
+                    rdfs:label "Hazard Type" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/Hurricane
+kwgl-ont:Hurricane rdf:type owl:Class ;
+                   rdfs:subClassOf kwgl-ont:HazardEvent ;
+                   rdfs:label "Hurricane" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/Place
+kwgl-ont:Place rdf:type owl:Class ;
+               rdfs:label "Place" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/PlaceType
+kwgl-ont:PlaceType rdf:type owl:Class ;
+                   rdfs:label "Place Type" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-ontology/Tornado
+kwgl-ont:Tornado rdf:type owl:Class ;
+                 rdfs:subClassOf kwgl-ont:HazardEvent ;
+                 rdfs:label "Tornado" .
+
+
+###  http://www.w3.org/2002/07/owl#Thing
+owl:Thing rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:hasHazardType ;
+                            owl:allValuesFrom kwgl-ont:HazardType
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:hasImpacted ;
+                            owl:allValuesFrom kwgl-ont:Place
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:hasPlaceType ;
+                            owl:allValuesFrom kwgl-ont:PlaceType
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:impactedBy ;
+                            owl:allValuesFrom kwgl-ont:HazardEvent
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:isOfFireType ;
+                            owl:allValuesFrom kwgl-ont:FireType
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:sfContains ;
+                            owl:allValuesFrom kwgl-ont:Place
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:sfIntersects ;
+                            owl:allValuesFrom kwgl-ont:Place
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:sfOverlaps ;
+                            owl:allValuesFrom kwgl-ont:Place
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:sfTouches ;
+                            owl:allValuesFrom kwgl-ont:Place
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:sfWithin ;
+                            owl:allValuesFrom kwgl-ont:Place
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:spatialRelation ;
+                            owl:allValuesFrom kwgl-ont:Place
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:affectedAreaInAcres ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageCoolingDegreeDaysPerMonth ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageCoolingDegreeDaysPerMonthApr2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageCoolingDegreeDaysPerMonthAug2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageCoolingDegreeDaysPerMonthDec2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageCoolingDegreeDaysPerMonthFeb2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageCoolingDegreeDaysPerMonthJan2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageCoolingDegreeDaysPerMonthJul2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageCoolingDegreeDaysPerMonthJun2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageCoolingDegreeDaysPerMonthMar2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageCoolingDegreeDaysPerMonthMay2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageCoolingDegreeDaysPerMonthNov2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageCoolingDegreeDaysPerMonthOct2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageCoolingDegreeDaysPerMonthSep2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageHeatingDegreeDaysPerMonth ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageHeatingDegreeDaysPerMonthApr2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageHeatingDegreeDaysPerMonthAug2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageHeatingDegreeDaysPerMonthDec2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageHeatingDegreeDaysPerMonthFeb2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageHeatingDegreeDaysPerMonthJan2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageHeatingDegreeDaysPerMonthJul2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageHeatingDegreeDaysPerMonthJun2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageHeatingDegreeDaysPerMonthMar2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageHeatingDegreeDaysPerMonthMay2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageHeatingDegreeDaysPerMonthNov2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageHeatingDegreeDaysPerMonthOct2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageHeatingDegreeDaysPerMonthSep2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageMonthlyTemperatureInCelsius ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageMonthlyTemperatureInCelsiusApr2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageMonthlyTemperatureInCelsiusAug2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageMonthlyTemperatureInCelsiusDec2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageMonthlyTemperatureInCelsiusFeb2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageMonthlyTemperatureInCelsiusJan2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageMonthlyTemperatureInCelsiusJul2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageMonthlyTemperatureInCelsiusJun2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageMonthlyTemperatureInCelsiusMar2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageMonthlyTemperatureInCelsiusMay2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageMonthlyTemperatureInCelsiusNov2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageMonthlyTemperatureInCelsiusOct2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:averageMonthlyTemperatureInCelsiusSep2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:damageToCropsInDollars ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:damageToInfrastructureInDollars ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfFiresImpactingPlace ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfFiresImpactingPlace2018 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfFiresImpactingPlace2019 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfFiresImpactingPlace2020 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfFiresImpactingPlace2021 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfFiresImpactingPlace2022 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfFloodsImpactingPlace ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfFloodsImpactingPlace2018 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfFloodsImpactingPlace2019 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfFloodsImpactingPlace2020 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfFloodsImpactingPlace2021 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfFloodsImpactingPlace2022 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfHurricanesImpactingPlace ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfHurricanesImpactingPlace2018 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfHurricanesImpactingPlace2019 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfHurricanesImpactingPlace2020 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfHurricanesImpactingPlace2021 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfHurricanesImpactingPlace2022 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfLandslidesImpactingPlace ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfLandslidesImpactingPlace2018 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfLandslidesImpactingPlace2019 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfLandslidesImpactingPlace2020 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfLandslidesImpactingPlace2021 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfLandslidesImpactingPlace2022 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfStormSurgesImpactingPlace ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfStormSurgesImpactingPlace2018 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfStormSurgesImpactingPlace2019 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfStormSurgesImpactingPlace2020 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfStormSurgesImpactingPlace2021 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfStormSurgesImpactingPlace2022 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfTornadoesImpactingPlace ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfTornadoesImpactingPlace2018 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfTornadoesImpactingPlace2019 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfTornadoesImpactingPlace2020 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfTornadoesImpactingPlace2021 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:dollarDamageOfTornadoesImpactingPlace2022 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:hasEndDate ;
+                            owl:allValuesFrom xsd:date
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:hasKWGEntity ;
+                            owl:allValuesFrom xsd:anyURI
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:hasName ;
+                            owl:allValuesFrom xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:hasNumberOfHouseHolds ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:hasPopulation ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:hasStartDate ;
+                            owl:allValuesFrom xsd:date
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:maximumMonthlyTemperatureInCelsius ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:maximumMonthlyTemperatureInCelsiusApr2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:maximumMonthlyTemperatureInCelsiusAug2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:maximumMonthlyTemperatureInCelsiusDec2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:maximumMonthlyTemperatureInCelsiusFeb2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:maximumMonthlyTemperatureInCelsiusJan2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:maximumMonthlyTemperatureInCelsiusJul2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:maximumMonthlyTemperatureInCelsiusJun2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:maximumMonthlyTemperatureInCelsiusMar2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:maximumMonthlyTemperatureInCelsiusMay2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:maximumMonthlyTemperatureInCelsiusNov2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:maximumMonthlyTemperatureInCelsiusOct2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:maximumMonthlyTemperatureInCelsiusSep2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:minimumMonthlyTemperatureInCelsius ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:minimumMonthlyTemperatureInCelsiusApr2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:minimumMonthlyTemperatureInCelsiusAug2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:minimumMonthlyTemperatureInCelsiusDec2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:minimumMonthlyTemperatureInCelsiusFeb2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:minimumMonthlyTemperatureInCelsiusJan2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:minimumMonthlyTemperatureInCelsiusJul2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:minimumMonthlyTemperatureInCelsiusJun2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:minimumMonthlyTemperatureInCelsiusMar2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:minimumMonthlyTemperatureInCelsiusMay2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:minimumMonthlyTemperatureInCelsiusNov2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:minimumMonthlyTemperatureInCelsiusOct2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:minimumMonthlyTemperatureInCelsiusSep2021 ;
+                            owl:allValuesFrom xsd:integer
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfDeaths ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfEarthquakesImpactingPlace ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfEarthquakesImpactingPlace2018 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfEarthquakesImpactingPlace2019 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfEarthquakesImpactingPlace2020 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfEarthquakesImpactingPlace2021 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfEarthquakesImpactingPlace2022 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfFiresImpactingPlace ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfFiresImpactingPlace2018 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfFiresImpactingPlace2019 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfFiresImpactingPlace2020 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfFiresImpactingPlace2021 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfFiresImpactingPlace2022 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfFloodsImpactingPlace ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfFloodsImpactingPlace2018 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfFloodsImpactingPlace2019 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfFloodsImpactingPlace2020 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfFloodsImpactingPlace2021 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfFloodsImpactingPlace2022 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfHurricanesImpactingPlace ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfHurricanesImpactingPlace2018 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfHurricanesImpactingPlace2019 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfHurricanesImpactingPlace2020 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfHurricanesImpactingPlace2021 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfHurricanesImpactingPlace2022 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfLandslidesImpactingPlace ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfLandslidesImpactingPlace2018 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfLandslidesImpactingPlace2019 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfLandslidesImpactingPlace2020 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfLandslidesImpactingPlace2021 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfLandslidesImpactingPlace2022 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfStormSurgesImpactingPlace ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfStormSurgesImpactingPlace2018 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfStormSurgesImpactingPlace2019 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfStormSurgesImpactingPlace2020 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfStormSurgesImpactingPlace2021 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfStormSurgesImpactingPlace2022 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfTornadoesImpactingPlace ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfTornadoesImpactingPlace-2018 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfTornadoesImpactingPlace2019 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfTornadoesImpactingPlace2020 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfTornadoesImpactingPlace2021 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:numberOfTornadoesImpactingPlace2022 ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:percentBelowPovertyLine ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:percentDiabetic ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty kwgl-ont:percentObese ;
+                            owl:allValuesFrom xsd:nonNegativeInteger
+                          ] .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_0
+kwglr:AdministrativeRegion_0 rdf:type owl:NamedIndividual ,
+                                      kwgl-ont:PlaceType ;
+                             rdfs:label "administrative region level-0" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_1
+kwglr:AdministrativeRegion_1 rdf:type owl:NamedIndividual ,
+                                      kwgl-ont:PlaceType ;
+                             rdfs:label "administrative region level-1" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_2
+kwglr:AdministrativeRegion_2 rdf:type owl:NamedIndividual ,
+                                      kwgl-ont:PlaceType ;
+                             rdfs:label "administrative region level-2" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_3
+kwglr:AdministrativeRegion_3 rdf:type owl:NamedIndividual ,
+                                      kwgl-ont:PlaceType ;
+                             rdfs:label "administrative region level-3" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_4
+kwglr:AdministrativeRegion_4 rdf:type owl:NamedIndividual ,
+                                      kwgl-ont:PlaceType ;
+                             rdfs:label "administrative region level-4" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_5
+kwglr:AdministrativeRegion_5 rdf:type owl:NamedIndividual ,
+                                      kwgl-ont:PlaceType ;
+                             rdfs:label "administrative region level-5" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/AdministrativeRegion_6
+kwglr:AdministrativeRegion_6 rdf:type owl:NamedIndividual ,
+                                      kwgl-ont:PlaceType ;
+                             rdfs:label "administrative region level-6" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/FederalJudicialDistrict
+kwglr:FederalJudicialDistrict rdf:type owl:NamedIndividual ,
+                                       kwgl-ont:PlaceType ;
+                              rdfs:label "federal judicial district" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSComplexFire
+kwglr:MTBSComplexFire rdf:type owl:NamedIndividual ,
+                               kwgl-ont:FireType ;
+                      rdfs:label "mtbs complex fire" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSOutOfAreaResponseFire
+kwglr:MTBSOutOfAreaResponseFire rdf:type owl:NamedIndividual ,
+                                         kwgl-ont:FireType ;
+                                rdfs:label "mtbs out of area response fire" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSUnknownFire
+kwglr:MTBSUnknownFire rdf:type owl:NamedIndividual ,
+                               kwgl-ont:FireType ;
+                      rdfs:label "mtbs unknown fire" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSWildfire
+kwglr:MTBSWildfire rdf:type owl:NamedIndividual ,
+                            kwgl-ont:FireType ;
+                   rdfs:label "mtbs wildfire" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/MTBSWildlandFireUse
+kwglr:MTBSWildlandFireUse rdf:type owl:NamedIndividual ,
+                                   kwgl-ont:FireType ;
+                          rdfs:label "mtbs wildland fire use" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NIFCIncidentComplexFire
+kwglr:NIFCIncidentComplexFire rdf:type owl:NamedIndividual ,
+                                       kwgl-ont:FireType ;
+                              rdfs:label "nifc incident complex fire" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NIFCPrescribedFire
+kwglr:NIFCPrescribedFire rdf:type owl:NamedIndividual ,
+                                  kwgl-ont:FireType ;
+                         rdfs:label "nifc prescribed fire" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NIFCWildfire
+kwglr:NIFCWildfire rdf:type owl:NamedIndividual ,
+                            kwgl-ont:FireType ;
+                   rdfs:label "nifc wildfire" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NOAAWildfire
+kwglr:NOAAWildfire rdf:type owl:NamedIndividual ,
+                            kwgl-ont:FireType ;
+                   rdfs:label "noaa wildfire" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/NWZone
+kwglr:NWZone rdf:type owl:NamedIndividual ,
+                      kwgl-ont:PlaceType ;
+             rdfs:label "national weather zone" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/USCensusMSA
+kwglr:USCensusMSA rdf:type owl:NamedIndividual ,
+                           kwgl-ont:PlaceType ;
+                  rdfs:label "US census unit" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/USClimateDivision
+kwglr:USClimateDivision rdf:type owl:NamedIndividual ,
+                                 kwgl-ont:PlaceType ;
+                        rdfs:label "US climate division" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/ZipCodeArea
+kwglr:ZipCodeArea rdf:type owl:NamedIndividual ,
+                           kwgl-ont:PlaceType ;
+                  rdfs:label "zip code area" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/astronomicalLowTide
+kwglr:astronomicalLowTide rdf:type owl:NamedIndividual ,
+                                   kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/avalanche
+kwglr:avalanche rdf:type owl:NamedIndividual ,
+                         kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/blizzard
+kwglr:blizzard rdf:type owl:NamedIndividual ,
+                        kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/coastalFlood
+kwglr:coastalFlood rdf:type owl:NamedIndividual ,
+                            kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/coldWindChill
+kwglr:coldWindChill rdf:type owl:NamedIndividual ,
+                             kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/debrisFlow
+kwglr:debrisFlow rdf:type owl:NamedIndividual ,
+                          kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/denseFog
+kwglr:denseFog rdf:type owl:NamedIndividual ,
+                        kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/denseSmoke
+kwglr:denseSmoke rdf:type owl:NamedIndividual ,
+                          kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/drought
+kwglr:drought rdf:type owl:NamedIndividual ,
+                       kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/dustDevil
+kwglr:dustDevil rdf:type owl:NamedIndividual ,
+                         kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/dustStorm
+kwglr:dustStorm rdf:type owl:NamedIndividual ,
+                         kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/earthquake
+kwglr:earthquake rdf:type owl:NamedIndividual ,
+                          kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/excessiveHeat
+kwglr:excessiveHeat rdf:type owl:NamedIndividual ,
+                             kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/extremeColdWindChill
+kwglr:extremeColdWindChill rdf:type owl:NamedIndividual ,
+                                    kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/fire
+kwglr:fire rdf:type owl:NamedIndividual ,
+                    kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/flashFlood
+kwglr:flashFlood rdf:type owl:NamedIndividual ,
+                          kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/flood
+kwglr:flood rdf:type owl:NamedIndividual ,
+                     kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/freezingFog
+kwglr:freezingFog rdf:type owl:NamedIndividual ,
+                           kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/frostFreeze
+kwglr:frostFreeze rdf:type owl:NamedIndividual ,
+                           kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/funnelCloud
+kwglr:funnelCloud rdf:type owl:NamedIndividual ,
+                           kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/hail
+kwglr:hail rdf:type owl:NamedIndividual ,
+                    kwgl-ont:HazardType ;
+           rdfs:comment "hail" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/heat
+kwglr:heat rdf:type owl:NamedIndividual ,
+                    kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/heavyRain
+kwglr:heavyRain rdf:type owl:NamedIndividual ,
+                         kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/heavySnow
+kwglr:heavySnow rdf:type owl:NamedIndividual ,
+                         kwgl-ont:HazardType ;
+                rdfs:comment "heavy snow" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/highSurf
+kwglr:highSurf rdf:type owl:NamedIndividual ,
+                        kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/highWind
+kwglr:highWind rdf:type owl:NamedIndividual ,
+                        kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/hurricane
+kwglr:hurricane rdf:type owl:NamedIndividual ,
+                         kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/iceStorm
+kwglr:iceStorm rdf:type owl:NamedIndividual ,
+                        kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/lake-EffectSnow
+kwglr:lake-EffectSnow rdf:type owl:NamedIndividual ,
+                               kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/lakeshoreFlood
+kwglr:lakeshoreFlood rdf:type owl:NamedIndividual ,
+                              kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/lightning
+kwglr:lightning rdf:type owl:NamedIndividual ,
+                         kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineHail
+kwglr:marineHail rdf:type owl:NamedIndividual ,
+                          kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineHighWind
+kwglr:marineHighWind rdf:type owl:NamedIndividual ,
+                              kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineStrongWind
+kwglr:marineStrongWind rdf:type owl:NamedIndividual ,
+                                kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineThunderstormWind
+kwglr:marineThunderstormWind rdf:type owl:NamedIndividual ,
+                                      kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineTropicalDepression
+kwglr:marineTropicalDepression rdf:type owl:NamedIndividual ,
+                                        kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/marineTropicalStorm
+kwglr:marineTropicalStorm rdf:type owl:NamedIndividual ,
+                                   kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/ripCurrent
+kwglr:ripCurrent rdf:type owl:NamedIndividual ,
+                          kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/sleet
+kwglr:sleet rdf:type owl:NamedIndividual ,
+                     kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/sneakerwave
+kwglr:sneakerwave rdf:type owl:NamedIndividual ,
+                           kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/stormSurgeTide
+kwglr:stormSurgeTide rdf:type owl:NamedIndividual ,
+                              kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/strongWind
+kwglr:strongWind rdf:type owl:NamedIndividual ,
+                          kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/thunderstormWind
+kwglr:thunderstormWind rdf:type owl:NamedIndividual ,
+                                kwgl-ont:HazardType ;
+                       rdfs:comment "thunderstorm wind" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/tornado
+kwglr:tornado rdf:type owl:NamedIndividual ,
+                       kwgl-ont:HazardType ;
+              rdfs:comment "tornado" .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/tropicalDepression
+kwglr:tropicalDepression rdf:type owl:NamedIndividual ,
+                                  kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/tropicalStorm
+kwglr:tropicalStorm rdf:type owl:NamedIndividual ,
+                             kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/waterspout
+kwglr:waterspout rdf:type owl:NamedIndividual ,
+                          kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/wildfire
+kwglr:wildfire rdf:type owl:NamedIndividual ,
+                        kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/winterStorm
+kwglr:winterStorm rdf:type owl:NamedIndividual ,
+                           kwgl-ont:HazardType .
+
+
+###  http://stko-kwg.geog.ucsb.edu/lod/lite-resource/winterWeather
+kwglr:winterWeather rdf:type owl:NamedIndividual ,
+                             kwgl-ont:HazardType .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:hasHazardType ;
+  owl:someValuesFrom kwgl-ont:HazardType ;
+  rdfs:subClassOf kwgl-ont:HazardEvent
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:hasImpacted ;
+  owl:someValuesFrom kwgl-ont:Place ;
+  rdfs:subClassOf kwgl-ont:HazardEvent
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:hasPlaceType ;
+  owl:someValuesFrom kwgl-ont:PlaceType ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:impactedBy ;
+  owl:someValuesFrom kwgl-ont:HazardEvent ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:isOfFireType ;
+  owl:someValuesFrom kwgl-ont:FireType ;
+  rdfs:subClassOf kwgl-ont:Fire
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:sfContains ;
+  owl:someValuesFrom kwgl-ont:Place ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:sfIntersects ;
+  owl:someValuesFrom kwgl-ont:Place ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:sfOverlaps ;
+  owl:someValuesFrom kwgl-ont:Place ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:sfTouches ;
+  owl:someValuesFrom kwgl-ont:Place ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:sfWithin ;
+  owl:someValuesFrom kwgl-ont:Place ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:spatialRelation ;
+  owl:someValuesFrom kwgl-ont:Place ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:affectedAreaInAcres ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:HazardEvent
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageCoolingDegreeDaysPerMonth ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageCoolingDegreeDaysPerMonthApr2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageCoolingDegreeDaysPerMonthAug2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageCoolingDegreeDaysPerMonthDec2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageCoolingDegreeDaysPerMonthFeb2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageCoolingDegreeDaysPerMonthJan2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageCoolingDegreeDaysPerMonthJul2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageCoolingDegreeDaysPerMonthJun2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageCoolingDegreeDaysPerMonthMar2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageCoolingDegreeDaysPerMonthMay2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageCoolingDegreeDaysPerMonthNov2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageCoolingDegreeDaysPerMonthOct2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageCoolingDegreeDaysPerMonthSep2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageHeatingDegreeDaysPerMonth ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageHeatingDegreeDaysPerMonthApr2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageHeatingDegreeDaysPerMonthAug2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageHeatingDegreeDaysPerMonthDec2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageHeatingDegreeDaysPerMonthFeb2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageHeatingDegreeDaysPerMonthJan2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageHeatingDegreeDaysPerMonthJul2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageHeatingDegreeDaysPerMonthJun2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageHeatingDegreeDaysPerMonthMar2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageHeatingDegreeDaysPerMonthMay2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageHeatingDegreeDaysPerMonthNov2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageHeatingDegreeDaysPerMonthOct2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageHeatingDegreeDaysPerMonthSep2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageMonthlyTemperatureInCelsius ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageMonthlyTemperatureInCelsiusApr2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageMonthlyTemperatureInCelsiusAug2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageMonthlyTemperatureInCelsiusDec2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageMonthlyTemperatureInCelsiusFeb2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageMonthlyTemperatureInCelsiusJan2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageMonthlyTemperatureInCelsiusJul2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageMonthlyTemperatureInCelsiusJun2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageMonthlyTemperatureInCelsiusMar2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageMonthlyTemperatureInCelsiusMay2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageMonthlyTemperatureInCelsiusNov2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageMonthlyTemperatureInCelsiusOct2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:averageMonthlyTemperatureInCelsiusSep2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:damageToCropsInDollars ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:HazardEvent
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:damageToInfrastructureInDollars ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:HazardEvent
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfFiresImpactingPlace ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfFiresImpactingPlace2018 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfFiresImpactingPlace2019 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfFiresImpactingPlace2020 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfFiresImpactingPlace2021 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfFiresImpactingPlace2022 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfFloodsImpactingPlace ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfFloodsImpactingPlace2018 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfFloodsImpactingPlace2019 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfFloodsImpactingPlace2020 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfFloodsImpactingPlace2021 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfFloodsImpactingPlace2022 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfHurricanesImpactingPlace ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfHurricanesImpactingPlace2018 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfHurricanesImpactingPlace2019 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfHurricanesImpactingPlace2020 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfHurricanesImpactingPlace2021 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfHurricanesImpactingPlace2022 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfLandslidesImpactingPlace ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfLandslidesImpactingPlace2018 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfLandslidesImpactingPlace2019 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfLandslidesImpactingPlace2020 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfLandslidesImpactingPlace2021 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfLandslidesImpactingPlace2022 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfStormSurgesImpactingPlace ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfStormSurgesImpactingPlace2018 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfStormSurgesImpactingPlace2019 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfStormSurgesImpactingPlace2020 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfStormSurgesImpactingPlace2021 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfStormSurgesImpactingPlace2022 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfTornadoesImpactingPlace ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfTornadoesImpactingPlace2018 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfTornadoesImpactingPlace2019 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfTornadoesImpactingPlace2020 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfTornadoesImpactingPlace2021 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:dollarDamageOfTornadoesImpactingPlace2022 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:hasEndDate ;
+  owl:someValuesFrom xsd:date ;
+  rdfs:subClassOf kwgl-ont:HazardEvent
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:hasKWGEntity ;
+  owl:someValuesFrom xsd:anyURI ;
+  rdfs:subClassOf [ rdf:type owl:Class ;
+                    owl:unionOf ( kwgl-ont:HazardEvent
+                                  kwgl-ont:Place
+                                )
+                  ]
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:hasName ;
+  owl:someValuesFrom xsd:string ;
+  rdfs:subClassOf [ rdf:type owl:Class ;
+                    owl:unionOf ( kwgl-ont:HazardEvent
+                                  kwgl-ont:Place
+                                )
+                  ]
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:hasNumberOfHouseHolds ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:hasPopulation ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:hasStartDate ;
+  owl:someValuesFrom xsd:date ;
+  rdfs:subClassOf kwgl-ont:HazardEvent
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:maximumMonthlyTemperatureInCelsius ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:maximumMonthlyTemperatureInCelsiusApr2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:maximumMonthlyTemperatureInCelsiusAug2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:maximumMonthlyTemperatureInCelsiusDec2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:maximumMonthlyTemperatureInCelsiusFeb2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:maximumMonthlyTemperatureInCelsiusJan2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:maximumMonthlyTemperatureInCelsiusJul2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:maximumMonthlyTemperatureInCelsiusJun2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:maximumMonthlyTemperatureInCelsiusMar2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:maximumMonthlyTemperatureInCelsiusMay2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:maximumMonthlyTemperatureInCelsiusNov2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:maximumMonthlyTemperatureInCelsiusOct2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:maximumMonthlyTemperatureInCelsiusSep2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:minimumMonthlyTemperatureInCelsius ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:minimumMonthlyTemperatureInCelsiusApr2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:minimumMonthlyTemperatureInCelsiusAug2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:minimumMonthlyTemperatureInCelsiusDec2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:minimumMonthlyTemperatureInCelsiusFeb2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:minimumMonthlyTemperatureInCelsiusJan2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:minimumMonthlyTemperatureInCelsiusJul2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:minimumMonthlyTemperatureInCelsiusJun2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:minimumMonthlyTemperatureInCelsiusMar2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:minimumMonthlyTemperatureInCelsiusMay2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:minimumMonthlyTemperatureInCelsiusNov2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:minimumMonthlyTemperatureInCelsiusOct2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:minimumMonthlyTemperatureInCelsiusSep2021 ;
+  owl:someValuesFrom xsd:integer ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfDeaths ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:HazardEvent
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfEarthquakesImpactingPlace ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfEarthquakesImpactingPlace2018 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfEarthquakesImpactingPlace2019 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfEarthquakesImpactingPlace2020 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfEarthquakesImpactingPlace2021 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfEarthquakesImpactingPlace2022 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfFiresImpactingPlace ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfFiresImpactingPlace2018 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfFiresImpactingPlace2019 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfFiresImpactingPlace2020 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfFiresImpactingPlace2021 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfFiresImpactingPlace2022 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfFloodsImpactingPlace ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfFloodsImpactingPlace2018 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfFloodsImpactingPlace2019 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfFloodsImpactingPlace2020 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfFloodsImpactingPlace2021 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfFloodsImpactingPlace2022 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfHurricanesImpactingPlace ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfHurricanesImpactingPlace2018 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfHurricanesImpactingPlace2019 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfHurricanesImpactingPlace2020 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfHurricanesImpactingPlace2021 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfHurricanesImpactingPlace2022 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfLandslidesImpactingPlace ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfLandslidesImpactingPlace2018 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfLandslidesImpactingPlace2019 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfLandslidesImpactingPlace2020 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfLandslidesImpactingPlace2021 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfLandslidesImpactingPlace2022 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfStormSurgesImpactingPlace ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfStormSurgesImpactingPlace2018 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfStormSurgesImpactingPlace2019 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfStormSurgesImpactingPlace2020 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfStormSurgesImpactingPlace2021 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfStormSurgesImpactingPlace2022 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfTornadoesImpactingPlace ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfTornadoesImpactingPlace-2018 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfTornadoesImpactingPlace2019 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfTornadoesImpactingPlace2020 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfTornadoesImpactingPlace2021 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:numberOfTornadoesImpactingPlace2022 ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:percentBelowPovertyLine ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:percentDiabetic ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty kwgl-ont:percentObese ;
+  owl:someValuesFrom xsd:nonNegativeInteger ;
+  rdfs:subClassOf kwgl-ont:Place
+] .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

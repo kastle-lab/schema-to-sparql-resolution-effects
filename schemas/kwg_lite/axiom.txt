@@ -1,0 +1,708 @@
+kwgl-ont:Earthquake ⊑ kwgl-ont:HazardEvent
+kwgl-ont:Fire ⊑ kwgl-ont:HazardEvent
+kwgl-ont:Hurricane ⊑ kwgl-ont:HazardEvent
+owl:Thing ⊑ ∀ kwgl-ont:numberOfDeaths xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:numberOfHurricanesImpactingPlace2021 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:averageHeatingDegreeDaysPerMonthSep2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfStormSurgesImpactingPlace2019 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:numberOfFloodsImpactingPlace2018 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfFiresImpactingPlace2021 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfFiresImpactingPlace2018 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:averageMonthlyTemperatureInCelsiusJul2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:averageCoolingDegreeDaysPerMonthJun2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfTornadoesImpactingPlace2022 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:numberOfEarthquakesImpactingPlace2019 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:sfIntersects kwgl-ont:Place
+owl:Thing ⊑ ∀ kwgl-ont:maximumMonthlyTemperatureInCelsiusJan2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:numberOfLandslidesImpactingPlace2021 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:numberOfFloodsImpactingPlace2021 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:hasEndDate xsd:date
+owl:Thing ⊑ ∀ kwgl-ont:averageCoolingDegreeDaysPerMonthAug2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfFiresImpactingPlace xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:hasNumberOfHouseHolds xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:numberOfTornadoesImpactingPlace2021 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfLandslidesImpactingPlace2019 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:numberOfStormSurgesImpactingPlace2021 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:hasName xsd:string
+owl:Thing ⊑ ∀ kwgl-ont:averageCoolingDegreeDaysPerMonthJan2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:numberOfEarthquakesImpactingPlace xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:maximumMonthlyTemperatureInCelsiusOct2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:numberOfFiresImpactingPlace2022 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:minimumMonthlyTemperatureInCelsiusFeb2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:minimumMonthlyTemperatureInCelsiusJan2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:hasKWGEntity xsd:anyURI
+owl:Thing ⊑ ∀ kwgl-ont:averageHeatingDegreeDaysPerMonth xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:numberOfFiresImpactingPlace2019 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:hasPlaceType kwgl-ont:PlaceType
+owl:Thing ⊑ ∀ kwgl-ont:minimumMonthlyTemperatureInCelsiusAug2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfTornadoesImpactingPlace2018 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfHurricanesImpactingPlace2019 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:minimumMonthlyTemperatureInCelsiusJun2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:averageMonthlyTemperatureInCelsiusSep2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:averageCoolingDegreeDaysPerMonth xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:minimumMonthlyTemperatureInCelsiusMay2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:averageCoolingDegreeDaysPerMonthFeb2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:maximumMonthlyTemperatureInCelsius xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:averageMonthlyTemperatureInCelsius xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:numberOfTornadoesImpactingPlace xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:numberOfHurricanesImpactingPlace2022 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfLandslidesImpactingPlace xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:minimumMonthlyTemperatureInCelsiusApr2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:hasPopulation xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfStormSurgesImpactingPlace2018 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfFiresImpactingPlace2020 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:numberOfFloodsImpactingPlace2019 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:averageMonthlyTemperatureInCelsiusFeb2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:minimumMonthlyTemperatureInCelsiusMar2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:sfContains kwgl-ont:Place
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfLandslidesImpactingPlace2020 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfHurricanesImpactingPlace2020 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:numberOfStormSurgesImpactingPlace2018 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfFloodsImpactingPlace2020 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:averageHeatingDegreeDaysPerMonthMay2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:numberOfLandslidesImpactingPlace2022 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:averageHeatingDegreeDaysPerMonthJul2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:averageCoolingDegreeDaysPerMonthDec2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:averageCoolingDegreeDaysPerMonthJul2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:damageToInfrastructureInDollars xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:hasStartDate xsd:date
+owl:Thing ⊑ ∀ kwgl-ont:numberOfLandslidesImpactingPlace2018 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:numberOfTornadoesImpactingPlace2022 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:maximumMonthlyTemperatureInCelsiusJun2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:numberOfFloodsImpactingPlace2022 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:averageHeatingDegreeDaysPerMonthDec2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:numberOfHurricanesImpactingPlace xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:percentDiabetic xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:numberOfStormSurgesImpactingPlace2022 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:numberOfHurricanesImpactingPlace2018 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:numberOfFiresImpactingPlace2021 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:averageCoolingDegreeDaysPerMonthOct2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfStormSurgesImpactingPlace2022 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:hasHazardType kwgl-ont:HazardType
+owl:Thing ⊑ ∀ kwgl-ont:averageCoolingDegreeDaysPerMonthNov2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:averageMonthlyTemperatureInCelsiusJan2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:maximumMonthlyTemperatureInCelsiusFeb2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:numberOfFiresImpactingPlace2018 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:numberOfEarthquakesImpactingPlace2020 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:numberOfFloodsImpactingPlace xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfTornadoesImpactingPlace2019 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:averageMonthlyTemperatureInCelsiusJun2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:averageHeatingDegreeDaysPerMonthFeb2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:numberOfTornadoesImpactingPlace2019 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:minimumMonthlyTemperatureInCelsius xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:averageHeatingDegreeDaysPerMonthOct2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfLandslidesImpactingPlace2021 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:averageHeatingDegreeDaysPerMonthAug2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:averageMonthlyTemperatureInCelsiusMar2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:sfWithin kwgl-ont:Place
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfFloodsImpactingPlace2021 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:numberOfStormSurgesImpactingPlace xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfFloodsImpactingPlace xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:averageCoolingDegreeDaysPerMonthSep2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:numberOfStormSurgesImpactingPlace2019 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:averageHeatingDegreeDaysPerMonthJun2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfHurricanesImpactingPlace2021 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfTornadoesImpactingPlace2020 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:percentBelowPovertyLine xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:averageHeatingDegreeDaysPerMonthApr2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:numberOfLandslidesImpactingPlace2019 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfTornadoesImpactingPlace xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:averageHeatingDegreeDaysPerMonthNov2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:averageMonthlyTemperatureInCelsiusNov2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:maximumMonthlyTemperatureInCelsiusMar2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:averageHeatingDegreeDaysPerMonthMar2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:averageMonthlyTemperatureInCelsiusDec2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:affectedAreaInAcres xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:numberOfHurricanesImpactingPlace2019 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:numberOfFiresImpactingPlace2020 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfStormSurgesImpactingPlace xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfStormSurgesImpactingPlace2021 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:numberOfTornadoesImpactingPlace-2018 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:numberOfFiresImpactingPlace xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:maximumMonthlyTemperatureInCelsiusNov2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:isOfFireType kwgl-ont:FireType
+owl:Thing ⊑ ∀ kwgl-ont:impactedBy kwgl-ont:HazardEvent
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfFloodsImpactingPlace2018 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:averageMonthlyTemperatureInCelsiusOct2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:numberOfEarthquakesImpactingPlace2021 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:damageToCropsInDollars xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:averageCoolingDegreeDaysPerMonthMay2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfFloodsImpactingPlace2019 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:averageCoolingDegreeDaysPerMonthMar2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:maximumMonthlyTemperatureInCelsiusAug2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:numberOfHurricanesImpactingPlace2020 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:hasImpacted kwgl-ont:Place
+owl:Thing ⊑ ∀ kwgl-ont:sfTouches kwgl-ont:Place
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfFiresImpactingPlace2019 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfFiresImpactingPlace2022 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:minimumMonthlyTemperatureInCelsiusDec2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:minimumMonthlyTemperatureInCelsiusNov2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:averageCoolingDegreeDaysPerMonthApr2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfHurricanesImpactingPlace2022 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:numberOfLandslidesImpactingPlace xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:numberOfEarthquakesImpactingPlace2018 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:maximumMonthlyTemperatureInCelsiusApr2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:maximumMonthlyTemperatureInCelsiusSep2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:maximumMonthlyTemperatureInCelsiusDec2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfTornadoesImpactingPlace2021 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:numberOfLandslidesImpactingPlace2020 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:maximumMonthlyTemperatureInCelsiusJul2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:averageHeatingDegreeDaysPerMonthJan2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:percentObese xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfFloodsImpactingPlace2022 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:numberOfFloodsImpactingPlace2020 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:numberOfTornadoesImpactingPlace2020 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:maximumMonthlyTemperatureInCelsiusMay2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfLandslidesImpactingPlace2018 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:averageMonthlyTemperatureInCelsiusApr2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:numberOfStormSurgesImpactingPlace2020 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:spatialRelation kwgl-ont:Place
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfLandslidesImpactingPlace2022 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:minimumMonthlyTemperatureInCelsiusJul2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:sfOverlaps kwgl-ont:Place
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfHurricanesImpactingPlace xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfStormSurgesImpactingPlace2020 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:minimumMonthlyTemperatureInCelsiusOct2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:averageMonthlyTemperatureInCelsiusAug2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:averageMonthlyTemperatureInCelsiusMay2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:dollarDamageOfHurricanesImpactingPlace2018 xsd:nonNegativeInteger
+owl:Thing ⊑ ∀ kwgl-ont:minimumMonthlyTemperatureInCelsiusSep2021 xsd:integer
+owl:Thing ⊑ ∀ kwgl-ont:numberOfEarthquakesImpactingPlace2022 xsd:nonNegativeInteger
+kwgl-ont:Tornado ⊑ kwgl-ont:HazardEvent
+∃ kwgl-ont:hasHazardType owl:Thing ⊑ kwgl-ont:HazardEvent
+⊤ ⊑ ∀ kwgl-ont:hasHazardType kwgl-ont:HazardType
+kwgl-ont:hasImpacted ≡ kwgl-ont:impactedBy⁻
+∃ kwgl-ont:hasImpacted owl:Thing ⊑ kwgl-ont:HazardEvent
+⊤ ⊑ ∀ kwgl-ont:hasImpacted kwgl-ont:Place
+∃ kwgl-ont:hasPlaceType owl:Thing ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:hasPlaceType kwgl-ont:PlaceType
+kwgl-ont:hasImpacted ≡ kwgl-ont:impactedBy⁻
+∃ kwgl-ont:impactedBy owl:Thing ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:impactedBy kwgl-ont:HazardEvent
+∃ kwgl-ont:isOfFireType owl:Thing ⊑ kwgl-ont:Fire
+⊤ ⊑ ∀ kwgl-ont:isOfFireType kwgl-ont:FireType
+⊑ kwgl-ont:spatialRelation
+∃ kwgl-ont:sfContains owl:Thing ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:sfContains kwgl-ont:Place
+⊑ kwgl-ont:spatialRelation
+∃ kwgl-ont:sfIntersects owl:Thing ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:sfIntersects kwgl-ont:Place
+⊑ kwgl-ont:spatialRelation
+∃ kwgl-ont:sfOverlaps owl:Thing ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:sfOverlaps kwgl-ont:Place
+⊑ kwgl-ont:spatialRelation
+∃ kwgl-ont:sfTouches owl:Thing ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:sfTouches kwgl-ont:Place
+⊑ kwgl-ont:spatialRelation
+∃ kwgl-ont:sfWithin owl:Thing ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:sfWithin kwgl-ont:Place
+∃ kwgl-ont:spatialRelation owl:Thing ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:spatialRelation kwgl-ont:Place
+∃ kwgl-ont:affectedAreaInAcres rdfs:Literal ⊑ kwgl-ont:HazardEvent
+⊤ ⊑ ∀ kwgl-ont:affectedAreaInAcres xsd:nonNegativeInteger
+∃ kwgl-ont:averageCoolingDegreeDaysPerMonth rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageCoolingDegreeDaysPerMonth xsd:integer
+⊑ kwgl-ont:averageCoolingDegreeDaysPerMonth
+∃ kwgl-ont:averageCoolingDegreeDaysPerMonthApr2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageCoolingDegreeDaysPerMonthApr2021 xsd:integer
+⊑ kwgl-ont:averageCoolingDegreeDaysPerMonth
+∃ kwgl-ont:averageCoolingDegreeDaysPerMonthAug2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageCoolingDegreeDaysPerMonthAug2021 xsd:integer
+⊑ kwgl-ont:averageCoolingDegreeDaysPerMonth
+∃ kwgl-ont:averageCoolingDegreeDaysPerMonthDec2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageCoolingDegreeDaysPerMonthDec2021 xsd:integer
+⊑ kwgl-ont:averageCoolingDegreeDaysPerMonth
+∃ kwgl-ont:averageCoolingDegreeDaysPerMonthFeb2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageCoolingDegreeDaysPerMonthFeb2021 xsd:integer
+⊑ kwgl-ont:averageCoolingDegreeDaysPerMonth
+∃ kwgl-ont:averageCoolingDegreeDaysPerMonthJan2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageCoolingDegreeDaysPerMonthJan2021 xsd:integer
+⊑ kwgl-ont:averageCoolingDegreeDaysPerMonth
+∃ kwgl-ont:averageCoolingDegreeDaysPerMonthJul2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageCoolingDegreeDaysPerMonthJul2021 xsd:integer
+⊑ kwgl-ont:averageCoolingDegreeDaysPerMonth
+∃ kwgl-ont:averageCoolingDegreeDaysPerMonthJun2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageCoolingDegreeDaysPerMonthJun2021 xsd:integer
+⊑ kwgl-ont:averageCoolingDegreeDaysPerMonth
+∃ kwgl-ont:averageCoolingDegreeDaysPerMonthMar2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageCoolingDegreeDaysPerMonthMar2021 xsd:integer
+⊑ kwgl-ont:averageCoolingDegreeDaysPerMonth
+∃ kwgl-ont:averageCoolingDegreeDaysPerMonthMay2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageCoolingDegreeDaysPerMonthMay2021 xsd:integer
+⊑ kwgl-ont:averageCoolingDegreeDaysPerMonth
+∃ kwgl-ont:averageCoolingDegreeDaysPerMonthNov2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageCoolingDegreeDaysPerMonthNov2021 xsd:integer
+⊑ kwgl-ont:averageCoolingDegreeDaysPerMonth
+∃ kwgl-ont:averageCoolingDegreeDaysPerMonthOct2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageCoolingDegreeDaysPerMonthOct2021 xsd:integer
+⊑ kwgl-ont:averageCoolingDegreeDaysPerMonth
+∃ kwgl-ont:averageCoolingDegreeDaysPerMonthSep2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageCoolingDegreeDaysPerMonthSep2021 xsd:integer
+∃ kwgl-ont:averageHeatingDegreeDaysPerMonth rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageHeatingDegreeDaysPerMonth xsd:integer
+⊑ kwgl-ont:averageHeatingDegreeDaysPerMonth
+∃ kwgl-ont:averageHeatingDegreeDaysPerMonthApr2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageHeatingDegreeDaysPerMonthApr2021 xsd:integer
+⊑ kwgl-ont:averageHeatingDegreeDaysPerMonth
+∃ kwgl-ont:averageHeatingDegreeDaysPerMonthAug2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageHeatingDegreeDaysPerMonthAug2021 xsd:integer
+⊑ kwgl-ont:averageHeatingDegreeDaysPerMonth
+∃ kwgl-ont:averageHeatingDegreeDaysPerMonthDec2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageHeatingDegreeDaysPerMonthDec2021 xsd:integer
+⊑ kwgl-ont:averageHeatingDegreeDaysPerMonth
+∃ kwgl-ont:averageHeatingDegreeDaysPerMonthFeb2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageHeatingDegreeDaysPerMonthFeb2021 xsd:integer
+⊑ kwgl-ont:averageHeatingDegreeDaysPerMonth
+∃ kwgl-ont:averageHeatingDegreeDaysPerMonthJan2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageHeatingDegreeDaysPerMonthJan2021 xsd:integer
+⊑ kwgl-ont:averageHeatingDegreeDaysPerMonth
+∃ kwgl-ont:averageHeatingDegreeDaysPerMonthJul2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageHeatingDegreeDaysPerMonthJul2021 xsd:integer
+⊑ kwgl-ont:averageHeatingDegreeDaysPerMonth
+∃ kwgl-ont:averageHeatingDegreeDaysPerMonthJun2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageHeatingDegreeDaysPerMonthJun2021 xsd:integer
+⊑ kwgl-ont:averageHeatingDegreeDaysPerMonth
+∃ kwgl-ont:averageHeatingDegreeDaysPerMonthMar2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageHeatingDegreeDaysPerMonthMar2021 xsd:integer
+⊑ kwgl-ont:averageHeatingDegreeDaysPerMonth
+∃ kwgl-ont:averageHeatingDegreeDaysPerMonthMay2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageHeatingDegreeDaysPerMonthMay2021 xsd:integer
+⊑ kwgl-ont:averageHeatingDegreeDaysPerMonth
+∃ kwgl-ont:averageHeatingDegreeDaysPerMonthNov2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageHeatingDegreeDaysPerMonthNov2021 xsd:integer
+⊑ kwgl-ont:averageHeatingDegreeDaysPerMonth
+∃ kwgl-ont:averageHeatingDegreeDaysPerMonthOct2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageHeatingDegreeDaysPerMonthOct2021 xsd:integer
+⊑ kwgl-ont:averageHeatingDegreeDaysPerMonth
+∃ kwgl-ont:averageHeatingDegreeDaysPerMonthSep2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageHeatingDegreeDaysPerMonthSep2021 xsd:integer
+∃ kwgl-ont:averageMonthlyTemperatureInCelsius rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageMonthlyTemperatureInCelsius xsd:integer
+⊑ kwgl-ont:averageMonthlyTemperatureInCelsius
+∃ kwgl-ont:averageMonthlyTemperatureInCelsiusApr2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageMonthlyTemperatureInCelsiusApr2021 xsd:integer
+⊑ kwgl-ont:averageMonthlyTemperatureInCelsius
+∃ kwgl-ont:averageMonthlyTemperatureInCelsiusAug2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageMonthlyTemperatureInCelsiusAug2021 xsd:integer
+⊑ kwgl-ont:averageMonthlyTemperatureInCelsius
+∃ kwgl-ont:averageMonthlyTemperatureInCelsiusDec2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageMonthlyTemperatureInCelsiusDec2021 xsd:integer
+⊑ kwgl-ont:averageMonthlyTemperatureInCelsius
+∃ kwgl-ont:averageMonthlyTemperatureInCelsiusFeb2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageMonthlyTemperatureInCelsiusFeb2021 xsd:integer
+⊑ kwgl-ont:averageMonthlyTemperatureInCelsius
+∃ kwgl-ont:averageMonthlyTemperatureInCelsiusJan2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageMonthlyTemperatureInCelsiusJan2021 xsd:integer
+⊑ kwgl-ont:averageMonthlyTemperatureInCelsius
+∃ kwgl-ont:averageMonthlyTemperatureInCelsiusJul2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageMonthlyTemperatureInCelsiusJul2021 xsd:integer
+⊑ kwgl-ont:averageMonthlyTemperatureInCelsius
+∃ kwgl-ont:averageMonthlyTemperatureInCelsiusJun2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageMonthlyTemperatureInCelsiusJun2021 xsd:integer
+⊑ kwgl-ont:averageMonthlyTemperatureInCelsius
+∃ kwgl-ont:averageMonthlyTemperatureInCelsiusMar2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageMonthlyTemperatureInCelsiusMar2021 xsd:integer
+⊑ kwgl-ont:averageMonthlyTemperatureInCelsius
+∃ kwgl-ont:averageMonthlyTemperatureInCelsiusMay2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageMonthlyTemperatureInCelsiusMay2021 xsd:integer
+⊑ kwgl-ont:averageMonthlyTemperatureInCelsius
+∃ kwgl-ont:averageMonthlyTemperatureInCelsiusNov2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageMonthlyTemperatureInCelsiusNov2021 xsd:integer
+⊑ kwgl-ont:averageMonthlyTemperatureInCelsius
+∃ kwgl-ont:averageMonthlyTemperatureInCelsiusOct2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageMonthlyTemperatureInCelsiusOct2021 xsd:integer
+⊑ kwgl-ont:averageMonthlyTemperatureInCelsius
+∃ kwgl-ont:averageMonthlyTemperatureInCelsiusSep2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:averageMonthlyTemperatureInCelsiusSep2021 xsd:integer
+∃ kwgl-ont:damageToCropsInDollars rdfs:Literal ⊑ kwgl-ont:HazardEvent
+⊤ ⊑ ∀ kwgl-ont:damageToCropsInDollars xsd:nonNegativeInteger
+∃ kwgl-ont:damageToInfrastructureInDollars rdfs:Literal ⊑ kwgl-ont:HazardEvent
+⊤ ⊑ ∀ kwgl-ont:damageToInfrastructureInDollars xsd:nonNegativeInteger
+∃ kwgl-ont:dollarDamageOfFiresImpactingPlace rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfFiresImpactingPlace xsd:nonNegativeInteger
+⊑ kwgl-ont:dollarDamageOfFiresImpactingPlace
+∃ kwgl-ont:dollarDamageOfFiresImpactingPlace2018 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfFiresImpactingPlace2018 xsd:nonNegativeInteger
+⊑ kwgl-ont:dollarDamageOfFiresImpactingPlace
+∃ kwgl-ont:dollarDamageOfFiresImpactingPlace2019 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfFiresImpactingPlace2019 xsd:nonNegativeInteger
+⊑ kwgl-ont:dollarDamageOfFiresImpactingPlace
+∃ kwgl-ont:dollarDamageOfFiresImpactingPlace2020 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfFiresImpactingPlace2020 xsd:nonNegativeInteger
+⊑ kwgl-ont:dollarDamageOfFiresImpactingPlace
+∃ kwgl-ont:dollarDamageOfFiresImpactingPlace2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfFiresImpactingPlace2021 xsd:nonNegativeInteger
+⊑ kwgl-ont:dollarDamageOfFiresImpactingPlace
+∃ kwgl-ont:dollarDamageOfFiresImpactingPlace2022 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfFiresImpactingPlace2022 xsd:nonNegativeInteger
+∃ kwgl-ont:dollarDamageOfFloodsImpactingPlace rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfFloodsImpactingPlace xsd:nonNegativeInteger
+⊑ kwgl-ont:dollarDamageOfFloodsImpactingPlace
+∃ kwgl-ont:dollarDamageOfFloodsImpactingPlace2018 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfFloodsImpactingPlace2018 xsd:nonNegativeInteger
+⊑ kwgl-ont:dollarDamageOfFloodsImpactingPlace
+∃ kwgl-ont:dollarDamageOfFloodsImpactingPlace2019 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfFloodsImpactingPlace2019 xsd:nonNegativeInteger
+⊑ kwgl-ont:dollarDamageOfFloodsImpactingPlace
+∃ kwgl-ont:dollarDamageOfFloodsImpactingPlace2020 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfFloodsImpactingPlace2020 xsd:nonNegativeInteger
+⊑ kwgl-ont:dollarDamageOfFloodsImpactingPlace
+∃ kwgl-ont:dollarDamageOfFloodsImpactingPlace2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfFloodsImpactingPlace2021 xsd:nonNegativeInteger
+⊑ kwgl-ont:dollarDamageOfFloodsImpactingPlace
+∃ kwgl-ont:dollarDamageOfFloodsImpactingPlace2022 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfFloodsImpactingPlace2022 xsd:nonNegativeInteger
+∃ kwgl-ont:dollarDamageOfHurricanesImpactingPlace rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfHurricanesImpactingPlace xsd:nonNegativeInteger
+⊑ kwgl-ont:dollarDamageOfHurricanesImpactingPlace
+∃ kwgl-ont:dollarDamageOfHurricanesImpactingPlace2018 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfHurricanesImpactingPlace2018 xsd:nonNegativeInteger
+⊑ kwgl-ont:dollarDamageOfHurricanesImpactingPlace
+∃ kwgl-ont:dollarDamageOfHurricanesImpactingPlace2019 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfHurricanesImpactingPlace2019 xsd:nonNegativeInteger
+⊑ kwgl-ont:dollarDamageOfHurricanesImpactingPlace
+∃ kwgl-ont:dollarDamageOfHurricanesImpactingPlace2020 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfHurricanesImpactingPlace2020 xsd:nonNegativeInteger
+⊑ kwgl-ont:dollarDamageOfHurricanesImpactingPlace
+∃ kwgl-ont:dollarDamageOfHurricanesImpactingPlace2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfHurricanesImpactingPlace2021 xsd:nonNegativeInteger
+⊑ kwgl-ont:dollarDamageOfHurricanesImpactingPlace
+∃ kwgl-ont:dollarDamageOfHurricanesImpactingPlace2022 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfHurricanesImpactingPlace2022 xsd:nonNegativeInteger
+∃ kwgl-ont:dollarDamageOfLandslidesImpactingPlace rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfLandslidesImpactingPlace xsd:nonNegativeInteger
+⊑ kwgl-ont:dollarDamageOfLandslidesImpactingPlace
+∃ kwgl-ont:dollarDamageOfLandslidesImpactingPlace2018 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfLandslidesImpactingPlace2018 xsd:nonNegativeInteger
+⊑ kwgl-ont:dollarDamageOfLandslidesImpactingPlace
+∃ kwgl-ont:dollarDamageOfLandslidesImpactingPlace2019 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfLandslidesImpactingPlace2019 xsd:nonNegativeInteger
+⊑ kwgl-ont:dollarDamageOfLandslidesImpactingPlace
+∃ kwgl-ont:dollarDamageOfLandslidesImpactingPlace2020 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfLandslidesImpactingPlace2020 xsd:nonNegativeInteger
+⊑ kwgl-ont:dollarDamageOfLandslidesImpactingPlace
+∃ kwgl-ont:dollarDamageOfLandslidesImpactingPlace2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfLandslidesImpactingPlace2021 xsd:nonNegativeInteger
+⊑ kwgl-ont:dollarDamageOfLandslidesImpactingPlace
+∃ kwgl-ont:dollarDamageOfLandslidesImpactingPlace2022 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfLandslidesImpactingPlace2022 xsd:nonNegativeInteger
+∃ kwgl-ont:dollarDamageOfStormSurgesImpactingPlace rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfStormSurgesImpactingPlace xsd:nonNegativeInteger
+⊑ kwgl-ont:dollarDamageOfStormSurgesImpactingPlace
+∃ kwgl-ont:dollarDamageOfStormSurgesImpactingPlace2018 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfStormSurgesImpactingPlace2018 xsd:nonNegativeInteger
+⊑ kwgl-ont:dollarDamageOfStormSurgesImpactingPlace
+∃ kwgl-ont:dollarDamageOfStormSurgesImpactingPlace2019 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfStormSurgesImpactingPlace2019 xsd:nonNegativeInteger
+⊑ kwgl-ont:dollarDamageOfStormSurgesImpactingPlace
+∃ kwgl-ont:dollarDamageOfStormSurgesImpactingPlace2020 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfStormSurgesImpactingPlace2020 xsd:nonNegativeInteger
+⊑ kwgl-ont:dollarDamageOfStormSurgesImpactingPlace
+∃ kwgl-ont:dollarDamageOfStormSurgesImpactingPlace2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfStormSurgesImpactingPlace2021 xsd:nonNegativeInteger
+⊑ kwgl-ont:dollarDamageOfStormSurgesImpactingPlace
+∃ kwgl-ont:dollarDamageOfStormSurgesImpactingPlace2022 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfStormSurgesImpactingPlace2022 xsd:nonNegativeInteger
+∃ kwgl-ont:dollarDamageOfTornadoesImpactingPlace rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfTornadoesImpactingPlace xsd:nonNegativeInteger
+⊑ kwgl-ont:dollarDamageOfTornadoesImpactingPlace
+∃ kwgl-ont:dollarDamageOfTornadoesImpactingPlace2018 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfTornadoesImpactingPlace2018 xsd:nonNegativeInteger
+⊑ kwgl-ont:dollarDamageOfTornadoesImpactingPlace
+∃ kwgl-ont:dollarDamageOfTornadoesImpactingPlace2019 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfTornadoesImpactingPlace2019 xsd:nonNegativeInteger
+⊑ kwgl-ont:dollarDamageOfTornadoesImpactingPlace
+∃ kwgl-ont:dollarDamageOfTornadoesImpactingPlace2020 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfTornadoesImpactingPlace2020 xsd:nonNegativeInteger
+⊑ kwgl-ont:dollarDamageOfTornadoesImpactingPlace
+∃ kwgl-ont:dollarDamageOfTornadoesImpactingPlace2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfTornadoesImpactingPlace2021 xsd:nonNegativeInteger
+⊑ kwgl-ont:dollarDamageOfTornadoesImpactingPlace
+∃ kwgl-ont:dollarDamageOfTornadoesImpactingPlace2022 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:dollarDamageOfTornadoesImpactingPlace2022 xsd:nonNegativeInteger
+∃ kwgl-ont:hasEndDate rdfs:Literal ⊑ kwgl-ont:HazardEvent
+⊤ ⊑ ∀ kwgl-ont:hasEndDate xsd:date
+∃ kwgl-ont:hasKWGEntity rdfs:Literal ⊑ kwgl-ont:HazardEvent ⊔ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:hasKWGEntity xsd:anyURI
+∃ kwgl-ont:hasName rdfs:Literal ⊑ kwgl-ont:HazardEvent ⊔ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:hasName xsd:string
+∃ kwgl-ont:hasNumberOfHouseHolds rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:hasNumberOfHouseHolds xsd:nonNegativeInteger
+∃ kwgl-ont:hasPopulation rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:hasPopulation xsd:nonNegativeInteger
+∃ kwgl-ont:hasStartDate rdfs:Literal ⊑ kwgl-ont:HazardEvent
+⊤ ⊑ ∀ kwgl-ont:hasStartDate xsd:date
+∃ kwgl-ont:maximumMonthlyTemperatureInCelsius rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:maximumMonthlyTemperatureInCelsius xsd:integer
+⊑ kwgl-ont:maximumMonthlyTemperatureInCelsius
+∃ kwgl-ont:maximumMonthlyTemperatureInCelsiusApr2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:maximumMonthlyTemperatureInCelsiusApr2021 xsd:integer
+⊑ kwgl-ont:maximumMonthlyTemperatureInCelsius
+∃ kwgl-ont:maximumMonthlyTemperatureInCelsiusAug2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:maximumMonthlyTemperatureInCelsiusAug2021 xsd:integer
+⊑ kwgl-ont:maximumMonthlyTemperatureInCelsius
+∃ kwgl-ont:maximumMonthlyTemperatureInCelsiusDec2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:maximumMonthlyTemperatureInCelsiusDec2021 xsd:integer
+⊑ kwgl-ont:maximumMonthlyTemperatureInCelsius
+∃ kwgl-ont:maximumMonthlyTemperatureInCelsiusFeb2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:maximumMonthlyTemperatureInCelsiusFeb2021 xsd:integer
+⊑ kwgl-ont:maximumMonthlyTemperatureInCelsius
+∃ kwgl-ont:maximumMonthlyTemperatureInCelsiusJan2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:maximumMonthlyTemperatureInCelsiusJan2021 xsd:integer
+⊑ kwgl-ont:maximumMonthlyTemperatureInCelsius
+∃ kwgl-ont:maximumMonthlyTemperatureInCelsiusJul2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:maximumMonthlyTemperatureInCelsiusJul2021 xsd:integer
+⊑ kwgl-ont:maximumMonthlyTemperatureInCelsius
+∃ kwgl-ont:maximumMonthlyTemperatureInCelsiusJun2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:maximumMonthlyTemperatureInCelsiusJun2021 xsd:integer
+⊑ kwgl-ont:maximumMonthlyTemperatureInCelsius
+∃ kwgl-ont:maximumMonthlyTemperatureInCelsiusMar2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:maximumMonthlyTemperatureInCelsiusMar2021 xsd:integer
+⊑ kwgl-ont:maximumMonthlyTemperatureInCelsius
+∃ kwgl-ont:maximumMonthlyTemperatureInCelsiusMay2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:maximumMonthlyTemperatureInCelsiusMay2021 xsd:integer
+⊑ kwgl-ont:maximumMonthlyTemperatureInCelsius
+∃ kwgl-ont:maximumMonthlyTemperatureInCelsiusNov2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:maximumMonthlyTemperatureInCelsiusNov2021 xsd:integer
+⊑ kwgl-ont:maximumMonthlyTemperatureInCelsius
+∃ kwgl-ont:maximumMonthlyTemperatureInCelsiusOct2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:maximumMonthlyTemperatureInCelsiusOct2021 xsd:integer
+⊑ kwgl-ont:maximumMonthlyTemperatureInCelsius
+∃ kwgl-ont:maximumMonthlyTemperatureInCelsiusSep2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:maximumMonthlyTemperatureInCelsiusSep2021 xsd:integer
+∃ kwgl-ont:minimumMonthlyTemperatureInCelsius rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:minimumMonthlyTemperatureInCelsius xsd:integer
+⊑ kwgl-ont:minimumMonthlyTemperatureInCelsius
+∃ kwgl-ont:minimumMonthlyTemperatureInCelsiusApr2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:minimumMonthlyTemperatureInCelsiusApr2021 xsd:integer
+⊑ kwgl-ont:minimumMonthlyTemperatureInCelsius
+∃ kwgl-ont:minimumMonthlyTemperatureInCelsiusAug2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:minimumMonthlyTemperatureInCelsiusAug2021 xsd:integer
+⊑ kwgl-ont:minimumMonthlyTemperatureInCelsius
+∃ kwgl-ont:minimumMonthlyTemperatureInCelsiusDec2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:minimumMonthlyTemperatureInCelsiusDec2021 xsd:integer
+⊑ kwgl-ont:minimumMonthlyTemperatureInCelsius
+∃ kwgl-ont:minimumMonthlyTemperatureInCelsiusFeb2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:minimumMonthlyTemperatureInCelsiusFeb2021 xsd:integer
+⊑ kwgl-ont:minimumMonthlyTemperatureInCelsius
+∃ kwgl-ont:minimumMonthlyTemperatureInCelsiusJan2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:minimumMonthlyTemperatureInCelsiusJan2021 xsd:integer
+⊑ kwgl-ont:minimumMonthlyTemperatureInCelsius
+∃ kwgl-ont:minimumMonthlyTemperatureInCelsiusJul2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:minimumMonthlyTemperatureInCelsiusJul2021 xsd:integer
+⊑ kwgl-ont:minimumMonthlyTemperatureInCelsius
+∃ kwgl-ont:minimumMonthlyTemperatureInCelsiusJun2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:minimumMonthlyTemperatureInCelsiusJun2021 xsd:integer
+⊑ kwgl-ont:minimumMonthlyTemperatureInCelsius
+∃ kwgl-ont:minimumMonthlyTemperatureInCelsiusMar2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:minimumMonthlyTemperatureInCelsiusMar2021 xsd:integer
+⊑ kwgl-ont:minimumMonthlyTemperatureInCelsius
+∃ kwgl-ont:minimumMonthlyTemperatureInCelsiusMay2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:minimumMonthlyTemperatureInCelsiusMay2021 xsd:integer
+⊑ kwgl-ont:minimumMonthlyTemperatureInCelsius
+∃ kwgl-ont:minimumMonthlyTemperatureInCelsiusNov2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:minimumMonthlyTemperatureInCelsiusNov2021 xsd:integer
+⊑ kwgl-ont:minimumMonthlyTemperatureInCelsius
+∃ kwgl-ont:minimumMonthlyTemperatureInCelsiusOct2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:minimumMonthlyTemperatureInCelsiusOct2021 xsd:integer
+⊑ kwgl-ont:minimumMonthlyTemperatureInCelsius
+∃ kwgl-ont:minimumMonthlyTemperatureInCelsiusSep2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:minimumMonthlyTemperatureInCelsiusSep2021 xsd:integer
+∃ kwgl-ont:numberOfDeaths rdfs:Literal ⊑ kwgl-ont:HazardEvent
+⊤ ⊑ ∀ kwgl-ont:numberOfDeaths xsd:nonNegativeInteger
+∃ kwgl-ont:numberOfEarthquakesImpactingPlace rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfEarthquakesImpactingPlace xsd:nonNegativeInteger
+⊑ kwgl-ont:numberOfEarthquakesImpactingPlace
+∃ kwgl-ont:numberOfEarthquakesImpactingPlace2018 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfEarthquakesImpactingPlace2018 xsd:nonNegativeInteger
+⊑ kwgl-ont:numberOfEarthquakesImpactingPlace
+∃ kwgl-ont:numberOfEarthquakesImpactingPlace2019 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfEarthquakesImpactingPlace2019 xsd:nonNegativeInteger
+⊑ kwgl-ont:numberOfEarthquakesImpactingPlace
+∃ kwgl-ont:numberOfEarthquakesImpactingPlace2020 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfEarthquakesImpactingPlace2020 xsd:nonNegativeInteger
+⊑ kwgl-ont:numberOfEarthquakesImpactingPlace
+∃ kwgl-ont:numberOfEarthquakesImpactingPlace2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfEarthquakesImpactingPlace2021 xsd:nonNegativeInteger
+⊑ kwgl-ont:numberOfEarthquakesImpactingPlace
+∃ kwgl-ont:numberOfEarthquakesImpactingPlace2022 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfEarthquakesImpactingPlace2022 xsd:nonNegativeInteger
+∃ kwgl-ont:numberOfFiresImpactingPlace rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfFiresImpactingPlace xsd:nonNegativeInteger
+⊑ kwgl-ont:numberOfFiresImpactingPlace
+∃ kwgl-ont:numberOfFiresImpactingPlace2018 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfFiresImpactingPlace2018 xsd:nonNegativeInteger
+⊑ kwgl-ont:numberOfFiresImpactingPlace
+∃ kwgl-ont:numberOfFiresImpactingPlace2019 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfFiresImpactingPlace2019 xsd:nonNegativeInteger
+⊑ kwgl-ont:numberOfFiresImpactingPlace
+∃ kwgl-ont:numberOfFiresImpactingPlace2020 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfFiresImpactingPlace2020 xsd:nonNegativeInteger
+⊑ kwgl-ont:numberOfFiresImpactingPlace
+∃ kwgl-ont:numberOfFiresImpactingPlace2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfFiresImpactingPlace2021 xsd:nonNegativeInteger
+⊑ kwgl-ont:numberOfFiresImpactingPlace
+∃ kwgl-ont:numberOfFiresImpactingPlace2022 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfFiresImpactingPlace2022 xsd:nonNegativeInteger
+∃ kwgl-ont:numberOfFloodsImpactingPlace rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfFloodsImpactingPlace xsd:nonNegativeInteger
+⊑ kwgl-ont:numberOfFloodsImpactingPlace
+∃ kwgl-ont:numberOfFloodsImpactingPlace2018 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfFloodsImpactingPlace2018 xsd:nonNegativeInteger
+⊑ kwgl-ont:numberOfFloodsImpactingPlace
+∃ kwgl-ont:numberOfFloodsImpactingPlace2019 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfFloodsImpactingPlace2019 xsd:nonNegativeInteger
+⊑ kwgl-ont:numberOfFloodsImpactingPlace
+∃ kwgl-ont:numberOfFloodsImpactingPlace2020 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfFloodsImpactingPlace2020 xsd:nonNegativeInteger
+⊑ kwgl-ont:numberOfFloodsImpactingPlace
+∃ kwgl-ont:numberOfFloodsImpactingPlace2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfFloodsImpactingPlace2021 xsd:nonNegativeInteger
+⊑ kwgl-ont:numberOfFloodsImpactingPlace
+∃ kwgl-ont:numberOfFloodsImpactingPlace2022 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfFloodsImpactingPlace2022 xsd:nonNegativeInteger
+∃ kwgl-ont:numberOfHurricanesImpactingPlace rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfHurricanesImpactingPlace xsd:nonNegativeInteger
+⊑ kwgl-ont:numberOfHurricanesImpactingPlace
+∃ kwgl-ont:numberOfHurricanesImpactingPlace2018 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfHurricanesImpactingPlace2018 xsd:nonNegativeInteger
+⊑ kwgl-ont:numberOfHurricanesImpactingPlace
+∃ kwgl-ont:numberOfHurricanesImpactingPlace2019 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfHurricanesImpactingPlace2019 xsd:nonNegativeInteger
+⊑ kwgl-ont:numberOfHurricanesImpactingPlace
+∃ kwgl-ont:numberOfHurricanesImpactingPlace2020 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfHurricanesImpactingPlace2020 xsd:nonNegativeInteger
+⊑ kwgl-ont:numberOfHurricanesImpactingPlace
+∃ kwgl-ont:numberOfHurricanesImpactingPlace2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfHurricanesImpactingPlace2021 xsd:nonNegativeInteger
+⊑ kwgl-ont:numberOfHurricanesImpactingPlace
+∃ kwgl-ont:numberOfHurricanesImpactingPlace2022 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfHurricanesImpactingPlace2022 xsd:nonNegativeInteger
+∃ kwgl-ont:numberOfLandslidesImpactingPlace rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfLandslidesImpactingPlace xsd:nonNegativeInteger
+⊑ kwgl-ont:numberOfLandslidesImpactingPlace
+∃ kwgl-ont:numberOfLandslidesImpactingPlace2018 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfLandslidesImpactingPlace2018 xsd:nonNegativeInteger
+⊑ kwgl-ont:numberOfLandslidesImpactingPlace
+∃ kwgl-ont:numberOfLandslidesImpactingPlace2019 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfLandslidesImpactingPlace2019 xsd:nonNegativeInteger
+⊑ kwgl-ont:numberOfLandslidesImpactingPlace
+∃ kwgl-ont:numberOfLandslidesImpactingPlace2020 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfLandslidesImpactingPlace2020 xsd:nonNegativeInteger
+⊑ kwgl-ont:numberOfLandslidesImpactingPlace
+∃ kwgl-ont:numberOfLandslidesImpactingPlace2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfLandslidesImpactingPlace2021 xsd:nonNegativeInteger
+⊑ kwgl-ont:numberOfLandslidesImpactingPlace
+∃ kwgl-ont:numberOfLandslidesImpactingPlace2022 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfLandslidesImpactingPlace2022 xsd:nonNegativeInteger
+∃ kwgl-ont:numberOfStormSurgesImpactingPlace rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfStormSurgesImpactingPlace xsd:nonNegativeInteger
+⊑ kwgl-ont:numberOfStormSurgesImpactingPlace
+∃ kwgl-ont:numberOfStormSurgesImpactingPlace2018 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfStormSurgesImpactingPlace2018 xsd:nonNegativeInteger
+⊑ kwgl-ont:numberOfStormSurgesImpactingPlace
+∃ kwgl-ont:numberOfStormSurgesImpactingPlace2019 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfStormSurgesImpactingPlace2019 xsd:nonNegativeInteger
+⊑ kwgl-ont:numberOfStormSurgesImpactingPlace
+∃ kwgl-ont:numberOfStormSurgesImpactingPlace2020 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfStormSurgesImpactingPlace2020 xsd:nonNegativeInteger
+⊑ kwgl-ont:numberOfStormSurgesImpactingPlace
+∃ kwgl-ont:numberOfStormSurgesImpactingPlace2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfStormSurgesImpactingPlace2021 xsd:nonNegativeInteger
+⊑ kwgl-ont:numberOfStormSurgesImpactingPlace
+∃ kwgl-ont:numberOfStormSurgesImpactingPlace2022 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfStormSurgesImpactingPlace2022 xsd:nonNegativeInteger
+∃ kwgl-ont:numberOfTornadoesImpactingPlace rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfTornadoesImpactingPlace xsd:nonNegativeInteger
+⊑ kwgl-ont:numberOfTornadoesImpactingPlace
+∃ kwgl-ont:numberOfTornadoesImpactingPlace-2018 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfTornadoesImpactingPlace-2018 xsd:nonNegativeInteger
+⊑ kwgl-ont:numberOfTornadoesImpactingPlace
+∃ kwgl-ont:numberOfTornadoesImpactingPlace2019 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfTornadoesImpactingPlace2019 xsd:nonNegativeInteger
+⊑ kwgl-ont:numberOfTornadoesImpactingPlace
+∃ kwgl-ont:numberOfTornadoesImpactingPlace2020 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfTornadoesImpactingPlace2020 xsd:nonNegativeInteger
+⊑ kwgl-ont:numberOfTornadoesImpactingPlace
+∃ kwgl-ont:numberOfTornadoesImpactingPlace2021 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfTornadoesImpactingPlace2021 xsd:nonNegativeInteger
+⊑ kwgl-ont:numberOfTornadoesImpactingPlace
+∃ kwgl-ont:numberOfTornadoesImpactingPlace2022 rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:numberOfTornadoesImpactingPlace2022 xsd:nonNegativeInteger
+∃ kwgl-ont:percentBelowPovertyLine rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:percentBelowPovertyLine xsd:nonNegativeInteger
+∃ kwgl-ont:percentDiabetic rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:percentDiabetic xsd:nonNegativeInteger
+∃ kwgl-ont:percentObese rdfs:Literal ⊑ kwgl-ont:Place
+⊤ ⊑ ∀ kwgl-ont:percentObese xsd:nonNegativeInteger
+kwglr:AdministrativeRegion_0 : kwgl-ont:PlaceType
+kwglr:AdministrativeRegion_1 : kwgl-ont:PlaceType
+kwglr:AdministrativeRegion_2 : kwgl-ont:PlaceType
+kwglr:AdministrativeRegion_3 : kwgl-ont:PlaceType
+kwglr:AdministrativeRegion_4 : kwgl-ont:PlaceType
+kwglr:AdministrativeRegion_5 : kwgl-ont:PlaceType
+kwglr:AdministrativeRegion_6 : kwgl-ont:PlaceType
+kwglr:FederalJudicialDistrict : kwgl-ont:PlaceType
+kwglr:MTBSComplexFire : kwgl-ont:FireType
+kwglr:MTBSOutOfAreaResponseFire : kwgl-ont:FireType
+kwglr:MTBSUnknownFire : kwgl-ont:FireType
+kwglr:MTBSWildfire : kwgl-ont:FireType
+kwglr:MTBSWildlandFireUse : kwgl-ont:FireType
+kwglr:NIFCIncidentComplexFire : kwgl-ont:FireType
+kwglr:NIFCPrescribedFire : kwgl-ont:FireType
+kwglr:NIFCWildfire : kwgl-ont:FireType
+kwglr:NOAAWildfire : kwgl-ont:FireType
+kwglr:NWZone : kwgl-ont:PlaceType
+kwglr:USCensusMSA : kwgl-ont:PlaceType
+kwglr:USClimateDivision : kwgl-ont:PlaceType
+kwglr:ZipCodeArea : kwgl-ont:PlaceType
+kwglr:astronomicalLowTide : kwgl-ont:HazardType
+kwglr:avalanche : kwgl-ont:HazardType
+kwglr:blizzard : kwgl-ont:HazardType
+kwglr:coastalFlood : kwgl-ont:HazardType
+kwglr:coldWindChill : kwgl-ont:HazardType
+kwglr:debrisFlow : kwgl-ont:HazardType
+kwglr:denseFog : kwgl-ont:HazardType
+kwglr:denseSmoke : kwgl-ont:HazardType
+kwglr:drought : kwgl-ont:HazardType
+kwglr:dustDevil : kwgl-ont:HazardType
+kwglr:dustStorm : kwgl-ont:HazardType
+kwglr:earthquake : kwgl-ont:HazardType
+kwglr:excessiveHeat : kwgl-ont:HazardType
+kwglr:extremeColdWindChill : kwgl-ont:HazardType
+kwglr:fire : kwgl-ont:HazardType
+kwglr:flashFlood : kwgl-ont:HazardType
+kwglr:flood : kwgl-ont:HazardType
+kwglr:freezingFog : kwgl-ont:HazardType
+kwglr:frostFreeze : kwgl-ont:HazardType
+kwglr:funnelCloud : kwgl-ont:HazardType
+kwglr:hail : kwgl-ont:HazardType
+kwglr:heat : kwgl-ont:HazardType
+kwglr:heavyRain : kwgl-ont:HazardType
+kwglr:heavySnow : kwgl-ont:HazardType
+kwglr:highSurf : kwgl-ont:HazardType
+kwglr:highWind : kwgl-ont:HazardType
+kwglr:hurricane : kwgl-ont:HazardType
+kwglr:iceStorm : kwgl-ont:HazardType
+kwglr:lake-EffectSnow : kwgl-ont:HazardType
+kwglr:lakeshoreFlood : kwgl-ont:HazardType
+kwglr:lightning : kwgl-ont:HazardType
+kwglr:marineHail : kwgl-ont:HazardType
+kwglr:marineHighWind : kwgl-ont:HazardType
+kwglr:marineStrongWind : kwgl-ont:HazardType
+kwglr:marineThunderstormWind : kwgl-ont:HazardType
+kwglr:marineTropicalDepression : kwgl-ont:HazardType
+kwglr:marineTropicalStorm : kwgl-ont:HazardType
+kwglr:ripCurrent : kwgl-ont:HazardType
+kwglr:sleet : kwgl-ont:HazardType
+kwglr:sneakerwave : kwgl-ont:HazardType
+kwglr:stormSurgeTide : kwgl-ont:HazardType
+kwglr:strongWind : kwgl-ont:HazardType
+kwglr:thunderstormWind : kwgl-ont:HazardType
+kwglr:tornado : kwgl-ont:HazardType
+kwglr:tropicalDepression : kwgl-ont:HazardType
+kwglr:tropicalStorm : kwgl-ont:HazardType
+kwglr:waterspout : kwgl-ont:HazardType
+kwglr:wildfire : kwgl-ont:HazardType
+kwglr:winterStorm : kwgl-ont:HazardType
+kwglr:winterWeather : kwgl-ont:HazardType

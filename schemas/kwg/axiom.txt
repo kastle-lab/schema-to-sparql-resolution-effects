@@ -1,0 +1,968 @@
+kwg-ont:ATH ⊑ kwg-ont:TraumaCareLevel
+kwg-ont:AdministrativeRegion ⊑ kwg-ont:Region
+kwg-ont:AdministrativeRegion ⊑ geo:Feature
+kwg-ont:AdministrativeRegion_0 ⊑ kwg-ont:AdministrativeRegion
+kwg-ont:AdministrativeRegion_0 ⊑ ∀ kwg-ont:hasGeometry geo:Geometry
+kwg-ont:AdministrativeRegion_1 ⊑ kwg-ont:AdministrativeRegion
+kwg-ont:AdministrativeRegion_1 ⊑ ∀ kwg-ont:hasGeometry geo:Geometry
+kwg-ont:AdministrativeRegion_2 ⊑ ∀ kwg-ont:hasGeometry geo:Geometry
+kwg-ont:AdministrativeRegion_2 ⊑ kwg-ont:AdministrativeRegion
+kwg-ont:AdministrativeRegion_3 ⊑ sosa:FeatureOfInterest
+kwg-ont:AdministrativeRegion_3 ⊑ ∀ geo:hasDefaultGeometry geo:Geometry
+kwg-ont:AdministrativeRegion_3 ⊑ ∀ kwg-ont:hasGeometry geo:Geometry
+kwg-ont:AdministrativeRegion_3 ⊑ kwg-ont:AdministrativeRegion
+kwg-ont:AdministrativeRegion_4 ⊑ ∀ kwg-ont:hasGeometry geo:Geometry
+kwg-ont:AdministrativeRegion_4 ⊑ kwg-ont:AdministrativeRegion
+kwg-ont:AdministrativeRegion_5 ⊑ ∀ kwg-ont:hasGeometry geo:Geometry
+kwg-ont:AdministrativeRegion_5 ⊑ kwg-ont:AdministrativeRegion
+kwg-ont:AdministrativeRegion_6 ⊑ kwg-ont:AdministrativeRegion
+kwg-ont:AdministrativeRegion_6 ⊑ ∀ kwg-ont:hasGeometry geo:Geometry
+kwg-ont:AirPollutant ⊑ sosa:ObservableProperty
+kwg-ont:AirQualityInstrument ⊑ sosa:Sensor
+kwg-ont:AirQualityObservation ⊑ ∀ sosa:observedProperty kwg-ont:AirPollutant
+kwg-ont:AirQualityObservation ⊑ sosa:Observation
+kwg-ont:AirQualityObservationCollection ⊑ ∀ sosa:observedProperty kwg-ont:AirPollutant
+kwg-ont:AirQualityObservationCollection ⊑ ∀ sosa:hasMember kwg-ont:AirQualityObservation
+kwg-ont:AirQualityObservationCollection ⊑ sosa:ObservationCollection
+kwg-ont:AirQualitySite ⊑ ∀ kwg-ont:hasGeometry geo:Geometry
+kwg-ont:AirQualitySite ⊑ sosa:Platform
+kwg-ont:AirQualitySite ⊑ ∀ sosa:hosts kwg-ont:AirQualityInstrument
+kwg-ont:AirQualitySite ⊑ ∃ kwg-ont:sfWithin kwg-ont:S2Cell
+kwg-ont:AirQualitySite ⊑ ∀ geo:hasDefaultGeometry geo:Geometry
+kwg-ont:AirQualitySite ⊑ ∃ kwg-ont:sfWithin kwg-ont:AdministrativeRegion
+usgs:Airport ⊑ usgs:BuiltUpArea
+usgs:Arch ⊑ usgs:Terrain
+usgs:Arch ⊑ usgs:BuiltUpArea
+usgs:Arroyo ⊑ usgs:SurfaceWater
+usgs:Bar ⊑ usgs:BuiltUpArea
+usgs:Bar ⊑ usgs:Terrain
+usgs:Basin ⊑ usgs:Terrain
+usgs:Basin ⊑ usgs:SurfaceWater
+usgs:Bay ⊑ usgs:SurfaceWater
+usgs:Beach ⊑ usgs:Terrain
+usgs:Beach ⊑ usgs:SurfaceWater
+usgs:Bench ⊑ usgs:Terrain
+usgs:Bend ⊑ usgs:SurfaceWater
+kwg-ont:BlueskyModel ⊑ sosa:Sensor
+kwg-ont:BlueskyModeledWildfire ⊑ ∃ kwg-ont:spatialRelation kwg-ont:AdministrativeRegion_3
+kwg-ont:BlueskyModeledWildfire ⊑ geo:Feature
+kwg-ont:BlueskyModeledWildfire ⊑ sosa:FeatureOfInterest
+kwg-ont:BlueskyModeledWildfire ⊑ ∀ kwg-ont:hasGeometry geo:Geometry
+kwg-ont:BlueskyModeledWildfire ⊑ ∀ geo:hasDefaultGeometry geo:Geometry
+kwg-ont:BlueskyModeledWildfire ⊑ ∃ kwg-ont:hasTemporalScope time:Instant
+kwg-ont:BlueskyModeledWildfire ⊑ ∃ kwg-ont:spatialRelation kwg-ont:S2Cell
+kwg-ont:BlueskyWildfireObservableProperty ⊑ sosa:ObservableProperty
+kwg-ont:BlueskyWildfireObservation ⊑ sosa:Observation
+kwg-ont:BlueskyWildfireObservation ⊑ ∀ sosa:observedProperty kwg-ont:BlueskyWildfireObservableProperty
+kwg-ont:BlueskyWildfireObservation ⊑ ∀ sosa:hasFeatureOfInterest kwg-ont:BlueskyModeledWildfire
+kwg-ont:BlueskyWildfireObservationCollection ⊑ sosa:ObservationCollection
+kwg-ont:BlueskyWildfireObservationCollection ⊑ ∀ sosa:hasMember kwg-ont:BlueskyWildfireObservation
+kwg-ont:BlueskyWildfireObservationCollection ⊑ ∀ sosa:phenomenonTime time:Instant
+kwg-ont:BlueskyWildfireObservationCollection ⊑ ∀ sosa:madeBySensor kwg-ont:BlueskyModel
+usgs:Bridge ⊑ usgs:BuiltUpArea
+usgs:Building ⊑ usgs:BuiltUpArea
+usgs:BuiltUpArea ⊑ geo:SpatialObject
+C ⊑ kwg-ont:Program
+kwg-ont:CTH ⊑ kwg-ont:TraumaCareLevel
+usgs:Canal ⊑ usgs:SurfaceWater
+usgs:Canal ⊑ usgs:BuiltUpArea
+usgs:Cape ⊑ usgs:Terrain
+kwg-ont:Cell ⊑ geo:SpatialObject
+usgs:Cemetery ⊑ usgs:BuiltUpArea
+usgs:Census ⊑ usgs:Division
+kwg-ont:CensusACS5YearEstimatesObservation ⊑ ∀ sosa:observedProperty kwg-ont:CensusObservableProperty
+kwg-ont:CensusACS5YearEstimatesObservation ⊑ sosa:Observation
+kwg-ont:CensusACS5YearEstimatesObservationCollection ⊑ ∀ sosa:hasMember kwg-ont:CensusACS5YearEstimatesObservation
+kwg-ont:CensusACS5YearEstimatesObservationCollection ⊑ sosa:ObservationCollection
+kwg-ont:CensusACS5YearEstimatesObservationCollection ⊑ ∀ sosa:hasFeatureOfInterest kwg-ont:USCensusMSA
+kwg-ont:CensusObservableProperty ⊑ sosa:ObservableProperty
+usgs:Channel ⊑ usgs:SurfaceWater
+usgs:Church ⊑ usgs:BuiltUpArea
+usgs:Cliff ⊑ usgs:Terrain
+kwg-ont:ClimateDivisionObservationCollection ⊑ sosa:ObservationCollection
+kwg-ont:ClimateDivisionObservationCollection ⊑ ∀ sosa:hasFeatureOfInterest kwg-ont:USClimateDivision
+kwg-ont:ClimateDivisionObservationCollection ⊑ ∀ sosa:hasMember kwg-ont:ClimateDivisionPropertyObservationCollection
+kwg-ont:ClimateDivisionObservationResult ⊑ sosa:Result
+kwg-ont:ClimateDivisionPropertyObservationCollection ⊑ sosa:ObservationCollection
+kwg-ont:ClimateDivisionPropertyObservationCollection ⊑ ∀ sosa:observedProperty kwg-ont:ClimateObservableProperty
+kwg-ont:ClimateDivisionPropertyObservationCollection ⊑ ∀ sosa:hasMember kwg-ont:ClimateObservation
+kwg-ont:ClimateObservableProperty ⊑ sosa:ObservableProperty
+kwg-ont:ClimateObservation ⊑ sosa:Observation
+kwg-ont:ClimateObservation ⊑ ∀ sosa:observedProperty kwg-ont:ClimateObservableProperty
+kwg-ont:ComplexFire ⊑ kwg-ont:Fire
+gnis:County ⊑ usgs:Division
+usgs:Crater ⊑ usgs:Basin
+usgs:Crater ⊑ usgs:Terrain
+kwg-ont:CrisisCounselling ⊑ kwg-ont:Program
+kwg-ont:CroplandObservableProperty ⊑ sosa:ObservableProperty
+kwg-ont:CroplandObservation ⊑ sosa:Observation
+kwg-ont:CroplandObservation ⊑ ∀ sosa:observedProperty kwg-ont:CroplandObservableProperty
+kwg-ont:CroplandObservationCollection ⊑ ∀ sosa:hasFeatureOfInterest kwg-ont:S2Cell
+kwg-ont:CroplandObservationCollection ⊑ sosa:ObservationCollection
+kwg-ont:CroplandObservationCollection ⊑ ∀ sosa:hasMember kwg-ont:CroplandObservation
+kwg-ont:CroplandObservationCollection ⊑ ∀ sosa:phenomenonTime time:TemporalEntity
+kwg-ont:CroplandResult ⊑ sosa:Result
+usgs:Crossing ⊑ usgs:BuiltUpArea
+usgs:Dam ⊑ usgs:BuiltUpArea
+usgs:Dam ⊑ usgs:SurfaceWater
+kwg-ont:DebrisRemoval-PA-A ⊑ kwg-ont:PublicAssistance
+kwg-ont:DirectFederalAssistance ⊑ kwg-ont:Program
+kwg-ont:DisasterHousing ⊑ kwg-ont:Program
+kwg-ont:DisasterUnemploymentAssistance ⊑ kwg-ont:Program
+kwg-ont:DoD ⊑ kwg-ont:Program
+kwg-ont:DroughtIntensity ⊑ sosa:ObservableProperty
+kwg-ont:DroughtZone ⊑ Drought
+kwg-ont:DroughtZone ⊑ kwg-ont:Hazard
+kwg-ont:DroughtZone ⊑ ∃ kwg-ont:spatialRelation kwg-ont:AdministrativeRegion_3
+kwg-ont:DroughtZone ⊑ ∃ kwg-ont:hasTemporalScope time:TemporalEntity
+kwg-ont:DroughtZone ⊑ ∃ geo:hasDefaultGeometry geo:Geometry
+kwg-ont:DroughtZone ⊑ geo:Feature
+kwg-ont:DroughtZone ⊑ ∃ kwg-ont:spatialRelation kwg-ont:S2Cell
+kwg-ont:DroughtZone ⊑ ∃ kwg-ont:hasGeometry geo:Geometry
+kwg-ont:DroughtZoneOverlapObservation ⊑ ∀ sosa:observedProperty kwg-ont:DroughtIntensity
+kwg-ont:DroughtZoneOverlapObservation ⊑ sosa:Observation
+kwg-ont:DroughtZoneOverlapObservationCollection ⊑ sosa:ObservationCollection
+kwg-ont:DroughtZoneOverlapObservationCollection ⊑ ∀ sosa:hasMember kwg-ont:DroughtZoneOverlapObservation
+kwg-ont:DroughtZoneOverlapObservationCollection ⊑ ∀ sosa:hasFeatureOfInterest kwg-ont:S2Cell
+time:Duration ⊑ time:TemporalDuration
+kwg-ont:Earthquake ⊑ kwg-ont:Hazard
+kwg-ont:Earthquake ⊑ ∃ kwg-ont:hasTemporalScope time:Instant
+kwg-ont:Earthquake ⊑ EarthquakeSurfaceRupture
+kwg-ont:Earthquake ⊑ ∃ geo:hasDefaultGeometry geo:Geometry
+kwg-ont:Earthquake ⊑ geo:Feature
+kwg-ont:Earthquake ⊑ ∃ kwg-ont:sfWithin kwg-ont:S2Cell
+kwg-ont:Earthquake ⊑ sosa:FeatureOfInterest
+kwg-ont:Earthquake ⊑ ∃ kwg-ont:sfWithin kwg-ont:AdministrativeRegion_3
+kwg-ont:Earthquake ⊑ ∃ kwg-ont:hasGeometry geo:Geometry
+kwg-ont:EarthquakeObservableProperty ⊑ sosa:ObservableProperty
+sosa:EarthquakeObservation ⊑ ∀ sosa:observedProperty kwg-ont:EarthquakeObservableProperty
+sosa:EarthquakeObservation ⊑ sosa:Observation
+kwg-ont:EarthquakeObservationCollection ⊑ ∀ sosa:hasMember sosa:EarthquakeObservation
+kwg-ont:EarthquakeObservationCollection ⊑ ∀ sosa:hasFeatureOfInterest kwg-ont:Earthquake
+kwg-ont:EarthquakeObservationCollection ⊑ sosa:ObservationCollection
+kwg-ont:EarthquakeObservationCollection ⊑ ∀ sosa:phenomenonTime time:Instant
+kwg-ont:EmergencyDeclaration ⊑ kwg-ont:Declaration
+kwg-ont:EventSegment ⊑ ∃ kwg-ont:endsAt kwg-ont:Fix
+kwg-ont:FEMADisaster ⊑ geo:Feature
+kwg-ont:FEMADisaster ⊑ kwg-ont:Hazard
+geo:Feature ⊑ geo:SpatialObject
+geo:Feature ⊑ ¬ geo:Geometry
+kwg-ont:FederalJudicalDistrict ⊑ ∃ kwg-ont:spatialRelation kwg-ont:S2Cell
+kwg-ont:FederalJudicalDistrict ⊑ ∀ geo:hasDefaultGeometry geo:Geometry
+kwg-ont:FederalJudicalDistrict ⊑ ∃ kwg-ont:spatialRelation kwg-ont:AdministrativeRegion_3
+kwg-ont:FederalJudicalDistrict ⊑ geo:Feature
+kwg-ont:FederalJudicalDistrict ⊑ kwg-ont:Region
+kwg-ont:FederalJudicalDistrict ⊑ ∀ kwg-ont:hasGeometry geo:Geometry
+kwg-ont:Fire ⊑ kwg-ont:Hazard
+kwg-ont:FireManagementAssistance-PA-I ⊑ kwg-ont:PublicAssistance
+kwg-ont:FireManagementDeclaration ⊑ kwg-ont:Declaration
+kwg-ont:Fix ⊑ ∀ kwg-ont:hasGeometry geo:Geometry
+kwg-ont:Fix ⊑ ∀ geo:hasDefaultGeometry geo:Geometry
+usgs:Flat ⊑ usgs:Terrain
+usgs:Forest ⊑ usgs:EcologicalRegime
+usgs:Gap ⊑ usgs:Terrain
+geo:Geometry ⊑ geo:SpatialObject
+geo:Geometry ⊑ ¬ geo:Feature
+kwg-ont:GeometryCollection ⊑ geo:SpatialObject
+usgs:Glacier ⊑ usgs:SurfaceWater
+usgs:Gut ⊑ usgs:SurfaceWater
+usgs:Harbor ⊑ usgs:BuiltUpArea
+kwg-ont:HazardMitigation ⊑ kwg-ont:Program
+kwg-ont:HealthCareFacility ⊑ geo:Feature
+kwg-ont:Hospital ⊑ usgs:BuiltUpArea
+kwg-ont:Hospital ⊑ ∃ kwg-ont:sfWithin kwg-ont:S2Cell
+kwg-ont:Hospital ⊑ ∃ kwg-ont:sfWithin kwg-ont:AdministrativeRegion
+kwg-ont:Hospital ⊑ ∀ geo:hasDefaultGeometry geo:Geometry
+kwg-ont:Hospital ⊑ ∀ kwg-ont:hasGeometry geo:Geometry
+kwg-ont:Hospital ⊑ kwg-ont:HealthCareFacility
+kwg-ont:HousingAssistance ⊑ kwg-ont:Program
+kwg-ont:ImpactObservableProperty ⊑ sosa:ObservableProperty
+kwg-ont:ImpactObservation ⊑ sosa:Observation
+kwg-ont:ImpactObservation ⊑ ∀ sosa:observedProperty kwg-ont:ImpactObservableProperty
+kwg-ont:ImpactObservationCollection ⊑ ∀ sosa:hasFeatureOfInterest kwg-ont:NOAAHazardEvent
+kwg-ont:ImpactObservationCollection ⊑ sosa:ObservationCollection
+kwg-ont:ImpactObservationCollection ⊑ ∀ sosa:hasMember kwg-ont:ImpactObservation
+kwg-ont:ImpactObservationCollection ⊑ ∀ sosa:phenomenonTime time:TemporalEntity
+kwg-ont:IndividualAndFamilyGrant ⊑ kwg-ont:Program
+kwg-ont:IndividualAssistance ⊑ kwg-ont:Program
+kwg-ont:IndividualAssistance-PA-C ⊑ kwg-ont:PublicAssistance
+kwg-ont:IndividualsAndHouseholds ⊑ kwg-ont:Program
+time:Instant ⊑ ∀ time:inXSDDateTime xsd:dateTime
+time:Instant ⊑ time:TemporalEntity
+time:Interval ⊑ time:TemporalEntity
+usgs:Island ⊑ usgs:Terrain
+usgs:Isthmus ⊑ usgs:Terrain
+kwg-ont:KWGCellLevel11 ⊑ kwg-ont:S2Cell
+kwg-ont:KWGCellLevel13 ⊑ kwg-ont:S2Cell
+kwg-ont:KWGCellLevel9 ⊑ kwg-ont:S2Cell
+usgs:Lake ⊑ usgs:SurfaceWater
+usgs:Lava ⊑ usgs:Terrain
+usgs:Levee ⊑ usgs:Embankment
+kwg-ont:Level_I ⊑ kwg-ont:TraumaCareLevel
+kwg-ont:Level_II ⊑ kwg-ont:TraumaCareLevel
+kwg-ont:Level_III ⊑ kwg-ont:TraumaCareLevel
+kwg-ont:Level_III_Pediatric ⊑ kwg-ont:TraumaCareLevel
+kwg-ont:Level_II_Pediatric ⊑ kwg-ont:TraumaCareLevel
+kwg-ont:Level_II_Rehab ⊑ kwg-ont:TraumaCareLevel
+kwg-ont:Level_IV ⊑ kwg-ont:TraumaCareLevel
+kwg-ont:Level_I_Pediatric ⊑ kwg-ont:TraumaCareLevel
+kwg-ont:Level_I_Pediatric_Rehab ⊑ kwg-ont:TraumaCareLevel
+kwg-ont:Level_I_Rehab ⊑ kwg-ont:TraumaCareLevel
+kwg-ont:Level_Pediatric ⊑ kwg-ont:TraumaCareLevel
+kwg-ont:Level_V ⊑ kwg-ont:TraumaCareLevel
+sf:LineString ⊑ geo:Geometry
+usgs:Locale ⊑ usgs:Division
+kwg-ont:MTBSComplexFire ⊑ kwg-ont:ComplexFire
+kwg-ont:MTBSComplexFire ⊑ kwg-ont:MTBSFire
+kwg-ont:MTBSFire ⊑ sosa:FeatureOfInterest
+kwg-ont:MTBSFire ⊑ kwg-ont:Fire
+kwg-ont:MTBSFire ⊑ geo:Feature
+kwg-ont:MTBSFireObservableProperty ⊑ sosa:ObservableProperty
+kwg-ont:MTBSFireObservation ⊑ ∀ sosa:observedProperty kwg-ont:MTBSFireObservableProperty
+kwg-ont:MTBSFireObservation ⊑ sosa:Observation
+kwg-ont:MTBSFireObservationCollection ⊑ ∀ sosa:phenomenonTime time:TemporalEntity
+kwg-ont:MTBSFireObservationCollection ⊑ sosa:ObservationCollection
+kwg-ont:MTBSFireObservationCollection ⊑ ∀ sosa:hasMember kwg-ont:MTBSFireObservation
+kwg-ont:MTBSOutOfAreaResponseFire ⊑ kwg-ont:MTBSFire
+kwg-ont:MTBSOutOfAreaResponseFire ⊑ kwg-ont:OutOfAreaResponseFire
+kwg-ont:MTBSPrescribedFire ⊑ kwg-ont:PrescribedFire
+kwg-ont:MTBSPrescribedFire ⊑ kwg-ont:MTBSFire
+kwg-ont:MTBSUnknownFire ⊑ kwg-ont:MTBSFire
+kwg-ont:MTBSWildfire ⊑ kwg-ont:MTBSFire
+kwg-ont:MTBSWildfire ⊑ kwg-ont:Wildfire
+kwg-ont:MTBSWildlandFireUse ⊑ kwg-ont:MTBSFire
+kwg-ont:MTBSWildlandFireUse ⊑ kwg-ont:WildlandFireUse
+kwg-ont:MagnitudeObservableProperty ⊑ sosa:ObservableProperty
+kwg-ont:MagnitudeObservation ⊑ ∀ sosa:observedProperty kwg-ont:MagnitudeObservableProperty
+kwg-ont:MagnitudeObservation ⊑ sosa:Observation
+kwg-ont:MagnitudeObservationCollection ⊑ ∀ sosa:hasMember kwg-ont:MagnitudeObservation
+kwg-ont:MagnitudeObservationCollection ⊑ ∀ sosa:hasFeatureOfInterest kwg-ont:NOAAHazardEvent
+kwg-ont:MagnitudeObservationCollection ⊑ sosa:ObservationCollection
+kwg-ont:MagnitudeObservationCollection ⊑ ∀ sosa:phenomenonTime time:TemporalEntity
+kwg-ont:MajorDisasterDeclaration ⊑ kwg-ont:Declaration
+usgs:Mine ⊑ usgs:BuiltUpArea
+usgs:MountainRange ⊑ usgs:Terrain
+kwg-ont:NIFCFire ⊑ sosa:FeatureOfInterest
+kwg-ont:NIFCFire ⊑ kwg-ont:Fire
+kwg-ont:NIFCFire ⊑ geo:Feature
+kwg-ont:NIFCFireObservableProperty ⊑ sosa:ObservableProperty
+kwg-ont:NIFCFireObservation ⊑ ∀ sosa:observedProperty kwg-ont:NIFCFireObservableProperty
+kwg-ont:NIFCFireObservation ⊑ sosa:Observation
+kwg-ont:NIFCIncidentComplexFire ⊑ kwg-ont:ComplexFire
+kwg-ont:NIFCIncidentComplexFire ⊑ kwg-ont:NIFCFire
+kwg-ont:NIFCPrescribedFire ⊑ kwg-ont:NIFCFire
+kwg-ont:NIFCPrescribedFire ⊑ kwg-ont:PrescribedFire
+kwg-ont:NIFCWildfire ⊑ kwg-ont:NIFCFire
+kwg-ont:NIFCWildfire ⊑ kwg-ont:Wildfire
+kwg-ont:NOAAAstronomicalLowTide ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAAAvalanche ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAABlizzard ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAACoastalFlood ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAAColdWindChill ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAADebrisFlow ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAADenseFog ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAADenseSmoke ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAADrought ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAADustDevil ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAADustStorm ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAAExcessiveHeat ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAAExtremeColdWindChill ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAAFlashFlood ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAAFlood ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAAFreezingFog ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAAFrostFreeze ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAAFunnelCloud ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAAHail ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAAHazardEvent ⊑ sosa:FeatureOfInterest
+kwg-ont:NOAAHazardEvent ⊑ geo:Feature
+kwg-ont:NOAAHazardEvent ⊑ kwg-ont:Hazard
+kwg-ont:NOAAHazardEvent ⊑ MetereologicalAndHydrological
+kwg-ont:NOAAHeat ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAAHeavyRain ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAAHeavySnow ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAAHighSurf ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAAHighWind ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAAHurricane ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAAIceStorm ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAALake-EffectSnow ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAALakeshoreFlood ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAALightning ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAAMarineHail ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAAMarineHighWind ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAAMarineHurricaneTyphoon ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAAMarineStrongWind ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAAMarineThunderstormWind ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAAMarineTropicalDepression ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAAMarineTropicalStorm ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAARipCurrent ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAASleet ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAASneakerwave ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAAStormSurgeTide ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAAStrongWind ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAAThunderstormWind ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAATornado ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAATropicalDepression ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAATropicalStorm ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAAWaterspout ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAAWildfire ⊑ kwg-ont:Wildfire
+kwg-ont:NOAAWildfire ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAAWinterStorm ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NOAAWinterWeather ⊑ kwg-ont:NOAAHazardEvent
+kwg-ont:NWZone ⊑ geo:Feature
+kwg-ont:NWZone ⊑ ∀ geo:hasDefaultGeometry geo:Geometry
+kwg-ont:NWZone ⊑ ∃ kwg-ont:spatialRelation kwg-ont:AdministrativeRegion_3
+kwg-ont:NWZone ⊑ ∃ kwg-ont:spatialRelation kwg-ont:S2Cell
+kwg-ont:NWZone ⊑ kwg-ont:Region
+kwg-ont:NWZone ⊑ ∀ kwg-ont:hasGeometry geo:Geometry
+kwg-ont:NielsenMarketZone ⊑ ∃ kwg-ont:spatialRelation kwg-ont:S2Cell
+kwg-ont:NielsenMarketZone ⊑ kwg-ont:Region
+kwg-ont:NielsenMarketZone ⊑ ∀ kwg-ont:hasGeometry geo:Geometry
+kwg-ont:NielsenMarketZone ⊑ geo:Feature
+kwg-ont:NielsenMarketZone ⊑ ∃ kwg-ont:spatialRelation kwg-ont:AdministrativeRegion_3
+kwg-ont:NielsenMarketZone ⊑ ∀ geo:hasDefaultGeometry geo:Geometry
+usgs:OilField ⊑ usgs:BuiltUpArea
+kwg-ont:Other ⊑ kwg-ont:Program
+kwg-ont:OutOfAreaResponseFire ⊑ kwg-ont:Fire
+kwg-ont:PARC ⊑ kwg-ont:TraumaCareLevel
+usgs:Park ⊑ usgs:BuiltUpArea
+kwg-ont:Pharmacy ⊑ ∀ geo:hasDefaultGeometry geo:Geometry
+kwg-ont:Pharmacy ⊑ ∃ kwg-ont:sfWithin kwg-ont:AdministrativeRegion
+kwg-ont:Pharmacy ⊑ ∃ kwg-ont:spatialRelation kwg-ont:S2Cell
+kwg-ont:Pharmacy ⊑ ∀ kwg-ont:hasGeometry geo:Geometry
+kwg-ont:Pharmacy ⊑ kwg-ont:HealthCareFacility
+usgs:Plain ⊑ usgs:Terrain
+sf:Point ⊑ geo:Geometry
+usgs:PopulatedPlace ⊑ usgs:BuiltUpArea
+usgs:PostOffice ⊑ usgs:BuiltUpArea
+kwg-ont:PrescribedFire ⊑ kwg-ont:Fire
+kwg-ont:ProtectiveMeasures-PA-B ⊑ kwg-ont:PublicAssistance
+kwg-ont:PublicAssistance ⊑ kwg-ont:Program
+kwg-ont:PublicBuildings-PA-F ⊑ kwg-ont:PublicAssistance
+kwg-ont:PublicHealthDepartment ⊑ ∀ kwg-ont:hasGeometry geo:Geometry
+kwg-ont:PublicHealthDepartment ⊑ ∃ kwg-ont:spatialRelation kwg-ont:S2Cell
+kwg-ont:PublicHealthDepartment ⊑ kwg-ont:HealthCareFacility
+kwg-ont:PublicHealthDepartment ⊑ ∃ kwg-ont:sfWithin kwg-ont:AdministrativeRegion
+kwg-ont:PublicHealthDepartment ⊑ ∀ geo:hasDefaultGeometry geo:Geometry
+kwg-ont:PublicHealthObservableProperty ⊑ sosa:ObservableProperty
+kwg-ont:PublicHealthObservation ⊑ sosa:Observation
+kwg-ont:PublicHealthObservation ⊑ ∀ sosa:observedProperty kwg-ont:PublicHealthObservableProperty
+kwg-ont:PublicHealthObservationCollection ⊑ ∀ sosa:phenomenonTime time:TemporalEntity
+kwg-ont:PublicHealthObservationCollection ⊑ ∀ sosa:hasFeatureOfInterest kwg-ont:AdministrativeRegion_3
+kwg-ont:PublicHealthObservationCollection ⊑ ∀ sosa:hasMember kwg-ont:PublicHealthObservation
+kwg-ont:PublicHealthObservationCollection ⊑ sosa:ObservationCollection
+kwg-ont:PublicUtilitiesPA-G ⊑ kwg-ont:PublicAssistance
+kwg-ont:Quantity ⊑ QuantityValue
+kwg-ont:RPTC ⊑ kwg-ont:TraumaCareLevel
+kwg-ont:RTC ⊑ kwg-ont:TraumaCareLevel
+kwg-ont:RTH ⊑ kwg-ont:TraumaCareLevel
+usgs:Rapids ⊑ usgs:SurfaceWater
+kwg-ont:RecreationalOrOther-PA-H ⊑ kwg-ont:PublicAssistance
+usgs:Reserve ⊑ usgs:Division
+usgs:Reservoir ⊑ usgs:SurfaceWater
+usgs:Ridge ⊑ usgs:Terrain
+kwg-ont:RoadSegment ⊑ ∃ kwg-ont:spatialRelation kwg-ont:S2Cell
+kwg-ont:RoadSegment ⊑ ∀ geo:hasDefaultGeometry geo:Geometry
+kwg-ont:RoadSegment ⊑ ∃ kwg-ont:spatialRelation kwg-ont:AdministrativeRegion_3
+kwg-ont:RoadSegment ⊑ geo:Feature
+kwg-ont:RoadSegment ⊑ ∃ kwg-ont:sfTouches kwg-ont:RoadSegment
+kwg-ont:RoadSegment ⊑ ∀ kwg-ont:hasGeometry geo:Geometry
+kwg-ont:RoadSegmentNode ⊑ ∀ geo:hasDefaultGeometry geo:Geometry
+kwg-ont:RoadSegmentNode ⊑ geo:Feature
+kwg-ont:RoadSegmentNode ⊑ ∀ kwg-ont:hasGeometry geo:Geometry
+kwg-ont:RoadsAndBridges-PA-D ⊑ kwg-ont:PublicAssistance
+usgs:Rock ⊑ usgs:Terrain
+kwg-ont:S2Cell ⊑ sosa:FeatureOfInterest
+kwg-ont:S2Cell ⊑ kwg-ont:Cell
+kwg-ont:S2Cell ⊑ ∀ geo:hasDefaultGeometry geo:Geometry
+kwg-ont:S2Cell ⊑ ∀ kwg-ont:hasGeometry geo:Geometry
+kwg-ont:S2CellLevelX ⊑ kwg-ont:S2Cell
+usgs:School ⊑ usgs:BuiltUpArea
+usgs:Sea ⊑ usgs:Ocean
+usgs:Slope ⊑ usgs:Terrain
+kwg-ont:SmallBusinessAdministration ⊑ kwg-ont:Program
+kwg-ont:SmokePlumeObservableProperty ⊑ sosa:ObservableProperty
+kwg-ont:SmokePlumeObservation ⊑ ∀ sosa:observedProperty kwg-ont:SmokePlumeObservableProperty
+kwg-ont:SmokePlumeObservation ⊑ ∀ sosa:hasFeatureOfInterest kwg-ont:SmokePlumeSnapshot
+kwg-ont:SmokePlumeObservation ⊑ sosa:Observation
+kwg-ont:SmokePlumeSnapshot ⊑ sosa:FeatureOfInterest
+kwg-ont:SmokePlumeSnapshot ⊑ kwg-ont:Hazard
+kwg-ont:SmokePlumeSnapshot ⊑ ∃ kwg-ont:spatialRelation kwg-ont:S2Cell
+kwg-ont:SmokePlumeSnapshot ⊑ ∀ kwg-ont:hasTemporalScope time:TemporalEntity
+kwg-ont:SmokePlumeSnapshot ⊑ ∃ kwg-ont:spatialRelation kwg-ont:AdministrativeRegion_3
+kwg-ont:SmokePlumeSnapshot ⊑ ∀ geo:hasDefaultGeometry geo:Geometry
+kwg-ont:SmokePlumeSnapshot ⊑ ∀ kwg-ont:hasGeometry geo:Geometry
+kwg-ont:SmokePlumeSnapshot ⊑ geo:Feature
+kwg-ont:SmokePlumeSnapshot ⊑ Smoke
+kwg-ont:SoilMapUnit ⊑ geo:Feature
+kwg-ont:SoilMapUnit ⊑ sosa:FeatureOfInterest
+kwg-ont:SoilMapUnitObservableProperty ⊑ sosa:ObservableProperty
+kwg-ont:SoilMapUnitObservation ⊑ ∀ sosa:observedProperty kwg-ont:SoilMapUnitObservableProperty
+kwg-ont:SoilMapUnitObservation ⊑ sosa:Observation
+kwg-ont:SoilMapUnitObservationCollection ⊑ ∃ sosa:hasMember kwg-ont:SoilMapUnitOverlapObservation
+kwg-ont:SoilMapUnitObservationCollection ⊑ ∃ sosa:hasMember kwg-ont:SoilMapUnitObservation
+kwg-ont:SoilMapUnitObservationCollection ⊑ ∀ sosa:hasFeatureOfInterest kwg-ont:SoilMapUnit
+kwg-ont:SoilMapUnitObservationCollection ⊑ sosa:ObservationCollection
+kwg-ont:SoilMapUnitOverlapObservation ⊑ sosa:Observation
+usgs:Spring ⊑ usgs:SurfaceWater
+gnis:State ⊑ usgs:Division
+kwg-ont:StormTrack ⊑ ∀ kwg-ont:hasTemporalScope time:TemporalEntity
+kwg-ont:StormTrack ⊑ geo:Feature
+kwg-ont:StormTrack ⊑ sosa:FeatureOfInterest
+kwg-ont:StormTrackObservableProperty ⊑ sosa:ObservableProperty
+kwg-ont:StormTrackObservation ⊑ sosa:Observation
+kwg-ont:StormTrackObservation ⊑ ∀ sosa:observedProperty kwg-ont:StormTrackObservableProperty
+kwg-ont:StormTrackObservationCollection ⊑ ∀ sosa:phenomenonTime time:Interval
+kwg-ont:StormTrackObservationCollection ⊑ ∀ sosa:hasMember kwg-ont:StormTrackObservation
+kwg-ont:StormTrackObservationCollection ⊑ ∀ sosa:hasFeatureOfInterest kwg-ont:StormTrack
+kwg-ont:StormTrackObservationCollection ⊑ sosa:ObservationCollection
+kwg-ont:StormTracklet ⊑ sosa:FeatureOfInterest
+kwg-ont:StormTracklet ⊑ ∀ geo:hasDefaultGeometry geo:Geometry
+kwg-ont:StormTracklet ⊑ ∀ kwg-ont:spatialRelation kwg-ont:AdministrativeRegion_3
+kwg-ont:StormTracklet ⊑ ∀ kwg-ont:spatialRelation kwg-ont:S2Cell
+kwg-ont:StormTracklet ⊑ ∀ kwg-ont:hasGeometry geo:Geometry
+kwg-ont:StormTracklet ⊑ geo:Feature
+kwg-ont:StormTracklet ⊑ ∀ kwg-ont:hasTemporalScope time:TemporalEntity
+kwg-ont:StormTrackletObservableProperty ⊑ sosa:ObservableProperty
+kwg-ont:StormTrackletObservation ⊑ ∀ sosa:observedProperty kwg-ont:StormTrackletObservableProperty
+kwg-ont:StormTrackletObservation ⊑ sosa:Observation
+kwg-ont:StormTrackletObservationCollection ⊑ sosa:ObservationCollection
+kwg-ont:StormTrackletObservationCollection ⊑ ∀ sosa:hasMember kwg-ont:StormTrackletObservation
+kwg-ont:StormTrackletObservationCollection ⊑ ∀ sosa:hasFeatureOfInterest kwg-ont:StormTracklet
+kwg-ont:StormTrackletObservationCollection ⊑ ∀ sosa:phenomenonTime time:Instant
+usgs:Stream ⊑ usgs:SurfaceWater
+usgs:Summit ⊑ usgs:Terrain
+usgs:SurfaceWater ⊑ geo:SpatialObject
+usgs:Swamp ⊑ usgs:SurfaceWater
+kwg-ont:TRF ⊑ kwg-ont:TraumaCareLevel
+kwg-ont:TRH ⊑ kwg-ont:TraumaCareLevel
+usgs:Terrain ⊑ geo:SpatialObject
+kwg-ont:TornadoMagnitudeObservationCollection ⊑ kwg-ont:MagnitudeObservationCollection
+usgs:Tower ⊑ usgs:BuiltUpArea
+usgs:Trail ⊑ usgs:BuiltUpArea
+kwg-ont:TraumaCenter ⊑ kwg-ont:Hospital
+usgs:Tunnel ⊑ usgs:BuiltUpArea
+kwg-ont:USCensusMSA ⊑ ∃ kwg-ont:spatialRelation kwg-ont:S2Cell
+kwg-ont:USCensusMSA ⊑ sosa:FeatureOfInterest
+kwg-ont:USCensusMSA ⊑ kwg-ont:Region
+kwg-ont:USCensusMSA ⊑ geo:Feature
+kwg-ont:USCensusMSA ⊑ ∃ kwg-ont:spatialRelation kwg-ont:AdministrativeRegion_2
+kwg-ont:USCensusMSA ⊑ ∀ kwg-ont:hasTemporalScope time:Instant
+kwg-ont:USCensusMSA ⊑ ∀ kwg-ont:hasGeometry geo:Geometry
+kwg-ont:USCensusMSA ⊑ ∀ geo:hasDefaultGeometry geo:Geometry
+kwg-ont:USClimateDivision ⊑ sosa:FeatureOfInterest
+kwg-ont:USClimateDivision ⊑ ∀ geo:hasDefaultGeometry geo:Geometry
+kwg-ont:USClimateDivision ⊑ ∃ kwg-ont:spatialRelation kwg-ont:AdministrativeRegion_3
+kwg-ont:USClimateDivision ⊑ geo:Feature
+kwg-ont:USClimateDivision ⊑ ∃ kwg-ont:spatialRelation kwg-ont:S2Cell
+kwg-ont:USClimateDivision ⊑ ∀ kwg-ont:hasGeometry geo:Geometry
+kwg-ont:USClimateDivision ⊑ kwg-ont:Region
+usgs:Valley ⊑ usgs:Terrain
+kwg-ont:VulnerabilityObservableProperty ⊑ sosa:ObservableProperty
+kwg-ont:VulnerabilityObservation ⊑ ∀ sosa:observedProperty kwg-ont:VulnerabilityObservableProperty
+kwg-ont:VulnerabilityObservation ⊑ sosa:Observation
+kwg-ont:WaterControlFacilities-PA-E ⊑ kwg-ont:PublicAssistance
+usgs:Waterfall ⊑ usgs:SurfaceWater
+usgs:Well ⊑ usgs:BuiltUpArea
+kwg-ont:Wildfire ⊑ kwg-ont:Fire
+kwg-ont:Wildfire ⊑ Wildfires
+kwg-ont:WildlandFireUse ⊑ kwg-ont:Fire
+kwg-ont:WindMagnitudeObservationCollection ⊑ kwg-ont:MagnitudeObservationCollection
+usgs:Woodland ⊑ usgs:Forest
+kwg-ont:ZipCodeArea ⊑ ∃ kwg-ont:spatialRelation kwg-ont:S2Cell
+kwg-ont:ZipCodeArea ⊑ ∀ kwg-ont:hasGeometry geo:Geometry
+kwg-ont:ZipCodeArea ⊑ ∀ geo:hasDefaultGeometry geo:Geometry
+kwg-ont:ZipCodeArea ⊑ ∃ kwg-ont:spatialRelation kwg-ont:AdministrativeRegion_3
+kwg-ont:ZipCodeArea ⊑ geo:Feature
+kwg-ont:ZipCodeArea ⊑ kwg-ont:Region
+⊤ ⊑ ∀ kwg-ont:administrativeLevel kwg-ont:AdministrativeLevel
+kwg-ont:affectedBy ≡ kwg-ont:affectedByInverse⁻
+kwg-ont:affectedBy ≡ kwg-ont:affectedByInverse⁻
+∃ kwg-ont:endsAt Thing ⊑ kwg-ont:EventSegment
+∃ kwg-ont:episodeHasPart Thing ⊑ kwg-ont:HazardEpisode
+⊤ ⊑ ∀ kwg-ont:episodeHasPart kwg-ont:NOAAHazardEvent
+⊑ time:hasTime
+∃ kwg-ont:hasChiefJudge Thing ⊑ kwg-ont:JudgeInfo
+⊤ ⊑ ∀ kwg-ont:hasChiefJudge kwg-ont:ChiefJudge
+∃ kwg-ont:hasDeclaration Thing ⊑ kwg-ont:FEMADisaster
+⊤ ⊑ ∀ kwg-ont:hasDeclaration kwg-ont:Declaration
+∃ kwg-ont:hasDeclarationDate Thing ⊑ kwg-ont:Declaration
+⊤ ⊑ ∀ kwg-ont:hasDeclarationDate time:TemporalEntity
+⊑ time:hasTemporalDuration
+⊑ time:hasTemporalDuration
+⊑ time:hasTime
+sosa:hasFeatureOfInterest ≡ sosa:isFeatureOfInterestOf⁻
+∃ kwg-ont:hasFireCause Thing ⊑ kwg-ont:NIFCFire
+⊤ ⊑ ∀ kwg-ont:hasFireCause kwg-ont:FireCause
+kwg-ont:hasFireMappingAssessmentLabel ≡ kwg-ont:hasFireMappingAssessmentLabelInverse⁻
+∃ kwg-ont:hasFireMappingAssessmentLabel Thing ⊑ kwg-ont:MTBSFire
+⊤ ⊑ ∀ kwg-ont:hasFireMappingAssessmentLabel kwg-ont:FireMappingAssessmentLabel
+kwg-ont:hasFireMappingAssessmentLabel ≡ kwg-ont:hasFireMappingAssessmentLabelInverse⁻
+∃ kwg-ont:hasFireMappingAssessmentLabelInverse Thing ⊑ kwg-ont:FireMappingAssessmentLabel
+⊤ ⊑ ∀ kwg-ont:hasFireMappingAssessmentLabelInverse kwg-ont:MTBSFire
+∃ kwg-ont:hasGeometry Thing ⊑ kwg-ont:SoilMapUnit
+⊤ ⊑ ∀ kwg-ont:hasGeometry kwg-ont:GeometryCollection
+kwg-ont:hasGeometryMember ≡ kwg-ont:hasGeometryMemberInverse⁻
+∃ kwg-ont:hasGeometryMember Thing ⊑ kwg-ont:GeometryCollection
+⊤ ⊑ ∀ kwg-ont:hasGeometryMember geo:Feature
+kwg-ont:hasGeometryMember ≡ kwg-ont:hasGeometryMemberInverse⁻
+∃ kwg-ont:hasGeometryMemberInverse Thing ⊑ geo:Feature
+⊤ ⊑ ∀ kwg-ont:hasGeometryMemberInverse kwg-ont:GeometryCollection
+∃ kwg-ont:hasJudgeInfo Thing ⊑ kwg-ont:FederalJudicalDistrict
+⊤ ⊑ ∀ kwg-ont:hasJudgeInfo kwg-ont:JudgeInfo
+kwg-ont:hasMappingProgram ≡ kwg-ont:hasMappingProgramInverse⁻
+∃ kwg-ont:hasMappingProgram Thing ⊑ kwg-ont:MTBSFireObservationCollection
+⊤ ⊑ ∀ kwg-ont:hasMappingProgram kwg-ont:MappingProgram
+kwg-ont:hasMappingProgram ≡ kwg-ont:hasMappingProgramInverse⁻
+∃ kwg-ont:hasMappingProgramInverse Thing ⊑ kwg-ont:MappingProgram
+⊤ ⊑ ∀ kwg-ont:hasMappingProgramInverse kwg-ont:MTBSFireObservationCollection
+∃ kwg-ont:hasPart Thing ⊑ kwg-ont:NOAAHazard
+⊤ ⊑ ∀ kwg-ont:hasPart kwg-ont:NOAAHazardEvent
+∃ kwg-ont:hasProgram Thing ⊑ kwg-ont:FEMADisaster
+⊤ ⊑ ∀ kwg-ont:hasProgram kwg-ont:Program
+∃ kwg-ont:hasProgramDesignatedDate Thing ⊑ kwg-ont:Program
+⊤ ⊑ ∀ kwg-ont:hasProgramDesignatedDate time:TemporalEntity
+∃ kwg-ont:hasRoadType Thing ⊑ kwg-ont:RoadSegment
+⊤ ⊑ ∀ kwg-ont:hasRoadType kwg-ont:RoadType
+∃ kwg-ont:hasSegment Thing ⊑ kwg-ont:NOAAHazardEvent
+⊤ ⊑ ∀ kwg-ont:hasSegment kwg-ont:EventSegment
+∃ kwg-ont:hasStormTrack Thing ⊑ kwg-ont:StormTrack
+∃ kwg-ont:hasStormTracklet Thing ⊑ kwg-ont:StormTrack
+⊤ ⊑ ∀ kwg-ont:hasStormTracklet kwg-ont:StormTracklet
+∃ kwg-ont:hasTraumaDescription Thing ⊑ kwg-ont:TraumaCareLevel
+⊤ ⊑ ∀ kwg-ont:hasTraumaDescription kwg-ont:TraumaDescription
+∃ kwg-ont:helipadAvailability Thing ⊑ kwg-ont:Hospital
+⊤ ⊑ ∀ kwg-ont:helipadAvailability kwg-ont:HelipadAvailability
+∃ kwg-ont:hospitalStatus Thing ⊑ kwg-ont:Hospital
+⊤ ⊑ ∀ kwg-ont:hospitalStatus kwg-ont:HospitalStatus
+∃ kwg-ont:hospitalType Thing ⊑ kwg-ont:Hospital
+⊤ ⊑ ∀ kwg-ont:hospitalType kwg-ont:HospitalType
+∃ kwg-ont:inCircuit Thing ⊑ kwg-ont:FederalJudicalDistrict
+⊤ ⊑ ∀ kwg-ont:inCircuit kwg-ont:RegionalCircuit
+sosa:hasFeatureOfInterest ≡ sosa:isFeatureOfInterestOf⁻
+∃ kwg-ont:mean Thing ⊑ kwg-ont:ClimateDivisionObservationResult
+∃ kwg-ont:nominatedBy Thing ⊑ kwg-ont:JudgeInfo
+⊤ ⊑ ∀ kwg-ont:nominatedBy kwg-ont:USPresident
+∃ kwg-ont:nominatedTime Thing ⊑ kwg-ont:JudgeInfo
+⊤ ⊑ ∀ kwg-ont:nominatedTime time:TemporalEntity
+⊤ ⊑ ∀ kwg-ont:pharmacyType kwg-ont:PharmacyType
+⊑ kwg-ont:spatialRelation
+kwg-ont:sfContains ≡ kwg-ont:sfWithin⁻
+⊑ kwg-ont:spatialRelation
+⊑ kwg-ont:spatialRelation
+⊑ kwg-ont:spatialRelation
+⊑ kwg-ont:spatialRelation
+∃ kwg-ont:sfTouches Thing ⊑ kwg-ont:RoadSegment
+⊤ ⊑ ∀ kwg-ont:sfTouches kwg-ont:RoadSegment
+⊑ kwg-ont:spatialRelation
+kwg-ont:sfContains ≡ kwg-ont:sfWithin⁻
+kwg-ont:spatialRelation ≡ kwg-ont:spatialRelation⁻
+∃ kwg-ont:startsFrom Thing ⊑ kwg-ont:EventSegment
+∃ kwg-ont:timeScale Thing ⊑ kwg-ont:ClimateObservation
+⊤ ⊑ ∀ kwg-ont:timeScale time:Duration
+∃ kwg-ont:traumaCareLevel Thing ⊑ kwg-ont:Hospital
+⊤ ⊑ ∀ kwg-ont:traumaCareLevel kwg-ont:TraumaCareLevel
+∃ kwg-ont:traumaDescriptionSourceDate Thing ⊑ kwg-ont:TraumaDescription
+⊤ ⊑ ∀ kwg-ont:traumaDescriptionSourceDate time:Instant
+∃ kwg-ont:typeOfLSAD Thing ⊑ kwg-ont:USCensusMSA
+⊤ ⊑ ∀ kwg-ont:typeOfLSAD kwg-ont:LSADArea
+∃ kwg-ont:value Thing ⊑ kwg-ont:ClimateDivisionObservationResult
+⊤ ⊑ ∀ kwg-ont:value kwg-ont:Quantity
+⊤ ⊑ ∀ kwg-ont:address xsd:string
+∃ kwg-ont:amountApproved_HA rdfs:Literal ⊑ kwg-ont:FEMADisaster
+⊤ ⊑ ∀ kwg-ont:amountApproved_HA rdfs:Literal
+∃ kwg-ont:amountApproved_IHP rdfs:Literal ⊑ kwg-ont:FEMADisaster
+⊤ ⊑ ∀ kwg-ont:amountApproved_IHP rdfs:Literal
+∃ kwg-ont:amountApproved_ONA rdfs:Literal ⊑ kwg-ont:FEMADisaster
+⊤ ⊑ ∀ kwg-ont:amountApproved_ONA rdfs:Literal
+∃ kwg-ont:anomaly rdfs:Literal ⊑ kwg-ont:ClimateDivisionObservationResult
+⊤ ⊑ ∀ kwg-ont:anomaly xsd:decimal
+⊑ geo:hasSerialization
+∃ kwg-ont:cbsaCode rdfs:Literal ⊑ kwg-ont:AirQualitySite
+⊤ ⊑ ∀ kwg-ont:cbsaCode xsd:string
+∃ kwg-ont:cbsaName rdfs:Literal ⊑ kwg-ont:AirQualitySite
+⊤ ⊑ ∀ kwg-ont:cbsaName xsd:string
+∃ kwg-ont:climateDivisionFIPS rdfs:Literal ⊑ kwg-ont:USClimateDivision
+⊤ ⊑ ∀ kwg-ont:climateDivisionFIPS rdfs:Literal
+∃ kwg-ont:climateDivisionNCDC_GEO rdfs:Literal ⊑ kwg-ont:USClimateDivision
+⊤ ⊑ ∀ kwg-ont:climateDivisionNCDC_GEO rdfs:Literal
+∃ kwg-ont:climateDivisionName rdfs:Literal ⊑ kwg-ont:USClimateDivision
+⊤ ⊑ ∀ kwg-ont:climateDivisionName rdfs:Literal
+∃ kwg-ont:climateDivisionNumber rdfs:Literal ⊑ kwg-ont:USClimateDivision
+⊤ ⊑ ∀ kwg-ont:climateDivisionNumber rdfs:Literal
+∃ kwg-ont:compositePercentageInformation rdfs:Literal ⊑ kwg-ont:DroughtZoneOverlapObservationCollection
+⊤ ⊑ ∀ kwg-ont:compositePercentageInformation xsd:string
+∃ kwg-ont:correspondingMapID rdfs:Literal ⊑ kwg-ont:MTBSFire
+⊤ ⊑ ∀ kwg-ont:correspondingMapID xsd:string
+∃ kwg-ont:dailyAQIValue rdfs:Literal ⊑ kwg-ont:AirQualityObservation
+⊤ ⊑ ∀ kwg-ont:dailyAQIValue rdfs:Literal
+∃ kwg-ont:designatedArea rdfs:Literal ⊑ kwg-ont:Declaration
+⊤ ⊑ ∀ kwg-ont:designatedArea rdfs:Literal
+⊤ ⊑ ∀ kwg-ont:fipsCountyCode xsd:string
+⊤ ⊑ ∀ kwg-ont:fipsStateCode xsd:string
+∃ kwg-ont:hasAzimuth rdfs:Literal ⊑ kwg-ont:Fix
+⊤ ⊑ ∀ kwg-ont:hasAzimuth xsd:string
+∃ kwg-ont:hasCode rdfs:Literal ⊑ kwg-ont:LSADArea
+⊤ ⊑ ∀ kwg-ont:hasCode xsd:string
+∃ kwg-ont:hasDeclarationID rdfs:Literal ⊑ kwg-ont:Declaration
+⊤ ⊑ ∀ kwg-ont:hasDeclarationID xsd:string
+∃ kwg-ont:hasDeclarationRequestNo rdfs:Literal ⊑ kwg-ont:Declaration
+⊤ ⊑ ∀ kwg-ont:hasDeclarationRequestNo rdfs:Literal
+∃ kwg-ont:hasDeclarationTitle rdfs:Literal ⊑ kwg-ont:Declaration
+⊤ ⊑ ∀ kwg-ont:hasDeclarationTitle rdfs:Literal
+∃ kwg-ont:hasDisasterName rdfs:Literal ⊑ kwg-ont:FEMADisaster
+⊤ ⊑ ∀ kwg-ont:hasDisasterName rdfs:Literal
+⊤ ⊑ ∀ kwg-ont:hasDisasterNumber rdfs:Literal
+∃ kwg-ont:hasFireName rdfs:Literal ⊑ kwg-ont:MTBSFire
+⊤ ⊑ ∀ kwg-ont:hasFireName xsd:string
+∃ kwg-ont:hasIncidentName rdfs:Literal ⊑ kwg-ont:NIFCFire
+⊤ ⊑ ∀ kwg-ont:hasIncidentName xsd:string
+∃ kwg-ont:hasLength rdfs:Literal ⊑ kwg-ont:RoadSegment
+⊤ ⊑ ∀ kwg-ont:hasLength xsd:decimal
+∃ kwg-ont:hasMapUnitAreaSymbol rdfs:Literal ⊑ kwg-ont:SoilMapUnitObservationCollection
+⊤ ⊑ ∀ kwg-ont:hasMapUnitAreaSymbol xsd:string
+∃ kwg-ont:hasName rdfs:Literal ⊑ kwg-ont:FederalJudicalDistrict
+⊤ ⊑ ∀ kwg-ont:hasName xsd:string
+∃ kwg-ont:hasNarrative rdfs:Literal ⊑ kwg-ont:HazardEpisode
+⊤ ⊑ ∀ kwg-ont:hasNarrative xsd:string
+∃ kwg-ont:hasProgramDescription rdfs:Literal ⊑ kwg-ont:Program
+⊤ ⊑ ∀ kwg-ont:hasProgramDescription rdfs:Literal
+∃ kwg-ont:hasProgramID rdfs:Literal ⊑ kwg-ont:Program
+⊤ ⊑ ∀ kwg-ont:hasProgramID xsd:string
+∃ kwg-ont:hasRange rdfs:Literal ⊑ kwg-ont:Fix
+⊤ ⊑ ∀ kwg-ont:hasRange xsd:string
+∃ kwg-ont:hasRoadName rdfs:Literal ⊑ kwg-ont:RoadSegment
+⊤ ⊑ ∀ kwg-ont:hasRoadName xsd:string
+∃ kwg-ont:hasRoadSign rdfs:Literal ⊑ kwg-ont:RoadSegment
+⊤ ⊑ ∀ kwg-ont:hasRoadSign xsd:string
+∃ kwg-ont:hasSoilMapUnitKey rdfs:Literal ⊑ kwg-ont:SoilMapUnitObservationCollection
+⊤ ⊑ ∀ kwg-ont:hasSoilMapUnitKey xsd:string
+∃ kwg-ont:hasSoilMapUnitSymbol rdfs:Literal ⊑ kwg-ont:SoilMapUnitObservationCollection
+⊤ ⊑ ∀ kwg-ont:hasSoilMapUnitSymbol xsd:string
+∃ kwg-ont:hasTraumaDefinition rdfs:Literal ⊑ kwg-ont:TraumaDescription
+⊤ ⊑ ∀ kwg-ont:hasTraumaDefinition rdfs:Literal
+∃ kwg-ont:hasZipCode rdfs:Literal ⊑ kwg-ont:ZipCodeArea
+⊤ ⊑ ∀ kwg-ont:hasZipCode xsd:string
+∃ kwg-ont:hospitalAddress rdfs:Literal ⊑ kwg-ont:Hospital
+⊤ ⊑ ∀ kwg-ont:hospitalAddress xsd:string
+∃ kwg-ont:hospitalName rdfs:Literal ⊑ kwg-ont:Hospital
+⊤ ⊑ ∀ kwg-ont:hospitalName xsd:string
+∃ kwg-ont:isHMProgramDeclared rdfs:Literal ⊑ kwg-ont:Declaration
+⊤ ⊑ ∀ kwg-ont:isHMProgramDeclared rdfs:Literal
+∃ kwg-ont:isIAProgramDeclared rdfs:Literal ⊑ kwg-ont:Declaration
+⊤ ⊑ ∀ kwg-ont:isIAProgramDeclared rdfs:Literal
+∃ kwg-ont:isIHProgramDeclared rdfs:Literal ⊑ kwg-ont:Declaration
+⊤ ⊑ ∀ kwg-ont:isIHProgramDeclared rdfs:Literal
+∃ kwg-ont:isPAProgramDeclared rdfs:Literal ⊑ kwg-ont:Declaration
+⊤ ⊑ ∀ kwg-ont:isPAProgramDeclared rdfs:Literal
+⊤ ⊑ ∀ kwg-ont:nielsenMarketZoneDMA xsd:int
+⊤ ⊑ ∀ kwg-ont:nielsenMarketZoneHHTV xsd:int
+⊤ ⊑ ∀ kwg-ont:nielsenMarketZoneID xsd:double
+⊤ ⊑ ∀ kwg-ont:nielsenMarketZonePUSA xsd:string
+⊤ ⊑ ∀ kwg-ont:nielsenMarketZoneRank xsd:int
+∃ kwg-ont:noHospitalBeds rdfs:Literal ⊑ kwg-ont:Hospital
+⊤ ⊑ ∀ kwg-ont:noHospitalBeds xsd:decimal
+∃ kwg-ont:noaaDisasterID rdfs:Literal ⊑ kwg-ont:FEMADisaster
+⊤ ⊑ ∀ kwg-ont:noaaDisasterID rdfs:Literal
+∃ kwg-ont:pharmacyName rdfs:Literal ⊑ kwg-ont:Pharmacy
+⊤ ⊑ ∀ kwg-ont:pharmacyName xsd:string
+⊤ ⊑ ∀ kwg-ont:pocValue xsd:string
+∃ kwg-ont:publicHealthDepartmentName rdfs:Literal ⊑ kwg-ont:PublicHealthDepartment
+⊤ ⊑ ∀ kwg-ont:publicHealthDepartmentName xsd:string
+∃ kwg-ont:rank rdfs:Literal ⊑ kwg-ont:ClimateDivisionObservationResult
+⊤ ⊑ ∀ kwg-ont:rank xsd:integer
+∃ kwg-ont:siteID rdfs:Literal ⊑ kwg-ont:AirQualitySite
+⊤ ⊑ ∀ kwg-ont:siteID xsd:string
+∃ kwg-ont:siteName rdfs:Literal ⊑ kwg-ont:AirQualitySite
+⊤ ⊑ ∀ kwg-ont:siteName xsd:string
+∃ kwg-ont:telephoneNo rdfs:Literal ⊑ kwg-ont:Hospital
+⊤ ⊑ ∀ kwg-ont:telephoneNo xsd:string
+∃ kwg-ont:traumaDescriptionForState rdfs:Literal ⊑ kwg-ont:TraumaDescription
+⊤ ⊑ ∀ kwg-ont:traumaDescriptionForState xsd:string
+∃ kwg-ont:traumaDescriptionSource rdfs:Literal ⊑ kwg-ont:TraumaDescription
+⊤ ⊑ ∀ kwg-ont:traumaDescriptionSource xsd:string
+∃ kwg-ont:website rdfs:Literal ⊑ kwg-ont:Hospital
+⊤ ⊑ ∀ kwg-ont:website xsd:string
+∃ kwg-ont:zipCode rdfs:Literal ⊑ kwg-ont:Hospital
+⊤ ⊑ ∀ kwg-ont:zipCode xsd:integer
+∃ kwg-ont:zoneNumber rdfs:Literal ⊑ kwg-ont:NWZone
+⊤ ⊑ ∀ kwg-ont:zoneNumber xsd:string
+kwg-ont:LSADArea.M1 : kwg-ont:LSADArea
+kwg-ont:LSADArea.M2 : kwg-ont:LSADArea
+kwg-ont:administrativeLevel.LOCAL : kwg-ont:AdministrativeLevel
+kwg-ont:administrativeLevel.OTHER : kwg-ont:AdministrativeLevel
+kwg-ont:administrativeLevel.STATE : kwg-ont:AdministrativeLevel
+kwg-ont:administrativeLevel.TRIBAL : kwg-ont:AdministrativeLevel
+kwgr:airQualityObservableProperty.CO : kwg-ont:AirPollutant
+kwgr:airQualityObservableProperty.NO2 : kwg-ont:AirPollutant
+kwgr:airQualityObservableProperty.Ozone : kwg-ont:AirPollutant
+kwgr:airQualityObservableProperty.PM10 : kwg-ont:AirPollutant
+kwgr:airQualityObservableProperty.PM25 : kwg-ont:AirPollutant
+kwgr:airQualityObservableProperty.Pb : kwg-ont:AirPollutant
+kwgr:airQualityObservableProperty.SO2 : kwg-ont:AirPollutant
+kwgr:blueskyObservableProperty.PM10ModeledDailyEmission : kwg-ont:BlueskyWildfireObservableProperty
+kwgr:blueskyObservableProperty.PM25ModeledDailyEmission : kwg-ont:BlueskyWildfireObservableProperty
+kwgr:blueskyObservableProperty.modeledGrowthArea : kwg-ont:BlueskyWildfireObservableProperty
+kwgr:blueskyObservableProperty.modeledGrowthNumLocation : kwg-ont:BlueskyWildfireObservableProperty
+kwgr:censusObservableProperty.femalePopulation : kwg-ont:CensusObservableProperty
+kwgr:censusObservableProperty.householdUnits : kwg-ont:CensusObservableProperty
+kwgr:censusObservableProperty.malePopulation : kwg-ont:CensusObservableProperty
+kwgr:censusObservableProperty.totalPopulation : kwg-ont:CensusObservableProperty
+kwgr:children : kwg-ont:HospitalType
+kwgr:chronicDisease : kwg-ont:HospitalType
+kwgr:climateObservableProperty.CDD : kwg-ont:ClimateObservableProperty
+kwgr:climateObservableProperty.HDD : kwg-ont:ClimateObservableProperty
+kwgr:climateObservableProperty.PDSI : kwg-ont:ClimateObservableProperty
+kwgr:climateObservableProperty.PHDI : kwg-ont:ClimateObservableProperty
+kwgr:climateObservableProperty.PMDI : kwg-ont:ClimateObservableProperty
+kwgr:climateObservableProperty.PZI : kwg-ont:ClimateObservableProperty
+kwgr:climateObservableProperty.avgTemp : kwg-ont:ClimateObservableProperty
+kwgr:climateObservableProperty.maxTemp : kwg-ont:ClimateObservableProperty
+kwgr:climateObservableProperty.minTemp : kwg-ont:ClimateObservableProperty
+kwgr:climateObservableProperty.precipitation : kwg-ont:ClimateObservableProperty
+kwgr:closed : kwg-ont:HospitalStatus
+kwgr:criticalAccess : kwg-ont:HospitalType
+kwgr:croplandObservableProperty.alfalfaArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.almondsArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.applesArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.apricotsArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.aquacultureArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.asparagusArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.avocadosArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.backgroundArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.barleyArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.barrenArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.blueberriesArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.broccoliArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.buckwheatArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.cabbageArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.camelinaArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.caneberriesArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.canolaArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.cantaloupesArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.carrotsArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.cauliflowerArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.celeryArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.cherriesArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.chickPeasArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.christmasTreesArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.citrusArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.cloudsNoDataArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.cloverWildflowersArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.cornArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.cottonArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.cranberriesArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.cucumbersArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.dblCropBarleyCornArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.dblCropBarleySorghumArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.dblCropBarleySoybeansArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.dblCropCornSoybeansArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.dblCropDurumWhtSorghumArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.dblCropLettuceBarleyArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.dblCropLettuceCantaloupeArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.dblCropLettuceCottonArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.dblCropLettuceDurumWhtArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.dblCropOatsCornArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.dblCropSoybeansCottonArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.dblCropSoybeansOatsArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.dblCropTriticaleCornArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.dblCropWinwhtCornArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.dblCropWinwhtCottonArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.dblCropWinwhtSorghumArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.dblCropWinwhtSoybeansArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.deciduousForestArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.developedArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.developedHighIntensityArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.developedLowIntensityArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.developedMedIntensityArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.developedOpenSpaceArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.dryBeansArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.durumWheatArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.eggplantsArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.evergreenForestArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.fallowIdleCroplandArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.flaxseedArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.forestArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.garlicArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.gourdsArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.grapesArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.grasslandPastureArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.greensArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.herbaceousWetlandsArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.herbsArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.honeydewMelonsArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.hopsArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.lentilsArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.lettuceArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.milletArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.mintArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.miscVegsAndFruitsArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.mixedForestArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.mustardArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.nectarinesArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.nonagUndefinedArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.oatsArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.olivesArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.onionsArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.openWaterArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.orangesArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.otherCropsArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.otherHayNonAlfalfaArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.otherSmallGrainsArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.otherTreeCropsArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.peachesArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.peanutsArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.pearsArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.peasArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.pecansArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.peppersArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.perennialIceSnowArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.pistachiosArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.plumsArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.pomegranatesArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.popOrOrnCornArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.potatoesArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.prunesArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.pumpkinsArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.radishesArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.rapeSeedArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.riceArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.ryeArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.safflowerArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.shrublandArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.sodGrassSeedArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.sorghumArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.soybeansArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.speltzArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.springWheatArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.squashArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.strawberriesArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.sugarbeetsArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.sugarcaneArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.sunflowerArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.sweetCornArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.sweetPotatoesArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.switchgrassArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.tobaccoArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.tomatoesArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.triticaleArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.turnipsArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.vetchArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.walnutsArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.waterArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.watermelonsArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.wetlandsArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.winterWheatArea : kwg-ont:CroplandObservableProperty
+kwgr:croplandObservableProperty.woodyWetlandsArea : kwg-ont:CroplandObservableProperty
+kwgr:droughtObservableProperty.DroughtIntensity.D0 : kwg-ont:DroughtIntensity
+kwgr:droughtObservableProperty.DroughtIntensity.D1 : kwg-ont:DroughtIntensity
+kwgr:droughtObservableProperty.DroughtIntensity.D2 : kwg-ont:DroughtIntensity
+kwgr:droughtObservableProperty.DroughtIntensity.D3 : kwg-ont:DroughtIntensity
+kwgr:droughtObservableProperty.DroughtIntensity.D4 : kwg-ont:DroughtIntensity
+kwgr:earthquakeObservableProperty.depth : kwg-ont:EarthquakeObservableProperty
+kwgr:earthquakeObservableProperty.depthError : kwg-ont:EarthquakeObservableProperty
+kwgr:earthquakeObservableProperty.dmin : kwg-ont:EarthquakeObservableProperty
+kwgr:earthquakeObservableProperty.gap : kwg-ont:EarthquakeObservableProperty
+kwgr:earthquakeObservableProperty.horizontalError : kwg-ont:EarthquakeObservableProperty
+kwgr:earthquakeObservableProperty.locationSource : kwg-ont:EarthquakeObservableProperty
+kwgr:earthquakeObservableProperty.mag : kwg-ont:EarthquakeObservableProperty
+kwgr:earthquakeObservableProperty.magError : kwg-ont:EarthquakeObservableProperty
+kwgr:earthquakeObservableProperty.magNst : kwg-ont:EarthquakeObservableProperty
+kwgr:earthquakeObservableProperty.magSource : kwg-ont:EarthquakeObservableProperty
+kwgr:earthquakeObservableProperty.magType : kwg-ont:EarthquakeObservableProperty
+kwgr:earthquakeObservableProperty.net : kwg-ont:EarthquakeObservableProperty
+kwgr:earthquakeObservableProperty.nst : kwg-ont:EarthquakeObservableProperty
+kwgr:earthquakeObservableProperty.rms : kwg-ont:EarthquakeObservableProperty
+kwgr:earthquakeObservableProperty.status : kwg-ont:EarthquakeObservableProperty
+kwgr:earthquakeObservableProperty.type : kwg-ont:EarthquakeObservableProperty
+kwgr:generalAcuteCare : kwg-ont:HospitalType
+kwgr:impactObservableProperty.damageCrop : kwg-ont:ImpactObservableProperty
+kwgr:impactObservableProperty.damageProperty : kwg-ont:ImpactObservableProperty
+kwgr:impactObservableProperty.deathDirect : kwg-ont:ImpactObservableProperty
+kwgr:impactObservableProperty.deathIndirect : kwg-ont:ImpactObservableProperty
+kwgr:impactObservableProperty.injuryDirect : kwg-ont:ImpactObservableProperty
+kwgr:impactObservableProperty.injuryIndirect : kwg-ont:ImpactObservableProperty
+kwgr:longTermCare : kwg-ont:HospitalType
+kwgr:magnitudeObservableProperty.estimateSustainedWidth : kwg-ont:MagnitudeObservableProperty
+kwgr:magnitudeObservableProperty.fujitaScale : kwg-ont:MagnitudeObservableProperty
+kwgr:magnitudeObservableProperty.length : kwg-ont:MagnitudeObservableProperty
+kwgr:magnitudeObservableProperty.measuredSustainedWind : kwg-ont:MagnitudeObservableProperty
+kwgr:magnitudeObservableProperty.measuredWind : kwg-ont:MagnitudeObservableProperty
+kwgr:magnitudeObservableProperty.width : kwg-ont:MagnitudeObservableProperty
+kwgr:magnitudeObservableProperty.windEstimatedGust : kwg-ont:MagnitudeObservableProperty
+kwgr:military : kwg-ont:HospitalType
+kwgr:mtbsFireObservableProperty.MeandNBRValue : kwg-ont:MTBSFireObservableProperty
+kwgr:mtbsFireObservableProperty.NumberOfAcresBurned : kwg-ont:MTBSFireObservableProperty
+kwgr:mtbsFireObservableProperty.StandardDeviationOfMeandNBRValue : kwg-ont:MTBSFireObservableProperty
+kwgr:nifcFireHumanCause : kwg-ont:FireCause
+kwgr:nifcFireNaturalCause : kwg-ont:FireCause
+kwgr:nifcFireObservableProperty.calculatedAcres : kwg-ont:NIFCFireObservableProperty
+kwgr:nifcFireObservableProperty.fireDiscoveryDateTime : kwg-ont:NIFCFireObservableProperty
+kwgr:nifcFireObservableProperty.fireOutDateTime : kwg-ont:NIFCFireObservableProperty
+kwgr:nifcFireUndeterminedCause : kwg-ont:FireCause
+kwgr:nifcFireUnknownCause : kwg-ont:FireCause
+kwgr:no : kwg-ont:HelipadAvailability
+kwgr:open : kwg-ont:HospitalStatus
+kwgr:overlapArea.squareMeter : kwg-ont:SoilMapUnitObservableProperty
+kwg-ont:pharmacyType.Dialysis_Center : kwg-ont:PharmacyType
+kwg-ont:pharmacyType.Pharmacy : kwg-ont:PharmacyType
+kwgr:psychiatric : kwg-ont:HospitalType
+kwgr:publicHealthObservableProperty.belowPovertyLevelPercent : kwg-ont:PublicHealthObservableProperty
+kwgr:publicHealthObservableProperty.diabetesAgeAdjusted20PlusPercent : kwg-ont:PublicHealthObservableProperty
+kwgr:publicHealthObservableProperty.fluVaccination : kwg-ont:PublicHealthObservableProperty
+kwgr:publicHealthObservableProperty.fluVaccination-americanIndian-alaskanNative : kwg-ont:PublicHealthObservableProperty
+kwgr:publicHealthObservableProperty.fluVaccination-asian-pacificIslander : kwg-ont:PublicHealthObservableProperty
+kwgr:publicHealthObservableProperty.fluVaccination-black : kwg-ont:PublicHealthObservableProperty
+kwgr:publicHealthObservableProperty.fluVaccination-hispanic : kwg-ont:PublicHealthObservableProperty
+kwgr:publicHealthObservableProperty.fluVaccination-white : kwg-ont:PublicHealthObservableProperty
+kwgr:publicHealthObservableProperty.foodEnvironmentIndex : kwg-ont:PublicHealthObservableProperty
+kwgr:publicHealthObservableProperty.injuryAndDeaths : kwg-ont:PublicHealthObservableProperty
+kwgr:publicHealthObservableProperty.injuryAndDeaths-americanIndian-alaskanNative : kwg-ont:PublicHealthObservableProperty
+kwgr:publicHealthObservableProperty.injuryAndDeaths-asian-pacificIslander : kwg-ont:PublicHealthObservableProperty
+kwgr:publicHealthObservableProperty.injuryAndDeaths-black : kwg-ont:PublicHealthObservableProperty
+kwgr:publicHealthObservableProperty.injuryAndDeaths-hispanic : kwg-ont:PublicHealthObservableProperty
+kwgr:publicHealthObservableProperty.injuryAndDeaths-white : kwg-ont:PublicHealthObservableProperty
+kwgr:publicHealthObservableProperty.lowBirthWeight : kwg-ont:PublicHealthObservableProperty
+kwgr:publicHealthObservableProperty.lowBirthWeight-americanIndian-alaskanNative : kwg-ont:PublicHealthObservableProperty
+kwgr:publicHealthObservableProperty.lowBirthWeight-asian-pacificIslander : kwg-ont:PublicHealthObservableProperty
+kwgr:publicHealthObservableProperty.lowBirthWeight-black : kwg-ont:PublicHealthObservableProperty
+kwgr:publicHealthObservableProperty.lowBirthWeight-hispanic : kwg-ont:PublicHealthObservableProperty
+kwgr:publicHealthObservableProperty.lowBirthWeight-white : kwg-ont:PublicHealthObservableProperty
+kwgr:publicHealthObservableProperty.mammographyScreening : kwg-ont:PublicHealthObservableProperty
+kwgr:publicHealthObservableProperty.mammographyScreening-americanIndian-alaskanNative : kwg-ont:PublicHealthObservableProperty
+kwgr:publicHealthObservableProperty.mammographyScreening-asian-pacificIslander : kwg-ont:PublicHealthObservableProperty
+kwgr:publicHealthObservableProperty.mammographyScreening-black : kwg-ont:PublicHealthObservableProperty
+kwgr:publicHealthObservableProperty.mammographyScreening-hispanic : kwg-ont:PublicHealthObservableProperty
+kwgr:publicHealthObservableProperty.mammographyScreening-white : kwg-ont:PublicHealthObservableProperty
+kwgr:publicHealthObservableProperty.mentalHealthProviders : kwg-ont:PublicHealthObservableProperty
+kwgr:publicHealthObservableProperty.obesityAgeAdjusted20PlusPercent : kwg-ont:PublicHealthObservableProperty
+kwgr:publicHealthObservableProperty.poorMentalHealthDays : kwg-ont:PublicHealthObservableProperty
+kwgr:publicHealthObservableProperty.ratioOfPopulationToMentalHealthProviders : kwg-ont:PublicHealthObservableProperty
+kwgr:publicHealthObservableProperty.uninsuredAdults : kwg-ont:PublicHealthObservableProperty
+kwgr:publicHealthObservableProperty.uninsuredChildren : kwg-ont:PublicHealthObservableProperty
+kwgr:rehabilitation : kwg-ont:HospitalType
+kwgr:roadType.C : kwg-ont:RoadType
+kwgr:roadType.I : kwg-ont:RoadType
+kwgr:roadType.M : kwg-ont:RoadType
+kwgr:roadType.O : kwg-ont:RoadType
+kwgr:roadType.S : kwg-ont:RoadType
+kwgr:roadType.U : kwg-ont:RoadType
+kwgr:smokePlumeObservableProperty.smokeDensity : kwg-ont:SmokePlumeObservableProperty
+kwgr:soilMapUnitObservableProperty.aws0150wta : kwg-ont:SoilMapUnitObservableProperty
+kwgr:soilMapUnitObservableProperty.castorieindex : kwg-ont:SoilMapUnitObservableProperty
+kwgr:soilMapUnitObservableProperty.farmlndcl : kwg-ont:SoilMapUnitObservableProperty
+kwgr:soilMapUnitObservableProperty.ffd_r : kwg-ont:SoilMapUnitObservableProperty
+kwgr:soilMapUnitObservableProperty.flodfreqdcd : kwg-ont:SoilMapUnitObservableProperty
+kwgr:soilMapUnitObservableProperty.iccdcd : kwg-ont:SoilMapUnitObservableProperty
+kwgr:soilMapUnitObservableProperty.nccpi3all : kwg-ont:SoilMapUnitObservableProperty
+kwgr:soilMapUnitObservableProperty.niccdcd : kwg-ont:SoilMapUnitObservableProperty
+kwgr:soilMapUnitObservableProperty.pondfreqprs : kwg-ont:SoilMapUnitObservableProperty
+kwgr:special : kwg-ont:HospitalType
+kwgr:stormTrackObservableProperty.category : kwg-ont:StormTrackObservableProperty
+kwgr:stormTrackObservableProperty.maxWindSpeed : kwg-ont:StormTrackObservableProperty
+kwgr:stormTrackObservableProperty.minPressure : kwg-ont:StormTrackObservableProperty
+kwgr:stormTrackletObservableProperty.category : kwg-ont:StormTrackletObservableProperty
+kwgr:stormTrackletObservableProperty.maxWindSpeed : kwg-ont:StormTrackletObservableProperty
+kwgr:stormTrackletObservableProperty.minPressure : kwg-ont:StormTrackletObservableProperty
+kwgr:vulnerabilityObservableProperty.socialVulnerabilityIndex : kwg-ont:VulnerabilityObservableProperty
+kwgr:women : kwg-ont:HospitalType
+kwgr:yes : kwg-ont:HelipadAvailability

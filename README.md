@@ -8,6 +8,7 @@ This repository contains prompt templates, prompt assets, helper scripts, notebo
 * **prompt_assets/** — JSON prompt support assets used by the SPARQL generation workflow.
 * **prompts/** — Python prompt template modules used to assemble LLM requests for SPARQL generation.
 * **results/** — SPARQL generation and evaluation outputs.
+* **schemas/** — Schema representations and generated instance data used in the experiments.
 * **scripts/** — Helper scripts and notebooks for preprocessing schemas, running experiments, and evaluating generated SPARQL.
 * `.gitignore` — Ignore rules for local, generated, cache, environment, and notebook artifacts.
 * `LICENSE` — License for the repository.

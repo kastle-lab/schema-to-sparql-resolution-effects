@@ -1,0 +1,1292 @@
+@prefix : <http://example.org/core_scholar_rich/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix coresr-ont: <http://example.org/core_scholar_rich/> .
+@base <http://example.org/core_scholar_rich/> .
+
+<http://example.org/core_scholar_rich/> rdf:type owl:Ontology ;
+                                         terms:contributor "Anmol Saini" ,
+                                                           "Antrea Christou" ,
+                                                           "Brandon Dave" ,
+                                                           "Chris Davis Jaldi" ,
+                                                           "Cogan Shimizu" ,
+                                                           "Elham Ghiasi" ;
+                                         terms:description "A rich ontology for the Core Scholar domain capturing publications, scholarly roles, identifiers, publication structure, contact information, and academic organizational context." ;
+                                         terms:title "Core Scholar Rich Ontology" ;
+                                         rdfs:label "Core Scholar Rich Ontology" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+terms:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+terms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+terms:title rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#int
+xsd:int rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#string
+xsd:string rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://example.org/core_scholar_rich/advisedBy
+coresr-ont:advisedBy rdf:type owl:ObjectProperty ;
+                     owl:inverseOf coresr-ont:advises ;
+                     rdfs:domain coresr-ont:Author ;
+                     rdfs:range coresr-ont:Advisor ;
+                     rdfs:comment "Relates an author to the advisor associated with that author." ;
+                     rdfs:label "advisedBy" .
+
+
+###  http://example.org/core_scholar_rich/advises
+coresr-ont:advises rdf:type owl:ObjectProperty ;
+                   rdfs:domain coresr-ont:Advisor ;
+                   rdfs:range coresr-ont:Author ;
+                   rdfs:comment "Relates an advisor to an author advised by that advisor." ;
+                   rdfs:label "advises" .
+
+
+###  http://example.org/core_scholar_rich/associatedFieldOfStudy
+coresr-ont:associatedFieldOfStudy rdf:type owl:ObjectProperty ;
+                                  owl:inverseOf coresr-ont:isFieldOfStudyOf ;
+                                  rdfs:domain coresr-ont:Publication ;
+                                  rdfs:range coresr-ont:FieldOfStudy ;
+                                  rdfs:comment "Relates a publication to a field of study associated with it." ;
+                                  rdfs:label "associatedFieldOfStudy" .
+
+
+###  http://example.org/core_scholar_rich/associatedWith
+coresr-ont:associatedWith rdf:type owl:ObjectProperty ;
+                          owl:inverseOf coresr-ont:hasAssociatedAgent ;
+                          rdfs:domain coresr-ont:Agent ;
+                          rdfs:range coresr-ont:Department ;
+                          rdfs:comment "Relates an agent to a department with which the agent is associated." ;
+                          rdfs:label "associatedWith" .
+
+
+###  http://example.org/core_scholar_rich/atState
+coresr-ont:atState rdf:type owl:ObjectProperty ;
+                   owl:inverseOf coresr-ont:isStateOf ;
+                   rdfs:domain coresr-ont:Location ;
+                   rdfs:range coresr-ont:State ;
+                   rdfs:comment "Relates a location to the state in which it is situated." ;
+                   rdfs:label "atState" .
+
+
+###  http://example.org/core_scholar_rich/contributedTo
+coresr-ont:contributedTo rdf:type owl:ObjectProperty ;
+                         owl:inverseOf coresr-ont:hasContributor ;
+                         rdfs:domain coresr-ont:Contributor ;
+                         rdfs:range coresr-ont:Publication ;
+                         rdfs:comment "Relates a contributor role to a publication it contributed to." ;
+                         rdfs:label "contributedTo" .
+
+
+###  http://example.org/core_scholar_rich/hasAbstract
+coresr-ont:hasAbstract rdf:type owl:ObjectProperty ;
+                       owl:inverseOf coresr-ont:isAbstractOf ;
+                       rdfs:domain coresr-ont:Publication ;
+                       rdfs:range coresr-ont:Abstract ;
+                       rdfs:comment "Relates a publication to its abstract." ;
+                       rdfs:label "hasAbstract" .
+
+
+###  http://example.org/core_scholar_rich/hasAssociatedAgent
+coresr-ont:hasAssociatedAgent rdf:type owl:ObjectProperty ;
+                              rdfs:domain coresr-ont:Department ;
+                              rdfs:range coresr-ont:Agent ;
+                              rdfs:comment "Relates a department to an agent associated with it." ;
+                              rdfs:label "hasAssociatedAgent" .
+
+
+###  http://example.org/core_scholar_rich/hasContactInformation
+coresr-ont:hasContactInformation rdf:type owl:ObjectProperty ;
+                                 owl:inverseOf coresr-ont:isContactInformationFor ;
+                                 rdfs:domain coresr-ont:Agent ;
+                                 rdfs:range coresr-ont:ContactInformation ;
+                                 rdfs:comment "Relates an agent to contact information for that agent." ;
+                                 rdfs:label "hasContactInformation" .
+
+
+###  http://example.org/core_scholar_rich/hasContributor
+coresr-ont:hasContributor rdf:type owl:ObjectProperty ;
+                          rdfs:domain coresr-ont:Publication ;
+                          rdfs:range coresr-ont:Contributor ;
+                          rdfs:comment "Relates a publication to a contributor role associated with it." ;
+                          rdfs:label "hasContributor" .
+
+
+###  http://example.org/core_scholar_rich/hasIdentifier
+coresr-ont:hasIdentifier rdf:type owl:ObjectProperty ;
+                         owl:inverseOf coresr-ont:isIdentifierFor ;
+                         rdf:type owl:FunctionalProperty ;
+                         rdfs:domain coresr-ont:Publication ;
+                         rdfs:range coresr-ont:DOI ;
+                         rdfs:comment "Relates a publication to its DOI identifier." ;
+                         rdfs:label "hasIdentifier" .
+
+
+###  http://example.org/core_scholar_rich/hasIssue
+coresr-ont:hasIssue rdf:type owl:ObjectProperty ;
+                    owl:inverseOf coresr-ont:isIssueOf ;
+                    rdfs:domain coresr-ont:PeriodicalLiterature ;
+                    rdfs:range coresr-ont:Issue ;
+                    rdfs:comment "Relates periodical literature to one of its issues." ;
+                    rdfs:label "hasIssue" .
+
+
+###  http://example.org/core_scholar_rich/hasPart
+coresr-ont:hasPart rdf:type owl:ObjectProperty ;
+                   owl:inverseOf coresr-ont:partOf ;
+                   rdf:type owl:AsymmetricProperty ,
+                            owl:IrreflexiveProperty ;
+                   rdfs:domain [ rdf:type owl:Class ;
+                                 owl:unionOf ( coresr-ont:Article
+                                               coresr-ont:College
+                                               coresr-ont:University
+                                             )
+                               ] ;
+                   rdfs:range [ rdf:type owl:Class ;
+                                owl:unionOf ( coresr-ont:College
+                                              coresr-ont:Department
+                                              coresr-ont:Publication
+                                            )
+                              ] ;
+                   rdfs:comment "Relates an entity to another entity that forms one of its parts." ;
+                   rdfs:label "hasPart" .
+
+
+###  http://example.org/core_scholar_rich/hasPublicationType
+coresr-ont:hasPublicationType rdf:type owl:ObjectProperty ;
+                              owl:inverseOf coresr-ont:isPublicationTypeOf ;
+                              rdf:type owl:FunctionalProperty ;
+                              rdfs:domain coresr-ont:Publication ;
+                              rdfs:range coresr-ont:PublicationType ;
+                              rdfs:comment "Relates a publication to its publication type." ;
+                              rdfs:label "hasPublicationType" .
+
+
+###  http://example.org/core_scholar_rich/hasState
+coresr-ont:hasState rdf:type owl:ObjectProperty ;
+                    owl:inverseOf coresr-ont:inCity ;
+                    rdfs:domain coresr-ont:City ;
+                    rdfs:range coresr-ont:State ;
+                    rdfs:comment "Relates a city to a state associated with it." ;
+                    rdfs:label "hasState" .
+
+
+###  http://example.org/core_scholar_rich/hasVolume
+coresr-ont:hasVolume rdf:type owl:ObjectProperty ;
+                     owl:inverseOf coresr-ont:isVolumeOf ;
+                     rdfs:domain coresr-ont:PeriodicalLiterature ;
+                     rdfs:range coresr-ont:Volume ;
+                     rdfs:comment "Relates periodical literature to one of its volumes." ;
+                     rdfs:label "hasVolume" .
+
+
+###  http://example.org/core_scholar_rich/inCity
+coresr-ont:inCity rdf:type owl:ObjectProperty ;
+                  rdfs:domain coresr-ont:State ;
+                  rdfs:range coresr-ont:City ;
+                  rdfs:comment "Relates a state to a city associated with it." ;
+                  rdfs:label "inCity" .
+
+
+###  http://example.org/core_scholar_rich/isAbstractOf
+coresr-ont:isAbstractOf rdf:type owl:ObjectProperty ;
+                        rdfs:domain coresr-ont:Abstract ;
+                        rdfs:range coresr-ont:Publication ;
+                        rdfs:comment "Relates an abstract to the publication it describes." ;
+                        rdfs:label "isAbstractOf" .
+
+
+###  http://example.org/core_scholar_rich/isContactInformationFor
+coresr-ont:isContactInformationFor rdf:type owl:ObjectProperty ;
+                                   rdfs:domain coresr-ont:ContactInformation ;
+                                   rdfs:range coresr-ont:Agent ;
+                                   rdfs:comment "Relates contact information to the agent it describes." ;
+                                   rdfs:label "isContactInformationFor" .
+
+
+###  http://example.org/core_scholar_rich/isFieldOfStudyOf
+coresr-ont:isFieldOfStudyOf rdf:type owl:ObjectProperty ;
+                            rdfs:domain coresr-ont:FieldOfStudy ;
+                            rdfs:range coresr-ont:Publication ;
+                            rdfs:comment "Relates a field of study to a publication associated with it." ;
+                            rdfs:label "isFieldOfStudyOf" .
+
+
+###  http://example.org/core_scholar_rich/isIdentifierFor
+coresr-ont:isIdentifierFor rdf:type owl:ObjectProperty ;
+                           rdfs:domain coresr-ont:DOI ;
+                           rdfs:range coresr-ont:Publication ;
+                           rdfs:comment "Relates a DOI identifier to the publication it identifies." ;
+                           rdfs:label "isIdentifierFor" .
+
+
+###  http://example.org/core_scholar_rich/isIssueOf
+coresr-ont:isIssueOf rdf:type owl:ObjectProperty ;
+                     rdfs:domain coresr-ont:Issue ;
+                     rdfs:range coresr-ont:PeriodicalLiterature ;
+                     rdfs:comment "Relates an issue to the periodical literature it belongs to." ;
+                     rdfs:label "isIssueOf" .
+
+
+###  http://example.org/core_scholar_rich/isLocationOf
+coresr-ont:isLocationOf rdf:type owl:ObjectProperty ;
+                        owl:inverseOf coresr-ont:locatedAt ;
+                        rdfs:domain coresr-ont:Location ;
+                        rdfs:range coresr-ont:University ;
+                        rdfs:comment "Relates a location to a university located there." ;
+                        rdfs:label "isLocationOf" .
+
+
+###  http://example.org/core_scholar_rich/isPerformedBy
+coresr-ont:isPerformedBy rdf:type owl:ObjectProperty ;
+                         owl:inverseOf coresr-ont:performsRole ;
+                         rdfs:domain coresr-ont:Role ;
+                         rdfs:range coresr-ont:Agent ;
+                         rdfs:comment "Relates a role to the agent that performs it." ;
+                         rdfs:label "isPerformedBy" .
+
+
+###  http://example.org/core_scholar_rich/isPublicationStateOf
+coresr-ont:isPublicationStateOf rdf:type owl:ObjectProperty ;
+                                owl:inverseOf coresr-ont:publicationState ;
+                                rdfs:domain coresr-ont:ProcessState ;
+                                rdfs:range coresr-ont:Publication ;
+                                rdfs:comment "Relates a process state to a publication in that state." ;
+                                rdfs:label "isPublicationStateOf" .
+
+
+###  http://example.org/core_scholar_rich/isPublicationTypeOf
+coresr-ont:isPublicationTypeOf rdf:type owl:ObjectProperty ;
+                               rdfs:domain coresr-ont:PublicationType ;
+                               rdfs:range coresr-ont:Publication ;
+                               rdfs:comment "Relates a publication type to a publication categorized by it." ;
+                               rdfs:label "isPublicationTypeOf" .
+
+
+###  http://example.org/core_scholar_rich/isStateOf
+coresr-ont:isStateOf rdf:type owl:ObjectProperty ;
+                     rdfs:domain coresr-ont:State ;
+                     rdfs:range coresr-ont:Location ;
+                     rdfs:comment "Relates a state to a location situated in it." ;
+                     rdfs:label "isStateOf" .
+
+
+###  http://example.org/core_scholar_rich/isVolumeOf
+coresr-ont:isVolumeOf rdf:type owl:ObjectProperty ;
+                      rdfs:domain coresr-ont:Volume ;
+                      rdfs:range coresr-ont:PeriodicalLiterature ;
+                      rdfs:comment "Relates a volume to the periodical literature it belongs to." ;
+                      rdfs:label "isVolumeOf" .
+
+
+###  http://example.org/core_scholar_rich/locatedAt
+coresr-ont:locatedAt rdf:type owl:ObjectProperty ,
+                              owl:FunctionalProperty ;
+                     rdfs:domain coresr-ont:University ;
+                     rdfs:range coresr-ont:Location ;
+                     rdfs:comment "Relates a university to a location." ;
+                     rdfs:label "locatedAt" .
+
+
+###  http://example.org/core_scholar_rich/partOf
+coresr-ont:partOf rdf:type owl:ObjectProperty ,
+                           owl:AsymmetricProperty ,
+                           owl:IrreflexiveProperty ;
+                  rdfs:domain [ rdf:type owl:Class ;
+                                owl:unionOf ( coresr-ont:College
+                                              coresr-ont:Department
+                                              coresr-ont:Publication
+                                            )
+                              ] ;
+                  rdfs:range [ rdf:type owl:Class ;
+                               owl:unionOf ( coresr-ont:Article
+                                             coresr-ont:College
+                                             coresr-ont:University
+                                           )
+                             ] ;
+                  rdfs:comment "Relates an entity to a larger entity of which it is a part." ;
+                  rdfs:label "partOf" .
+
+
+###  http://example.org/core_scholar_rich/performsRole
+coresr-ont:performsRole rdf:type owl:ObjectProperty ;
+                        rdfs:domain coresr-ont:Agent ;
+                        rdfs:range coresr-ont:Role ;
+                        rdfs:comment "Relates an agent to a role that the agent performs." ;
+                        rdfs:label "performsRole" .
+
+
+###  http://example.org/core_scholar_rich/publicationState
+coresr-ont:publicationState rdf:type owl:ObjectProperty ,
+                                     owl:FunctionalProperty ;
+                            rdfs:domain coresr-ont:Publication ;
+                            rdfs:range coresr-ont:ProcessState ;
+                            rdfs:comment "Relates a publication to its current process state." ;
+                            rdfs:label "publicationState" .
+
+
+###  http://example.org/core_scholar_rich/submits
+coresr-ont:submits rdf:type owl:ObjectProperty ;
+                   owl:inverseOf coresr-ont:submittedBy ;
+                   rdfs:domain coresr-ont:Author ;
+                   rdfs:range coresr-ont:Publication ;
+                   rdfs:comment "Relates an author to a publication submitted by that author." ;
+                   rdfs:label "submits" .
+
+
+###  http://example.org/core_scholar_rich/submittedBy
+coresr-ont:submittedBy rdf:type owl:ObjectProperty ,
+                                owl:FunctionalProperty ;
+                       rdfs:domain coresr-ont:Publication ;
+                       rdfs:range coresr-ont:Author ;
+                       rdfs:comment "Relates a publication to the author who submitted it." ;
+                       rdfs:label "submittedBy" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://example.org/core_scholar_rich/atTime
+coresr-ont:atTime rdf:type owl:DatatypeProperty ,
+                           owl:FunctionalProperty ;
+                  rdfs:domain coresr-ont:ProcessState ;
+                  rdfs:range xsd:date ;
+                  rdfs:comment "Specifies the date associated with a process state." ;
+                  rdfs:label "atTime" .
+
+
+###  http://example.org/core_scholar_rich/dateOfPost
+coresr-ont:dateOfPost rdf:type owl:DatatypeProperty ,
+                               owl:FunctionalProperty ;
+                      rdfs:domain coresr-ont:Publication ;
+                      rdfs:range xsd:date ;
+                      rdfs:comment "Specifies the posting date of a publication." ;
+                      rdfs:label "dateOfPost" .
+
+
+###  http://example.org/core_scholar_rich/dateOfPublication
+coresr-ont:dateOfPublication rdf:type owl:DatatypeProperty ,
+                                      owl:FunctionalProperty ;
+                             rdfs:domain coresr-ont:Publication ;
+                             rdfs:range xsd:date ;
+                             rdfs:comment "Specifies the publication date of a publication." ;
+                             rdfs:label "dateOfPublication" .
+
+
+###  http://example.org/core_scholar_rich/dateOfSubmission
+coresr-ont:dateOfSubmission rdf:type owl:DatatypeProperty ,
+                                     owl:FunctionalProperty ;
+                            rdfs:domain coresr-ont:Publication ;
+                            rdfs:range xsd:date ;
+                            rdfs:comment "Specifies the submission date of a publication." ;
+                            rdfs:label "dateOfSubmission" .
+
+
+###  http://example.org/core_scholar_rich/doiAsString
+coresr-ont:doiAsString rdf:type owl:DatatypeProperty ,
+                                owl:FunctionalProperty ;
+                       rdfs:domain coresr-ont:DOI ;
+                       rdfs:range xsd:string ;
+                       rdfs:comment "Provides the literal DOI string." ;
+                       rdfs:label "doiAsString" .
+
+
+###  http://example.org/core_scholar_rich/hasDescription
+coresr-ont:hasDescription rdf:type owl:DatatypeProperty ,
+                                   owl:FunctionalProperty ;
+                          rdfs:domain coresr-ont:Abstract ;
+                          rdfs:range xsd:string ;
+                          rdfs:comment "Provides the description text of an abstract." ;
+                          rdfs:label "hasDescription" .
+
+
+###  http://example.org/core_scholar_rich/hasNumericIdentifier
+coresr-ont:hasNumericIdentifier rdf:type owl:DatatypeProperty ,
+                                         owl:FunctionalProperty ;
+                                rdfs:domain coresr-ont:Article ;
+                                rdfs:range xsd:int ;
+                                rdfs:comment "Provides a numeric identifier for an article." ;
+                                rdfs:label "hasNumericIdentifier" .
+
+
+###  http://example.org/core_scholar_rich/hasTitle
+coresr-ont:hasTitle rdf:type owl:DatatypeProperty ,
+                             owl:FunctionalProperty ;
+                    rdfs:domain coresr-ont:Publication ;
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Provides the title of a publication." ;
+                    rdfs:label "hasTitle" .
+
+
+###  http://example.org/core_scholar_rich/issueNumber
+coresr-ont:issueNumber rdf:type owl:DatatypeProperty ,
+                                owl:FunctionalProperty ;
+                       rdfs:domain coresr-ont:Issue ;
+                       rdfs:range xsd:int ;
+                       rdfs:comment "Provides the issue number of an issue." ;
+                       rdfs:label "issueNumber" .
+
+
+###  http://example.org/core_scholar_rich/nameAsString
+coresr-ont:nameAsString rdf:type owl:DatatypeProperty ,
+                                 owl:FunctionalProperty ;
+                        rdfs:domain coresr-ont:Name ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "Provides the lexical string of a name." ;
+                        rdfs:label "nameAsString" .
+
+
+###  http://example.org/core_scholar_rich/stateAsString
+coresr-ont:stateAsString rdf:type owl:DatatypeProperty ,
+                                  owl:FunctionalProperty ;
+                         rdfs:domain coresr-ont:ProcessState ;
+                         rdfs:range xsd:string ;
+                         rdfs:comment "Provides the textual value of a process state." ;
+                         rdfs:label "stateAsString" .
+
+
+###  http://example.org/core_scholar_rich/typeAsString
+coresr-ont:typeAsString rdf:type owl:DatatypeProperty ,
+                                 owl:FunctionalProperty ;
+                        rdfs:domain coresr-ont:PublicationType ;
+                        rdfs:range xsd:string ;
+                        rdfs:comment "Provides the textual value of a publication type." ;
+                        rdfs:label "typeAsString" .
+
+
+###  http://example.org/core_scholar_rich/volumeNumber
+coresr-ont:volumeNumber rdf:type owl:DatatypeProperty ,
+                                 owl:FunctionalProperty ;
+                        rdfs:domain coresr-ont:Volume ;
+                        rdfs:range xsd:int ;
+                        rdfs:comment "Provides the volume number of a volume." ;
+                        rdfs:label "volumeNumber" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.org/core_scholar_rich/Abstract
+coresr-ont:Abstract rdf:type owl:Class ;
+                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                      owl:onProperty coresr-ont:isAbstractOf ;
+                                      owl:someValuesFrom coresr-ont:Publication
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty coresr-ont:hasDescription ;
+                                      owl:someValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty coresr-ont:hasDescription ;
+                                      owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                      owl:onDataRange xsd:string
+                                    ] ;
+                    owl:disjointWith coresr-ont:Agent ,
+                                     coresr-ont:Publication ;
+                    rdfs:comment "An abstract associated with a publication." ;
+                    rdfs:label "Abstract" .
+
+
+###  http://example.org/core_scholar_rich/AcademicConcentration
+coresr-ont:AcademicConcentration rdf:type owl:Class ;
+                                 rdfs:subClassOf coresr-ont:FieldOfStudy ;
+                                 rdfs:comment "A specialized academic concentration within a field of study." ;
+                                 rdfs:label "AcademicConcentration" .
+
+
+###  http://example.org/core_scholar_rich/Advisor
+coresr-ont:Advisor rdf:type owl:Class ;
+                   rdfs:subClassOf coresr-ont:Role ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty coresr-ont:advises ;
+                                     owl:someValuesFrom coresr-ont:Author
+                                   ] ;
+                   rdfs:comment "A scholarly advisory role." ;
+                   rdfs:label "Advisor" .
+
+
+###  http://example.org/core_scholar_rich/Agent
+coresr-ont:Agent rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty coresr-ont:associatedWith ;
+                                   owl:someValuesFrom coresr-ont:Department
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty coresr-ont:hasContactInformation ;
+                                   owl:someValuesFrom coresr-ont:ContactInformation
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty coresr-ont:performsRole ;
+                                   owl:someValuesFrom coresr-ont:Role
+                                 ] ;
+                 owl:disjointWith coresr-ont:College ,
+                                  coresr-ont:DOI ,
+                                  coresr-ont:Department ,
+                                  coresr-ont:Location ,
+                                  coresr-ont:ProcessState ,
+                                  coresr-ont:Publication ,
+                                  coresr-ont:PublicationType ,
+                                  coresr-ont:University ;
+                 rdfs:comment "An actor participating in scholarly activity." ;
+                 rdfs:label "Agent" .
+
+
+###  http://example.org/core_scholar_rich/Article
+coresr-ont:Article rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty coresr-ont:hasNumericIdentifier ;
+                                     owl:someValuesFrom xsd:int
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty coresr-ont:hasNumericIdentifier ;
+                                     owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:int
+                                   ] ;
+                   rdfs:comment "An article-level publication component." ;
+                   rdfs:label "Article" .
+
+
+###  http://example.org/core_scholar_rich/Author
+coresr-ont:Author rdf:type owl:Class ;
+                  rdfs:subClassOf coresr-ont:Role ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty coresr-ont:advisedBy ;
+                                    owl:someValuesFrom coresr-ont:Advisor
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty coresr-ont:submits ;
+                                    owl:someValuesFrom coresr-ont:Publication
+                                  ] ;
+                  rdfs:comment "A role representing authorship." ;
+                  rdfs:label "Author" .
+
+
+###  http://example.org/core_scholar_rich/City
+coresr-ont:City rdf:type owl:Class ;
+                owl:disjointWith coresr-ont:College ,
+                                 coresr-ont:Location ,
+                                 coresr-ont:University ;
+                rdfs:comment "A city associated with a state." ;
+                rdfs:label "City" .
+
+
+###  http://example.org/core_scholar_rich/College
+coresr-ont:College rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty coresr-ont:hasPart ;
+                                     owl:someValuesFrom coresr-ont:Department
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty coresr-ont:partOf ;
+                                     owl:someValuesFrom coresr-ont:University
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty coresr-ont:partOf ;
+                                     owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass coresr-ont:University
+                                   ] ;
+                   owl:disjointWith coresr-ont:ContactInformation ,
+                                    coresr-ont:Department ,
+                                    coresr-ont:Location ,
+                                    coresr-ont:Publication ,
+                                    coresr-ont:State ,
+                                    coresr-ont:University ;
+                   rdfs:comment "A college within a university." ;
+                   rdfs:label "College" .
+
+
+###  http://example.org/core_scholar_rich/ContactInformation
+coresr-ont:ContactInformation rdf:type owl:Class ;
+                              owl:disjointWith coresr-ont:Department ,
+                                               coresr-ont:Publication ,
+                                               coresr-ont:University ;
+                              rdfs:comment "Contact information associated with an agent." ;
+                              rdfs:label "ContactInformation" .
+
+
+###  http://example.org/core_scholar_rich/Contributor
+coresr-ont:Contributor rdf:type owl:Class ;
+                       rdfs:subClassOf coresr-ont:Role ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty coresr-ont:contributedTo ;
+                                         owl:someValuesFrom coresr-ont:Publication
+                                       ] ;
+                       rdfs:comment "A role representing contribution to a publication." ;
+                       rdfs:label "Contributor" .
+
+
+###  http://example.org/core_scholar_rich/DOI
+coresr-ont:DOI rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty coresr-ont:isIdentifierFor ;
+                                 owl:someValuesFrom coresr-ont:Publication
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty coresr-ont:doiAsString ;
+                                 owl:someValuesFrom xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty coresr-ont:doiAsString ;
+                                 owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange xsd:string
+                               ] ;
+               owl:disjointWith coresr-ont:Location ,
+                                coresr-ont:Publication ;
+               rdfs:comment "A DOI identifier associated with a publication." ;
+               rdfs:label "DOI" .
+
+
+###  http://example.org/core_scholar_rich/Department
+coresr-ont:Department rdf:type owl:Class ;
+                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                        owl:onProperty coresr-ont:hasAssociatedAgent ;
+                                        owl:someValuesFrom coresr-ont:Agent
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty coresr-ont:partOf ;
+                                        owl:someValuesFrom coresr-ont:College
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty coresr-ont:partOf ;
+                                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onClass coresr-ont:College
+                                      ] ;
+                      owl:disjointWith coresr-ont:Publication ,
+                                       coresr-ont:University ;
+                      rdfs:comment "An academic department within a college." ;
+                      rdfs:label "Department" .
+
+
+###  http://example.org/core_scholar_rich/Discipline
+coresr-ont:Discipline rdf:type owl:Class ;
+                      rdfs:subClassOf coresr-ont:FieldOfStudy ;
+                      rdfs:comment "A discipline within a broader field of study." ;
+                      rdfs:label "Discipline" .
+
+
+###  http://example.org/core_scholar_rich/EmailAddress
+coresr-ont:EmailAddress rdf:type owl:Class ;
+                        rdfs:subClassOf coresr-ont:ContactInformation ;
+                        rdfs:comment "An email address as contact information." ;
+                        rdfs:label "EmailAddress" .
+
+
+###  http://example.org/core_scholar_rich/FamilyName
+coresr-ont:FamilyName rdf:type owl:Class ;
+                      rdfs:subClassOf coresr-ont:Name ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty coresr-ont:nameAsString ;
+                                        owl:someValuesFrom xsd:string
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty coresr-ont:nameAsString ;
+                                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onDataRange xsd:string
+                                      ] ;
+                      rdfs:comment "A family name component of a name." ;
+                      rdfs:label "FamilyName" .
+
+
+###  http://example.org/core_scholar_rich/FieldOfStudy
+coresr-ont:FieldOfStudy rdf:type owl:Class ;
+                        rdfs:comment "A field of scholarly study." ;
+                        rdfs:label "FieldOfStudy" .
+
+
+###  http://example.org/core_scholar_rich/FirstName
+coresr-ont:FirstName rdf:type owl:Class ;
+                     rdfs:subClassOf coresr-ont:Name ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty coresr-ont:nameAsString ;
+                                       owl:someValuesFrom xsd:string
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty coresr-ont:nameAsString ;
+                                       owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onDataRange xsd:string
+                                     ] ;
+                     rdfs:comment "A first or given name component of a name." ;
+                     rdfs:label "FirstName" .
+
+
+###  http://example.org/core_scholar_rich/Issue
+coresr-ont:Issue rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty coresr-ont:isIssueOf ;
+                                   owl:someValuesFrom coresr-ont:PeriodicalLiterature
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty coresr-ont:issueNumber ;
+                                   owl:someValuesFrom xsd:int
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty coresr-ont:issueNumber ;
+                                   owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange xsd:int
+                                 ] ;
+                 owl:disjointWith coresr-ont:Publication ,
+                                  coresr-ont:Volume ;
+                 rdfs:comment "An issue of a periodical literature resource." ;
+                 rdfs:label "Issue" .
+
+
+###  http://example.org/core_scholar_rich/Location
+coresr-ont:Location rdf:type owl:Class ;
+                    rdfs:subClassOf coresr-ont:SpatialExtent ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty coresr-ont:atState ;
+                                      owl:someValuesFrom coresr-ont:State
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty coresr-ont:isLocationOf ;
+                                      owl:someValuesFrom coresr-ont:University
+                                    ] ;
+                    owl:disjointWith coresr-ont:ProcessState ,
+                                     coresr-ont:Publication ,
+                                     coresr-ont:State ,
+                                     coresr-ont:University ;
+                    rdfs:comment "A location associated with a university." ;
+                    rdfs:label "Location" .
+
+
+###  http://example.org/core_scholar_rich/Name
+coresr-ont:Name rdf:type owl:Class ;
+                rdfs:subClassOf coresr-ont:ContactInformation ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty coresr-ont:nameAsString ;
+                                  owl:someValuesFrom xsd:string
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty coresr-ont:nameAsString ;
+                                  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:string
+                                ] ;
+                rdfs:comment "A name represented as contact information." ;
+                rdfs:label "Name" .
+
+
+###  http://example.org/core_scholar_rich/PeriodicalLiterature
+coresr-ont:PeriodicalLiterature rdf:type owl:Class ;
+                                rdfs:subClassOf coresr-ont:Article ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty coresr-ont:hasIssue ;
+                                                  owl:someValuesFrom coresr-ont:Issue
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty coresr-ont:hasVolume ;
+                                                  owl:someValuesFrom coresr-ont:Volume
+                                                ] ;
+                                rdfs:comment "A periodical literature resource composed of issues and volumes." ;
+                                rdfs:label "PeriodicalLiterature" .
+
+
+###  http://example.org/core_scholar_rich/PhoneNumber
+coresr-ont:PhoneNumber rdf:type owl:Class ;
+                       rdfs:subClassOf coresr-ont:ContactInformation ;
+                       rdfs:comment "A phone number as contact information." ;
+                       rdfs:label "PhoneNumber" .
+
+
+###  http://example.org/core_scholar_rich/ProcessState
+coresr-ont:ProcessState rdf:type owl:Class ;
+                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                          owl:onProperty coresr-ont:isPublicationStateOf ;
+                                          owl:someValuesFrom coresr-ont:Publication
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty coresr-ont:atTime ;
+                                          owl:someValuesFrom xsd:date
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty coresr-ont:stateAsString ;
+                                          owl:someValuesFrom xsd:string
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty coresr-ont:atTime ;
+                                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onDataRange xsd:date
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty coresr-ont:stateAsString ;
+                                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onDataRange xsd:string
+                                        ] ;
+                        owl:disjointWith coresr-ont:Publication ;
+                        rdfs:comment "A process state associated with a publication lifecycle." ;
+                        rdfs:label "ProcessState" .
+
+
+###  http://example.org/core_scholar_rich/Publication
+coresr-ont:Publication rdf:type owl:Class ;
+                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty coresr-ont:associatedFieldOfStudy ;
+                                         owl:someValuesFrom coresr-ont:FieldOfStudy
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty coresr-ont:hasAbstract ;
+                                         owl:someValuesFrom coresr-ont:Abstract
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty coresr-ont:hasIdentifier ;
+                                         owl:someValuesFrom coresr-ont:DOI
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty coresr-ont:hasPublicationType ;
+                                         owl:someValuesFrom coresr-ont:PublicationType
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty coresr-ont:partOf ;
+                                         owl:someValuesFrom coresr-ont:Article
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty coresr-ont:publicationState ;
+                                         owl:someValuesFrom coresr-ont:ProcessState
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty coresr-ont:submittedBy ;
+                                         owl:someValuesFrom coresr-ont:Author
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty coresr-ont:hasIdentifier ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass coresr-ont:DOI
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty coresr-ont:hasPublicationType ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass coresr-ont:PublicationType
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty coresr-ont:publicationState ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass coresr-ont:ProcessState
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty coresr-ont:submittedBy ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass coresr-ont:Author
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty coresr-ont:dateOfPost ;
+                                         owl:someValuesFrom xsd:date
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty coresr-ont:dateOfPublication ;
+                                         owl:someValuesFrom xsd:date
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty coresr-ont:dateOfSubmission ;
+                                         owl:someValuesFrom xsd:date
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty coresr-ont:hasTitle ;
+                                         owl:someValuesFrom xsd:string
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty coresr-ont:dateOfPost ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onDataRange xsd:date
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty coresr-ont:dateOfPublication ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onDataRange xsd:date
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty coresr-ont:dateOfSubmission ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onDataRange xsd:date
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty coresr-ont:hasTitle ;
+                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onDataRange xsd:string
+                                       ] ;
+                       owl:disjointWith coresr-ont:PublicationType ,
+                                        coresr-ont:University ,
+                                        coresr-ont:Volume ;
+                       rdfs:comment "A scholarly publication with metadata, identifiers, and state." ;
+                       rdfs:label "Publication" .
+
+
+###  http://example.org/core_scholar_rich/PublicationType
+coresr-ont:PublicationType rdf:type owl:Class ;
+                           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                             owl:onProperty coresr-ont:isPublicationTypeOf ;
+                                             owl:someValuesFrom coresr-ont:Publication
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty coresr-ont:typeAsString ;
+                                             owl:someValuesFrom xsd:string
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty coresr-ont:typeAsString ;
+                                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                             owl:onDataRange xsd:string
+                                           ] ;
+                           rdfs:comment "A category describing the type of a publication." ;
+                           rdfs:label "PublicationType" .
+
+
+###  http://example.org/core_scholar_rich/Role
+coresr-ont:Role rdf:type owl:Class ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty coresr-ont:isPerformedBy ;
+                                  owl:someValuesFrom coresr-ont:Agent
+                                ] ;
+                rdfs:comment "A role performed by an agent in the scholarly domain." ;
+                rdfs:label "Role" .
+
+
+###  http://example.org/core_scholar_rich/SpatialExtent
+coresr-ont:SpatialExtent rdf:type owl:Class ;
+                         rdfs:comment "A spatial extent used to contextualize locations." ;
+                         rdfs:label "SpatialExtent" .
+
+
+###  http://example.org/core_scholar_rich/State
+coresr-ont:State rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty coresr-ont:inCity ;
+                                   owl:someValuesFrom coresr-ont:City
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty coresr-ont:isStateOf ;
+                                   owl:someValuesFrom coresr-ont:Location
+                                 ] ;
+                 owl:disjointWith coresr-ont:University ;
+                 rdfs:comment "A state associated with a location." ;
+                 rdfs:label "State" .
+
+
+###  http://example.org/core_scholar_rich/University
+coresr-ont:University rdf:type owl:Class ;
+                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                        owl:onProperty coresr-ont:hasPart ;
+                                        owl:someValuesFrom coresr-ont:College
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty coresr-ont:locatedAt ;
+                                        owl:someValuesFrom coresr-ont:Location
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty coresr-ont:locatedAt ;
+                                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                        owl:onClass coresr-ont:Location
+                                      ] ;
+                      rdfs:comment "A university associated with a location and containing colleges." ;
+                      rdfs:label "University" .
+
+
+###  http://example.org/core_scholar_rich/Volume
+coresr-ont:Volume rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty coresr-ont:isVolumeOf ;
+                                    owl:someValuesFrom coresr-ont:PeriodicalLiterature
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty coresr-ont:volumeNumber ;
+                                    owl:someValuesFrom xsd:int
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty coresr-ont:volumeNumber ;
+                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onDataRange xsd:int
+                                  ] ;
+                  rdfs:comment "A volume of a periodical literature resource." ;
+                  rdfs:label "Volume" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:advisedBy ;
+                         owl:someValuesFrom coresr-ont:Advisor
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:submits ;
+                         owl:someValuesFrom coresr-ont:Publication
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf coresr-ont:Author
+] .
+
+
+[ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:associatedFieldOfStudy ;
+                         owl:someValuesFrom coresr-ont:FieldOfStudy
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:hasAbstract ;
+                         owl:someValuesFrom coresr-ont:Abstract
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:hasIdentifier ;
+                         owl:someValuesFrom coresr-ont:DOI
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:hasPublicationType ;
+                         owl:someValuesFrom coresr-ont:PublicationType
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:partOf ;
+                         owl:someValuesFrom coresr-ont:Article
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:publicationState ;
+                         owl:someValuesFrom coresr-ont:ProcessState
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:submittedBy ;
+                         owl:someValuesFrom coresr-ont:Author
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:hasTitle ;
+                         owl:someValuesFrom xsd:string
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf coresr-ont:Publication
+] .
+
+
+[ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:associatedWith ;
+                         owl:someValuesFrom coresr-ont:Department
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:hasContactInformation ;
+                         owl:someValuesFrom coresr-ont:ContactInformation
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:performsRole ;
+                         owl:someValuesFrom coresr-ont:Role
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf coresr-ont:Agent
+] .
+
+
+[ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:atState ;
+                         owl:someValuesFrom coresr-ont:State
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:isLocationOf ;
+                         owl:someValuesFrom coresr-ont:University
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf coresr-ont:Location
+] .
+
+
+[ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:contributedTo ;
+                         owl:someValuesFrom coresr-ont:Publication
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:isPerformedBy ;
+                         owl:someValuesFrom coresr-ont:Agent
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf coresr-ont:Contributor
+] .
+
+
+[ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:hasAssociatedAgent ;
+                         owl:someValuesFrom coresr-ont:Agent
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:partOf ;
+                         owl:someValuesFrom coresr-ont:College
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf coresr-ont:Department
+] .
+
+
+[ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:hasIssue ;
+                         owl:someValuesFrom coresr-ont:Issue
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:hasVolume ;
+                         owl:someValuesFrom coresr-ont:Volume
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf coresr-ont:PeriodicalLiterature
+] .
+
+
+[ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:hasPart ;
+                         owl:someValuesFrom coresr-ont:College
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:locatedAt ;
+                         owl:someValuesFrom coresr-ont:Location
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf coresr-ont:University
+] .
+
+
+[ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:hasPart ;
+                         owl:someValuesFrom coresr-ont:Department
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:partOf ;
+                         owl:someValuesFrom coresr-ont:University
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf coresr-ont:College
+] .
+
+
+[ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:inCity ;
+                         owl:someValuesFrom coresr-ont:City
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:isStateOf ;
+                         owl:someValuesFrom coresr-ont:Location
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf coresr-ont:State
+] .
+
+
+[ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:isAbstractOf ;
+                         owl:someValuesFrom coresr-ont:Publication
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:hasDescription ;
+                         owl:someValuesFrom xsd:string
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf coresr-ont:Abstract
+] .
+
+
+[ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:isIdentifierFor ;
+                         owl:someValuesFrom coresr-ont:Publication
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:doiAsString ;
+                         owl:someValuesFrom xsd:string
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf coresr-ont:DOI
+] .
+
+
+[ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:isIssueOf ;
+                         owl:someValuesFrom coresr-ont:PeriodicalLiterature
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:issueNumber ;
+                         owl:someValuesFrom xsd:int
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf coresr-ont:Issue
+] .
+
+
+[ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:isPublicationStateOf ;
+                         owl:someValuesFrom coresr-ont:Publication
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:atTime ;
+                         owl:someValuesFrom xsd:date
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:stateAsString ;
+                         owl:someValuesFrom xsd:string
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf coresr-ont:ProcessState
+] .
+
+
+[ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:isPublicationTypeOf ;
+                         owl:someValuesFrom coresr-ont:Publication
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:typeAsString ;
+                         owl:someValuesFrom xsd:string
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf coresr-ont:PublicationType
+] .
+
+
+[ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:isVolumeOf ;
+                         owl:someValuesFrom coresr-ont:PeriodicalLiterature
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty coresr-ont:volumeNumber ;
+                         owl:someValuesFrom xsd:int
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf coresr-ont:Volume
+] .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
