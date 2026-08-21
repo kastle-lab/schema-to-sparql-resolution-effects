@@ -9,3 +9,9 @@ This directory contains competency question lists used as SPARQL generation task
 * `kwg.txt` — Competency questions for the KnowWhereGraph schema.
 * `kwg_lite.txt` — Competency questions for the KWG-Lite schema.
 * `README.md` — Readme file for this directory.
+
+## Complexity Labels
+Each file contains 15 CQs.
+* Lines 1-5: `simple`
+* Lines 6-10: `moderate`
+* Lines 11-15: `complex`

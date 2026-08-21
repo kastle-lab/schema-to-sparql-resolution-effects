@@ -1,0 +1,900 @@
+level,dimensions,kg,representation,prompt_type,temperature_label,cq_complexity,n,syntax_ok_count,syntax_ok_rate,satisfiable_count,satisfiable_rate,deterministic_count,deterministic_rate,all_checks_passed_count,all_checks_passed_rate,nonzero_rows_count,nonzero_rows_rate,avg_rows
+kg,kg,core_scholar_rich,,,,,240,235,0.9792,182,0.7583,234,0.975,182,0.7583,182,0.7583,15.35
+kg,kg,core_scholar_shallow,,,,,240,233,0.9708,173,0.7208,232,0.9667,172,0.7167,172,0.7167,16.2417
+kg,kg,kwg,,,,,240,201,0.8375,85,0.3542,189,0.7875,80,0.3333,80,0.3333,118.2833
+kg,kg,kwg_lite,,,,,240,223,0.9292,154,0.6417,218,0.9083,152,0.6333,152,0.6333,96.925
+cq_complexity,cq_complexity,,,,,complex,320,292,0.9125,102,0.3187,286,0.8938,101,0.3156,101,0.3156,58.9531
+cq_complexity,cq_complexity,,,,,moderate,320,295,0.9219,227,0.7094,289,0.9031,225,0.7031,225,0.7031,60.8813
+cq_complexity,cq_complexity,,,,,simple,320,305,0.9531,265,0.8281,298,0.9313,260,0.8125,260,0.8125,65.2656
+representation,representation,,axiom,,,,240,228,0.95,151,0.6292,225,0.9375,148,0.6167,148,0.6167,34.05
+representation,representation,,"axiom, nen",,,,240,219,0.9125,152,0.6333,215,0.8958,152,0.6333,152,0.6333,50.8542
+representation,representation,,nen,,,,240,226,0.9417,143,0.5958,219,0.9125,139,0.5792,139,0.5792,94.825
+representation,representation,,ttl,,,,240,219,0.9125,148,0.6167,214,0.8917,147,0.6125,147,0.6125,67.0708
+prompt_type,prompt_type,,,0_shot,,,480,442,0.9208,259,0.5396,430,0.8958,256,0.5333,256,0.5333,34.9896
+prompt_type,prompt_type,,,cot,,,480,450,0.9375,335,0.6979,443,0.9229,330,0.6875,330,0.6875,88.4104
+temperature_label,temperature_label,,,,temp0,,480,464,0.9667,311,0.6479,456,0.95,308,0.6417,308,0.6417,78.5104
+temperature_label,temperature_label,,,,temp1,,480,428,0.8917,283,0.5896,417,0.8688,278,0.5792,278,0.5792,44.8896
+kg__cq_complexity,kg|cq_complexity,core_scholar_rich,,,,complex,80,76,0.95,39,0.4875,75,0.9375,39,0.4875,39,0.4875,3.95
+kg__cq_complexity,kg|cq_complexity,core_scholar_rich,,,,moderate,80,79,0.9875,71,0.8875,79,0.9875,71,0.8875,71,0.8875,21.375
+kg__cq_complexity,kg|cq_complexity,core_scholar_rich,,,,simple,80,80,1.0,72,0.9,80,1.0,72,0.9,72,0.9,20.725
+kg__cq_complexity,kg|cq_complexity,core_scholar_shallow,,,,complex,80,73,0.9125,19,0.2375,72,0.9,18,0.225,18,0.225,2.225
+kg__cq_complexity,kg|cq_complexity,core_scholar_shallow,,,,moderate,80,80,1.0,74,0.925,80,1.0,74,0.925,74,0.925,24.5
+kg__cq_complexity,kg|cq_complexity,core_scholar_shallow,,,,simple,80,80,1.0,80,1.0,80,1.0,80,1.0,80,1.0,22.0
+kg__cq_complexity,kg|cq_complexity,kwg,,,,complex,80,69,0.8625,10,0.125,67,0.8375,10,0.125,10,0.125,190.7125
+kg__cq_complexity,kg|cq_complexity,kwg,,,,moderate,80,63,0.7875,27,0.3375,59,0.7375,27,0.3375,27,0.3375,26.775
+kg__cq_complexity,kg|cq_complexity,kwg,,,,simple,80,69,0.8625,48,0.6,63,0.7875,43,0.5375,43,0.5375,137.3625
+kg__cq_complexity,kg|cq_complexity,kwg_lite,,,,complex,80,74,0.925,34,0.425,72,0.9,34,0.425,34,0.425,38.925
+kg__cq_complexity,kg|cq_complexity,kwg_lite,,,,moderate,80,73,0.9125,55,0.6875,71,0.8875,53,0.6625,53,0.6625,170.875
+kg__cq_complexity,kg|cq_complexity,kwg_lite,,,,simple,80,76,0.95,65,0.8125,75,0.9375,65,0.8125,65,0.8125,80.975
+kg__representation,kg|representation,core_scholar_rich,axiom,,,,60,59,0.9833,42,0.7,59,0.9833,42,0.7,42,0.7,14.9
+kg__representation,kg|representation,core_scholar_rich,"axiom, nen",,,,60,59,0.9833,48,0.8,59,0.9833,48,0.8,48,0.8,15.0667
+kg__representation,kg|representation,core_scholar_rich,nen,,,,60,58,0.9667,45,0.75,57,0.95,45,0.75,45,0.75,16.2333
+kg__representation,kg|representation,core_scholar_rich,ttl,,,,60,59,0.9833,47,0.7833,59,0.9833,47,0.7833,47,0.7833,15.2
+kg__representation,kg|representation,core_scholar_shallow,axiom,,,,60,59,0.9833,45,0.75,59,0.9833,45,0.75,45,0.75,15.05
+kg__representation,kg|representation,core_scholar_shallow,"axiom, nen",,,,60,59,0.9833,44,0.7333,59,0.9833,44,0.7333,44,0.7333,16.8667
+kg__representation,kg|representation,core_scholar_shallow,nen,,,,60,58,0.9667,42,0.7,57,0.95,41,0.6833,41,0.6833,17.85
+kg__representation,kg|representation,core_scholar_shallow,ttl,,,,60,57,0.95,42,0.7,57,0.95,42,0.7,42,0.7,15.2
+kg__representation,kg|representation,kwg,axiom,,,,60,57,0.95,23,0.3833,54,0.9,20,0.3333,20,0.3333,42.9167
+kg__representation,kg|representation,kwg,"axiom, nen",,,,60,47,0.7833,22,0.3667,44,0.7333,22,0.3667,22,0.3667,52.8833
+kg__representation,kg|representation,kwg,nen,,,,60,51,0.85,19,0.3167,49,0.8167,17,0.2833,17,0.2833,191.6667
+kg__representation,kg|representation,kwg,ttl,,,,60,46,0.7667,21,0.35,42,0.7,21,0.35,21,0.35,185.6667
+kg__representation,kg|representation,kwg_lite,axiom,,,,60,53,0.8833,41,0.6833,53,0.8833,41,0.6833,41,0.6833,63.3333
+kg__representation,kg|representation,kwg_lite,"axiom, nen",,,,60,54,0.9,38,0.6333,53,0.8833,38,0.6333,38,0.6333,118.6
+kg__representation,kg|representation,kwg_lite,nen,,,,60,59,0.9833,37,0.6167,56,0.9333,36,0.6,36,0.6,153.55
+kg__representation,kg|representation,kwg_lite,ttl,,,,60,57,0.95,38,0.6333,56,0.9333,37,0.6167,37,0.6167,52.2167
+kg__prompt_type,kg|prompt_type,core_scholar_rich,,0_shot,,,120,118,0.9833,86,0.7167,117,0.975,86,0.7167,86,0.7167,14.425
+kg__prompt_type,kg|prompt_type,core_scholar_rich,,cot,,,120,117,0.975,96,0.8,117,0.975,96,0.8,96,0.8,16.275
+kg__prompt_type,kg|prompt_type,core_scholar_shallow,,0_shot,,,120,115,0.9583,79,0.6583,115,0.9583,79,0.6583,79,0.6583,19.45
+kg__prompt_type,kg|prompt_type,core_scholar_shallow,,cot,,,120,118,0.9833,94,0.7833,117,0.975,93,0.775,93,0.775,13.0333
+kg__prompt_type,kg|prompt_type,kwg,,0_shot,,,120,100,0.8333,27,0.225,92,0.7667,25,0.2083,25,0.2083,51.925
+kg__prompt_type,kg|prompt_type,kwg,,cot,,,120,101,0.8417,58,0.4833,97,0.8083,55,0.4583,55,0.4583,184.6417
+kg__prompt_type,kg|prompt_type,kwg_lite,,0_shot,,,120,109,0.9083,67,0.5583,106,0.8833,66,0.55,66,0.55,54.1583
+kg__prompt_type,kg|prompt_type,kwg_lite,,cot,,,120,114,0.95,87,0.725,112,0.9333,86,0.7167,86,0.7167,139.6917
+kg__temperature_label,kg|temperature_label,core_scholar_rich,,,temp0,,120,120,1.0,95,0.7917,119,0.9917,95,0.7917,95,0.7917,15.5333
+kg__temperature_label,kg|temperature_label,core_scholar_rich,,,temp1,,120,115,0.9583,87,0.725,115,0.9583,87,0.725,87,0.725,15.1667
+kg__temperature_label,kg|temperature_label,core_scholar_shallow,,,temp0,,120,117,0.975,87,0.725,117,0.975,87,0.725,87,0.725,16.5417
+kg__temperature_label,kg|temperature_label,core_scholar_shallow,,,temp1,,120,116,0.9667,86,0.7167,115,0.9583,85,0.7083,85,0.7083,15.9417
+kg__temperature_label,kg|temperature_label,kwg,,,temp0,,120,109,0.9083,47,0.3917,103,0.8583,45,0.375,45,0.375,147.1
+kg__temperature_label,kg|temperature_label,kwg,,,temp1,,120,92,0.7667,38,0.3167,86,0.7167,35,0.2917,35,0.2917,89.4667
+kg__temperature_label,kg|temperature_label,kwg_lite,,,temp0,,120,118,0.9833,82,0.6833,117,0.975,81,0.675,81,0.675,134.8667
+kg__temperature_label,kg|temperature_label,kwg_lite,,,temp1,,120,105,0.875,72,0.6,101,0.8417,71,0.5917,71,0.5917,58.9833
+cq_complexity__representation,cq_complexity|representation,,axiom,,,complex,80,73,0.9125,25,0.3125,73,0.9125,25,0.3125,25,0.3125,53.2625
+cq_complexity__representation,cq_complexity|representation,,"axiom, nen",,,complex,80,73,0.9125,25,0.3125,72,0.9,25,0.3125,25,0.3125,3.725
+cq_complexity__representation,cq_complexity|representation,,nen,,,complex,80,72,0.9,20,0.25,69,0.8625,19,0.2375,19,0.2375,119.0625
+cq_complexity__representation,cq_complexity|representation,,ttl,,,complex,80,74,0.925,32,0.4,72,0.9,32,0.4,32,0.4,59.7625
+cq_complexity__representation,cq_complexity|representation,,axiom,,,moderate,80,78,0.975,58,0.725,78,0.975,58,0.725,58,0.725,23.4875
+cq_complexity__representation,cq_complexity|representation,,"axiom, nen",,,moderate,80,72,0.9,61,0.7625,70,0.875,61,0.7625,61,0.7625,73.9875
+cq_complexity__representation,cq_complexity|representation,,nen,,,moderate,80,75,0.9375,56,0.7,74,0.925,55,0.6875,55,0.6875,105.225
+cq_complexity__representation,cq_complexity|representation,,ttl,,,moderate,80,70,0.875,52,0.65,67,0.8375,51,0.6375,51,0.6375,40.825
+cq_complexity__representation,cq_complexity|representation,,axiom,,,simple,80,77,0.9625,68,0.85,74,0.925,65,0.8125,65,0.8125,25.4
+cq_complexity__representation,cq_complexity|representation,,"axiom, nen",,,simple,80,74,0.925,66,0.825,73,0.9125,66,0.825,66,0.825,74.85
+cq_complexity__representation,cq_complexity|representation,,nen,,,simple,80,79,0.9875,67,0.8375,76,0.95,65,0.8125,65,0.8125,60.1875
+cq_complexity__representation,cq_complexity|representation,,ttl,,,simple,80,75,0.9375,64,0.8,75,0.9375,64,0.8,64,0.8,100.625
+cq_complexity__prompt_type,cq_complexity|prompt_type,,,0_shot,,complex,160,145,0.9062,40,0.25,141,0.8812,40,0.25,40,0.25,19.7063
+cq_complexity__prompt_type,cq_complexity|prompt_type,,,cot,,complex,160,147,0.9187,62,0.3875,145,0.9062,61,0.3812,61,0.3812,98.2
+cq_complexity__prompt_type,cq_complexity|prompt_type,,,0_shot,,moderate,160,145,0.9062,94,0.5875,140,0.875,93,0.5813,93,0.5813,32.7437
+cq_complexity__prompt_type,cq_complexity|prompt_type,,,cot,,moderate,160,150,0.9375,133,0.8313,149,0.9313,132,0.825,132,0.825,89.0187
+cq_complexity__prompt_type,cq_complexity|prompt_type,,,0_shot,,simple,160,152,0.95,125,0.7812,149,0.9313,123,0.7688,123,0.7688,52.5187
+cq_complexity__prompt_type,cq_complexity|prompt_type,,,cot,,simple,160,153,0.9563,140,0.875,149,0.9313,137,0.8562,137,0.8562,78.0125
+cq_complexity__temperature_label,cq_complexity|temperature_label,,,,temp0,complex,160,155,0.9688,55,0.3438,152,0.95,55,0.3438,55,0.3438,77.9313
+cq_complexity__temperature_label,cq_complexity|temperature_label,,,,temp1,complex,160,137,0.8562,47,0.2938,134,0.8375,46,0.2875,46,0.2875,39.975
+cq_complexity__temperature_label,cq_complexity|temperature_label,,,,temp0,moderate,160,152,0.95,118,0.7375,150,0.9375,117,0.7312,117,0.7312,77.9437
+cq_complexity__temperature_label,cq_complexity|temperature_label,,,,temp1,moderate,160,143,0.8938,109,0.6813,139,0.8688,108,0.675,108,0.675,43.8188
+cq_complexity__temperature_label,cq_complexity|temperature_label,,,,temp0,simple,160,157,0.9812,138,0.8625,154,0.9625,136,0.85,136,0.85,79.6562
+cq_complexity__temperature_label,cq_complexity|temperature_label,,,,temp1,simple,160,148,0.925,127,0.7937,144,0.9,124,0.775,124,0.775,50.875
+representation__prompt_type,representation|prompt_type,,axiom,0_shot,,,120,112,0.9333,67,0.5583,111,0.925,66,0.55,66,0.55,35.3
+representation__prompt_type,representation|prompt_type,,axiom,cot,,,120,116,0.9667,84,0.7,114,0.95,82,0.6833,82,0.6833,32.8
+representation__prompt_type,representation|prompt_type,,"axiom, nen",0_shot,,,120,108,0.9,66,0.55,105,0.875,66,0.55,66,0.55,20.25
+representation__prompt_type,representation|prompt_type,,"axiom, nen",cot,,,120,111,0.925,86,0.7167,110,0.9167,86,0.7167,86,0.7167,81.4583
+representation__prompt_type,representation|prompt_type,,nen,0_shot,,,120,114,0.95,61,0.5083,110,0.9167,59,0.4917,59,0.4917,15.2417
+representation__prompt_type,representation|prompt_type,,nen,cot,,,120,112,0.9333,82,0.6833,109,0.9083,80,0.6667,80,0.6667,174.4083
+representation__prompt_type,representation|prompt_type,,ttl,0_shot,,,120,108,0.9,65,0.5417,104,0.8667,65,0.5417,65,0.5417,69.1667
+representation__prompt_type,representation|prompt_type,,ttl,cot,,,120,111,0.925,83,0.6917,110,0.9167,82,0.6833,82,0.6833,64.975
+representation__temperature_label,representation|temperature_label,,axiom,,temp0,,120,118,0.9833,77,0.6417,117,0.975,76,0.6333,76,0.6333,37.95
+representation__temperature_label,representation|temperature_label,,axiom,,temp1,,120,110,0.9167,74,0.6167,108,0.9,72,0.6,72,0.6,30.15
+representation__temperature_label,representation|temperature_label,,"axiom, nen",,temp0,,120,113,0.9417,80,0.6667,112,0.9333,80,0.6667,80,0.6667,76.0917
+representation__temperature_label,representation|temperature_label,,"axiom, nen",,temp1,,120,106,0.8833,72,0.6,103,0.8583,72,0.6,72,0.6,25.6167
+representation__temperature_label,representation|temperature_label,,nen,,temp0,,120,117,0.975,76,0.6333,114,0.95,74,0.6167,74,0.6167,131.025
+representation__temperature_label,representation|temperature_label,,nen,,temp1,,120,109,0.9083,67,0.5583,105,0.875,65,0.5417,65,0.5417,58.625
+representation__temperature_label,representation|temperature_label,,ttl,,temp0,,120,116,0.9667,78,0.65,113,0.9417,78,0.65,78,0.65,68.975
+representation__temperature_label,representation|temperature_label,,ttl,,temp1,,120,103,0.8583,70,0.5833,101,0.8417,69,0.575,69,0.575,65.1667
+prompt_type__temperature_label,prompt_type|temperature_label,,,0_shot,temp0,,240,229,0.9542,136,0.5667,224,0.9333,135,0.5625,135,0.5625,51.1542
+prompt_type__temperature_label,prompt_type|temperature_label,,,0_shot,temp1,,240,213,0.8875,123,0.5125,206,0.8583,121,0.5042,121,0.5042,18.825
+prompt_type__temperature_label,prompt_type|temperature_label,,,cot,temp0,,240,235,0.9792,175,0.7292,232,0.9667,173,0.7208,173,0.7208,105.8667
+prompt_type__temperature_label,prompt_type|temperature_label,,,cot,temp1,,240,215,0.8958,160,0.6667,211,0.8792,157,0.6542,157,0.6542,70.9542
+kg__cq_complexity__representation,kg|cq_complexity|representation,core_scholar_rich,axiom,,,complex,20,19,0.95,10,0.5,19,0.95,10,0.5,10,0.5,4.2
+kg__cq_complexity__representation,kg|cq_complexity|representation,core_scholar_rich,"axiom, nen",,,complex,20,19,0.95,10,0.5,19,0.95,10,0.5,10,0.5,4.7
+kg__cq_complexity__representation,kg|cq_complexity|representation,core_scholar_rich,nen,,,complex,20,18,0.9,7,0.35,17,0.85,7,0.35,7,0.35,1.7
+kg__cq_complexity__representation,kg|cq_complexity|representation,core_scholar_rich,ttl,,,complex,20,20,1.0,12,0.6,20,1.0,12,0.6,12,0.6,5.2
+kg__cq_complexity__representation,kg|cq_complexity|representation,core_scholar_rich,axiom,,,moderate,20,20,1.0,16,0.8,20,1.0,16,0.8,16,0.8,20.5
+kg__cq_complexity__representation,kg|cq_complexity|representation,core_scholar_rich,"axiom, nen",,,moderate,20,20,1.0,19,0.95,20,1.0,19,0.95,19,0.95,21.0
+kg__cq_complexity__representation,kg|cq_complexity|representation,core_scholar_rich,nen,,,moderate,20,20,1.0,19,0.95,20,1.0,19,0.95,19,0.95,24.5
+kg__cq_complexity__representation,kg|cq_complexity|representation,core_scholar_rich,ttl,,,moderate,20,19,0.95,17,0.85,19,0.95,17,0.85,17,0.85,19.5
+kg__cq_complexity__representation,kg|cq_complexity|representation,core_scholar_rich,axiom,,,simple,20,20,1.0,16,0.8,20,1.0,16,0.8,16,0.8,20.0
+kg__cq_complexity__representation,kg|cq_complexity|representation,core_scholar_rich,"axiom, nen",,,simple,20,20,1.0,19,0.95,20,1.0,19,0.95,19,0.95,19.5
+kg__cq_complexity__representation,kg|cq_complexity|representation,core_scholar_rich,nen,,,simple,20,20,1.0,19,0.95,20,1.0,19,0.95,19,0.95,22.5
+kg__cq_complexity__representation,kg|cq_complexity|representation,core_scholar_rich,ttl,,,simple,20,20,1.0,18,0.9,20,1.0,18,0.9,18,0.9,20.9
+kg__cq_complexity__representation,kg|cq_complexity|representation,core_scholar_shallow,axiom,,,complex,20,19,0.95,6,0.3,19,0.95,6,0.3,6,0.3,2.65
+kg__cq_complexity__representation,kg|cq_complexity|representation,core_scholar_shallow,"axiom, nen",,,complex,20,19,0.95,5,0.25,19,0.95,5,0.25,5,0.25,3.1
+kg__cq_complexity__representation,kg|cq_complexity|representation,core_scholar_shallow,nen,,,complex,20,18,0.9,4,0.2,17,0.85,3,0.15,3,0.15,1.55
+kg__cq_complexity__representation,kg|cq_complexity|representation,core_scholar_shallow,ttl,,,complex,20,17,0.85,4,0.2,17,0.85,4,0.2,4,0.2,1.6
+kg__cq_complexity__representation,kg|cq_complexity|representation,core_scholar_shallow,axiom,,,moderate,20,20,1.0,19,0.95,20,1.0,19,0.95,19,0.95,21.5
+kg__cq_complexity__representation,kg|cq_complexity|representation,core_scholar_shallow,"axiom, nen",,,moderate,20,20,1.0,19,0.95,20,1.0,19,0.95,19,0.95,25.5
+kg__cq_complexity__representation,kg|cq_complexity|representation,core_scholar_shallow,nen,,,moderate,20,20,1.0,18,0.9,20,1.0,18,0.9,18,0.9,27.0
+kg__cq_complexity__representation,kg|cq_complexity|representation,core_scholar_shallow,ttl,,,moderate,20,20,1.0,18,0.9,20,1.0,18,0.9,18,0.9,24.0
+kg__cq_complexity__representation,kg|cq_complexity|representation,core_scholar_shallow,axiom,,,simple,20,20,1.0,20,1.0,20,1.0,20,1.0,20,1.0,21.0
+kg__cq_complexity__representation,kg|cq_complexity|representation,core_scholar_shallow,"axiom, nen",,,simple,20,20,1.0,20,1.0,20,1.0,20,1.0,20,1.0,22.0
+kg__cq_complexity__representation,kg|cq_complexity|representation,core_scholar_shallow,nen,,,simple,20,20,1.0,20,1.0,20,1.0,20,1.0,20,1.0,25.0
+kg__cq_complexity__representation,kg|cq_complexity|representation,core_scholar_shallow,ttl,,,simple,20,20,1.0,20,1.0,20,1.0,20,1.0,20,1.0,20.0
+kg__cq_complexity__representation,kg|cq_complexity|representation,kwg,axiom,,,complex,20,20,1.0,1,0.05,20,1.0,1,0.05,1,0.05,82.0
+kg__cq_complexity__representation,kg|cq_complexity|representation,kwg,"axiom, nen",,,complex,20,16,0.8,2,0.1,16,0.8,2,0.1,2,0.1,0.9
+kg__cq_complexity__representation,kg|cq_complexity|representation,kwg,nen,,,complex,20,16,0.8,2,0.1,16,0.8,2,0.1,2,0.1,469.4
+kg__cq_complexity__representation,kg|cq_complexity|representation,kwg,ttl,,,complex,20,17,0.85,5,0.25,15,0.75,5,0.25,5,0.25,210.55
+kg__cq_complexity__representation,kg|cq_complexity|representation,kwg,axiom,,,moderate,20,19,0.95,8,0.4,19,0.95,8,0.4,8,0.4,8.65
+kg__cq_complexity__representation,kg|cq_complexity|representation,kwg,"axiom, nen",,,moderate,20,16,0.8,10,0.5,14,0.7,10,0.5,10,0.5,76.0
+kg__cq_complexity__representation,kg|cq_complexity|representation,kwg,nen,,,moderate,20,16,0.8,5,0.25,16,0.8,5,0.25,5,0.25,17.5
+kg__cq_complexity__representation,kg|cq_complexity|representation,kwg,ttl,,,moderate,20,12,0.6,4,0.2,10,0.5,4,0.2,4,0.2,4.95
+kg__cq_complexity__representation,kg|cq_complexity|representation,kwg,axiom,,,simple,20,18,0.9,14,0.7,15,0.75,11,0.55,11,0.55,38.1
+kg__cq_complexity__representation,kg|cq_complexity|representation,kwg,"axiom, nen",,,simple,20,15,0.75,10,0.5,14,0.7,10,0.5,10,0.5,81.75
+kg__cq_complexity__representation,kg|cq_complexity|representation,kwg,nen,,,simple,20,19,0.95,12,0.6,17,0.85,10,0.5,10,0.5,88.1
+kg__cq_complexity__representation,kg|cq_complexity|representation,kwg,ttl,,,simple,20,17,0.85,12,0.6,17,0.85,12,0.6,12,0.6,341.5
+kg__cq_complexity__representation,kg|cq_complexity|representation,kwg_lite,axiom,,,complex,20,15,0.75,8,0.4,15,0.75,8,0.4,8,0.4,124.2
+kg__cq_complexity__representation,kg|cq_complexity|representation,kwg_lite,"axiom, nen",,,complex,20,19,0.95,8,0.4,18,0.9,8,0.4,8,0.4,6.2
+kg__cq_complexity__representation,kg|cq_complexity|representation,kwg_lite,nen,,,complex,20,20,1.0,7,0.35,19,0.95,7,0.35,7,0.35,3.6
+kg__cq_complexity__representation,kg|cq_complexity|representation,kwg_lite,ttl,,,complex,20,20,1.0,11,0.55,20,1.0,11,0.55,11,0.55,21.7
+kg__cq_complexity__representation,kg|cq_complexity|representation,kwg_lite,axiom,,,moderate,20,19,0.95,15,0.75,19,0.95,15,0.75,15,0.75,43.3
+kg__cq_complexity__representation,kg|cq_complexity|representation,kwg_lite,"axiom, nen",,,moderate,20,16,0.8,13,0.65,16,0.8,13,0.65,13,0.65,173.45
+kg__cq_complexity__representation,kg|cq_complexity|representation,kwg_lite,nen,,,moderate,20,19,0.95,14,0.7,18,0.9,13,0.65,13,0.65,351.9
+kg__cq_complexity__representation,kg|cq_complexity|representation,kwg_lite,ttl,,,moderate,20,19,0.95,13,0.65,18,0.9,12,0.6,12,0.6,114.85
+kg__cq_complexity__representation,kg|cq_complexity|representation,kwg_lite,axiom,,,simple,20,19,0.95,18,0.9,19,0.95,18,0.9,18,0.9,22.5
+kg__cq_complexity__representation,kg|cq_complexity|representation,kwg_lite,"axiom, nen",,,simple,20,19,0.95,17,0.85,19,0.95,17,0.85,17,0.85,176.15
+kg__cq_complexity__representation,kg|cq_complexity|representation,kwg_lite,nen,,,simple,20,20,1.0,16,0.8,19,0.95,16,0.8,16,0.8,105.15
+kg__cq_complexity__representation,kg|cq_complexity|representation,kwg_lite,ttl,,,simple,20,18,0.9,14,0.7,18,0.9,14,0.7,14,0.7,20.1
+kg__cq_complexity__prompt_type,kg|cq_complexity|prompt_type,core_scholar_rich,,0_shot,,complex,40,38,0.95,17,0.425,37,0.925,17,0.425,17,0.425,2.475
+kg__cq_complexity__prompt_type,kg|cq_complexity|prompt_type,core_scholar_rich,,cot,,complex,40,38,0.95,22,0.55,38,0.95,22,0.55,22,0.55,5.425
+kg__cq_complexity__prompt_type,kg|cq_complexity|prompt_type,core_scholar_rich,,0_shot,,moderate,40,40,1.0,35,0.875,40,1.0,35,0.875,35,0.875,20.5
+kg__cq_complexity__prompt_type,kg|cq_complexity|prompt_type,core_scholar_rich,,cot,,moderate,40,39,0.975,36,0.9,39,0.975,36,0.9,36,0.9,22.25
+kg__cq_complexity__prompt_type,kg|cq_complexity|prompt_type,core_scholar_rich,,0_shot,,simple,40,40,1.0,34,0.85,40,1.0,34,0.85,34,0.85,20.3
+kg__cq_complexity__prompt_type,kg|cq_complexity|prompt_type,core_scholar_rich,,cot,,simple,40,40,1.0,38,0.95,40,1.0,38,0.95,38,0.95,21.15
+kg__cq_complexity__prompt_type,kg|cq_complexity|prompt_type,core_scholar_shallow,,0_shot,,complex,40,35,0.875,5,0.125,35,0.875,5,0.125,5,0.125,0.6
+kg__cq_complexity__prompt_type,kg|cq_complexity|prompt_type,core_scholar_shallow,,cot,,complex,40,38,0.95,14,0.35,37,0.925,13,0.325,13,0.325,3.85
+kg__cq_complexity__prompt_type,kg|cq_complexity|prompt_type,core_scholar_shallow,,0_shot,,moderate,40,40,1.0,34,0.85,40,1.0,34,0.85,34,0.85,32.75
+kg__cq_complexity__prompt_type,kg|cq_complexity|prompt_type,core_scholar_shallow,,cot,,moderate,40,40,1.0,40,1.0,40,1.0,40,1.0,40,1.0,16.25
+kg__cq_complexity__prompt_type,kg|cq_complexity|prompt_type,core_scholar_shallow,,0_shot,,simple,40,40,1.0,40,1.0,40,1.0,40,1.0,40,1.0,25.0
+kg__cq_complexity__prompt_type,kg|cq_complexity|prompt_type,core_scholar_shallow,,cot,,simple,40,40,1.0,40,1.0,40,1.0,40,1.0,40,1.0,19.0
+kg__cq_complexity__prompt_type,kg|cq_complexity|prompt_type,kwg,,0_shot,,complex,40,35,0.875,2,0.05,33,0.825,2,0.05,2,0.05,3.0
+kg__cq_complexity__prompt_type,kg|cq_complexity|prompt_type,kwg,,cot,,complex,40,34,0.85,8,0.2,34,0.85,8,0.2,8,0.2,378.425
+kg__cq_complexity__prompt_type,kg|cq_complexity|prompt_type,kwg,,0_shot,,moderate,40,31,0.775,5,0.125,27,0.675,5,0.125,5,0.125,5.125
+kg__cq_complexity__prompt_type,kg|cq_complexity|prompt_type,kwg,,cot,,moderate,40,32,0.8,22,0.55,32,0.8,22,0.55,22,0.55,48.425
+kg__cq_complexity__prompt_type,kg|cq_complexity|prompt_type,kwg,,0_shot,,simple,40,34,0.85,20,0.5,32,0.8,18,0.45,18,0.45,147.65
+kg__cq_complexity__prompt_type,kg|cq_complexity|prompt_type,kwg,,cot,,simple,40,35,0.875,28,0.7,31,0.775,25,0.625,25,0.625,127.075
+kg__cq_complexity__prompt_type,kg|cq_complexity|prompt_type,kwg_lite,,0_shot,,complex,40,37,0.925,16,0.4,36,0.9,16,0.4,16,0.4,72.75
+kg__cq_complexity__prompt_type,kg|cq_complexity|prompt_type,kwg_lite,,cot,,complex,40,37,0.925,18,0.45,36,0.9,18,0.45,18,0.45,5.1
+kg__cq_complexity__prompt_type,kg|cq_complexity|prompt_type,kwg_lite,,0_shot,,moderate,40,34,0.85,20,0.5,33,0.825,19,0.475,19,0.475,72.6
+kg__cq_complexity__prompt_type,kg|cq_complexity|prompt_type,kwg_lite,,cot,,moderate,40,39,0.975,35,0.875,38,0.95,34,0.85,34,0.85,269.15
+kg__cq_complexity__prompt_type,kg|cq_complexity|prompt_type,kwg_lite,,0_shot,,simple,40,38,0.95,31,0.775,37,0.925,31,0.775,31,0.775,17.125
+kg__cq_complexity__prompt_type,kg|cq_complexity|prompt_type,kwg_lite,,cot,,simple,40,38,0.95,34,0.85,38,0.95,34,0.85,34,0.85,144.825
+kg__cq_complexity__temperature_label,kg|cq_complexity|temperature_label,core_scholar_rich,,,temp0,complex,40,40,1.0,21,0.525,39,0.975,21,0.525,21,0.525,4.2
+kg__cq_complexity__temperature_label,kg|cq_complexity|temperature_label,core_scholar_rich,,,temp1,complex,40,36,0.9,18,0.45,36,0.9,18,0.45,18,0.45,3.7
+kg__cq_complexity__temperature_label,kg|cq_complexity|temperature_label,core_scholar_rich,,,temp0,moderate,40,40,1.0,37,0.925,40,1.0,37,0.925,37,0.925,22.0
+kg__cq_complexity__temperature_label,kg|cq_complexity|temperature_label,core_scholar_rich,,,temp1,moderate,40,39,0.975,34,0.85,39,0.975,34,0.85,34,0.85,20.75
+kg__cq_complexity__temperature_label,kg|cq_complexity|temperature_label,core_scholar_rich,,,temp0,simple,40,40,1.0,37,0.925,40,1.0,37,0.925,37,0.925,20.4
+kg__cq_complexity__temperature_label,kg|cq_complexity|temperature_label,core_scholar_rich,,,temp1,simple,40,40,1.0,35,0.875,40,1.0,35,0.875,35,0.875,21.05
+kg__cq_complexity__temperature_label,kg|cq_complexity|temperature_label,core_scholar_shallow,,,temp0,complex,40,37,0.925,9,0.225,37,0.925,9,0.225,9,0.225,2.125
+kg__cq_complexity__temperature_label,kg|cq_complexity|temperature_label,core_scholar_shallow,,,temp1,complex,40,36,0.9,10,0.25,35,0.875,9,0.225,9,0.225,2.325
+kg__cq_complexity__temperature_label,kg|cq_complexity|temperature_label,core_scholar_shallow,,,temp0,moderate,40,40,1.0,38,0.95,40,1.0,38,0.95,38,0.95,25.0
+kg__cq_complexity__temperature_label,kg|cq_complexity|temperature_label,core_scholar_shallow,,,temp1,moderate,40,40,1.0,36,0.9,40,1.0,36,0.9,36,0.9,24.0
+kg__cq_complexity__temperature_label,kg|cq_complexity|temperature_label,core_scholar_shallow,,,temp0,simple,40,40,1.0,40,1.0,40,1.0,40,1.0,40,1.0,22.5
+kg__cq_complexity__temperature_label,kg|cq_complexity|temperature_label,core_scholar_shallow,,,temp1,simple,40,40,1.0,40,1.0,40,1.0,40,1.0,40,1.0,21.5
+kg__cq_complexity__temperature_label,kg|cq_complexity|temperature_label,kwg,,,temp0,complex,40,38,0.95,5,0.125,36,0.9,5,0.125,5,0.125,232.95
+kg__cq_complexity__temperature_label,kg|cq_complexity|temperature_label,kwg,,,temp1,complex,40,31,0.775,5,0.125,31,0.775,5,0.125,5,0.125,148.475
+kg__cq_complexity__temperature_label,kg|cq_complexity|temperature_label,kwg,,,temp0,moderate,40,33,0.825,15,0.375,32,0.8,15,0.375,15,0.375,31.875
+kg__cq_complexity__temperature_label,kg|cq_complexity|temperature_label,kwg,,,temp1,moderate,40,30,0.75,12,0.3,27,0.675,12,0.3,12,0.3,21.675
+kg__cq_complexity__temperature_label,kg|cq_complexity|temperature_label,kwg,,,temp0,simple,40,38,0.95,27,0.675,35,0.875,25,0.625,25,0.625,176.475
+kg__cq_complexity__temperature_label,kg|cq_complexity|temperature_label,kwg,,,temp1,simple,40,31,0.775,21,0.525,28,0.7,18,0.45,18,0.45,98.25
+kg__cq_complexity__temperature_label,kg|cq_complexity|temperature_label,kwg_lite,,,temp0,complex,40,40,1.0,20,0.5,40,1.0,20,0.5,20,0.5,72.45
+kg__cq_complexity__temperature_label,kg|cq_complexity|temperature_label,kwg_lite,,,temp1,complex,40,34,0.85,14,0.35,32,0.8,14,0.35,14,0.35,5.4
+kg__cq_complexity__temperature_label,kg|cq_complexity|temperature_label,kwg_lite,,,temp0,moderate,40,39,0.975,28,0.7,38,0.95,27,0.675,27,0.675,232.9
+kg__cq_complexity__temperature_label,kg|cq_complexity|temperature_label,kwg_lite,,,temp1,moderate,40,34,0.85,27,0.675,33,0.825,26,0.65,26,0.65,108.85
+kg__cq_complexity__temperature_label,kg|cq_complexity|temperature_label,kwg_lite,,,temp0,simple,40,39,0.975,34,0.85,39,0.975,34,0.85,34,0.85,99.25
+kg__cq_complexity__temperature_label,kg|cq_complexity|temperature_label,kwg_lite,,,temp1,simple,40,37,0.925,31,0.775,36,0.9,31,0.775,31,0.775,62.7
+kg__representation__prompt_type,kg|representation|prompt_type,core_scholar_rich,axiom,0_shot,,,30,30,1.0,20,0.6667,30,1.0,20,0.6667,20,0.6667,14.0667
+kg__representation__prompt_type,kg|representation|prompt_type,core_scholar_rich,axiom,cot,,,30,29,0.9667,22,0.7333,29,0.9667,22,0.7333,22,0.7333,15.7333
+kg__representation__prompt_type,kg|representation|prompt_type,core_scholar_rich,"axiom, nen",0_shot,,,30,29,0.9667,22,0.7333,29,0.9667,22,0.7333,22,0.7333,12.4333
+kg__representation__prompt_type,kg|representation|prompt_type,core_scholar_rich,"axiom, nen",cot,,,30,30,1.0,26,0.8667,30,1.0,26,0.8667,26,0.8667,17.7
+kg__representation__prompt_type,kg|representation|prompt_type,core_scholar_rich,nen,0_shot,,,30,29,0.9667,22,0.7333,28,0.9333,22,0.7333,22,0.7333,16.7333
+kg__representation__prompt_type,kg|representation|prompt_type,core_scholar_rich,nen,cot,,,30,29,0.9667,23,0.7667,29,0.9667,23,0.7667,23,0.7667,15.7333
+kg__representation__prompt_type,kg|representation|prompt_type,core_scholar_rich,ttl,0_shot,,,30,30,1.0,22,0.7333,30,1.0,22,0.7333,22,0.7333,14.4667
+kg__representation__prompt_type,kg|representation|prompt_type,core_scholar_rich,ttl,cot,,,30,29,0.9667,25,0.8333,29,0.9667,25,0.8333,25,0.8333,15.9333
+kg__representation__prompt_type,kg|representation|prompt_type,core_scholar_shallow,axiom,0_shot,,,30,30,1.0,22,0.7333,30,1.0,22,0.7333,22,0.7333,19.0667
+kg__representation__prompt_type,kg|representation|prompt_type,core_scholar_shallow,axiom,cot,,,30,29,0.9667,23,0.7667,29,0.9667,23,0.7667,23,0.7667,11.0333
+kg__representation__prompt_type,kg|representation|prompt_type,core_scholar_shallow,"axiom, nen",0_shot,,,30,29,0.9667,20,0.6667,29,0.9667,20,0.6667,20,0.6667,19.7
+kg__representation__prompt_type,kg|representation|prompt_type,core_scholar_shallow,"axiom, nen",cot,,,30,30,1.0,24,0.8,30,1.0,24,0.8,24,0.8,14.0333
+kg__representation__prompt_type,kg|representation|prompt_type,core_scholar_shallow,nen,0_shot,,,30,29,0.9667,19,0.6333,29,0.9667,19,0.6333,19,0.6333,21.3667
+kg__representation__prompt_type,kg|representation|prompt_type,core_scholar_shallow,nen,cot,,,30,29,0.9667,23,0.7667,28,0.9333,22,0.7333,22,0.7333,14.3333
+kg__representation__prompt_type,kg|representation|prompt_type,core_scholar_shallow,ttl,0_shot,,,30,27,0.9,18,0.6,27,0.9,18,0.6,18,0.6,17.6667
+kg__representation__prompt_type,kg|representation|prompt_type,core_scholar_shallow,ttl,cot,,,30,30,1.0,24,0.8,30,1.0,24,0.8,24,0.8,12.7333
+kg__representation__prompt_type,kg|representation|prompt_type,kwg,axiom,0_shot,,,30,27,0.9,6,0.2,26,0.8667,5,0.1667,5,0.1667,4.7
+kg__representation__prompt_type,kg|representation|prompt_type,kwg,axiom,cot,,,30,30,1.0,17,0.5667,28,0.9333,15,0.5,15,0.5,81.1333
+kg__representation__prompt_type,kg|representation|prompt_type,kwg,"axiom, nen",0_shot,,,30,23,0.7667,8,0.2667,21,0.7,8,0.2667,8,0.2667,32.7
+kg__representation__prompt_type,kg|representation|prompt_type,kwg,"axiom, nen",cot,,,30,24,0.8,14,0.4667,23,0.7667,14,0.4667,14,0.4667,73.0667
+kg__representation__prompt_type,kg|representation|prompt_type,kwg,nen,0_shot,,,30,27,0.9,4,0.1333,26,0.8667,3,0.1,3,0.1,8.3
+kg__representation__prompt_type,kg|representation|prompt_type,kwg,nen,cot,,,30,24,0.8,15,0.5,23,0.7667,14,0.4667,14,0.4667,375.0333
+kg__representation__prompt_type,kg|representation|prompt_type,kwg,ttl,0_shot,,,30,23,0.7667,9,0.3,19,0.6333,9,0.3,9,0.3,162.0
+kg__representation__prompt_type,kg|representation|prompt_type,kwg,ttl,cot,,,30,23,0.7667,12,0.4,23,0.7667,12,0.4,12,0.4,209.3333
+kg__representation__prompt_type,kg|representation|prompt_type,kwg_lite,axiom,0_shot,,,30,25,0.8333,19,0.6333,25,0.8333,19,0.6333,19,0.6333,103.3667
+kg__representation__prompt_type,kg|representation|prompt_type,kwg_lite,axiom,cot,,,30,28,0.9333,22,0.7333,28,0.9333,22,0.7333,22,0.7333,23.3
+kg__representation__prompt_type,kg|representation|prompt_type,kwg_lite,"axiom, nen",0_shot,,,30,27,0.9,16,0.5333,26,0.8667,16,0.5333,16,0.5333,16.1667
+kg__representation__prompt_type,kg|representation|prompt_type,kwg_lite,"axiom, nen",cot,,,30,27,0.9,22,0.7333,27,0.9,22,0.7333,22,0.7333,221.0333
+kg__representation__prompt_type,kg|representation|prompt_type,kwg_lite,nen,0_shot,,,30,29,0.9667,16,0.5333,27,0.9,15,0.5,15,0.5,14.5667
+kg__representation__prompt_type,kg|representation|prompt_type,kwg_lite,nen,cot,,,30,30,1.0,21,0.7,29,0.9667,21,0.7,21,0.7,292.5333
+kg__representation__prompt_type,kg|representation|prompt_type,kwg_lite,ttl,0_shot,,,30,28,0.9333,16,0.5333,28,0.9333,16,0.5333,16,0.5333,82.5333
+kg__representation__prompt_type,kg|representation|prompt_type,kwg_lite,ttl,cot,,,30,29,0.9667,22,0.7333,28,0.9333,21,0.7,21,0.7,21.9
+kg__representation__temperature_label,kg|representation|temperature_label,core_scholar_rich,axiom,,temp0,,30,30,1.0,22,0.7333,30,1.0,22,0.7333,22,0.7333,13.4
+kg__representation__temperature_label,kg|representation|temperature_label,core_scholar_rich,axiom,,temp1,,30,29,0.9667,20,0.6667,29,0.9667,20,0.6667,20,0.6667,16.4
+kg__representation__temperature_label,kg|representation|temperature_label,core_scholar_rich,"axiom, nen",,temp0,,30,30,1.0,25,0.8333,30,1.0,25,0.8333,25,0.8333,16.0667
+kg__representation__temperature_label,kg|representation|temperature_label,core_scholar_rich,"axiom, nen",,temp1,,30,29,0.9667,23,0.7667,29,0.9667,23,0.7667,23,0.7667,14.0667
+kg__representation__temperature_label,kg|representation|temperature_label,core_scholar_rich,nen,,temp0,,30,30,1.0,24,0.8,29,0.9667,24,0.8,24,0.8,18.0667
+kg__representation__temperature_label,kg|representation|temperature_label,core_scholar_rich,nen,,temp1,,30,28,0.9333,21,0.7,28,0.9333,21,0.7,21,0.7,14.4
+kg__representation__temperature_label,kg|representation|temperature_label,core_scholar_rich,ttl,,temp0,,30,30,1.0,24,0.8,30,1.0,24,0.8,24,0.8,14.6
+kg__representation__temperature_label,kg|representation|temperature_label,core_scholar_rich,ttl,,temp1,,30,29,0.9667,23,0.7667,29,0.9667,23,0.7667,23,0.7667,15.8
+kg__representation__temperature_label,kg|representation|temperature_label,core_scholar_shallow,axiom,,temp0,,30,29,0.9667,22,0.7333,29,0.9667,22,0.7333,22,0.7333,16.0333
+kg__representation__temperature_label,kg|representation|temperature_label,core_scholar_shallow,axiom,,temp1,,30,30,1.0,23,0.7667,30,1.0,23,0.7667,23,0.7667,14.0667
+kg__representation__temperature_label,kg|representation|temperature_label,core_scholar_shallow,"axiom, nen",,temp0,,30,30,1.0,23,0.7667,30,1.0,23,0.7667,23,0.7667,18.4
+kg__representation__temperature_label,kg|representation|temperature_label,core_scholar_shallow,"axiom, nen",,temp1,,30,29,0.9667,21,0.7,29,0.9667,21,0.7,21,0.7,15.3333
+kg__representation__temperature_label,kg|representation|temperature_label,core_scholar_shallow,nen,,temp0,,30,29,0.9667,21,0.7,29,0.9667,21,0.7,21,0.7,19.0333
+kg__representation__temperature_label,kg|representation|temperature_label,core_scholar_shallow,nen,,temp1,,30,29,0.9667,21,0.7,28,0.9333,20,0.6667,20,0.6667,16.6667
+kg__representation__temperature_label,kg|representation|temperature_label,core_scholar_shallow,ttl,,temp0,,30,29,0.9667,21,0.7,29,0.9667,21,0.7,21,0.7,12.7
+kg__representation__temperature_label,kg|representation|temperature_label,core_scholar_shallow,ttl,,temp1,,30,28,0.9333,21,0.7,28,0.9333,21,0.7,21,0.7,17.7
+kg__representation__temperature_label,kg|representation|temperature_label,kwg,axiom,,temp0,,30,29,0.9667,11,0.3667,28,0.9333,10,0.3333,10,0.3333,21.2
+kg__representation__temperature_label,kg|representation|temperature_label,kwg,axiom,,temp1,,30,28,0.9333,12,0.4,26,0.8667,10,0.3333,10,0.3333,64.6333
+kg__representation__temperature_label,kg|representation|temperature_label,kwg,"axiom, nen",,temp0,,30,24,0.8,11,0.3667,23,0.7667,11,0.3667,11,0.3667,54.8333
+kg__representation__temperature_label,kg|representation|temperature_label,kwg,"axiom, nen",,temp1,,30,23,0.7667,11,0.3667,21,0.7,11,0.3667,11,0.3667,50.9333
+kg__representation__temperature_label,kg|representation|temperature_label,kwg,nen,,temp0,,30,28,0.9333,11,0.3667,27,0.9,10,0.3333,10,0.3333,352.3
+kg__representation__temperature_label,kg|representation|temperature_label,kwg,nen,,temp1,,30,23,0.7667,8,0.2667,22,0.7333,7,0.2333,7,0.2333,31.0333
+kg__representation__temperature_label,kg|representation|temperature_label,kwg,ttl,,temp0,,30,28,0.9333,14,0.4667,25,0.8333,14,0.4667,14,0.4667,160.0667
+kg__representation__temperature_label,kg|representation|temperature_label,kwg,ttl,,temp1,,30,18,0.6,7,0.2333,17,0.5667,7,0.2333,7,0.2333,211.2667
+kg__representation__temperature_label,kg|representation|temperature_label,kwg_lite,axiom,,temp0,,30,30,1.0,22,0.7333,30,1.0,22,0.7333,22,0.7333,101.1667
+kg__representation__temperature_label,kg|representation|temperature_label,kwg_lite,axiom,,temp1,,30,23,0.7667,19,0.6333,23,0.7667,19,0.6333,19,0.6333,25.5
+kg__representation__temperature_label,kg|representation|temperature_label,kwg_lite,"axiom, nen",,temp0,,30,29,0.9667,21,0.7,29,0.9667,21,0.7,21,0.7,215.0667
+kg__representation__temperature_label,kg|representation|temperature_label,kwg_lite,"axiom, nen",,temp1,,30,25,0.8333,17,0.5667,24,0.8,17,0.5667,17,0.5667,22.1333
+kg__representation__temperature_label,kg|representation|temperature_label,kwg_lite,nen,,temp0,,30,30,1.0,20,0.6667,29,0.9667,19,0.6333,19,0.6333,134.7
+kg__representation__temperature_label,kg|representation|temperature_label,kwg_lite,nen,,temp1,,30,29,0.9667,17,0.5667,27,0.9,17,0.5667,17,0.5667,172.4
+kg__representation__temperature_label,kg|representation|temperature_label,kwg_lite,ttl,,temp0,,30,29,0.9667,19,0.6333,29,0.9667,19,0.6333,19,0.6333,88.5333
+kg__representation__temperature_label,kg|representation|temperature_label,kwg_lite,ttl,,temp1,,30,28,0.9333,19,0.6333,27,0.9,18,0.6,18,0.6,15.9
+kg__prompt_type__temperature_label,kg|prompt_type|temperature_label,core_scholar_rich,,0_shot,temp0,,60,60,1.0,45,0.75,59,0.9833,45,0.75,45,0.75,14.5
+kg__prompt_type__temperature_label,kg|prompt_type|temperature_label,core_scholar_rich,,0_shot,temp1,,60,58,0.9667,41,0.6833,58,0.9667,41,0.6833,41,0.6833,14.35
+kg__prompt_type__temperature_label,kg|prompt_type|temperature_label,core_scholar_rich,,cot,temp0,,60,60,1.0,50,0.8333,60,1.0,50,0.8333,50,0.8333,16.5667
+kg__prompt_type__temperature_label,kg|prompt_type|temperature_label,core_scholar_rich,,cot,temp1,,60,57,0.95,46,0.7667,57,0.95,46,0.7667,46,0.7667,15.9833
+kg__prompt_type__temperature_label,kg|prompt_type|temperature_label,core_scholar_shallow,,0_shot,temp0,,60,59,0.9833,41,0.6833,59,0.9833,41,0.6833,41,0.6833,20.05
+kg__prompt_type__temperature_label,kg|prompt_type|temperature_label,core_scholar_shallow,,0_shot,temp1,,60,56,0.9333,38,0.6333,56,0.9333,38,0.6333,38,0.6333,18.85
+kg__prompt_type__temperature_label,kg|prompt_type|temperature_label,core_scholar_shallow,,cot,temp0,,60,58,0.9667,46,0.7667,58,0.9667,46,0.7667,46,0.7667,13.0333
+kg__prompt_type__temperature_label,kg|prompt_type|temperature_label,core_scholar_shallow,,cot,temp1,,60,60,1.0,48,0.8,59,0.9833,47,0.7833,47,0.7833,13.0333
+kg__prompt_type__temperature_label,kg|prompt_type|temperature_label,kwg,,0_shot,temp0,,60,52,0.8667,16,0.2667,49,0.8167,16,0.2667,16,0.2667,80.8333
+kg__prompt_type__temperature_label,kg|prompt_type|temperature_label,kwg,,0_shot,temp1,,60,48,0.8,11,0.1833,43,0.7167,9,0.15,9,0.15,23.0167
+kg__prompt_type__temperature_label,kg|prompt_type|temperature_label,kwg,,cot,temp0,,60,57,0.95,31,0.5167,54,0.9,29,0.4833,29,0.4833,213.3667
+kg__prompt_type__temperature_label,kg|prompt_type|temperature_label,kwg,,cot,temp1,,60,44,0.7333,27,0.45,43,0.7167,26,0.4333,26,0.4333,155.9167
+kg__prompt_type__temperature_label,kg|prompt_type|temperature_label,kwg_lite,,0_shot,temp0,,60,58,0.9667,34,0.5667,57,0.95,33,0.55,33,0.55,89.2333
+kg__prompt_type__temperature_label,kg|prompt_type|temperature_label,kwg_lite,,0_shot,temp1,,60,51,0.85,33,0.55,49,0.8167,33,0.55,33,0.55,19.0833
+kg__prompt_type__temperature_label,kg|prompt_type|temperature_label,kwg_lite,,cot,temp0,,60,60,1.0,48,0.8,60,1.0,48,0.8,48,0.8,180.5
+kg__prompt_type__temperature_label,kg|prompt_type|temperature_label,kwg_lite,,cot,temp1,,60,54,0.9,39,0.65,52,0.8667,38,0.6333,38,0.6333,98.8833
+cq_complexity__representation__prompt_type,cq_complexity|representation|prompt_type,,axiom,0_shot,,complex,40,37,0.925,11,0.275,37,0.925,11,0.275,11,0.275,62.1
+cq_complexity__representation__prompt_type,cq_complexity|representation|prompt_type,,axiom,cot,,complex,40,36,0.9,14,0.35,36,0.9,14,0.35,14,0.35,44.425
+cq_complexity__representation__prompt_type,cq_complexity|representation|prompt_type,,"axiom, nen",0_shot,,complex,40,37,0.925,10,0.25,36,0.9,10,0.25,10,0.25,2.6
+cq_complexity__representation__prompt_type,cq_complexity|representation|prompt_type,,"axiom, nen",cot,,complex,40,36,0.9,15,0.375,36,0.9,15,0.375,15,0.375,4.85
+cq_complexity__representation__prompt_type,cq_complexity|representation|prompt_type,,nen,0_shot,,complex,40,36,0.9,7,0.175,35,0.875,7,0.175,7,0.175,1.075
+cq_complexity__representation__prompt_type,cq_complexity|representation|prompt_type,,nen,cot,,complex,40,36,0.9,13,0.325,34,0.85,12,0.3,12,0.3,237.05
+cq_complexity__representation__prompt_type,cq_complexity|representation|prompt_type,,ttl,0_shot,,complex,40,35,0.875,12,0.3,33,0.825,12,0.3,12,0.3,13.05
+cq_complexity__representation__prompt_type,cq_complexity|representation|prompt_type,,ttl,cot,,complex,40,39,0.975,20,0.5,39,0.975,20,0.5,20,0.5,106.475
+cq_complexity__representation__prompt_type,cq_complexity|representation|prompt_type,,axiom,0_shot,,moderate,40,38,0.95,25,0.625,38,0.95,25,0.625,25,0.625,25.05
+cq_complexity__representation__prompt_type,cq_complexity|representation|prompt_type,,axiom,cot,,moderate,40,40,1.0,33,0.825,40,1.0,33,0.825,33,0.825,21.925
+cq_complexity__representation__prompt_type,cq_complexity|representation|prompt_type,,"axiom, nen",0_shot,,moderate,40,34,0.85,23,0.575,32,0.8,23,0.575,23,0.575,17.625
+cq_complexity__representation__prompt_type,cq_complexity|representation|prompt_type,,"axiom, nen",cot,,moderate,40,38,0.95,38,0.95,38,0.95,38,0.95,38,0.95,130.35
+cq_complexity__representation__prompt_type,cq_complexity|representation|prompt_type,,nen,0_shot,,moderate,40,38,0.95,23,0.575,37,0.925,22,0.55,22,0.55,23.05
+cq_complexity__representation__prompt_type,cq_complexity|representation|prompt_type,,nen,cot,,moderate,40,37,0.925,33,0.825,37,0.925,33,0.825,33,0.825,187.4
+cq_complexity__representation__prompt_type,cq_complexity|representation|prompt_type,,ttl,0_shot,,moderate,40,35,0.875,23,0.575,33,0.825,23,0.575,23,0.575,65.25
+cq_complexity__representation__prompt_type,cq_complexity|representation|prompt_type,,ttl,cot,,moderate,40,35,0.875,29,0.725,34,0.85,28,0.7,28,0.7,16.4
+cq_complexity__representation__prompt_type,cq_complexity|representation|prompt_type,,axiom,0_shot,,simple,40,37,0.925,31,0.775,36,0.9,30,0.75,30,0.75,18.75
+cq_complexity__representation__prompt_type,cq_complexity|representation|prompt_type,,axiom,cot,,simple,40,40,1.0,37,0.925,38,0.95,35,0.875,35,0.875,32.05
+cq_complexity__representation__prompt_type,cq_complexity|representation|prompt_type,,"axiom, nen",0_shot,,simple,40,37,0.925,33,0.825,37,0.925,33,0.825,33,0.825,40.525
+cq_complexity__representation__prompt_type,cq_complexity|representation|prompt_type,,"axiom, nen",cot,,simple,40,37,0.925,33,0.825,36,0.9,33,0.825,33,0.825,109.175
+cq_complexity__representation__prompt_type,cq_complexity|representation|prompt_type,,nen,0_shot,,simple,40,40,1.0,31,0.775,38,0.95,30,0.75,30,0.75,21.6
+cq_complexity__representation__prompt_type,cq_complexity|representation|prompt_type,,nen,cot,,simple,40,39,0.975,36,0.9,38,0.95,35,0.875,35,0.875,98.775
+cq_complexity__representation__prompt_type,cq_complexity|representation|prompt_type,,ttl,0_shot,,simple,40,38,0.95,30,0.75,38,0.95,30,0.75,30,0.75,129.2
+cq_complexity__representation__prompt_type,cq_complexity|representation|prompt_type,,ttl,cot,,simple,40,37,0.925,34,0.85,37,0.925,34,0.85,34,0.85,72.05
+cq_complexity__representation__temperature_label,cq_complexity|representation|temperature_label,,axiom,,temp0,complex,40,39,0.975,13,0.325,39,0.975,13,0.325,13,0.325,61.875
+cq_complexity__representation__temperature_label,cq_complexity|representation|temperature_label,,axiom,,temp1,complex,40,34,0.85,12,0.3,34,0.85,12,0.3,12,0.3,44.65
+cq_complexity__representation__temperature_label,cq_complexity|representation|temperature_label,,"axiom, nen",,temp0,complex,40,40,1.0,14,0.35,40,1.0,14,0.35,14,0.35,3.6
+cq_complexity__representation__temperature_label,cq_complexity|representation|temperature_label,,"axiom, nen",,temp1,complex,40,33,0.825,11,0.275,32,0.8,11,0.275,11,0.275,3.85
+cq_complexity__representation__temperature_label,cq_complexity|representation|temperature_label,,nen,,temp0,complex,40,37,0.925,12,0.3,36,0.9,12,0.3,12,0.3,231.875
+cq_complexity__representation__temperature_label,cq_complexity|representation|temperature_label,,nen,,temp1,complex,40,35,0.875,8,0.2,33,0.825,7,0.175,7,0.175,6.25
+cq_complexity__representation__temperature_label,cq_complexity|representation|temperature_label,,ttl,,temp0,complex,40,39,0.975,16,0.4,37,0.925,16,0.4,16,0.4,14.375
+cq_complexity__representation__temperature_label,cq_complexity|representation|temperature_label,,ttl,,temp1,complex,40,35,0.875,16,0.4,35,0.875,16,0.4,16,0.4,105.15
+cq_complexity__representation__temperature_label,cq_complexity|representation|temperature_label,,axiom,,temp0,moderate,40,39,0.975,30,0.75,39,0.975,30,0.75,30,0.75,21.6
+cq_complexity__representation__temperature_label,cq_complexity|representation|temperature_label,,axiom,,temp1,moderate,40,39,0.975,28,0.7,39,0.975,28,0.7,28,0.7,25.375
+cq_complexity__representation__temperature_label,cq_complexity|representation|temperature_label,,"axiom, nen",,temp0,moderate,40,35,0.875,31,0.775,35,0.875,31,0.775,31,0.775,116.075
+cq_complexity__representation__temperature_label,cq_complexity|representation|temperature_label,,"axiom, nen",,temp1,moderate,40,37,0.925,30,0.75,35,0.875,30,0.75,30,0.75,31.9
+cq_complexity__representation__temperature_label,cq_complexity|representation|temperature_label,,nen,,temp0,moderate,40,40,1.0,30,0.75,39,0.975,29,0.725,29,0.725,110.975
+cq_complexity__representation__temperature_label,cq_complexity|representation|temperature_label,,nen,,temp1,moderate,40,35,0.875,26,0.65,35,0.875,26,0.65,26,0.65,99.475
+cq_complexity__representation__temperature_label,cq_complexity|representation|temperature_label,,ttl,,temp0,moderate,40,38,0.95,27,0.675,37,0.925,27,0.675,27,0.675,63.125
+cq_complexity__representation__temperature_label,cq_complexity|representation|temperature_label,,ttl,,temp1,moderate,40,32,0.8,25,0.625,30,0.75,24,0.6,24,0.6,18.525
+cq_complexity__representation__temperature_label,cq_complexity|representation|temperature_label,,axiom,,temp0,simple,40,40,1.0,34,0.85,39,0.975,33,0.825,33,0.825,30.375
+cq_complexity__representation__temperature_label,cq_complexity|representation|temperature_label,,axiom,,temp1,simple,40,37,0.925,34,0.85,35,0.875,32,0.8,32,0.8,20.425
+cq_complexity__representation__temperature_label,cq_complexity|representation|temperature_label,,"axiom, nen",,temp0,simple,40,38,0.95,35,0.875,37,0.925,35,0.875,35,0.875,108.6
+cq_complexity__representation__temperature_label,cq_complexity|representation|temperature_label,,"axiom, nen",,temp1,simple,40,36,0.9,31,0.775,36,0.9,31,0.775,31,0.775,41.1
+cq_complexity__representation__temperature_label,cq_complexity|representation|temperature_label,,nen,,temp0,simple,40,40,1.0,34,0.85,39,0.975,33,0.825,33,0.825,50.225
+cq_complexity__representation__temperature_label,cq_complexity|representation|temperature_label,,nen,,temp1,simple,40,39,0.975,33,0.825,37,0.925,32,0.8,32,0.8,70.15
+cq_complexity__representation__temperature_label,cq_complexity|representation|temperature_label,,ttl,,temp0,simple,40,39,0.975,35,0.875,39,0.975,35,0.875,35,0.875,129.425
+cq_complexity__representation__temperature_label,cq_complexity|representation|temperature_label,,ttl,,temp1,simple,40,36,0.9,29,0.725,36,0.9,29,0.725,29,0.725,71.825
+cq_complexity__prompt_type__temperature_label,cq_complexity|prompt_type|temperature_label,,,0_shot,temp0,complex,80,78,0.975,23,0.2875,75,0.9375,23,0.2875,23,0.2875,36.9625
+cq_complexity__prompt_type__temperature_label,cq_complexity|prompt_type|temperature_label,,,0_shot,temp1,complex,80,67,0.8375,17,0.2125,66,0.825,17,0.2125,17,0.2125,2.45
+cq_complexity__prompt_type__temperature_label,cq_complexity|prompt_type|temperature_label,,,cot,temp0,complex,80,77,0.9625,32,0.4,77,0.9625,32,0.4,32,0.4,118.9
+cq_complexity__prompt_type__temperature_label,cq_complexity|prompt_type|temperature_label,,,cot,temp1,complex,80,70,0.875,30,0.375,68,0.85,29,0.3625,29,0.3625,77.5
+cq_complexity__prompt_type__temperature_label,cq_complexity|prompt_type|temperature_label,,,0_shot,temp0,moderate,80,74,0.925,48,0.6,72,0.9,47,0.5875,47,0.5875,44.35
+cq_complexity__prompt_type__temperature_label,cq_complexity|prompt_type|temperature_label,,,0_shot,temp1,moderate,80,71,0.8875,46,0.575,68,0.85,46,0.575,46,0.575,21.1375
+cq_complexity__prompt_type__temperature_label,cq_complexity|prompt_type|temperature_label,,,cot,temp0,moderate,80,78,0.975,70,0.875,78,0.975,70,0.875,70,0.875,111.5375
+cq_complexity__prompt_type__temperature_label,cq_complexity|prompt_type|temperature_label,,,cot,temp1,moderate,80,72,0.9,63,0.7875,71,0.8875,62,0.775,62,0.775,66.5
+cq_complexity__prompt_type__temperature_label,cq_complexity|prompt_type|temperature_label,,,0_shot,temp0,simple,80,77,0.9625,65,0.8125,77,0.9625,65,0.8125,65,0.8125,72.15
+cq_complexity__prompt_type__temperature_label,cq_complexity|prompt_type|temperature_label,,,0_shot,temp1,simple,80,75,0.9375,60,0.75,72,0.9,58,0.725,58,0.725,32.8875
+cq_complexity__prompt_type__temperature_label,cq_complexity|prompt_type|temperature_label,,,cot,temp0,simple,80,80,1.0,73,0.9125,77,0.9625,71,0.8875,71,0.8875,87.1625
+cq_complexity__prompt_type__temperature_label,cq_complexity|prompt_type|temperature_label,,,cot,temp1,simple,80,73,0.9125,67,0.8375,72,0.9,66,0.825,66,0.825,68.8625
+representation__prompt_type__temperature_label,representation|prompt_type|temperature_label,,axiom,0_shot,temp0,,60,59,0.9833,34,0.5667,59,0.9833,34,0.5667,34,0.5667,53.2167
+representation__prompt_type__temperature_label,representation|prompt_type|temperature_label,,axiom,0_shot,temp1,,60,53,0.8833,33,0.55,52,0.8667,32,0.5333,32,0.5333,17.3833
+representation__prompt_type__temperature_label,representation|prompt_type|temperature_label,,axiom,cot,temp0,,60,59,0.9833,43,0.7167,58,0.9667,42,0.7,42,0.7,22.6833
+representation__prompt_type__temperature_label,representation|prompt_type|temperature_label,,axiom,cot,temp1,,60,57,0.95,41,0.6833,56,0.9333,40,0.6667,40,0.6667,42.9167
+representation__prompt_type__temperature_label,representation|prompt_type|temperature_label,,"axiom, nen",0_shot,temp0,,60,54,0.9,36,0.6,54,0.9,36,0.6,36,0.6,14.3
+representation__prompt_type__temperature_label,representation|prompt_type|temperature_label,,"axiom, nen",0_shot,temp1,,60,54,0.9,30,0.5,51,0.85,30,0.5,30,0.5,26.2
+representation__prompt_type__temperature_label,representation|prompt_type|temperature_label,,"axiom, nen",cot,temp0,,60,59,0.9833,44,0.7333,58,0.9667,44,0.7333,44,0.7333,137.8833
+representation__prompt_type__temperature_label,representation|prompt_type|temperature_label,,"axiom, nen",cot,temp1,,60,52,0.8667,42,0.7,52,0.8667,42,0.7,42,0.7,25.0333
+representation__prompt_type__temperature_label,representation|prompt_type|temperature_label,,nen,0_shot,temp0,,60,59,0.9833,32,0.5333,57,0.95,31,0.5167,31,0.5167,14.9833
+representation__prompt_type__temperature_label,representation|prompt_type|temperature_label,,nen,0_shot,temp1,,60,55,0.9167,29,0.4833,53,0.8833,28,0.4667,28,0.4667,15.5
+representation__prompt_type__temperature_label,representation|prompt_type|temperature_label,,nen,cot,temp0,,60,58,0.9667,44,0.7333,57,0.95,43,0.7167,43,0.7167,247.0667
+representation__prompt_type__temperature_label,representation|prompt_type|temperature_label,,nen,cot,temp1,,60,54,0.9,38,0.6333,52,0.8667,37,0.6167,37,0.6167,101.75
+representation__prompt_type__temperature_label,representation|prompt_type|temperature_label,,ttl,0_shot,temp0,,60,57,0.95,34,0.5667,54,0.9,34,0.5667,34,0.5667,122.1167
+representation__prompt_type__temperature_label,representation|prompt_type|temperature_label,,ttl,0_shot,temp1,,60,51,0.85,31,0.5167,50,0.8333,31,0.5167,31,0.5167,16.2167
+representation__prompt_type__temperature_label,representation|prompt_type|temperature_label,,ttl,cot,temp0,,60,59,0.9833,44,0.7333,59,0.9833,44,0.7333,44,0.7333,15.8333
+representation__prompt_type__temperature_label,representation|prompt_type|temperature_label,,ttl,cot,temp1,,60,52,0.8667,39,0.65,51,0.85,38,0.6333,38,0.6333,114.1167
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_rich,axiom,0_shot,,complex,10,10,1.0,4,0.4,10,1.0,4,0.4,4,0.4,2.2
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_rich,axiom,cot,,complex,10,9,0.9,6,0.6,9,0.9,6,0.6,6,0.6,6.2
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_rich,"axiom, nen",0_shot,,complex,10,9,0.9,4,0.4,9,0.9,4,0.4,4,0.4,1.3
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_rich,"axiom, nen",cot,,complex,10,10,1.0,6,0.6,10,1.0,6,0.6,6,0.6,8.1
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_rich,nen,0_shot,,complex,10,9,0.9,3,0.3,8,0.8,3,0.3,3,0.3,1.2
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_rich,nen,cot,,complex,10,9,0.9,4,0.4,9,0.9,4,0.4,4,0.4,2.2
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_rich,ttl,0_shot,,complex,10,10,1.0,6,0.6,10,1.0,6,0.6,6,0.6,5.2
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_rich,ttl,cot,,complex,10,10,1.0,6,0.6,10,1.0,6,0.6,6,0.6,5.2
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_rich,axiom,0_shot,,moderate,10,10,1.0,8,0.8,10,1.0,8,0.8,8,0.8,20.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_rich,axiom,cot,,moderate,10,10,1.0,8,0.8,10,1.0,8,0.8,8,0.8,21.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_rich,"axiom, nen",0_shot,,moderate,10,10,1.0,9,0.9,10,1.0,9,0.9,9,0.9,19.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_rich,"axiom, nen",cot,,moderate,10,10,1.0,10,1.0,10,1.0,10,1.0,10,1.0,23.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_rich,nen,0_shot,,moderate,10,10,1.0,10,1.0,10,1.0,10,1.0,10,1.0,26.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_rich,nen,cot,,moderate,10,10,1.0,9,0.9,10,1.0,9,0.9,9,0.9,23.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_rich,ttl,0_shot,,moderate,10,10,1.0,8,0.8,10,1.0,8,0.8,8,0.8,17.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_rich,ttl,cot,,moderate,10,9,0.9,9,0.9,9,0.9,9,0.9,9,0.9,22.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_rich,axiom,0_shot,,simple,10,10,1.0,8,0.8,10,1.0,8,0.8,8,0.8,20.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_rich,axiom,cot,,simple,10,10,1.0,8,0.8,10,1.0,8,0.8,8,0.8,20.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_rich,"axiom, nen",0_shot,,simple,10,10,1.0,9,0.9,10,1.0,9,0.9,9,0.9,17.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_rich,"axiom, nen",cot,,simple,10,10,1.0,10,1.0,10,1.0,10,1.0,10,1.0,22.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_rich,nen,0_shot,,simple,10,10,1.0,9,0.9,10,1.0,9,0.9,9,0.9,23.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_rich,nen,cot,,simple,10,10,1.0,10,1.0,10,1.0,10,1.0,10,1.0,22.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_rich,ttl,0_shot,,simple,10,10,1.0,8,0.8,10,1.0,8,0.8,8,0.8,21.2
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_rich,ttl,cot,,simple,10,10,1.0,10,1.0,10,1.0,10,1.0,10,1.0,20.6
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_shallow,axiom,0_shot,,complex,10,10,1.0,3,0.3,10,1.0,3,0.3,3,0.3,2.2
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_shallow,axiom,cot,,complex,10,9,0.9,3,0.3,9,0.9,3,0.3,3,0.3,3.1
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_shallow,"axiom, nen",0_shot,,complex,10,9,0.9,1,0.1,9,0.9,1,0.1,1,0.1,0.1
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_shallow,"axiom, nen",cot,,complex,10,10,1.0,4,0.4,10,1.0,4,0.4,4,0.4,6.1
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_shallow,nen,0_shot,,complex,10,9,0.9,1,0.1,9,0.9,1,0.1,1,0.1,0.1
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_shallow,nen,cot,,complex,10,9,0.9,3,0.3,8,0.8,2,0.2,2,0.2,3.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_shallow,ttl,0_shot,,complex,10,7,0.7,0,0.0,7,0.7,0,0.0,0,0.0,0.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_shallow,ttl,cot,,complex,10,10,1.0,4,0.4,10,1.0,4,0.4,4,0.4,3.2
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_shallow,axiom,0_shot,,moderate,10,10,1.0,9,0.9,10,1.0,9,0.9,9,0.9,29.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_shallow,axiom,cot,,moderate,10,10,1.0,10,1.0,10,1.0,10,1.0,10,1.0,14.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_shallow,"axiom, nen",0_shot,,moderate,10,10,1.0,9,0.9,10,1.0,9,0.9,9,0.9,35.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_shallow,"axiom, nen",cot,,moderate,10,10,1.0,10,1.0,10,1.0,10,1.0,10,1.0,16.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_shallow,nen,0_shot,,moderate,10,10,1.0,8,0.8,10,1.0,8,0.8,8,0.8,34.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_shallow,nen,cot,,moderate,10,10,1.0,10,1.0,10,1.0,10,1.0,10,1.0,20.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_shallow,ttl,0_shot,,moderate,10,10,1.0,8,0.8,10,1.0,8,0.8,8,0.8,33.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_shallow,ttl,cot,,moderate,10,10,1.0,10,1.0,10,1.0,10,1.0,10,1.0,15.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_shallow,axiom,0_shot,,simple,10,10,1.0,10,1.0,10,1.0,10,1.0,10,1.0,26.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_shallow,axiom,cot,,simple,10,10,1.0,10,1.0,10,1.0,10,1.0,10,1.0,16.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_shallow,"axiom, nen",0_shot,,simple,10,10,1.0,10,1.0,10,1.0,10,1.0,10,1.0,24.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_shallow,"axiom, nen",cot,,simple,10,10,1.0,10,1.0,10,1.0,10,1.0,10,1.0,20.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_shallow,nen,0_shot,,simple,10,10,1.0,10,1.0,10,1.0,10,1.0,10,1.0,30.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_shallow,nen,cot,,simple,10,10,1.0,10,1.0,10,1.0,10,1.0,10,1.0,20.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_shallow,ttl,0_shot,,simple,10,10,1.0,10,1.0,10,1.0,10,1.0,10,1.0,20.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,core_scholar_shallow,ttl,cot,,simple,10,10,1.0,10,1.0,10,1.0,10,1.0,10,1.0,20.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg,axiom,0_shot,,complex,10,10,1.0,0,0.0,10,1.0,0,0.0,0,0.0,0.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg,axiom,cot,,complex,10,10,1.0,1,0.1,10,1.0,1,0.1,1,0.1,164.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg,"axiom, nen",0_shot,,complex,10,9,0.9,1,0.1,9,0.9,1,0.1,1,0.1,1.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg,"axiom, nen",cot,,complex,10,7,0.7,1,0.1,7,0.7,1,0.1,1,0.1,0.8
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg,nen,0_shot,,complex,10,8,0.8,0,0.0,8,0.8,0,0.0,0,0.0,0.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg,nen,cot,,complex,10,8,0.8,2,0.2,8,0.8,2,0.2,2,0.2,938.8
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg,ttl,0_shot,,complex,10,8,0.8,1,0.1,6,0.6,1,0.1,1,0.1,11.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg,ttl,cot,,complex,10,9,0.9,4,0.4,9,0.9,4,0.4,4,0.4,410.1
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg,axiom,0_shot,,moderate,10,9,0.9,2,0.2,9,0.9,2,0.2,2,0.2,2.1
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg,axiom,cot,,moderate,10,10,1.0,6,0.6,10,1.0,6,0.6,6,0.6,15.2
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg,"axiom, nen",0_shot,,moderate,10,7,0.7,1,0.1,5,0.5,1,0.1,1,0.1,10.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg,"axiom, nen",cot,,moderate,10,9,0.9,9,0.9,9,0.9,9,0.9,9,0.9,142.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg,nen,0_shot,,moderate,10,9,0.9,0,0.0,9,0.9,0,0.0,0,0.0,0.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg,nen,cot,,moderate,10,7,0.7,5,0.5,7,0.7,5,0.5,5,0.5,35.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg,ttl,0_shot,,moderate,10,6,0.6,2,0.2,4,0.4,2,0.2,2,0.2,8.4
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg,ttl,cot,,moderate,10,6,0.6,2,0.2,6,0.6,2,0.2,2,0.2,1.5
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg,axiom,0_shot,,simple,10,8,0.8,4,0.4,7,0.7,3,0.3,3,0.3,12.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg,axiom,cot,,simple,10,10,1.0,10,1.0,8,0.8,8,0.8,8,0.8,64.2
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg,"axiom, nen",0_shot,,simple,10,7,0.7,6,0.6,7,0.7,6,0.6,6,0.6,87.1
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg,"axiom, nen",cot,,simple,10,8,0.8,4,0.4,7,0.7,4,0.4,4,0.4,76.4
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg,nen,0_shot,,simple,10,10,1.0,4,0.4,9,0.9,3,0.3,3,0.3,24.9
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg,nen,cot,,simple,10,9,0.9,8,0.8,8,0.8,7,0.7,7,0.7,151.3
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg,ttl,0_shot,,simple,10,9,0.9,6,0.6,9,0.9,6,0.6,6,0.6,466.6
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg,ttl,cot,,simple,10,8,0.8,6,0.6,8,0.8,6,0.6,6,0.6,216.4
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg_lite,axiom,0_shot,,complex,10,7,0.7,4,0.4,7,0.7,4,0.4,4,0.4,244.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg_lite,axiom,cot,,complex,10,8,0.8,4,0.4,8,0.8,4,0.4,4,0.4,4.4
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg_lite,"axiom, nen",0_shot,,complex,10,10,1.0,4,0.4,9,0.9,4,0.4,4,0.4,8.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg_lite,"axiom, nen",cot,,complex,10,9,0.9,4,0.4,9,0.9,4,0.4,4,0.4,4.4
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg_lite,nen,0_shot,,complex,10,10,1.0,3,0.3,10,1.0,3,0.3,3,0.3,3.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg_lite,nen,cot,,complex,10,10,1.0,4,0.4,9,0.9,4,0.4,4,0.4,4.2
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg_lite,ttl,0_shot,,complex,10,10,1.0,5,0.5,10,1.0,5,0.5,5,0.5,36.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg_lite,ttl,cot,,complex,10,10,1.0,6,0.6,10,1.0,6,0.6,6,0.6,7.4
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg_lite,axiom,0_shot,,moderate,10,9,0.9,6,0.6,9,0.9,6,0.6,6,0.6,49.1
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg_lite,axiom,cot,,moderate,10,10,1.0,9,0.9,10,1.0,9,0.9,9,0.9,37.5
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg_lite,"axiom, nen",0_shot,,moderate,10,7,0.7,4,0.4,7,0.7,4,0.4,4,0.4,6.5
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg_lite,"axiom, nen",cot,,moderate,10,9,0.9,9,0.9,9,0.9,9,0.9,9,0.9,340.4
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg_lite,nen,0_shot,,moderate,10,9,0.9,5,0.5,8,0.8,4,0.4,4,0.4,32.2
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg_lite,nen,cot,,moderate,10,10,1.0,9,0.9,10,1.0,9,0.9,9,0.9,671.6
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg_lite,ttl,0_shot,,moderate,10,9,0.9,5,0.5,9,0.9,5,0.5,5,0.5,202.6
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg_lite,ttl,cot,,moderate,10,10,1.0,8,0.8,9,0.9,7,0.7,7,0.7,27.1
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg_lite,axiom,0_shot,,simple,10,9,0.9,9,0.9,9,0.9,9,0.9,9,0.9,17.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg_lite,axiom,cot,,simple,10,10,1.0,9,0.9,10,1.0,9,0.9,9,0.9,28.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg_lite,"axiom, nen",0_shot,,simple,10,10,1.0,8,0.8,10,1.0,8,0.8,8,0.8,34.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg_lite,"axiom, nen",cot,,simple,10,9,0.9,9,0.9,9,0.9,9,0.9,9,0.9,318.3
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg_lite,nen,0_shot,,simple,10,10,1.0,8,0.8,9,0.9,8,0.8,8,0.8,8.5
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg_lite,nen,cot,,simple,10,10,1.0,8,0.8,10,1.0,8,0.8,8,0.8,201.8
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg_lite,ttl,0_shot,,simple,10,9,0.9,6,0.6,9,0.9,6,0.6,6,0.6,9.0
+kg__cq_complexity__representation__prompt_type,kg|cq_complexity|representation|prompt_type,kwg_lite,ttl,cot,,simple,10,9,0.9,8,0.8,9,0.9,8,0.8,8,0.8,31.2
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_rich,axiom,,temp0,complex,10,10,1.0,6,0.6,10,1.0,6,0.6,6,0.6,5.2
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_rich,axiom,,temp1,complex,10,9,0.9,4,0.4,9,0.9,4,0.4,4,0.4,3.2
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_rich,"axiom, nen",,temp0,complex,10,10,1.0,5,0.5,10,1.0,5,0.5,5,0.5,4.2
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_rich,"axiom, nen",,temp1,complex,10,9,0.9,5,0.5,9,0.9,5,0.5,5,0.5,5.2
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_rich,nen,,temp0,complex,10,10,1.0,4,0.4,9,0.9,4,0.4,4,0.4,2.2
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_rich,nen,,temp1,complex,10,8,0.8,3,0.3,8,0.8,3,0.3,3,0.3,1.2
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_rich,ttl,,temp0,complex,10,10,1.0,6,0.6,10,1.0,6,0.6,6,0.6,5.2
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_rich,ttl,,temp1,complex,10,10,1.0,6,0.6,10,1.0,6,0.6,6,0.6,5.2
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_rich,axiom,,temp0,moderate,10,10,1.0,8,0.8,10,1.0,8,0.8,8,0.8,19.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_rich,axiom,,temp1,moderate,10,10,1.0,8,0.8,10,1.0,8,0.8,8,0.8,22.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_rich,"axiom, nen",,temp0,moderate,10,10,1.0,10,1.0,10,1.0,10,1.0,10,1.0,24.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_rich,"axiom, nen",,temp1,moderate,10,10,1.0,9,0.9,10,1.0,9,0.9,9,0.9,18.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_rich,nen,,temp0,moderate,10,10,1.0,10,1.0,10,1.0,10,1.0,10,1.0,27.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_rich,nen,,temp1,moderate,10,10,1.0,9,0.9,10,1.0,9,0.9,9,0.9,22.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_rich,ttl,,temp0,moderate,10,10,1.0,9,0.9,10,1.0,9,0.9,9,0.9,18.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_rich,ttl,,temp1,moderate,10,9,0.9,8,0.8,9,0.9,8,0.8,8,0.8,21.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_rich,axiom,,temp0,simple,10,10,1.0,8,0.8,10,1.0,8,0.8,8,0.8,16.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_rich,axiom,,temp1,simple,10,10,1.0,8,0.8,10,1.0,8,0.8,8,0.8,24.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_rich,"axiom, nen",,temp0,simple,10,10,1.0,10,1.0,10,1.0,10,1.0,10,1.0,20.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_rich,"axiom, nen",,temp1,simple,10,10,1.0,9,0.9,10,1.0,9,0.9,9,0.9,19.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_rich,nen,,temp0,simple,10,10,1.0,10,1.0,10,1.0,10,1.0,10,1.0,25.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_rich,nen,,temp1,simple,10,10,1.0,9,0.9,10,1.0,9,0.9,9,0.9,20.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_rich,ttl,,temp0,simple,10,10,1.0,9,0.9,10,1.0,9,0.9,9,0.9,20.6
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_rich,ttl,,temp1,simple,10,10,1.0,9,0.9,10,1.0,9,0.9,9,0.9,21.2
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_shallow,axiom,,temp0,complex,10,9,0.9,2,0.2,9,0.9,2,0.2,2,0.2,2.1
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_shallow,axiom,,temp1,complex,10,10,1.0,4,0.4,10,1.0,4,0.4,4,0.4,3.2
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_shallow,"axiom, nen",,temp0,complex,10,10,1.0,3,0.3,10,1.0,3,0.3,3,0.3,2.2
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_shallow,"axiom, nen",,temp1,complex,10,9,0.9,2,0.2,9,0.9,2,0.2,2,0.2,4.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_shallow,nen,,temp0,complex,10,9,0.9,2,0.2,9,0.9,2,0.2,2,0.2,2.1
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_shallow,nen,,temp1,complex,10,9,0.9,2,0.2,8,0.8,1,0.1,1,0.1,1.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_shallow,ttl,,temp0,complex,10,9,0.9,2,0.2,9,0.9,2,0.2,2,0.2,2.1
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_shallow,ttl,,temp1,complex,10,8,0.8,2,0.2,8,0.8,2,0.2,2,0.2,1.1
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_shallow,axiom,,temp0,moderate,10,10,1.0,10,1.0,10,1.0,10,1.0,10,1.0,24.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_shallow,axiom,,temp1,moderate,10,10,1.0,9,0.9,10,1.0,9,0.9,9,0.9,19.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_shallow,"axiom, nen",,temp0,moderate,10,10,1.0,10,1.0,10,1.0,10,1.0,10,1.0,29.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_shallow,"axiom, nen",,temp1,moderate,10,10,1.0,9,0.9,10,1.0,9,0.9,9,0.9,22.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_shallow,nen,,temp0,moderate,10,10,1.0,9,0.9,10,1.0,9,0.9,9,0.9,31.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_shallow,nen,,temp1,moderate,10,10,1.0,9,0.9,10,1.0,9,0.9,9,0.9,23.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_shallow,ttl,,temp0,moderate,10,10,1.0,9,0.9,10,1.0,9,0.9,9,0.9,16.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_shallow,ttl,,temp1,moderate,10,10,1.0,9,0.9,10,1.0,9,0.9,9,0.9,32.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_shallow,axiom,,temp0,simple,10,10,1.0,10,1.0,10,1.0,10,1.0,10,1.0,22.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_shallow,axiom,,temp1,simple,10,10,1.0,10,1.0,10,1.0,10,1.0,10,1.0,20.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_shallow,"axiom, nen",,temp0,simple,10,10,1.0,10,1.0,10,1.0,10,1.0,10,1.0,24.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_shallow,"axiom, nen",,temp1,simple,10,10,1.0,10,1.0,10,1.0,10,1.0,10,1.0,20.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_shallow,nen,,temp0,simple,10,10,1.0,10,1.0,10,1.0,10,1.0,10,1.0,24.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_shallow,nen,,temp1,simple,10,10,1.0,10,1.0,10,1.0,10,1.0,10,1.0,26.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_shallow,ttl,,temp0,simple,10,10,1.0,10,1.0,10,1.0,10,1.0,10,1.0,20.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,core_scholar_shallow,ttl,,temp1,simple,10,10,1.0,10,1.0,10,1.0,10,1.0,10,1.0,20.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg,axiom,,temp0,complex,10,10,1.0,0,0.0,10,1.0,0,0.0,0,0.0,0.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg,axiom,,temp1,complex,10,10,1.0,1,0.1,10,1.0,1,0.1,1,0.1,164.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg,"axiom, nen",,temp0,complex,10,10,1.0,2,0.2,10,1.0,2,0.2,2,0.2,1.8
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg,"axiom, nen",,temp1,complex,10,6,0.6,0,0.0,6,0.6,0,0.0,0,0.0,0.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg,nen,,temp0,complex,10,8,0.8,1,0.1,8,0.8,1,0.1,1,0.1,918.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg,nen,,temp1,complex,10,8,0.8,1,0.1,8,0.8,1,0.1,1,0.1,20.8
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg,ttl,,temp0,complex,10,10,1.0,2,0.2,8,0.8,2,0.2,2,0.2,12.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg,ttl,,temp1,complex,10,7,0.7,3,0.3,7,0.7,3,0.3,3,0.3,409.1
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg,axiom,,temp0,moderate,10,9,0.9,4,0.4,9,0.9,4,0.4,4,0.4,4.9
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg,axiom,,temp1,moderate,10,10,1.0,4,0.4,10,1.0,4,0.4,4,0.4,12.4
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg,"axiom, nen",,temp0,moderate,10,6,0.6,4,0.4,6,0.6,4,0.4,4,0.4,79.5
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg,"axiom, nen",,temp1,moderate,10,10,1.0,6,0.6,8,0.8,6,0.6,6,0.6,72.5
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg,nen,,temp0,moderate,10,10,1.0,4,0.4,10,1.0,4,0.4,4,0.4,33.8
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg,nen,,temp1,moderate,10,6,0.6,1,0.1,6,0.6,1,0.1,1,0.1,1.2
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg,ttl,,temp0,moderate,10,8,0.8,3,0.3,7,0.7,3,0.3,3,0.3,9.3
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg,ttl,,temp1,moderate,10,4,0.4,1,0.1,3,0.3,1,0.1,1,0.1,0.6
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg,axiom,,temp0,simple,10,10,1.0,7,0.7,9,0.9,6,0.6,6,0.6,58.7
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg,axiom,,temp1,simple,10,8,0.8,7,0.7,6,0.6,5,0.5,5,0.5,17.5
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg,"axiom, nen",,temp0,simple,10,8,0.8,5,0.5,7,0.7,5,0.5,5,0.5,83.2
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg,"axiom, nen",,temp1,simple,10,7,0.7,5,0.5,7,0.7,5,0.5,5,0.5,80.3
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg,nen,,temp0,simple,10,10,1.0,6,0.6,9,0.9,5,0.5,5,0.5,105.1
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg,nen,,temp1,simple,10,9,0.9,6,0.6,8,0.8,5,0.5,5,0.5,71.1
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg,ttl,,temp0,simple,10,10,1.0,9,0.9,10,1.0,9,0.9,9,0.9,458.9
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg,ttl,,temp1,simple,10,7,0.7,3,0.3,7,0.7,3,0.3,3,0.3,224.1
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg_lite,axiom,,temp0,complex,10,10,1.0,5,0.5,10,1.0,5,0.5,5,0.5,240.2
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg_lite,axiom,,temp1,complex,10,5,0.5,3,0.3,5,0.5,3,0.3,3,0.3,8.2
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg_lite,"axiom, nen",,temp0,complex,10,10,1.0,4,0.4,10,1.0,4,0.4,4,0.4,6.2
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg_lite,"axiom, nen",,temp1,complex,10,9,0.9,4,0.4,8,0.8,4,0.4,4,0.4,6.2
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg_lite,nen,,temp0,complex,10,10,1.0,5,0.5,10,1.0,5,0.5,5,0.5,5.2
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg_lite,nen,,temp1,complex,10,10,1.0,2,0.2,9,0.9,2,0.2,2,0.2,2.0
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg_lite,ttl,,temp0,complex,10,10,1.0,6,0.6,10,1.0,6,0.6,6,0.6,38.2
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg_lite,ttl,,temp1,complex,10,10,1.0,5,0.5,10,1.0,5,0.5,5,0.5,5.2
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg_lite,axiom,,temp0,moderate,10,10,1.0,8,0.8,10,1.0,8,0.8,8,0.8,38.5
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg_lite,axiom,,temp1,moderate,10,9,0.9,7,0.7,9,0.9,7,0.7,7,0.7,48.1
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg_lite,"axiom, nen",,temp0,moderate,10,9,0.9,7,0.7,9,0.9,7,0.7,7,0.7,331.8
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg_lite,"axiom, nen",,temp1,moderate,10,7,0.7,6,0.6,7,0.7,6,0.6,6,0.6,15.1
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg_lite,nen,,temp0,moderate,10,10,1.0,7,0.7,9,0.9,6,0.6,6,0.6,352.1
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg_lite,nen,,temp1,moderate,10,9,0.9,7,0.7,9,0.9,7,0.7,7,0.7,351.7
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg_lite,ttl,,temp0,moderate,10,10,1.0,6,0.6,10,1.0,6,0.6,6,0.6,209.2
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg_lite,ttl,,temp1,moderate,10,9,0.9,7,0.7,8,0.8,6,0.6,6,0.6,20.5
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg_lite,axiom,,temp0,simple,10,10,1.0,9,0.9,10,1.0,9,0.9,9,0.9,24.8
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg_lite,axiom,,temp1,simple,10,9,0.9,9,0.9,9,0.9,9,0.9,9,0.9,20.2
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg_lite,"axiom, nen",,temp0,simple,10,10,1.0,10,1.0,10,1.0,10,1.0,10,1.0,307.2
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg_lite,"axiom, nen",,temp1,simple,10,9,0.9,7,0.7,9,0.9,7,0.7,7,0.7,45.1
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg_lite,nen,,temp0,simple,10,10,1.0,8,0.8,10,1.0,8,0.8,8,0.8,46.8
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg_lite,nen,,temp1,simple,10,10,1.0,8,0.8,9,0.9,8,0.8,8,0.8,163.5
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg_lite,ttl,,temp0,simple,10,9,0.9,7,0.7,9,0.9,7,0.7,7,0.7,18.2
+kg__cq_complexity__representation__temperature_label,kg|cq_complexity|representation|temperature_label,kwg_lite,ttl,,temp1,simple,10,9,0.9,7,0.7,9,0.9,7,0.7,7,0.7,22.0
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,core_scholar_rich,,0_shot,temp0,complex,20,20,1.0,9,0.45,19,0.95,9,0.45,9,0.45,3.2
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,core_scholar_rich,,0_shot,temp1,complex,20,18,0.9,8,0.4,18,0.9,8,0.4,8,0.4,1.75
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,core_scholar_rich,,cot,temp0,complex,20,20,1.0,12,0.6,20,1.0,12,0.6,12,0.6,5.2
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,core_scholar_rich,,cot,temp1,complex,20,18,0.9,10,0.5,18,0.9,10,0.5,10,0.5,5.65
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,core_scholar_rich,,0_shot,temp0,moderate,20,20,1.0,18,0.9,20,1.0,18,0.9,18,0.9,20.5
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,core_scholar_rich,,0_shot,temp1,moderate,20,20,1.0,17,0.85,20,1.0,17,0.85,17,0.85,20.5
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,core_scholar_rich,,cot,temp0,moderate,20,20,1.0,19,0.95,20,1.0,19,0.95,19,0.95,23.5
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,core_scholar_rich,,cot,temp1,moderate,20,19,0.95,17,0.85,19,0.95,17,0.85,17,0.85,21.0
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,core_scholar_rich,,0_shot,temp0,simple,20,20,1.0,18,0.9,20,1.0,18,0.9,18,0.9,19.8
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,core_scholar_rich,,0_shot,temp1,simple,20,20,1.0,16,0.8,20,1.0,16,0.8,16,0.8,20.8
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,core_scholar_rich,,cot,temp0,simple,20,20,1.0,19,0.95,20,1.0,19,0.95,19,0.95,21.0
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,core_scholar_rich,,cot,temp1,simple,20,20,1.0,19,0.95,20,1.0,19,0.95,19,0.95,21.3
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,core_scholar_shallow,,0_shot,temp0,complex,20,19,0.95,3,0.15,19,0.95,3,0.15,3,0.15,0.15
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,core_scholar_shallow,,0_shot,temp1,complex,20,16,0.8,2,0.1,16,0.8,2,0.1,2,0.1,1.05
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,core_scholar_shallow,,cot,temp0,complex,20,18,0.9,6,0.3,18,0.9,6,0.3,6,0.3,4.1
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,core_scholar_shallow,,cot,temp1,complex,20,20,1.0,8,0.4,19,0.95,7,0.35,7,0.35,3.6
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,core_scholar_shallow,,0_shot,temp0,moderate,20,20,1.0,18,0.9,20,1.0,18,0.9,18,0.9,34.0
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,core_scholar_shallow,,0_shot,temp1,moderate,20,20,1.0,16,0.8,20,1.0,16,0.8,16,0.8,31.5
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,core_scholar_shallow,,cot,temp0,moderate,20,20,1.0,20,1.0,20,1.0,20,1.0,20,1.0,16.0
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,core_scholar_shallow,,cot,temp1,moderate,20,20,1.0,20,1.0,20,1.0,20,1.0,20,1.0,16.5
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,core_scholar_shallow,,0_shot,temp0,simple,20,20,1.0,20,1.0,20,1.0,20,1.0,20,1.0,26.0
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,core_scholar_shallow,,0_shot,temp1,simple,20,20,1.0,20,1.0,20,1.0,20,1.0,20,1.0,24.0
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,core_scholar_shallow,,cot,temp0,simple,20,20,1.0,20,1.0,20,1.0,20,1.0,20,1.0,19.0
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,core_scholar_shallow,,cot,temp1,simple,20,20,1.0,20,1.0,20,1.0,20,1.0,20,1.0,19.0
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,kwg,,0_shot,temp0,complex,20,19,0.95,2,0.1,17,0.85,2,0.1,2,0.1,6.0
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,kwg,,0_shot,temp1,complex,20,16,0.8,0,0.0,16,0.8,0,0.0,0,0.0,0.0
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,kwg,,cot,temp0,complex,20,19,0.95,3,0.15,19,0.95,3,0.15,3,0.15,459.9
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,kwg,,cot,temp1,complex,20,15,0.75,5,0.25,15,0.75,5,0.25,5,0.25,296.95
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,kwg,,0_shot,temp0,moderate,20,15,0.75,3,0.15,14,0.7,3,0.15,3,0.15,4.7
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,kwg,,0_shot,temp1,moderate,20,16,0.8,2,0.1,13,0.65,2,0.1,2,0.1,5.55
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,kwg,,cot,temp0,moderate,20,18,0.9,12,0.6,18,0.9,12,0.6,12,0.6,59.05
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,kwg,,cot,temp1,moderate,20,14,0.7,10,0.5,14,0.7,10,0.5,10,0.5,37.8
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,kwg,,0_shot,temp0,simple,20,18,0.9,11,0.55,18,0.9,11,0.55,11,0.55,231.8
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,kwg,,0_shot,temp1,simple,20,16,0.8,9,0.45,14,0.7,7,0.35,7,0.35,63.5
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,kwg,,cot,temp0,simple,20,20,1.0,16,0.8,17,0.85,14,0.7,14,0.7,121.15
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,kwg,,cot,temp1,simple,20,15,0.75,12,0.6,14,0.7,11,0.55,11,0.55,133.0
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,kwg_lite,,0_shot,temp0,complex,20,20,1.0,9,0.45,20,1.0,9,0.45,9,0.45,138.5
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,kwg_lite,,0_shot,temp1,complex,20,17,0.85,7,0.35,16,0.8,7,0.35,7,0.35,7.0
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,kwg_lite,,cot,temp0,complex,20,20,1.0,11,0.55,20,1.0,11,0.55,11,0.55,6.4
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,kwg_lite,,cot,temp1,complex,20,17,0.85,7,0.35,16,0.8,7,0.35,7,0.35,3.8
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,kwg_lite,,0_shot,temp0,moderate,20,19,0.95,9,0.45,18,0.9,8,0.4,8,0.4,118.2
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,kwg_lite,,0_shot,temp1,moderate,20,15,0.75,11,0.55,15,0.75,11,0.55,11,0.55,27.0
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,kwg_lite,,cot,temp0,moderate,20,20,1.0,19,0.95,20,1.0,19,0.95,19,0.95,347.6
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,kwg_lite,,cot,temp1,moderate,20,19,0.95,16,0.8,18,0.9,15,0.75,15,0.75,190.7
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,kwg_lite,,0_shot,temp0,simple,20,19,0.95,16,0.8,19,0.95,16,0.8,16,0.8,11.0
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,kwg_lite,,0_shot,temp1,simple,20,19,0.95,15,0.75,18,0.9,15,0.75,15,0.75,23.25
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,kwg_lite,,cot,temp0,simple,20,20,1.0,18,0.9,20,1.0,18,0.9,18,0.9,187.5
+kg__cq_complexity__prompt_type__temperature_label,kg|cq_complexity|prompt_type|temperature_label,kwg_lite,,cot,temp1,simple,20,18,0.9,16,0.8,18,0.9,16,0.8,16,0.8,102.15
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,core_scholar_rich,axiom,0_shot,temp0,,15,15,1.0,10,0.6667,15,1.0,10,0.6667,10,0.6667,11.4
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,core_scholar_rich,axiom,0_shot,temp1,,15,15,1.0,10,0.6667,15,1.0,10,0.6667,10,0.6667,16.7333
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,core_scholar_rich,axiom,cot,temp0,,15,15,1.0,12,0.8,15,1.0,12,0.8,12,0.8,15.4
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,core_scholar_rich,axiom,cot,temp1,,15,14,0.9333,10,0.6667,14,0.9333,10,0.6667,10,0.6667,16.0667
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,core_scholar_rich,"axiom, nen",0_shot,temp0,,15,15,1.0,12,0.8,15,1.0,12,0.8,12,0.8,14.7333
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,core_scholar_rich,"axiom, nen",0_shot,temp1,,15,14,0.9333,10,0.6667,14,0.9333,10,0.6667,10,0.6667,10.1333
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,core_scholar_rich,"axiom, nen",cot,temp0,,15,15,1.0,13,0.8667,15,1.0,13,0.8667,13,0.8667,17.4
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,core_scholar_rich,"axiom, nen",cot,temp1,,15,15,1.0,13,0.8667,15,1.0,13,0.8667,13,0.8667,18.0
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,core_scholar_rich,nen,0_shot,temp0,,15,15,1.0,12,0.8,14,0.9333,12,0.8,12,0.8,18.7333
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,core_scholar_rich,nen,0_shot,temp1,,15,14,0.9333,10,0.6667,14,0.9333,10,0.6667,10,0.6667,14.7333
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,core_scholar_rich,nen,cot,temp0,,15,15,1.0,12,0.8,15,1.0,12,0.8,12,0.8,17.4
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,core_scholar_rich,nen,cot,temp1,,15,14,0.9333,11,0.7333,14,0.9333,11,0.7333,11,0.7333,14.0667
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,core_scholar_rich,ttl,0_shot,temp0,,15,15,1.0,11,0.7333,15,1.0,11,0.7333,11,0.7333,13.1333
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,core_scholar_rich,ttl,0_shot,temp1,,15,15,1.0,11,0.7333,15,1.0,11,0.7333,11,0.7333,15.8
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,core_scholar_rich,ttl,cot,temp0,,15,15,1.0,13,0.8667,15,1.0,13,0.8667,13,0.8667,16.0667
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,core_scholar_rich,ttl,cot,temp1,,15,14,0.9333,12,0.8,14,0.9333,12,0.8,12,0.8,15.8
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,core_scholar_shallow,axiom,0_shot,temp0,,15,15,1.0,11,0.7333,15,1.0,11,0.7333,11,0.7333,20.7333
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,core_scholar_shallow,axiom,0_shot,temp1,,15,15,1.0,11,0.7333,15,1.0,11,0.7333,11,0.7333,17.4
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,core_scholar_shallow,axiom,cot,temp0,,15,14,0.9333,11,0.7333,14,0.9333,11,0.7333,11,0.7333,11.3333
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,core_scholar_shallow,axiom,cot,temp1,,15,15,1.0,12,0.8,15,1.0,12,0.8,12,0.8,10.7333
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,core_scholar_shallow,"axiom, nen",0_shot,temp0,,15,15,1.0,11,0.7333,15,1.0,11,0.7333,11,0.7333,23.4
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,core_scholar_shallow,"axiom, nen",0_shot,temp1,,15,14,0.9333,9,0.6,14,0.9333,9,0.6,9,0.6,16.0
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,core_scholar_shallow,"axiom, nen",cot,temp0,,15,15,1.0,12,0.8,15,1.0,12,0.8,12,0.8,13.4
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,core_scholar_shallow,"axiom, nen",cot,temp1,,15,15,1.0,12,0.8,15,1.0,12,0.8,12,0.8,14.6667
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,core_scholar_shallow,nen,0_shot,temp0,,15,15,1.0,10,0.6667,15,1.0,10,0.6667,10,0.6667,23.4
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,core_scholar_shallow,nen,0_shot,temp1,,15,14,0.9333,9,0.6,14,0.9333,9,0.6,9,0.6,19.3333
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,core_scholar_shallow,nen,cot,temp0,,15,14,0.9333,11,0.7333,14,0.9333,11,0.7333,11,0.7333,14.6667
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,core_scholar_shallow,nen,cot,temp1,,15,15,1.0,12,0.8,14,0.9333,11,0.7333,11,0.7333,14.0
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,core_scholar_shallow,ttl,0_shot,temp0,,15,14,0.9333,9,0.6,14,0.9333,9,0.6,9,0.6,12.6667
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,core_scholar_shallow,ttl,0_shot,temp1,,15,13,0.8667,9,0.6,13,0.8667,9,0.6,9,0.6,22.6667
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,core_scholar_shallow,ttl,cot,temp0,,15,15,1.0,12,0.8,15,1.0,12,0.8,12,0.8,12.7333
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,core_scholar_shallow,ttl,cot,temp1,,15,15,1.0,12,0.8,15,1.0,12,0.8,12,0.8,12.7333
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,kwg,axiom,0_shot,temp0,,15,14,0.9333,3,0.2,14,0.9333,3,0.2,3,0.2,5.3333
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,kwg,axiom,0_shot,temp1,,15,13,0.8667,3,0.2,12,0.8,2,0.1333,2,0.1333,4.0667
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,kwg,axiom,cot,temp0,,15,15,1.0,8,0.5333,14,0.9333,7,0.4667,7,0.4667,37.0667
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,kwg,axiom,cot,temp1,,15,15,1.0,9,0.6,14,0.9333,8,0.5333,8,0.5333,125.2
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,kwg,"axiom, nen",0_shot,temp0,,15,10,0.6667,4,0.2667,10,0.6667,4,0.2667,4,0.2667,10.0667
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,kwg,"axiom, nen",0_shot,temp1,,15,13,0.8667,4,0.2667,11,0.7333,4,0.2667,4,0.2667,55.3333
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,kwg,"axiom, nen",cot,temp0,,15,14,0.9333,7,0.4667,13,0.8667,7,0.4667,7,0.4667,99.6
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,kwg,"axiom, nen",cot,temp1,,15,10,0.6667,7,0.4667,10,0.6667,7,0.4667,7,0.4667,46.5333
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,kwg,nen,0_shot,temp0,,15,14,0.9333,2,0.1333,14,0.9333,2,0.1333,2,0.1333,2.6667
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,kwg,nen,0_shot,temp1,,15,13,0.8667,2,0.1333,12,0.8,1,0.0667,1,0.0667,13.9333
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,kwg,nen,cot,temp0,,15,14,0.9333,9,0.6,13,0.8667,8,0.5333,8,0.5333,701.9333
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,kwg,nen,cot,temp1,,15,10,0.6667,6,0.4,10,0.6667,6,0.4,6,0.4,48.1333
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,kwg,ttl,0_shot,temp0,,15,14,0.9333,7,0.4667,11,0.7333,7,0.4667,7,0.4667,305.2667
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,kwg,ttl,0_shot,temp1,,15,9,0.6,2,0.1333,8,0.5333,2,0.1333,2,0.1333,18.7333
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,kwg,ttl,cot,temp0,,15,14,0.9333,7,0.4667,14,0.9333,7,0.4667,7,0.4667,14.8667
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,kwg,ttl,cot,temp1,,15,9,0.6,5,0.3333,9,0.6,5,0.3333,5,0.3333,403.8
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,kwg_lite,axiom,0_shot,temp0,,15,15,1.0,10,0.6667,15,1.0,10,0.6667,10,0.6667,175.4
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,kwg_lite,axiom,0_shot,temp1,,15,10,0.6667,9,0.6,10,0.6667,9,0.6,9,0.6,31.3333
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,kwg_lite,axiom,cot,temp0,,15,15,1.0,12,0.8,15,1.0,12,0.8,12,0.8,26.9333
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,kwg_lite,axiom,cot,temp1,,15,13,0.8667,10,0.6667,13,0.8667,10,0.6667,10,0.6667,19.6667
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,kwg_lite,"axiom, nen",0_shot,temp0,,15,14,0.9333,9,0.6,14,0.9333,9,0.6,9,0.6,9.0
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,kwg_lite,"axiom, nen",0_shot,temp1,,15,13,0.8667,7,0.4667,12,0.8,7,0.4667,7,0.4667,23.3333
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,kwg_lite,"axiom, nen",cot,temp0,,15,15,1.0,12,0.8,15,1.0,12,0.8,12,0.8,421.1333
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,kwg_lite,"axiom, nen",cot,temp1,,15,12,0.8,10,0.6667,12,0.8,10,0.6667,10,0.6667,20.9333
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,kwg_lite,nen,0_shot,temp0,,15,15,1.0,8,0.5333,14,0.9333,7,0.4667,7,0.4667,15.1333
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,kwg_lite,nen,0_shot,temp1,,15,14,0.9333,8,0.5333,13,0.8667,8,0.5333,8,0.5333,14.0
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,kwg_lite,nen,cot,temp0,,15,15,1.0,12,0.8,15,1.0,12,0.8,12,0.8,254.2667
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,kwg_lite,nen,cot,temp1,,15,15,1.0,9,0.6,14,0.9333,9,0.6,9,0.6,330.8
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,kwg_lite,ttl,0_shot,temp0,,15,14,0.9333,7,0.4667,14,0.9333,7,0.4667,7,0.4667,157.4
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,kwg_lite,ttl,0_shot,temp1,,15,14,0.9333,9,0.6,14,0.9333,9,0.6,9,0.6,7.6667
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,kwg_lite,ttl,cot,temp0,,15,15,1.0,12,0.8,15,1.0,12,0.8,12,0.8,19.6667
+kg__representation__prompt_type__temperature_label,kg|representation|prompt_type|temperature_label,kwg_lite,ttl,cot,temp1,,15,14,0.9333,10,0.6667,13,0.8667,9,0.6,9,0.6,24.1333
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,axiom,0_shot,temp0,complex,20,20,1.0,5,0.25,20,1.0,5,0.25,5,0.25,119.1
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,axiom,0_shot,temp1,complex,20,17,0.85,6,0.3,17,0.85,6,0.3,6,0.3,5.1
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,axiom,cot,temp0,complex,20,19,0.95,8,0.4,19,0.95,8,0.4,8,0.4,4.65
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,axiom,cot,temp1,complex,20,17,0.85,6,0.3,17,0.85,6,0.3,6,0.3,84.2
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,"axiom, nen",0_shot,temp0,complex,20,20,1.0,6,0.3,20,1.0,6,0.3,6,0.3,3.1
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,"axiom, nen",0_shot,temp1,complex,20,17,0.85,4,0.2,16,0.8,4,0.2,4,0.2,2.1
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,"axiom, nen",cot,temp0,complex,20,20,1.0,8,0.4,20,1.0,8,0.4,8,0.4,4.1
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,"axiom, nen",cot,temp1,complex,20,16,0.8,7,0.35,16,0.8,7,0.35,7,0.35,5.6
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,nen,0_shot,temp0,complex,20,19,0.95,5,0.25,18,0.9,5,0.25,5,0.25,1.6
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,nen,0_shot,temp1,complex,20,17,0.85,2,0.1,17,0.85,2,0.1,2,0.1,0.55
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,nen,cot,temp0,complex,20,18,0.9,7,0.35,18,0.9,7,0.35,7,0.35,462.15
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,nen,cot,temp1,complex,20,18,0.9,6,0.3,16,0.8,5,0.25,5,0.25,11.95
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,ttl,0_shot,temp0,complex,20,19,0.95,7,0.35,17,0.85,7,0.35,7,0.35,24.05
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,ttl,0_shot,temp1,complex,20,16,0.8,5,0.25,16,0.8,5,0.25,5,0.25,2.05
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,ttl,cot,temp0,complex,20,20,1.0,9,0.45,20,1.0,9,0.45,9,0.45,4.7
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,ttl,cot,temp1,complex,20,19,0.95,11,0.55,19,0.95,11,0.55,11,0.55,208.25
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,axiom,0_shot,temp0,moderate,20,19,0.95,13,0.65,19,0.95,13,0.65,13,0.65,23.05
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,axiom,0_shot,temp1,moderate,20,19,0.95,12,0.6,19,0.95,12,0.6,12,0.6,27.05
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,axiom,cot,temp0,moderate,20,20,1.0,17,0.85,20,1.0,17,0.85,17,0.85,20.15
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,axiom,cot,temp1,moderate,20,20,1.0,16,0.8,20,1.0,16,0.8,16,0.8,23.7
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,"axiom, nen",0_shot,temp0,moderate,20,16,0.8,12,0.6,16,0.8,12,0.6,12,0.6,17.25
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,"axiom, nen",0_shot,temp1,moderate,20,18,0.9,11,0.55,16,0.8,11,0.55,11,0.55,18.0
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,"axiom, nen",cot,temp0,moderate,20,19,0.95,19,0.95,19,0.95,19,0.95,19,0.95,214.9
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,"axiom, nen",cot,temp1,moderate,20,19,0.95,19,0.95,19,0.95,19,0.95,19,0.95,45.8
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,nen,0_shot,temp0,moderate,20,20,1.0,11,0.55,19,0.95,10,0.5,10,0.5,25.35
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,nen,0_shot,temp1,moderate,20,18,0.9,12,0.6,18,0.9,12,0.6,12,0.6,20.75
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,nen,cot,temp0,moderate,20,20,1.0,19,0.95,20,1.0,19,0.95,19,0.95,196.6
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,nen,cot,temp1,moderate,20,17,0.85,14,0.7,17,0.85,14,0.7,14,0.7,178.2
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,ttl,0_shot,temp0,moderate,20,19,0.95,12,0.6,18,0.9,12,0.6,12,0.6,111.75
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,ttl,0_shot,temp1,moderate,20,16,0.8,11,0.55,15,0.75,11,0.55,11,0.55,18.75
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,ttl,cot,temp0,moderate,20,19,0.95,15,0.75,19,0.95,15,0.75,15,0.75,14.5
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,ttl,cot,temp1,moderate,20,16,0.8,14,0.7,15,0.75,13,0.65,13,0.65,18.3
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,axiom,0_shot,temp0,simple,20,20,1.0,16,0.8,20,1.0,16,0.8,16,0.8,17.5
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,axiom,0_shot,temp1,simple,20,17,0.85,15,0.75,16,0.8,14,0.7,14,0.7,20.0
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,axiom,cot,temp0,simple,20,20,1.0,18,0.9,19,0.95,17,0.85,17,0.85,43.25
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,axiom,cot,temp1,simple,20,20,1.0,19,0.95,19,0.95,18,0.9,18,0.9,20.85
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,"axiom, nen",0_shot,temp0,simple,20,18,0.9,18,0.9,18,0.9,18,0.9,18,0.9,22.55
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,"axiom, nen",0_shot,temp1,simple,20,19,0.95,15,0.75,19,0.95,15,0.75,15,0.75,58.5
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,"axiom, nen",cot,temp0,simple,20,20,1.0,17,0.85,19,0.95,17,0.85,17,0.85,194.65
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,"axiom, nen",cot,temp1,simple,20,17,0.85,16,0.8,17,0.85,16,0.8,16,0.8,23.7
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,nen,0_shot,temp0,simple,20,20,1.0,16,0.8,20,1.0,16,0.8,16,0.8,18.0
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,nen,0_shot,temp1,simple,20,20,1.0,15,0.75,18,0.9,14,0.7,14,0.7,25.2
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,nen,cot,temp0,simple,20,20,1.0,18,0.9,19,0.95,17,0.85,17,0.85,82.45
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,nen,cot,temp1,simple,20,19,0.95,18,0.9,19,0.95,18,0.9,18,0.9,115.1
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,ttl,0_shot,temp0,simple,20,19,0.95,15,0.75,19,0.95,15,0.75,15,0.75,230.55
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,ttl,0_shot,temp1,simple,20,19,0.95,15,0.75,19,0.95,15,0.75,15,0.75,27.85
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,ttl,cot,temp0,simple,20,20,1.0,20,1.0,20,1.0,20,1.0,20,1.0,28.3
+cq_complexity__representation__prompt_type__temperature_label,cq_complexity|representation|prompt_type|temperature_label,,ttl,cot,temp1,simple,20,17,0.85,14,0.7,17,0.85,14,0.7,14,0.7,115.8
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,axiom,0_shot,temp0,complex,5,5,1.0,2,0.4,5,1.0,2,0.4,2,0.4,2.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,axiom,0_shot,temp1,complex,5,5,1.0,2,0.4,5,1.0,2,0.4,2,0.4,2.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,axiom,cot,temp0,complex,5,5,1.0,4,0.8,5,1.0,4,0.8,4,0.8,8.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,axiom,cot,temp1,complex,5,4,0.8,2,0.4,4,0.8,2,0.4,2,0.4,4.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,"axiom, nen",0_shot,temp0,complex,5,5,1.0,2,0.4,5,1.0,2,0.4,2,0.4,2.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,"axiom, nen",0_shot,temp1,complex,5,4,0.8,2,0.4,4,0.8,2,0.4,2,0.4,0.4
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,"axiom, nen",cot,temp0,complex,5,5,1.0,3,0.6,5,1.0,3,0.6,3,0.6,6.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,"axiom, nen",cot,temp1,complex,5,5,1.0,3,0.6,5,1.0,3,0.6,3,0.6,10.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,nen,0_shot,temp0,complex,5,5,1.0,2,0.4,4,0.8,2,0.4,2,0.4,2.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,nen,0_shot,temp1,complex,5,4,0.8,1,0.2,4,0.8,1,0.2,1,0.2,0.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,nen,cot,temp0,complex,5,5,1.0,2,0.4,5,1.0,2,0.4,2,0.4,2.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,nen,cot,temp1,complex,5,4,0.8,2,0.4,4,0.8,2,0.4,2,0.4,2.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,ttl,0_shot,temp0,complex,5,5,1.0,3,0.6,5,1.0,3,0.6,3,0.6,6.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,ttl,0_shot,temp1,complex,5,5,1.0,3,0.6,5,1.0,3,0.6,3,0.6,4.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,ttl,cot,temp0,complex,5,5,1.0,3,0.6,5,1.0,3,0.6,3,0.6,4.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,ttl,cot,temp1,complex,5,5,1.0,3,0.6,5,1.0,3,0.6,3,0.6,6.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,axiom,0_shot,temp0,moderate,5,5,1.0,4,0.8,5,1.0,4,0.8,4,0.8,18.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,axiom,0_shot,temp1,moderate,5,5,1.0,4,0.8,5,1.0,4,0.8,4,0.8,22.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,axiom,cot,temp0,moderate,5,5,1.0,4,0.8,5,1.0,4,0.8,4,0.8,20.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,axiom,cot,temp1,moderate,5,5,1.0,4,0.8,5,1.0,4,0.8,4,0.8,22.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,"axiom, nen",0_shot,temp0,moderate,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,22.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,"axiom, nen",0_shot,temp1,moderate,5,5,1.0,4,0.8,5,1.0,4,0.8,4,0.8,16.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,"axiom, nen",cot,temp0,moderate,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,26.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,"axiom, nen",cot,temp1,moderate,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,20.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,nen,0_shot,temp0,moderate,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,28.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,nen,0_shot,temp1,moderate,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,24.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,nen,cot,temp0,moderate,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,26.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,nen,cot,temp1,moderate,5,5,1.0,4,0.8,5,1.0,4,0.8,4,0.8,20.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,ttl,0_shot,temp0,moderate,5,5,1.0,4,0.8,5,1.0,4,0.8,4,0.8,14.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,ttl,0_shot,temp1,moderate,5,5,1.0,4,0.8,5,1.0,4,0.8,4,0.8,20.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,ttl,cot,temp0,moderate,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,22.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,ttl,cot,temp1,moderate,5,4,0.8,4,0.8,4,0.8,4,0.8,4,0.8,22.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,axiom,0_shot,temp0,simple,5,5,1.0,4,0.8,5,1.0,4,0.8,4,0.8,14.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,axiom,0_shot,temp1,simple,5,5,1.0,4,0.8,5,1.0,4,0.8,4,0.8,26.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,axiom,cot,temp0,simple,5,5,1.0,4,0.8,5,1.0,4,0.8,4,0.8,18.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,axiom,cot,temp1,simple,5,5,1.0,4,0.8,5,1.0,4,0.8,4,0.8,22.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,"axiom, nen",0_shot,temp0,simple,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,20.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,"axiom, nen",0_shot,temp1,simple,5,5,1.0,4,0.8,5,1.0,4,0.8,4,0.8,14.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,"axiom, nen",cot,temp0,simple,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,20.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,"axiom, nen",cot,temp1,simple,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,24.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,nen,0_shot,temp0,simple,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,26.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,nen,0_shot,temp1,simple,5,5,1.0,4,0.8,5,1.0,4,0.8,4,0.8,20.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,nen,cot,temp0,simple,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,24.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,nen,cot,temp1,simple,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,20.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,ttl,0_shot,temp0,simple,5,5,1.0,4,0.8,5,1.0,4,0.8,4,0.8,19.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,ttl,0_shot,temp1,simple,5,5,1.0,4,0.8,5,1.0,4,0.8,4,0.8,23.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,ttl,cot,temp0,simple,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,22.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_rich,ttl,cot,temp1,simple,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,19.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,axiom,0_shot,temp0,complex,5,5,1.0,1,0.2,5,1.0,1,0.2,1,0.2,0.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,axiom,0_shot,temp1,complex,5,5,1.0,2,0.4,5,1.0,2,0.4,2,0.4,4.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,axiom,cot,temp0,complex,5,4,0.8,1,0.2,4,0.8,1,0.2,1,0.2,4.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,axiom,cot,temp1,complex,5,5,1.0,2,0.4,5,1.0,2,0.4,2,0.4,2.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,"axiom, nen",0_shot,temp0,complex,5,5,1.0,1,0.2,5,1.0,1,0.2,1,0.2,0.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,"axiom, nen",0_shot,temp1,complex,5,4,0.8,0,0.0,4,0.8,0,0.0,0,0.0,0.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,"axiom, nen",cot,temp0,complex,5,5,1.0,2,0.4,5,1.0,2,0.4,2,0.4,4.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,"axiom, nen",cot,temp1,complex,5,5,1.0,2,0.4,5,1.0,2,0.4,2,0.4,8.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,nen,0_shot,temp0,complex,5,5,1.0,1,0.2,5,1.0,1,0.2,1,0.2,0.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,nen,0_shot,temp1,complex,5,4,0.8,0,0.0,4,0.8,0,0.0,0,0.0,0.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,nen,cot,temp0,complex,5,4,0.8,1,0.2,4,0.8,1,0.2,1,0.2,4.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,nen,cot,temp1,complex,5,5,1.0,2,0.4,4,0.8,1,0.2,1,0.2,2.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,ttl,0_shot,temp0,complex,5,4,0.8,0,0.0,4,0.8,0,0.0,0,0.0,0.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,ttl,0_shot,temp1,complex,5,3,0.6,0,0.0,3,0.6,0,0.0,0,0.0,0.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,ttl,cot,temp0,complex,5,5,1.0,2,0.4,5,1.0,2,0.4,2,0.4,4.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,ttl,cot,temp1,complex,5,5,1.0,2,0.4,5,1.0,2,0.4,2,0.4,2.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,axiom,0_shot,temp0,moderate,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,34.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,axiom,0_shot,temp1,moderate,5,5,1.0,4,0.8,5,1.0,4,0.8,4,0.8,24.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,axiom,cot,temp0,moderate,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,14.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,axiom,cot,temp1,moderate,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,14.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,"axiom, nen",0_shot,temp0,moderate,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,42.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,"axiom, nen",0_shot,temp1,moderate,5,5,1.0,4,0.8,5,1.0,4,0.8,4,0.8,28.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,"axiom, nen",cot,temp0,moderate,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,16.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,"axiom, nen",cot,temp1,moderate,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,16.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,nen,0_shot,temp0,moderate,5,5,1.0,4,0.8,5,1.0,4,0.8,4,0.8,42.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,nen,0_shot,temp1,moderate,5,5,1.0,4,0.8,5,1.0,4,0.8,4,0.8,26.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,nen,cot,temp0,moderate,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,20.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,nen,cot,temp1,moderate,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,20.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,ttl,0_shot,temp0,moderate,5,5,1.0,4,0.8,5,1.0,4,0.8,4,0.8,18.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,ttl,0_shot,temp1,moderate,5,5,1.0,4,0.8,5,1.0,4,0.8,4,0.8,48.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,ttl,cot,temp0,moderate,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,14.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,ttl,cot,temp1,moderate,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,16.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,axiom,0_shot,temp0,simple,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,28.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,axiom,0_shot,temp1,simple,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,24.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,axiom,cot,temp0,simple,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,16.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,axiom,cot,temp1,simple,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,16.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,"axiom, nen",0_shot,temp0,simple,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,28.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,"axiom, nen",0_shot,temp1,simple,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,20.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,"axiom, nen",cot,temp0,simple,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,20.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,"axiom, nen",cot,temp1,simple,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,20.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,nen,0_shot,temp0,simple,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,28.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,nen,0_shot,temp1,simple,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,32.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,nen,cot,temp0,simple,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,20.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,nen,cot,temp1,simple,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,20.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,ttl,0_shot,temp0,simple,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,20.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,ttl,0_shot,temp1,simple,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,20.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,ttl,cot,temp0,simple,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,20.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,core_scholar_shallow,ttl,cot,temp1,simple,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,20.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,axiom,0_shot,temp0,complex,5,5,1.0,0,0.0,5,1.0,0,0.0,0,0.0,0.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,axiom,0_shot,temp1,complex,5,5,1.0,0,0.0,5,1.0,0,0.0,0,0.0,0.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,axiom,cot,temp0,complex,5,5,1.0,0,0.0,5,1.0,0,0.0,0,0.0,0.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,axiom,cot,temp1,complex,5,5,1.0,1,0.2,5,1.0,1,0.2,1,0.2,328.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,"axiom, nen",0_shot,temp0,complex,5,5,1.0,1,0.2,5,1.0,1,0.2,1,0.2,2.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,"axiom, nen",0_shot,temp1,complex,5,4,0.8,0,0.0,4,0.8,0,0.0,0,0.0,0.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,"axiom, nen",cot,temp0,complex,5,5,1.0,1,0.2,5,1.0,1,0.2,1,0.2,1.6
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,"axiom, nen",cot,temp1,complex,5,2,0.4,0,0.0,2,0.4,0,0.0,0,0.0,0.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,nen,0_shot,temp0,complex,5,4,0.8,0,0.0,4,0.8,0,0.0,0,0.0,0.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,nen,0_shot,temp1,complex,5,4,0.8,0,0.0,4,0.8,0,0.0,0,0.0,0.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,nen,cot,temp0,complex,5,4,0.8,1,0.2,4,0.8,1,0.2,1,0.2,1836.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,nen,cot,temp1,complex,5,4,0.8,1,0.2,4,0.8,1,0.2,1,0.2,41.6
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,ttl,0_shot,temp0,complex,5,5,1.0,1,0.2,3,0.6,1,0.2,1,0.2,22.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,ttl,0_shot,temp1,complex,5,3,0.6,0,0.0,3,0.6,0,0.0,0,0.0,0.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,ttl,cot,temp0,complex,5,5,1.0,1,0.2,5,1.0,1,0.2,1,0.2,2.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,ttl,cot,temp1,complex,5,4,0.8,3,0.6,4,0.8,3,0.6,3,0.6,818.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,axiom,0_shot,temp0,moderate,5,4,0.8,1,0.2,4,0.8,1,0.2,1,0.2,2.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,axiom,0_shot,temp1,moderate,5,5,1.0,1,0.2,5,1.0,1,0.2,1,0.2,2.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,axiom,cot,temp0,moderate,5,5,1.0,3,0.6,5,1.0,3,0.6,3,0.6,7.8
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,axiom,cot,temp1,moderate,5,5,1.0,3,0.6,5,1.0,3,0.6,3,0.6,22.6
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,"axiom, nen",0_shot,temp0,moderate,5,2,0.4,0,0.0,2,0.4,0,0.0,0,0.0,0.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,"axiom, nen",0_shot,temp1,moderate,5,5,1.0,1,0.2,3,0.6,1,0.2,1,0.2,20.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,"axiom, nen",cot,temp0,moderate,5,4,0.8,4,0.8,4,0.8,4,0.8,4,0.8,159.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,"axiom, nen",cot,temp1,moderate,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,125.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,nen,0_shot,temp0,moderate,5,5,1.0,0,0.0,5,1.0,0,0.0,0,0.0,0.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,nen,0_shot,temp1,moderate,5,4,0.8,0,0.0,4,0.8,0,0.0,0,0.0,0.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,nen,cot,temp0,moderate,5,5,1.0,4,0.8,5,1.0,4,0.8,4,0.8,67.6
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,nen,cot,temp1,moderate,5,2,0.4,1,0.2,2,0.4,1,0.2,1,0.2,2.4
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,ttl,0_shot,temp0,moderate,5,4,0.8,2,0.4,3,0.6,2,0.4,2,0.4,16.8
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,ttl,0_shot,temp1,moderate,5,2,0.4,0,0.0,1,0.2,0,0.0,0,0.0,0.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,ttl,cot,temp0,moderate,5,4,0.8,1,0.2,4,0.8,1,0.2,1,0.2,1.8
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,ttl,cot,temp1,moderate,5,2,0.4,1,0.2,2,0.4,1,0.2,1,0.2,1.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,axiom,0_shot,temp0,simple,5,5,1.0,2,0.4,5,1.0,2,0.4,2,0.4,14.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,axiom,0_shot,temp1,simple,5,3,0.6,2,0.4,2,0.4,1,0.2,1,0.2,10.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,axiom,cot,temp0,simple,5,5,1.0,5,1.0,4,0.8,4,0.8,4,0.8,103.4
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,axiom,cot,temp1,simple,5,5,1.0,5,1.0,4,0.8,4,0.8,4,0.8,25.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,"axiom, nen",0_shot,temp0,simple,5,3,0.6,3,0.6,3,0.6,3,0.6,3,0.6,28.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,"axiom, nen",0_shot,temp1,simple,5,4,0.8,3,0.6,4,0.8,3,0.6,3,0.6,146.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,"axiom, nen",cot,temp0,simple,5,5,1.0,2,0.4,4,0.8,2,0.4,2,0.4,138.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,"axiom, nen",cot,temp1,simple,5,3,0.6,2,0.4,3,0.6,2,0.4,2,0.4,14.6
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,nen,0_shot,temp0,simple,5,5,1.0,2,0.4,5,1.0,2,0.4,2,0.4,8.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,nen,0_shot,temp1,simple,5,5,1.0,2,0.4,4,0.8,1,0.2,1,0.2,41.8
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,nen,cot,temp0,simple,5,5,1.0,4,0.8,4,0.8,3,0.6,3,0.6,202.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,nen,cot,temp1,simple,5,4,0.8,4,0.8,4,0.8,4,0.8,4,0.8,100.4
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,ttl,0_shot,temp0,simple,5,5,1.0,4,0.8,5,1.0,4,0.8,4,0.8,877.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,ttl,0_shot,temp1,simple,5,4,0.8,2,0.4,4,0.8,2,0.4,2,0.4,56.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,ttl,cot,temp0,simple,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,40.8
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg,ttl,cot,temp1,simple,5,3,0.6,1,0.2,3,0.6,1,0.2,1,0.2,392.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,axiom,0_shot,temp0,complex,5,5,1.0,2,0.4,5,1.0,2,0.4,2,0.4,474.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,axiom,0_shot,temp1,complex,5,2,0.4,2,0.4,2,0.4,2,0.4,2,0.4,14.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,axiom,cot,temp0,complex,5,5,1.0,3,0.6,5,1.0,3,0.6,3,0.6,6.4
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,axiom,cot,temp1,complex,5,3,0.6,1,0.2,3,0.6,1,0.2,1,0.2,2.4
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,"axiom, nen",0_shot,temp0,complex,5,5,1.0,2,0.4,5,1.0,2,0.4,2,0.4,8.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,"axiom, nen",0_shot,temp1,complex,5,5,1.0,2,0.4,4,0.8,2,0.4,2,0.4,8.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,"axiom, nen",cot,temp0,complex,5,5,1.0,2,0.4,5,1.0,2,0.4,2,0.4,4.4
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,"axiom, nen",cot,temp1,complex,5,4,0.8,2,0.4,4,0.8,2,0.4,2,0.4,4.4
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,nen,0_shot,temp0,complex,5,5,1.0,2,0.4,5,1.0,2,0.4,2,0.4,4.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,nen,0_shot,temp1,complex,5,5,1.0,1,0.2,5,1.0,1,0.2,1,0.2,2.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,nen,cot,temp0,complex,5,5,1.0,3,0.6,5,1.0,3,0.6,3,0.6,6.4
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,nen,cot,temp1,complex,5,5,1.0,1,0.2,4,0.8,1,0.2,1,0.2,2.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,ttl,0_shot,temp0,complex,5,5,1.0,3,0.6,5,1.0,3,0.6,3,0.6,68.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,ttl,0_shot,temp1,complex,5,5,1.0,2,0.4,5,1.0,2,0.4,2,0.4,4.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,ttl,cot,temp0,complex,5,5,1.0,3,0.6,5,1.0,3,0.6,3,0.6,8.4
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,ttl,cot,temp1,complex,5,5,1.0,3,0.6,5,1.0,3,0.6,3,0.6,6.4
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,axiom,0_shot,temp0,moderate,5,5,1.0,3,0.6,5,1.0,3,0.6,3,0.6,38.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,axiom,0_shot,temp1,moderate,5,4,0.8,3,0.6,4,0.8,3,0.6,3,0.6,60.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,axiom,cot,temp0,moderate,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,38.8
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,axiom,cot,temp1,moderate,5,5,1.0,4,0.8,5,1.0,4,0.8,4,0.8,36.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,"axiom, nen",0_shot,temp0,moderate,5,4,0.8,2,0.4,4,0.8,2,0.4,2,0.4,5.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,"axiom, nen",0_shot,temp1,moderate,5,3,0.6,2,0.4,3,0.6,2,0.4,2,0.4,8.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,"axiom, nen",cot,temp0,moderate,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,658.6
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,"axiom, nen",cot,temp1,moderate,5,4,0.8,4,0.8,4,0.8,4,0.8,4,0.8,22.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,nen,0_shot,temp0,moderate,5,5,1.0,2,0.4,4,0.8,1,0.2,1,0.2,31.4
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,nen,0_shot,temp1,moderate,5,4,0.8,3,0.6,4,0.8,3,0.6,3,0.6,33.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,nen,cot,temp0,moderate,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,672.8
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,nen,cot,temp1,moderate,5,5,1.0,4,0.8,5,1.0,4,0.8,4,0.8,670.4
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,ttl,0_shot,temp0,moderate,5,5,1.0,2,0.4,5,1.0,2,0.4,2,0.4,398.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,ttl,0_shot,temp1,moderate,5,4,0.8,3,0.6,4,0.8,3,0.6,3,0.6,7.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,ttl,cot,temp0,moderate,5,5,1.0,4,0.8,5,1.0,4,0.8,4,0.8,20.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,ttl,cot,temp1,moderate,5,5,1.0,4,0.8,4,0.8,3,0.6,3,0.6,34.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,axiom,0_shot,temp0,simple,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,14.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,axiom,0_shot,temp1,simple,5,4,0.8,4,0.8,4,0.8,4,0.8,4,0.8,20.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,axiom,cot,temp0,simple,5,5,1.0,4,0.8,5,1.0,4,0.8,4,0.8,35.6
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,axiom,cot,temp1,simple,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,20.4
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,"axiom, nen",0_shot,temp0,simple,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,14.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,"axiom, nen",0_shot,temp1,simple,5,5,1.0,3,0.6,5,1.0,3,0.6,3,0.6,54.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,"axiom, nen",cot,temp0,simple,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,600.4
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,"axiom, nen",cot,temp1,simple,5,4,0.8,4,0.8,4,0.8,4,0.8,4,0.8,36.2
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,nen,0_shot,temp0,simple,5,5,1.0,4,0.8,5,1.0,4,0.8,4,0.8,10.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,nen,0_shot,temp1,simple,5,5,1.0,4,0.8,4,0.8,4,0.8,4,0.8,7.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,nen,cot,temp0,simple,5,5,1.0,4,0.8,5,1.0,4,0.8,4,0.8,83.6
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,nen,cot,temp1,simple,5,5,1.0,4,0.8,5,1.0,4,0.8,4,0.8,320.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,ttl,0_shot,temp0,simple,5,4,0.8,2,0.4,4,0.8,2,0.4,2,0.4,6.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,ttl,0_shot,temp1,simple,5,5,1.0,4,0.8,5,1.0,4,0.8,4,0.8,12.0
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,ttl,cot,temp0,simple,5,5,1.0,5,1.0,5,1.0,5,1.0,5,1.0,30.4
+kg__cq_complexity__representation__prompt_type__temperature_label,kg|cq_complexity|representation|prompt_type|temperature_label,kwg_lite,ttl,cot,temp1,simple,5,4,0.8,3,0.6,4,0.8,3,0.6,3,0.6,32.0
