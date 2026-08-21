@@ -5,8 +5,8 @@ This directory contains helper scripts and notebooks for preprocessing schemas, 
 ## Directory and File Overview
 
 * `automate_latex_to_dl.py` — Batch runner that converts each `schemas/<schema>/schema.tex` file into `axiom.txt` using the matching `schema.ttl` prefixes.
-* `exp_pipeline_gemini.py` — Script for loading schemas, competency questions, prompt templates, and prompt assets, then preparing experiment batches for Gemini.
-* `exp_pipeline_local_models.ipynb` — Notebook for loading schemas, competency questions, prompt templates, and prompt assets, then preparing experiment batches.
+* `exp_pipeline_gemini.py` — Script for loading schemas, competency questions, prompt templates, and prompt assets, and then preparing experiment batches for the Gemini model.
+* `exp_pipeline_local_models.ipynb` — Notebook for loading schemas, competency questions, prompt templates, and prompt assets, and then preparing experiment batches for local models.
 * `generate_mock_instances.py` — Generates synthetic RDF/Turtle instance data for each schema in `schemas/*/schema.ttl`.
 * `latex_to_dl.py` — Converts LaTeX description logic axioms into plain text, optionally adding prefixes from a Turtle schema.
 * `sparql_evaluator_all_models.py` — Script for checking generated SPARQL syntax, endpoint satisfiability, determinism, result rows, and summary metrics for each individual model.
